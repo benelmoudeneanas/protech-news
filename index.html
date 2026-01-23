@@ -526,26 +526,23 @@ function showCategory(category) {
     } else if (category === 'contact') {
         container.innerHTML = `<div class="widget" style="padding:40px;"><h1>Contact Us</h1><p>Email: contact@protech.com</p></div>`;
     } else if (category === 'home') {
-        // 1. قسم الاستقبال (Hero) - المطور
+        // 1. قسم الاستقبال (Hero) - المطور        // 1. قسم الاستقبال (Hero) - تم تصغيره
         container.innerHTML += `
-            <div style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; padding: 120px 20px; border-radius: 24px; text-align: center; margin-bottom: 40px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
-                <span style="background: var(--accent-blue); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold;">Evolution of Tech</span>
-                <h1 style="font-size: clamp(2rem, 5vw, 3.5rem); font-family: 'Space Grotesk'; margin: 20px 0; background: linear-gradient(to right, #fff, #007aff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700;">ProTech: The Future, Decoded.</h1>
-                <p style="font-size: 1.2rem; color: #a0aec0; max-width: 600px; margin: 0 auto 30px auto; line-height: 1.5;">Deep dives into AI, Gadgets, and the digital frontier. Stay ahead of the curve.</p>
-                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                     <button onclick="showCategory('trends')" style="background: var(--accent-blue); color: white; border: none; padding: 12px 30px; border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 15px var(--accent-glow);">Explore Trends</button>
-<button onclick="const el = document.querySelectorAll('h2')[1]; const offset = 160; window.scrollTo({ top: el.offsetTop - offset, behavior: 'smooth' });" style="background: rgba(255,255,255,0.05); color: white; border: 1px solid #334155; padding: 12px 30px; border-radius: 8px; font-weight: bold; cursor: pointer; backdrop-filter: blur(5px);">Latest Reviews</button>
+            <div style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; padding: 40px 20px; border-radius: 20px; text-align: center; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                <span style="background: var(--accent-blue); color: white; padding: 3px 12px; border-radius: 20px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold;">Evolution of Tech</span>
+                <h1 style="font-size: clamp(1.5rem, 4vw, 2.2rem); font-family: 'Space Grotesk'; margin: 10px 0; background: linear-gradient(to right, #fff, #007aff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700;">ProTech: The Future, Decoded.</h1>
+                <p style="font-size: 1rem; color: #a0aec0; max-width: 500px; margin: 0 auto 20px auto; line-height: 1.4;">Deep dives into AI, Gadgets, and the digital frontier.</p>
+                <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                     <button onclick="showCategory('trends')" style="background: var(--accent-blue); color: white; border: none; padding: 8px 20px; border-radius: 6px; font-size: 0.9rem; font-weight: bold; cursor: pointer; transition: 0.3s;">Explore Trends</button>
+                     <button onclick="const el = document.querySelectorAll('h2')[1]; window.scrollTo({ top: el.offsetTop - 100, behavior: 'smooth' });" style="background: rgba(255,255,255,0.05); color: white; border: 1px solid #334155; padding: 8px 20px; border-radius: 6px; font-size: 0.9rem; font-weight: bold; cursor: pointer;">Latest Reviews</button>
 
-<div style="margin-top: 30px; display: flex; justify-content: center; width: 100%;">
-    <div style="position: relative; width: 100%; max-width: 500px; box-sizing: border-box;">
-        <input type="text" id="searchInput" onkeyup="liveSearch()" placeholder="Search articles (e.g. iPhone, AI)..." 
-               style="width: 100%; padding: 15px 20px; border-radius: 30px; border: 1px solid #334155; background: rgba(15, 23, 42, 0.8); color: white; outline: none; font-size: 1rem; backdrop-filter: blur(10px); box-sizing: border-box;">
-        
-        <div id="searchResults" style="position: absolute; width: 100%; background: #12141c; border-radius: 12px; margin-top: 10px; z-index: 2000; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-align: left; max-height: 300px; overflow-y: auto; box-sizing: border-box;"></div>
-    </div>
-</div>
-
-
+                    <div style="margin-top: 20px; display: flex; justify-content: center; width: 100%;">
+                        <div style="position: relative; width: 100%; max-width: 400px; box-sizing: border-box;">
+                            <input type="text" id="searchInput" onkeyup="liveSearch()" placeholder="Search articles..." 
+                                   style="width: 100%; padding: 10px 18px; border-radius: 25px; border: 1px solid #334155; background: rgba(15, 23, 42, 0.8); color: white; outline: none; font-size: 0.9rem; backdrop-filter: blur(10px); box-sizing: border-box;">
+                            <div id="searchResults" style="position: absolute; width: 100%; background: #12141c; border-radius: 12px; margin-top: 5px; z-index: 2000; text-align: left; max-height: 250px; overflow-y: auto; box-sizing: border-box;"></div>
+                        </div>
+                    </div>
                 </div>
             </div>`;
 
