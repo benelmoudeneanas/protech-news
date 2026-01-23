@@ -501,7 +501,7 @@ function showCategory(category) {
 
         // 2. عرض الأقسام (Trends & Reviews)
         ['trends', 'reviews'].forEach((catName) => {
-            const filtered = articles.filter(a => a.cat === catName).slice(0, 3);
+            const filtered = articles.filter(a => a.cat === catName).slice(0, 4);
             let html = `<h2 style="text-transform: uppercase; color: var(--accent-blue); margin: 40px 0 20px 0; border-left: 4px solid var(--accent-blue); padding-left: 15px;">Latest ${catName}</h2>`;
             html += `<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">`;
             
