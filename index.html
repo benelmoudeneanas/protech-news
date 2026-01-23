@@ -56,9 +56,13 @@
             backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border-color);
             position: sticky; top: 0; z-index: 1000;
-            display: flex; justify-content: flex-start;
-            align-items: center; min-height: 70px; padding: 0 20px;
+            display: flex; 
+            justify-content: space-between; /* هذا يوزع اللوغو يميناً والقائمة يساراً */
+            align-items: center; 
+            min-height: 70px; 
+            padding: 0 40px; /* زيادة المساحة الجانبية قليلاً */
         }
+
 
         .menu-toggle {
             display: flex; flex-direction: column;
@@ -144,32 +148,76 @@ img {
     width: 100%;
     object-fit: cover;
 }
-/* تحسين عرض الصور ومنع اختفائها */
 .widget img {
     width: 100%;
     height: auto;
     display: block;
     object-fit: cover;
-    background: #1a1d29 url('https://www.samsung.com/etc.clientlibs/samsung/clientlibs/consumer/global/common/images/samsung-logo-720x405.png') no-repeat center;
-    background-size: contain;
+    background-color: #1a1d2c; /* لون داكن بسيط يظهر أثناء التحميل */
     min-height: 200px;
+    border-radius: 12px 12px 0 0; /* لجعل الزوايا العلوية مستديرة */
 }
+/* تنسيق شريط الكلمات الجديد */
+.quick-tags {
+    background: #0d0f16;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid #1e293b;
+    overflow-x: auto; /* يسمح بالتمرير لليمين واليسار في الموبايل */
+    white-space: nowrap;
+}
+
+.tag-label { 
+    color: var(--accent-blue); 
+    font-weight: bold; 
+    font-size: 0.8rem; 
+    text-transform: uppercase;
+}
+
+.tag-item {
+    background: #1e293b; 
+    color: #cbd5e1; 
+    padding: 6px 15px;
+    border-radius: 20px; 
+    font-size: 0.85rem; 
+    cursor: pointer; 
+    transition: 0.3s;
+}
+
+.tag-item:hover { 
+    background: var(--accent-blue); 
+    color: white; 
+}
+#searchInput:focus {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 15px var(--accent-glow);
+    background: rgba(15, 23, 42, 1);
+}
+
+/* حركة بسيطة لنتائج البحث */
+#live-results-grid .widget:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-blue);
+}
+
 
     </style>
 </head>
 <body>
-
-<header>
-    <h1 class="logo">PRO<span>TECH</span></h1>
-    <div style="color: var(--text-secondary); letter-spacing: 4px; font-size: 0.8rem; text-transform: uppercase;">The Digital Frontier</div>
-</header>
-
+  
 <nav>
+    <a onclick="showCategory('home')" style="cursor:pointer; text-decoration:none;">
+        <h2 class="logo" style="font-size: 1.5rem; margin: 0;">PRO<span>TECH</span></h2>
+    </a>
+
     <div class="menu-toggle" id="mobile-menu">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
     </div>
+
     <ul class="nav-list">
         <li><a onclick="showCategory('home')">Home</a></li>
         <li><a onclick="showCategory('trends')">Trends</a></li>
@@ -178,6 +226,16 @@ img {
         <li><a onclick="showCategory('contact')">Contact</a></li>
     </ul>
 </nav>
+<div class="quick-tags">
+    <span class="tag-label">Hot:</span>
+    <div class="tag-item" onclick="setQuickSearch('iPhone 18')">iPhone 18</div>
+    <div class="tag-item" onclick="setQuickSearch('GTA VI')">GTA VI</div>
+    <div class="tag-item" onclick="setQuickSearch('Galaxy S26')">Galaxy S26</div>
+    <div class="tag-item" onclick="setQuickSearch('PS6')">PS6</div>
+    <div class="tag-item" onclick="setQuickSearch('Apple')">Apple</div>
+    <div class="tag-item" onclick="setQuickSearch('Samsung')">Samsung</div>
+</div>
+
 
 <div class="wrapper">
     <main id="articles-container"></main>
@@ -188,31 +246,6 @@ const articles = [
 
 { 
     id: 23,
-    title: "The 2026 AI Smartphone War: 5 Devices That Think For You", 
-    cat: "reviews", 
-    desc: "Hardware specs are dead. In 2026, the battle is about Intelligence. Here are the top 5 phones that act as your second brain.", 
-    content: `
-        <p>Welcome to the era where your phone knows what you want before you do. In 2026, we are no longer looking at megapixels or battery size; the new metric is <strong>IQ</strong>. We tested the giants of the industry, and the results are terrifyingly good.</p>
-        
-        <h3 style="color: #e67e22;">1. Samsung Galaxy S26 Ultra: The Business God</h3>
-        <p>Forget the camera zoom. The real killer feature this year is the <strong>'Neural Knox'</strong> chip. It translates business meetings in real-time across 40 languages with 99% accuracy, even preserving the speaker's tone. It's not just a phone; it's a global office.</p>
-
-        <h3 style="color: #e67e22;">2. iPhone 17 Pro Max: Siri Reborn</h3>
-        <p>Apple finally did it. With iOS 20, Siri is no longer a voice assistant; she's an agent. In our tests, we asked: <em>"Plan a date night based on my calendar and book a table,"</em> and it was done in seconds without opening a single app. The ecosystem trap just got deeper.</p>
-
-        <h3 style="color: #e67e22;">3. Google Pixel 10 Pro: Reality Bender</h3>
-        <p>The <strong>Magic Editor Gen-3</strong> is borderline illegal. You can now change the lighting of a photo taken at noon to look like sunset. It creates details that never existed. If you are a content creator, this is your only choice.</p>
-
-        <div style="background-color: #1e293b; padding: 15px; border-radius: 8px; margin-top: 20px; border-left: 4px solid #007aff;">
-            <strong>🏆 ProTech Verdict:</strong> If you want raw productivity, go Samsung. If you want a proactive life assistant, the iPhone 17 takes the crown this year.
-        </div>
-    `,
-    img: "https://images.unsplash.com/photo-1695504239663-12586a119438?q=80&w=1000&auto=format&fit=crop" 
-},
-
-
-{ 
-    id: 22,
     title: "GTA VI: The 2026 Reality Check – Leaks, Delays & Development Woes", 
     cat: "trends", 
     desc: "Everything we know about Rockstar's biggest challenge yet: Why GTA 6 moved to November 2026 and the latest leaks from the Edinburgh HQ.", 
@@ -248,7 +281,7 @@ const articles = [
     img: "https://images.unsplash.com/photo-1616348436168-de43ad0db179" 
 },
     { 
-    id: 20,
+    id: 1,
         title: "The Federal AI Act of 2026: What US Small Businesses Need to Know", 
         cat: "trends", 
         desc: "Washington has finally passed the most comprehensive AI regulation in history. Here is how it impacts privacy and innovation for American entrepreneurs.", 
@@ -261,7 +294,7 @@ const articles = [
         img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1000&auto=format&fit=crop"
     },
     { 
-    id: 19,
+    id: 2,
         title: "America's Shift to Micro-Grids: The End of Massive Power Outages?", 
         cat: "trends", 
         desc: "Following the recent winter storms, US cities are rapidly adopting decentralized micro-grids powered by AI and solar energy.", 
@@ -274,7 +307,7 @@ const articles = [
         img: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e" 
     },
     { 
-    id: 18,
+    id: 3,
         title: "The 'Privacy-First' Smartphone Era: Why Americans are Ditching Big Tech", 
         cat: "trends", 
         desc: "A new wave of 'Linux-based' and 'Encryption-heavy' phones is gaining traction among privacy-conscious US users in 2026.", 
@@ -285,7 +318,7 @@ const articles = [
         img: "https://images.unsplash.com/photo-1563986768609-322da13575f3" 
     },
     { 
-    id: 17,
+    id: 4,
         title: "Remote Work 2.0: The Rise of 'Digital US Territories'", 
         cat: "trends", 
         desc: "As office mandates fail, American workers are moving to rural 'Tech Hubs'. Discover the top 10 US states attracting digital nomads this year.", 
@@ -296,7 +329,7 @@ const articles = [
         img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f" 
     },
     { 
-    id: 16,
+    id: 5,
         title: "The AI-Personalized Education Boom in US Public Schools", 
         cat: "trends", 
         desc: "Classrooms across America are implementing 'Personalized Learning Paths' powered by AI to bridge the post-pandemic learning gap.", 
@@ -307,7 +340,7 @@ const articles = [
         img: "https://images.unsplash.com/photo-1509062522246-3755977927d7" 
     },
     { 
-    id: 15,
+    id: 6,
         title: "Sustainable Tech: Americans Demanding 'The Right to Repair'", 
         cat: "trends", 
         desc: "New legislation in 15 US states now mandates that electronics must be easily repairable by consumers. Is this the end of planned obsolescence?", 
@@ -318,7 +351,7 @@ const articles = [
         img: "https://images.unsplash.com/photo-1581092160562-40aa08e78837" 
     },
     { 
-    id: 14,
+    id: 7,
         title: "SpaceX Starlink 3.0: High-Speed Internet for Every US Airline", 
         cat: "trends", 
         desc: "By mid-2026, every major US airline will offer free, gigabit-speed satellite internet to passengers. The 'No-WiFi' flight is officially history.", 
@@ -329,7 +362,7 @@ const articles = [
         img: "https://images.unsplash.com/photo-1517976487492-5750f3195933" 
     },
     { 
-    id: 13,
+    id: 8,
         title: "The Biotech Gold Rush: Personal Longevity Tech in the USA", 
         cat: "trends", 
         desc: "Americans are spending record amounts on 'Bio-Hacking' and AI-driven health monitoring. Is 100 the new 80?", 
@@ -340,7 +373,7 @@ const articles = [
         img: "https://images.unsplash.com/photo-1530210124550-912dc1381cb8" 
     },
     { 
-    id: 12,
+    id: 9,
         title: "Quantum Computing: The First Real-World US Applications", 
         cat: "trends", 
         desc: "US pharmaceutical companies are now using quantum processors to simulate drug interactions, cutting development time by 80%.", 
@@ -351,7 +384,7 @@ const articles = [
         img: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0" 
     },
     { 
-    id: 11,
+    id: 10,
         title: "The Decentralized Finance (DeFi) Comeback in US Markets", 
         cat: "trends", 
         desc: "Regulated DeFi platforms are seeing a surge in US institutional investment, signaling a new era for digital assets.", 
@@ -362,7 +395,7 @@ const articles = [
         img: "https://images.unsplash.com/photo-1621761191319-c6fb62004040" 
     },
         { 
-        id: 10,
+        id: 11,
         title: "Apple Glasses 'Air' Leaks: Everything We Know So Far", 
         cat: "reviews", 
         desc: "Rumors from the supply chain suggest Apple is finally ready to launch lightweight AR glasses. Here is the leaked spec sheet.", 
@@ -374,7 +407,7 @@ const articles = [
         img: "https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b" 
     },
     { 
-    id: 9,
+    id: 12,
         title: "Tesla 'Model 2' Spotted? The $25k EV Rumors Heat Up", 
         cat: "reviews", 
         desc: "Leaked photos from Texas Gigafactory suggest a new compact Tesla is in pre-production. Is this the long-awaited affordable EV?", 
@@ -385,7 +418,7 @@ const articles = [
      img: "https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
     },
     { 
-    id: 8,
+    id: 13,
         title: "Nintendo Switch 2 Pro: The Latest Performance Leaks", 
         cat: "reviews", 
         desc: "Developers are reportedly receiving dev kits for a more powerful Nintendo console. Here’s what the rumors say about 4K docked mode.", 
@@ -396,7 +429,7 @@ const articles = [
         img: "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe" 
     },
     { 
-    id: 7,
+    id: 14,
         title: "Galaxy Z Fold 8 Leaks: Is Samsung Planning a 'Triple-Fold'?", 
         cat: "reviews", 
         desc: "Patents filed in the US suggest a major redesign for Samsung's foldable line. Rumors point to a massive 10-inch unfolding display.", 
@@ -408,7 +441,7 @@ const articles = [
 
     },
     { 
-    id: 6,
+    id: 15,
         title: "Sony 'Project Trinity' Rumors: PS5 Pro or PS6 Early Concept?", 
         cat: "reviews", 
         desc: "Internal documents leaked from Sony reveal a mysterious project focused on path-tracing at 60fps. What does this mean for US gamers?", 
@@ -419,7 +452,7 @@ const articles = [
         img: "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3" 
     },
     { 
-    id: 5,
+    id: 16,
         title: "Amazon's New 'Astro 2' Robot Leaks: More Than Just a Camera", 
         cat: "reviews", 
         desc: "Rumors suggest Amazon is integrating its next-gen LLM into the Astro home robot, giving it 'human-like' reasoning capabilities.", 
@@ -431,7 +464,7 @@ const articles = [
     },
     { 
     
-    id: 4,
+    id: 17,
         title: "Meta 'Ventura' Leaks: A Budget-Friendly Quest on the Horizon?", 
         cat: "reviews", 
         desc: "Following the success of Quest 3, rumors suggest Meta is working on a 'Lite' version for the US education and enterprise sectors.", 
@@ -442,7 +475,7 @@ const articles = [
        img: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=80&w=1000&auto=format&fit=crop"
     },
     { 
-    id: 3,
+    id: 18,
         title: "Google Pixel 11 Pro Leaks: The 'Under-Display' Camera Breakthrough", 
         cat: "reviews", 
         desc: "Supply chain rumors from Asia suggest Google has perfected the under-display selfie camera. Is this the first truly 'all-screen' Pixel?", 
@@ -453,7 +486,7 @@ const articles = [
         img: "https://images.unsplash.com/photo-1598327105666-5b89351aff97" 
     },
     { 
-    id: 2,
+    id: 19,
         title: "Starlink Mini Rumors: High-Speed Internet in Your Backpack?", 
         cat: "reviews", 
         desc: "Leaked FCC filings reveal a smaller Starlink dish designed for nomadic use across the United States. Here is what we know.", 
@@ -464,7 +497,7 @@ const articles = [
         img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa" 
     },
     { 
-    id: 1,
+    id: 20,
         title: "Dyson 'Zone 2' Leaks: A More Subtle Approach to Pure Air", 
         cat: "reviews", 
         desc: "After the controversial first version, rumors suggest Dyson is redesigning its air-purifying headphones to be more discrete.", 
@@ -484,6 +517,7 @@ const articles = [
 
 
 function showCategory(category) {
+  window.scrollTo({top: 0, behavior: 'smooth'});
     const container = document.getElementById('articles-container');
     container.innerHTML = ""; 
 
@@ -492,12 +526,29 @@ function showCategory(category) {
     } else if (category === 'contact') {
         container.innerHTML = `<div class="widget" style="padding:40px;"><h1>Contact Us</h1><p>Email: contact@protech.com</p></div>`;
     } else if (category === 'home') {
-        // 1. قسم الاستقبال (Hero)
+        // 1. قسم الاستقبال (Hero) - المطور
         container.innerHTML += `
-            <div style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; padding: 100px 20px; border-radius: 20px; text-align: center; margin-bottom: 40px; border: 1px solid var(--border-color);">
-                <h1 style="font-size: 3rem; font-family: 'Space Grotesk';">Welcome to PRO TECH</h1>
-                <p style="font-size: 1.2rem; color: #cbd5e0;">Exploring the digital frontier.</p>
+            <div style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; padding: 120px 20px; border-radius: 24px; text-align: center; margin-bottom: 40px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+                <span style="background: var(--accent-blue); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold;">Evolution of Tech</span>
+                <h1 style="font-size: clamp(2rem, 5vw, 3.5rem); font-family: 'Space Grotesk'; margin: 20px 0; background: linear-gradient(to right, #fff, #007aff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700;">ProTech: The Future, Decoded.</h1>
+                <p style="font-size: 1.2rem; color: #a0aec0; max-width: 600px; margin: 0 auto 30px auto; line-height: 1.5;">Deep dives into AI, Gadgets, and the digital frontier. Stay ahead of the curve.</p>
+                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                     <button onclick="showCategory('trends')" style="background: var(--accent-blue); color: white; border: none; padding: 12px 30px; border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 15px var(--accent-glow);">Explore Trends</button>
+<button onclick="const el = document.querySelectorAll('h2')[1]; const offset = 160; window.scrollTo({ top: el.offsetTop - offset, behavior: 'smooth' });" style="background: rgba(255,255,255,0.05); color: white; border: 1px solid #334155; padding: 12px 30px; border-radius: 8px; font-weight: bold; cursor: pointer; backdrop-filter: blur(5px);">Latest Reviews</button>
+
+<div style="margin-top: 30px; display: flex; justify-content: center; width: 100%;">
+    <div style="position: relative; width: 100%; max-width: 500px; box-sizing: border-box;">
+        <input type="text" id="searchInput" onkeyup="liveSearch()" placeholder="Search articles (e.g. iPhone, AI)..." 
+               style="width: 100%; padding: 15px 20px; border-radius: 30px; border: 1px solid #334155; background: rgba(15, 23, 42, 0.8); color: white; outline: none; font-size: 1rem; backdrop-filter: blur(10px); box-sizing: border-box;">
+        
+        <div id="searchResults" style="position: absolute; width: 100%; background: #12141c; border-radius: 12px; margin-top: 10px; z-index: 2000; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-align: left; max-height: 300px; overflow-y: auto; box-sizing: border-box;"></div>
+    </div>
+</div>
+
+
+                </div>
             </div>`;
+
 
         // 2. عرض الأقسام (Trends & Reviews)
         ['trends', 'reviews'].forEach((catName) => {
@@ -567,143 +618,13 @@ window.onload = () => showCategory('home');
 
 
 
-function showFullArticle(index) {
-    const article = articles[index];
-    if (!article) return; 
+/*12345678*/
 
-    const container = document.getElementById('articles-container');
-    window.scrollTo({top: 0, behavior: 'smooth'}); 
-    
-    // هذا السطر هو السر في ظهور المقال وتحديث الرابط
-    const newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?id=' + article.id;
-    window.history.pushState({path:newurl},'',newurl);
-
-    container.innerHTML = `
-        <article class="widget" style="padding: 0; overflow: hidden; border: none; background: transparent;">
-            <div style="width:100%; height:90px; background:#12141c; border:1px dashed #333; margin-bottom:20px; display:flex; align-items:center; justify-content:center; border-radius:8px;">
-                <span style="color:#444;">[ TOP ARTICLE AD ]</span>
-            </div>
-            
-            <img src="${article.img}" style="width: 100%; max-height: 450px; object-fit: cover; border-radius: 15px; margin-bottom: 30px;">
-            
-            <div style="padding: 0 10px;">
-                <span style="color:var(--accent-blue); font-weight:700; letter-spacing: 2px;">${article.cat.toUpperCase()}</span>
-                <h1 style="font-size: 2.8rem; line-height: 1.2; margin: 15px 0 25px 0; font-family: 'Space Grotesk', sans-serif;">${article.title}</h1>
-                
-                <div style="font-size: 1.25rem; line-height: 1.9; color: var(--text-secondary); text-align: left;">
-                    ${article.content || article.desc}
-                </div>
-
-                <div style="width:100%; height:250px; background:#12141c; border:1px dashed #333; margin:40px 0; display:flex; align-items:center; justify-content:center; border-radius:12px;">
-                    <span style="color:#444;">[ BOTTOM ARTICLE AD ]</span>
-                </div>
-                
-                <button onclick="showCategory('home')" style="margin-top: 50px; background: #1e293b; color: white; border: 1px solid var(--border-color); padding: 12px 25px; border-radius: 8px; cursor: pointer; font-weight: bold;">
-                    ← Back to Feed
-                </button>
-            </div>
-        </article>
-    `;
-}
 
 
 </script>
 <script>
-(function() {
-    // 1. إضافة تنسيقات إضافية للصفحات الاحترافية
-    const style = document.createElement('style');
-    style.innerHTML = `
-        .pro-page { animation: fadeIn 0.5s ease; color: white; line-height: 1.6; }
-        .pro-header { background: linear-gradient(135deg, #3b82f6, #1d4ed8); padding: 40px 20px; text-align: center; border-radius: 15px; margin-bottom: 30px; }
-        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .input-field { width: 100%; padding: 12px; margin-bottom: 15px; background: #1e293b; border: 1px solid #334155; color: white; border-radius: 8px; }
-        .submit-btn { background: #3b82f6; color: white; border: none; padding: 12px 25px; border-radius: 8px; font-weight: bold; cursor: pointer; width: 100%; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-    `;
-    document.head.appendChild(style);
 
-    // 2. تحديث وظيفة التنقل لتشغيل الصفحات الجديدة
-    const originalShowCategory = window.showCategory;
-    window.showCategory = function(category) {
-        const container = document.getElementById('articles-container');
-        
-        if (category === 'about') {
-            container.innerHTML = `
-                <div class="pro-page">
-                    <div class="pro-header">
-                        <h1>About PRO TECH</h1>
-                        <p>Leading the Future of Tech News since 2026</p>
-                    </div>
-                    <div class="widget">
-                        <h3>Our Story</h3>
-                        <p>ProTech was founded on the principle of speed and accuracy. We deliver the latest updates in hardware, AI, and mobile technology before anyone else.</p>
-                        <div class="contact-grid" style="margin-top:20px;">
-                            <div style="background:#0f172a; padding:15px; border-radius:10px;">
-                                <h4 style="color:#3b82f6;">Accuracy</h4>
-                                <p style="font-size:0.85rem;">Verified sources for every leak we publish.</p>
-                            </div>
-                            <div style="background:#0f172a; padding:15px; border-radius:10px;">
-                                <h4 style="color:#3b82f6;">Innovation</h4>
-                                <p style="font-size:0.85rem;">Using AI to track the latest tech movements.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>`;
-        } 
-        else if (category === 'contact') {
-            container.innerHTML = `
-                <div class="pro-page">
-                    <div class="pro-header" style="background: linear-gradient(135deg, #0f172a, #1e293b);">
-                        <h1>Contact Us</h1>
-                        <p>We are here to answer your technical inquiries</p>
-                    </div>
-                    <div class="contact-grid">
-                        <div class="widget">
-                            <h3 style="color:#3b82f6;">Info</h3>
-                            <p>📧 Email: support@protech.com</p>
-                            <p>📍 Location: Silicon Valley, CA</p>
-                            <p>🕒 Hours: 24/7 Tech Support</p>
-                        </div>
-                        <div class="widget">
-                            <form onsubmit="event.preventDefault(); alert('Thank you! We will reply soon.');">
-                                <input type="text" class="input-field" placeholder="Full Name" required>
-                                <input type="email" class="input-field" placeholder="Email Address" required>
-                                <textarea class="input-field" rows="4" placeholder="Your Message"></textarea>
-                                <button type="submit" class="submit-btn">Send Message</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>`;
-        }
-        else {
-            // تشغيل الكود الأصلي للأقسام الأخرى
-            originalShowCategory(category);
-            
-            // إضافة رابط سياسة الخصوصية في نهاية الصفحة الرئيسية
-            if(category === 'home' && !document.getElementById('p-link')) {
-                const footer = document.createElement('div');
-                footer.id = 'p-link';
-                footer.style = "text-align:center; padding:20px;";
-                footer.innerHTML = `<button onclick="showPrivacy()" style="background:none; border:none; color:#64748b; cursor:pointer; text-decoration:underline;">Privacy Policy</button>`;
-                container.appendChild(footer);
-            }
-        }
-    };
-
-    // 3. وظيفة عرض سياسة الخصوصية
-    window.showPrivacy = function() {
-        const modal = document.createElement('div');
-        modal.style = "position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); z-index:99999; display:flex; align-items:center; justify-content:center; padding:20px;";
-        modal.innerHTML = `
-            <div class="widget" style="max-width:500px; max-height:80vh; overflow-y:auto; border:1px solid #3b82f6;">
-                <h2 style="color:#3b82f6;">Privacy Policy</h2>
-                <p style="font-size:0.9rem; color:#cbd5e1;">This policy explains how we handle your data. At ProTech, we use cookies to improve your experience and show relevant tech ads through Google AdSense.</p>
-                <button onclick="this.parentElement.parentElement.remove()" class="submit-btn" style="margin-top:20px;">I Understand</button>
-            </div>
-        `;
-        document.body.appendChild(modal);
-    };
-})();
 </script>
 <script>
 (function() {
@@ -757,54 +678,7 @@ function showFullArticle(index) {
 })();
 </script>
 <script>
-(function() {
-    // 1. التنسيق
-    const tickerStyle = document.createElement('style');
-    tickerStyle.innerHTML = `
-        .ticker-wrap {
-            width: 100%; overflow: hidden; background: #0f172a; 
-            border-bottom: 2px solid var(--accent-blue); padding: 12px 0;
-            display: flex; align-items: center; position: sticky; top: 70px; z-index: 999;
-        }
-        .ticker-label {
-            background: var(--accent-blue); color: white; padding: 5px 20px;
-            font-weight: bold; font-size: 0.85rem; z-index: 10; text-transform: uppercase;
-            margin-right: 10px;
-        }
-        .ticker-content {
-            display: inline-block; white-space: nowrap; 
-            animation: ticker-move 40s linear infinite;
-            color: #cbd5e1; font-size: 1rem;
-        }
-        .ticker-item { display: inline-block; padding: 0 40px; }
-        @keyframes ticker-move {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-    `;
-    document.head.appendChild(tickerStyle);
 
-    // 2. تجميع العناوين (استخدمت طريقة الربط الآمنة لتجنب الخطأ)
-    let singleSet = "";
-    articles.slice(0, 8).forEach(article => {
-        singleSet += ' <span style="color:var(--accent-blue)">⚡</span> ' + article.title + ' &nbsp;&nbsp;&nbsp;&nbsp; ';
-    });
-
-    const tickerContainer = document.createElement('div');
-    tickerContainer.className = 'ticker-wrap';
-    
-    // تم إصلاح دمج النصوص هنا لحل خطأ SyntaxError
-    tickerContainer.innerHTML = '<div class="ticker-label">Breaking</div>' +
-                                '<div class="ticker-content">' + singleSet + singleSet + '</div>';
-
-    // 3. التثبيت
-    const navBar = document.querySelector('nav');
-    if (navBar) {
-        navBar.after(tickerContainer);
-    } else {
-        document.body.prepend(tickerContainer);
-    }
-})();
 
 
 
@@ -819,39 +693,114 @@ function checkUrlParams() {
     }
 }
 
-const originalShowFullArticle = window.showFullArticle;
-window.showFullArticle = function(index) {
-    if (typeof originalShowFullArticle === 'function') {
-        originalShowFullArticle(index);
-    }
+function showFullArticle(index, pushToHistory = true) {
     const article = articles[index];
-    if (article) {
-        // تحديث الرابط في المتصفح
+    if (!article) return; 
+
+    const container = document.getElementById('articles-container');
+    window.scrollTo({top: 0, behavior: 'smooth'}); 
+    
+    if (pushToHistory) {
         const newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?id=' + article.id;
-        window.history.pushState({path:newurl},'',newurl);
-
-        // --- هذه هي اللمسة السحرية التي تجعل جوجل يحبك ---
-        document.title = article.title + " | ProTech"; // يغير العنوان تلقائياً
-        
-        let metaDescription = document.querySelector('meta[name="description"]');
-        if (!metaDescription) {
-            metaDescription = document.createElement('meta');
-            metaDescription.name = "description";
-            document.head.appendChild(metaDescription);
-        }
-        metaDescription.content = article.excerpt; // يضع الوصف تلقائياً
-        
-        window.scrollTo(0, 0); // يصعد بالصفحة للأعلى
-        // -----------------------------------------------
-
-        if (typeof gtag === 'function') {
-            gtag('config', 'G-ZZ3D01HRPG', {'page_path': '/?id=' + article.id});
-        }
+        window.history.pushState({page: 'article', index: index}, '', newurl);
     }
-};
+
+    document.title = article.title + " | ProTech";
+    
+    container.innerHTML = `
+        <article class="widget" style="padding: 0; overflow: hidden; border: none; background: transparent;">
+            <img src="${article.img}" style="width: 100%; max-height: 450px; object-fit: cover; border-radius: 15px; margin-bottom: 30px;">
+            <div style="padding: 0 10px;">
+                <span style="color:var(--accent-blue); font-weight:700; letter-spacing: 2px;">${article.cat.toUpperCase()}</span>
+                <h1 style="font-size: 2.5rem; line-height: 1.2; margin: 15px 0 25px 0;">${article.title}</h1>
+                <div style="font-size: 1.2rem; line-height: 1.8; color: var(--text-secondary);">
+                    ${article.content || article.desc}
+                </div>
+                <button onclick="window.history.back()" style="margin-top: 50px; background: #1e293b; color: white; border: 1px solid var(--border-color); padding: 12px 25px; border-radius: 8px; cursor: pointer; font-weight: bold;">
+                    ← Back to Feed
+                </button>
+            </div>
+        </article>
+    `;
+
+    if (typeof gtag === 'function') {
+        gtag('config', 'G-ZZ3D01HRPG', {'page_path': '/?id=' + article.id});
+    }
+}
+
 
 
 window.addEventListener('load', checkUrlParams);
+// دالة تشغيل الأزرار السريعة
+function setQuickSearch(term) {
+    showCategory('home');
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+        searchInput.value = term;
+        liveSearch(); // تشغيل البحث فوراً
+        searchInput.focus(); // وضع المؤشر داخل الصندوق
+        window.scrollTo({top: searchInput.offsetTop - 100, behavior: 'smooth'});
+    }
+}
+
+
+function liveSearch() {
+    const query = document.getElementById('searchInput').value.toLowerCase();
+    const container = document.getElementById('articles-container');
+    const resultsDropdown = document.getElementById('searchResults');
+
+    // إخفاء القائمة المنسدلة الصغيرة لأننا سنعرض النتائج في الصفحة الكبيرة
+    resultsDropdown.innerHTML = '';
+
+    if (query.length < 2) {
+        // إذا مسح المستخدم البحث، نعود للصفحة الرئيسية
+        if (query.length === 0) showCategory('home');
+        return;
+    }
+
+    const matched = articles.filter(a => 
+        a.title.toLowerCase().includes(query) || 
+        a.desc.toLowerCase().includes(query)
+    );
+
+    // تحديث عنوان الصفحة ومحتواها بالنتائج
+    container.innerHTML = `
+        <div style="margin-bottom: 30px;">
+            <h2 style="color: var(--accent-blue);">Search Results for: "${query}"</h2>
+            <p style="color: var(--text-secondary);">${matched.length} articles found</p>
+        </div>
+        <div id="live-results-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;"></div>
+    `;
+
+    const grid = document.getElementById('live-results-grid');
+
+    if (matched.length === 0) {
+        grid.innerHTML = `<div class="widget" style="grid-column: 1/-1; text-align: center; padding: 50px;">
+            <p style="font-size: 1.2rem; color: #64748b;">No articles found matching your search.</p>
+        </div>`;
+    } else {
+        matched.forEach(article => {
+            const globalIdx = articles.findIndex(a => a.id === article.id);
+            grid.innerHTML += `
+                <div class="widget" style="padding: 0; overflow: hidden; cursor: pointer; transition: 0.3s;" onclick="showFullArticle(${globalIdx})">
+                    <div style="width: 100%; height: 180px; background-image: url('${article.img}'); background-size: cover; background-position: center;"></div>
+                    <div style="padding: 15px;">
+                        <span style="color:var(--accent-blue); font-size: 0.8rem; font-weight: bold;">${article.cat.toUpperCase()}</span>
+                        <h3 style="font-size: 1rem; margin: 10px 0;">${article.title}</h3>
+                    </div>
+                </div>`;
+        });
+    }
+}
+
+window.onpopstate = function(event) {
+    if (event.state && event.state.index !== undefined) {
+        showFullArticle(event.state.index, false); // نضع false لمنع تكرار السجل
+    } else {
+        showCategory('home');
+    }
+};
+
 </script>
 </body>
 </html>
