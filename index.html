@@ -1,803 +1,1116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ3D01HRPG"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-ZZ3D01HRPG');
-    </script>
-    <meta name="google-site-verification" content="rMjJnMz7ZZitF1NaLmYgiUyfNEbe06qhl11Lq_6iUBs" />
-
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProTech | Exploring the Digital Frontier</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --bg-body: #0a0b10;
-            --bg-card: #12141c;
-            --bg-header: #0d0f16;
-            --accent-blue: #007aff;
-            --accent-glow: rgba(0, 122, 255, 0.3);
-            --text-primary: #ffffff;
-            --text-secondary: #94a3b8;
-            --border-color: #1e293b;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-body);
-            color: var(--text-primary);
-            margin: 0; padding: 0;
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: var(--bg-header);
-            padding: 40px 20px;
-            text-align: center;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .logo {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 3rem; margin: 0;
-            letter-spacing: -2px; text-transform: uppercase;
-        }
-
-        .logo span { color: var(--accent-blue); text-shadow: 0 0 20px var(--accent-glow); }
-
-        nav {
-            background: rgba(13, 15, 22, 0.9);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-color);
-            position: sticky; top: 0; z-index: 1000;
-            display: flex; 
-            justify-content: space-between; /* هذا يوزع اللوغو يميناً والقائمة يساراً */
-            align-items: center; 
-            min-height: 70px; 
-            padding: 0 40px; /* زيادة المساحة الجانبية قليلاً */
-        }
-
-
-        .menu-toggle {
-            display: flex; flex-direction: column;
-            justify-content: space-around;
-            width: 30px; height: 24px; cursor: pointer;
-        }
-
-        .bar {
-            width: 30px; height: 3px;
-            background-color: #ffffff !important;
-            border-radius: 2px; transition: 0.3s;
-        }
-
-        .nav-list {
-            display: flex; list-style: none; margin: 0; padding: 0;
-        }
-
-        .nav-list li a {
-            display: block; padding: 20px 25px;
-            text-decoration: none; color: white;
-            font-size: 0.85rem; text-transform: uppercase;
-            transition: 0.3s; cursor: pointer;
-        }
-
-        @media (max-width: 900px) {
+    <head>
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-ZZ3D01HRPG"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-ZZ3D01HRPG");
+        </script>
+        <meta
+            name="google-site-verification"
+            content="rMjJnMz7ZZitF1NaLmYgiUyfNEbe06qhl11Lq_6iUBs"
+        />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ProTech | Exploring the Digital Frontier</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            :root {
+                --bg-body: #0a0b10;
+                --bg-card: #12141c;
+                --bg-header: #0d0f16;
+                --accent-blue: #007aff;
+                --accent-glow: rgba(0, 122, 255, 0.3);
+                --text-primary: #ffffff;
+                --text-secondary: #94a3b8;
+                --border-color: #1e293b;
+            }
+            body {
+                font-family: "Inter", sans-serif;
+                background-color: var(--bg-body);
+                color: var(--text-primary);
+                margin: 0;
+                padding: 0;
+                line-height: 1.6;
+            }
+            header {
+                background-color: var(--bg-header);
+                padding: 40px 20px;
+                text-align: center;
+                border-bottom: 1px solid var(--border-color);
+            }
+            .logo {
+                font-family: "Space Grotesk", sans-serif;
+                font-size: 3rem;
+                margin: 0;
+                letter-spacing: -2px;
+                text-transform: uppercase;
+            }
+            .logo span {
+                color: var(--accent-blue);
+                text-shadow: 0 0 20px var(--accent-glow);
+            }
+            nav {
+                background: rgba(13, 15, 22, 0.9);
+                backdrop-filter: blur(12px);
+                border-bottom: 1px solid var(--border-color);
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                min-height: 70px;
+                padding: 0 40px;
+            }
+            .menu-toggle {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                width: 30px;
+                height: 24px;
+                cursor: pointer;
+            }
+            .bar {
+                width: 30px;
+                height: 3px;
+                background-color: #ffffff !important;
+                border-radius: 2px;
+                transition: 0.3s;
+            }
             .nav-list {
-                display: none; flex-direction: column;
-                position: absolute; top: 70px; left: 0;
-                width: 100%; background: var(--bg-header);
+                display: flex;
+                list-style: none;
+                margin: 0;
+                padding: 0;
             }
-            .nav-list.active { display: flex; }
-        }
-
-        @media (min-width: 901px) {
-            .menu-toggle { display: none; }
-        }
-
-        .wrapper { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
-        
-        .widget {
-            background-color: var(--bg-card);
-            padding: 25px; border-radius: 12px;
-            border: 1px solid var(--border-color);
-            margin-bottom: 30px;
-            animation: fadeInUp 0.6s ease forwards;
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .btn-action {
-            width: 100%; padding: 14px; background: var(--accent-blue);
-            color: white; border: none; border-radius: 8px;
-            font-weight: 700; cursor: pointer; transition: 0.3s;
-        }
-
-        .btn-action:hover { box-shadow: 0 0 20px var(--accent-glow); transform: translateY(-2px); }
-  
-  /* تأثير النبض للصور أثناء التحميل */
-img {
-    background: linear-gradient(90deg, #1a1d29 25%, #24283b 50%, #1a1d29 75%);
-    background-size: 200% 100%;
-    animation: loading-pulse 1.5s infinite;
-}
-
-@keyframes loading-pulse {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
-}
-/* أضف هذا في قسم الـ style */
-.widget img {
-    width: 100%;
-    height: auto;
-    display: block;
-    background-color: #1a1d29; /* لون احتياطي في حال تأخر الصورة */
-}
-img {
-    background: #12141c url('https://via.placeholder.com/400x250/12141c/007aff?text=PRO+TECH') no-repeat center;
-    background-size: contain;
-    min-height: 200px;
-    width: 100%;
-    object-fit: cover;
-}
-.widget img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    background-color: #1a1d2c; /* لون داكن بسيط يظهر أثناء التحميل */
-    min-height: 200px;
-    border-radius: 12px 12px 0 0; /* لجعل الزوايا العلوية مستديرة */
-}
-/* تنسيق شريط الكلمات الجديد */
-.quick-tags {
-    background: #0d0f16;
-    padding: 12px 20px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    border-bottom: 1px solid #1e293b;
-    overflow-x: auto; /* يسمح بالتمرير لليمين واليسار في الموبايل */
-    white-space: nowrap;
-}
-
-.tag-label { 
-    color: var(--accent-blue); 
-    font-weight: bold; 
-    font-size: 0.8rem; 
-    text-transform: uppercase;
-}
-
-.tag-item {
-    background: #1e293b; 
-    color: #cbd5e1; 
-    padding: 6px 15px;
-    border-radius: 20px; 
-    font-size: 0.85rem; 
-    cursor: pointer; 
-    transition: 0.3s;
-}
-
-.tag-item:hover { 
-    background: var(--accent-blue); 
-    color: white; 
-}
-#searchInput:focus {
-    border-color: var(--accent-blue);
-    box-shadow: 0 0 15px var(--accent-glow);
-    background: rgba(15, 23, 42, 1);
-}
-
-/* حركة بسيطة لنتائج البحث */
-#live-results-grid .widget:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent-blue);
-}
-
-
-    </style>
-</head>
-<body>
-  
-<nav>
-    <a onclick="showCategory('home')" style="cursor:pointer; text-decoration:none;">
-        <h2 class="logo" style="font-size: 1.5rem; margin: 0;">PRO<span>TECH</span></h2>
-    </a>
-
-    <div class="menu-toggle" id="mobile-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </div>
-
-    <ul class="nav-list">
-        <li><a onclick="showCategory('home')">Home</a></li>
-        <li><a onclick="showCategory('trends')">Trends</a></li>
-        <li><a onclick="showCategory('reviews')">Reviews</a></li>
-        <li><a onclick="showCategory('about')">About Us</a></li>
-        <li><a onclick="showCategory('contact')">Contact</a></li>
-    </ul>
-</nav>
-<div class="quick-tags">
-    <span class="tag-label">Hot:</span>
-    <div class="tag-item" onclick="setQuickSearch('iPhone 18')">iPhone 18</div>
-    <div class="tag-item" onclick="setQuickSearch('GTA VI')">GTA VI</div>
-    <div class="tag-item" onclick="setQuickSearch('Galaxy S26')">Galaxy S26</div>
-    <div class="tag-item" onclick="setQuickSearch('PS6')">PS6</div>
-    <div class="tag-item" onclick="setQuickSearch('Apple')">Apple</div>
-    <div class="tag-item" onclick="setQuickSearch('Samsung')">Samsung</div>
-</div>
-
-
-<div class="wrapper">
-    <main id="articles-container"></main>
-</div>
-
-<script>
-const articles = [
-
-{ 
-    id: 23,
-    title: "GTA VI: The 2026 Reality Check – Leaks, Delays & Development Woes", 
-    cat: "trends", 
-    desc: "Everything we know about Rockstar's biggest challenge yet: Why GTA 6 moved to November 2026 and the latest leaks from the Edinburgh HQ.", 
-    content: `
-        <p>As we enter 2026, the anticipation for <strong>Grand Theft Auto VI</strong> has reached a fever pitch, but not without its share of controversies and technical hurdles. Recent updates from Rockstar Games and parent company Take-Two Interactive have confirmed a shift in the timeline.</p>
-        
-        <h3>The New Release Window</h3>
-        <p>While fans were hopeful for a 2025 release, Rockstar has officially adjusted the launch date to <strong>November 19, 2026</strong>. This delay is reportedly to ensure the "level of polish" fans expect, though industry insiders suggest internal development milestones are still being met with difficulty.</p>
-        
-        <h3>Technical Leaks & Multiplayer</h3>
-        <p>Recent court documents from a lawsuit involving former employees have revealed a key detail: <strong>GTA VI Online</strong> is currently being tested with 32-player sessions. This suggests a familiar structure to GTA Online but with significantly enhanced density and AI interactions within the state of Leonida.</p>
-        
-        <h3>Development Challenges</h3>
-        <p>The road hasn't been smooth. In January 2026, a minor incident at Rockstar North's Edinburgh HQ involving a boiler malfunction caused a brief scare. More significantly, the studio continues to face pressure regarding its 'return-to-office' mandate and ongoing unionization discussions among QA testers, which some analysts fear could lead to further "internal friction" before the late 2026 launch.</p>
-        
-        <p>For PC players, the news remains bittersweet: no official PC release date has been set, with most experts predicting a 2027 or 2028 arrival, following Rockstar's traditional console-first strategy.</p>
-    `,
-    img: "https://images.unsplash.com/photo-1542751371-adc38448a05e" 
-},
-
-
-{ 
-    id: 21,
-    title: "iPhone 18 Pro Max: Exclusive US Price Leaks", 
-    cat: "trends", 
-    desc: "Breaking: Supply chain sources in Cupertino reveal the starting prices for the 2026 iPhone lineup. Is the $2,000 smartphone finally here?", 
-    content: `
-        <p>The tech world in the United States is buzzing today following a massive leak regarding the <strong>iPhone 18 Pro Max</strong>. Documents from Apple's logistics partners suggest a significant price shift for the 2026 models.</p>
-        <h3>The Expected US Price List</h3>
-        <p>Analysts in New York predict that the base iPhone 18 will remain at $899, but the Pro Max model with the new 2nm 'A20' chip could start at <strong>$1,399</strong>, reaching over $2,000 for the 2TB version.</p>
-        <p>For American consumers, this hike is justified by the rumored 'True-All-Screen' design and integrated satellite-AI features that will work anywhere in the US without a cellular signal.</p>
-    `,
-    img: "https://images.unsplash.com/photo-1616348436168-de43ad0db179" 
-},
-    { 
-    id: 1,
-        title: "The Federal AI Act of 2026: What US Small Businesses Need to Know", 
-        cat: "trends", 
-        desc: "Washington has finally passed the most comprehensive AI regulation in history. Here is how it impacts privacy and innovation for American entrepreneurs.", 
-        content: `
-            <p>The landscape of American innovation changed this week as the <strong>Federal AI Act of 2026</strong> was signed into law. This legislation aims to balance the rapid growth of generative AI with strict consumer privacy protections.</p>
-            <h3>Key Compliance Points</h3>
-            <p>For small business owners from New York to California, the act mandates full transparency. Any AI-generated content must be watermarked, and automated customer service bots must identify themselves as non-human.</p>
-            <p>While tech giants are lobbying for adjustments, the general US public sentiment is positive, with 70% of Americans supporting stricter data usage controls to prevent algorithmic bias.</p>
-        `,
-        img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1000&auto=format&fit=crop"
-    },
-    { 
-    id: 2,
-        title: "America's Shift to Micro-Grids: The End of Massive Power Outages?", 
-        cat: "trends", 
-        desc: "Following the recent winter storms, US cities are rapidly adopting decentralized micro-grids powered by AI and solar energy.", 
-        content: `
-            <p>Extreme weather events in 2025 have pushed the US energy infrastructure to its limit. Now, a massive trend is emerging: <strong>The Localized Micro-Grid</strong>.</p>
-            <h3>Energy Independence</h3>
-            <p>Communities in Texas and Florida are no longer relying solely on the aging national grid. By combining neighborhood-scale battery storage with AI-managed solar arrays, these towns remain powered even when the main grid fails.</p>
-            <p>Investors are pouring billions into 'Grid-Tech' startups, making it one of the most profitable sectors for US investors this year.</p>
-        `,
-        img: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e" 
-    },
-    { 
-    id: 3,
-        title: "The 'Privacy-First' Smartphone Era: Why Americans are Ditching Big Tech", 
-        cat: "trends", 
-        desc: "A new wave of 'Linux-based' and 'Encryption-heavy' phones is gaining traction among privacy-conscious US users in 2026.", 
-        content: `
-            <p>Data privacy has moved from a niche concern to a mainstream demand in the USA. Tired of targeted ads, a significant percentage of Gen Z users are switching to devices that offer hardware-level kill switches for cameras and mics.</p>
-            <p>Platforms like 'SovereignOS' are seeing record downloads in the US, signaling a shift away from the traditional duopoly of mobile operating systems. The trend is clear: Americans want to own their data again.</p>
-        `,
-        img: "https://images.unsplash.com/photo-1563986768609-322da13575f3" 
-    },
-    { 
-    id: 4,
-        title: "Remote Work 2.0: The Rise of 'Digital US Territories'", 
-        cat: "trends", 
-        desc: "As office mandates fail, American workers are moving to rural 'Tech Hubs'. Discover the top 10 US states attracting digital nomads this year.", 
-        content: `
-            <p>The predicted 'return to office' for 2026 has stalled. Instead, a new trend called <strong>Remote Work 2.0</strong> is revitalizing rural America. States like Wyoming and West Virginia are offering massive tax incentives for tech workers to relocate.</p>
-            <p>This internal migration is reshaping the US housing market and creating high-speed fiber-optic corridors in previously underserved areas.</p>
-        `,
-        img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f" 
-    },
-    { 
-    id: 5,
-        title: "The AI-Personalized Education Boom in US Public Schools", 
-        cat: "trends", 
-        desc: "Classrooms across America are implementing 'Personalized Learning Paths' powered by AI to bridge the post-pandemic learning gap.", 
-        content: `
-            <p>Education is undergoing its biggest transformation since the 19th century. In 2026, US school districts are deploying AI tutors that adapt to each student's specific pace and learning style.</p>
-            <p>Early data from pilot programs in Chicago and Atlanta show a 30% increase in math proficiency. This tech-driven approach is finally providing a solution to overcrowded classrooms and teacher shortages.</p>
-        `,
-        img: "https://images.unsplash.com/photo-1509062522246-3755977927d7" 
-    },
-    { 
-    id: 6,
-        title: "Sustainable Tech: Americans Demanding 'The Right to Repair'", 
-        cat: "trends", 
-        desc: "New legislation in 15 US states now mandates that electronics must be easily repairable by consumers. Is this the end of planned obsolescence?", 
-        content: `
-            <p>The 'Throwaway Culture' is dying in America. The <strong>Right to Repair</strong> movement has achieved major legal victories in 2026, forcing manufacturers to sell spare parts and repair manuals to the public.</p>
-            <p>This trend is fostering a new economy of local repair shops across the US and encouraging companies to design longer-lasting, more modular products.</p>
-        `,
-        img: "https://images.unsplash.com/photo-1581092160562-40aa08e78837" 
-    },
-    { 
-    id: 7,
-        title: "SpaceX Starlink 3.0: High-Speed Internet for Every US Airline", 
-        cat: "trends", 
-        desc: "By mid-2026, every major US airline will offer free, gigabit-speed satellite internet to passengers. The 'No-WiFi' flight is officially history.", 
-        content: `
-            <p>In-flight connectivity was once a luxury; now it's an American standard. SpaceX's Starlink 3.0 constellation is providing low-latency, high-speed internet to every corner of the US airspace.</p>
-            <p>Business travelers are the biggest winners, as 'Office in the Sky' becomes a literal reality, allowing for seamless video conferencing at 35,000 feet.</p>
-        `,
-        img: "https://images.unsplash.com/photo-1517976487492-5750f3195933" 
-    },
-    { 
-    id: 8,
-        title: "The Biotech Gold Rush: Personal Longevity Tech in the USA", 
-        cat: "trends", 
-        desc: "Americans are spending record amounts on 'Bio-Hacking' and AI-driven health monitoring. Is 100 the new 80?", 
-        content: `
-            <p>Health-tech is the new obsession in the US. From wearable glucose monitors to AI-analyzed blood tests, Americans are taking a proactive, data-driven approach to aging.</p>
-            <p>Startups in Boston and San Francisco are leading the world in 'Longevity Tech', attracting trillions in investment and changing how the US healthcare system operates.</p>
-        `,
-        img: "https://images.unsplash.com/photo-1530210124550-912dc1381cb8" 
-    },
-    { 
-    id: 9,
-        title: "Quantum Computing: The First Real-World US Applications", 
-        cat: "trends", 
-        desc: "US pharmaceutical companies are now using quantum processors to simulate drug interactions, cutting development time by 80%.", 
-        content: `
-            <p>We have moved past the theoretical. In 2026, quantum computing is solving real problems in America. The most significant impact is being felt in the medical field.</p>
-            <p>By simulating molecular structures at the quantum level, US labs are developing vaccines and treatments at a speed that was previously unimaginable.</p>
-        `,
-        img: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0" 
-    },
-    { 
-    id: 10,
-        title: "The Decentralized Finance (DeFi) Comeback in US Markets", 
-        cat: "trends", 
-        desc: "Regulated DeFi platforms are seeing a surge in US institutional investment, signaling a new era for digital assets.", 
-        content: `
-            <p>After the volatility of previous years, 2026 marks the 'Great Stabilization' of digital finance in the US. New, regulated frameworks have allowed major American banks to integrate blockchain technology into their daily operations.</p>
-            <p>This is providing faster, cheaper transaction methods for millions of US consumers, proving that the underlying technology is here to stay.</p>
-        `,
-        img: "https://images.unsplash.com/photo-1621761191319-c6fb62004040" 
-    },
-        { 
-        id: 11,
-        title: "Apple Glasses 'Air' Leaks: Everything We Know So Far", 
-        cat: "reviews", 
-        desc: "Rumors from the supply chain suggest Apple is finally ready to launch lightweight AR glasses. Here is the leaked spec sheet.", 
-        content: `
-            <p>The tech world is buzzing with <strong>leaks</strong> regarding Apple's next big move: The 'Air' Glasses. Unlike the Vision Pro, these are rumored to look like standard spectacles while offering heads-up navigation.</p>
-            <h3>Leaked Specifications</h3>
-            <p>Industry insiders suggest a micro-LED display with a 120Hz refresh rate. The most talked-about rumor in US tech forums is the 'tetherless' design, relying on a nearby iPhone for processing power to keep the frame lightweight.</p>
-        `,
-        img: "https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b" 
-    },
-    { 
-    id: 12,
-        title: "Tesla 'Model 2' Spotted? The $25k EV Rumors Heat Up", 
-        cat: "reviews", 
-        desc: "Leaked photos from Texas Gigafactory suggest a new compact Tesla is in pre-production. Is this the long-awaited affordable EV?", 
-        content: `
-            <p>Recent <strong>spy shots</strong> circulating on X (formerly Twitter) show what appears to be a smaller, hatchback-style Tesla. Dubbed the 'Model 2' by the US media, this vehicle is expected to target a $25,000 price point.</p>
-            <p>Leaks suggest a new structural battery pack that could offer up to 250 miles of range, making it the most disruptive vehicle in the US electric market since the Model 3.</p>
-        `,
-     img: "https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-    },
-    { 
-    id: 13,
-        title: "Nintendo Switch 2 Pro: The Latest Performance Leaks", 
-        cat: "reviews", 
-        desc: "Developers are reportedly receiving dev kits for a more powerful Nintendo console. Here’s what the rumors say about 4K docked mode.", 
-        content: `
-            <p>The rumor mill is in overdrive regarding the <strong>Switch 2 Pro</strong>. Reliable leakers in the gaming industry point toward an Nvidia T239 chip, which would support DLSS 3.1 for high-fidelity 4K gaming on US living room TVs.</p>
-            <p>While Nintendo remains silent, the leaked backward compatibility feature is what has American gamers most excited, allowing them to play their current library on the new hardware.</p>
-        `,
-        img: "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe" 
-    },
-    { 
-    id: 14,
-        title: "Galaxy Z Fold 8 Leaks: Is Samsung Planning a 'Triple-Fold'?", 
-        cat: "reviews", 
-        desc: "Patents filed in the US suggest a major redesign for Samsung's foldable line. Rumors point to a massive 10-inch unfolding display.", 
-        content: `
-            <p>Tech analysts in New York are analyzing new <strong>patent filings</strong> that suggest Samsung is moving toward a 'Z-shaped' triple-fold design. This would effectively turn a smartphone into a full-sized tablet.</p>
-            <p>Early leaks suggest an improved 'Ironflex' hinge that is significantly more durable than previous generations, addressing one of the biggest complaints from US foldable users.</p>
-        `,
-  img: "https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=800"
-
-    },
-    { 
-    id: 15,
-        title: "Sony 'Project Trinity' Rumors: PS5 Pro or PS6 Early Concept?", 
-        cat: "reviews", 
-        desc: "Internal documents leaked from Sony reveal a mysterious project focused on path-tracing at 60fps. What does this mean for US gamers?", 
-        content: `
-            <p>A massive <strong>data leak</strong> has shed light on 'Project Trinity,' Sony's next leap in hardware. The focus appears to be on AI-driven upscaling, similar to Nvidia's DLSS, to achieve native 4K performance at high frame rates.</p>
-            <p>Speculation among American tech reviewers suggests a late 2026 launch window, positioning it against the next generation of Xbox hardware.</p>
-        `,
-        img: "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3" 
-    },
-    { 
-    id: 16,
-        title: "Amazon's New 'Astro 2' Robot Leaks: More Than Just a Camera", 
-        cat: "reviews", 
-        desc: "Rumors suggest Amazon is integrating its next-gen LLM into the Astro home robot, giving it 'human-like' reasoning capabilities.", 
-        content: `
-            <p>Leaked internal test results for the <strong>Astro 2</strong> suggest a robot that can actually understand complex commands like 'Find my keys' or 'Watch the stove.' American smart-home enthusiasts are eagerly awaiting an official announcement.</p>
-            <p>The leaked price point remains high, but the integration with the broader Ring security ecosystem makes it a highly anticipated product in the US security market.</p>
-        `,
-        img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e" 
-    },
-    { 
-    
-    id: 17,
-        title: "Meta 'Ventura' Leaks: A Budget-Friendly Quest on the Horizon?", 
-        cat: "reviews", 
-        desc: "Following the success of Quest 3, rumors suggest Meta is working on a 'Lite' version for the US education and enterprise sectors.", 
-        content: `
-            <p>Code discovered in the latest Meta OS update points to a device codenamed <strong>'Ventura'</strong>. Analysts believe this will be a $299 VR headset designed to make the metaverse more accessible to average American families.</p>
-            <p>To reach this price point, leaks suggest Meta might use Fresnel lenses instead of pancake optics, but with the same powerful processor to ensure high performance.</p>
-        `,
-       img: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=80&w=1000&auto=format&fit=crop"
-    },
-    { 
-    id: 18,
-        title: "Google Pixel 11 Pro Leaks: The 'Under-Display' Camera Breakthrough", 
-        cat: "reviews", 
-        desc: "Supply chain rumors from Asia suggest Google has perfected the under-display selfie camera. Is this the first truly 'all-screen' Pixel?", 
-        content: `
-            <p>The <strong>Pixel 11 Pro leaks</strong> are focusing on one thing: The Screen. Industry insiders claim Google is using a new sensor technology that allows the front camera to be completely invisible without sacrificing photo quality.</p>
-            <p>This would be a massive win for Google in the US market, where aesthetics and camera performance are the top priorities for smartphone buyers.</p>
-        `,
-        img: "https://images.unsplash.com/photo-1598327105666-5b89351aff97" 
-    },
-    { 
-    id: 19,
-        title: "Starlink Mini Rumors: High-Speed Internet in Your Backpack?", 
-        cat: "reviews", 
-        desc: "Leaked FCC filings reveal a smaller Starlink dish designed for nomadic use across the United States. Here is what we know.", 
-        content: `
-            <p>Recent <strong>FCC filings</strong> have confirmed that SpaceX is working on a portable, 'laptop-sized' Starlink dish. Rumors suggest it could be powered by a standard USB-C power bank.</p>
-            <p>For US digital nomads and hikers, this is a game-changer. Leaks point to a $200 hardware cost and a specialized 'Roam' subscription plan for occasional users.</p>
-        `,
-        img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa" 
-    },
-    { 
-    id: 20,
-        title: "Dyson 'Zone 2' Leaks: A More Subtle Approach to Pure Air", 
-        cat: "reviews", 
-        desc: "After the controversial first version, rumors suggest Dyson is redesigning its air-purifying headphones to be more discrete.", 
-        content: `
-            <p>The <strong>Dyson Zone 2</strong> leaks suggest a much smaller 'visor' that is detachable. Rumors in the US wellness tech space claim the noise-canceling performance has been doubled, making them ideal for polluted urban environments like NYC or LA.</p>
-            <p>Early renders show a design that looks more like standard over-ear headphones, a move likely intended to increase mainstream appeal in the American market.</p>
-        `,
-        img: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e" 
-    }
-    
-    
-
-];
-
-
-
-
-
-function showCategory(category) {
-  window.scrollTo({top: 0, behavior: 'smooth'});
-    const container = document.getElementById('articles-container');
-    container.innerHTML = ""; 
-
-    if (category === 'about') {
-        container.innerHTML = `<div class="widget" style="padding:40px;"><h1>About ProTech</h1><p>Leading source for tech leaks and digital trends.</p></div>`;
-    } else if (category === 'contact') {
-        container.innerHTML = `<div class="widget" style="padding:40px;"><h1>Contact Us</h1><p>Email: contact@protech.com</p></div>`;
-    } else if (category === 'home') {
-        // 1. قسم الاستقبال (Hero) - المطور        // 1. قسم الاستقبال (Hero) - تم تصغيره
-        container.innerHTML += `
-            <div style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; padding: 40px 20px; border-radius: 20px; text-align: center; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <span style="background: var(--accent-blue); color: white; padding: 3px 12px; border-radius: 20px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold;">Evolution of Tech</span>
-                <h1 style="font-size: clamp(1.5rem, 4vw, 2.2rem); font-family: 'Space Grotesk'; margin: 10px 0; background: linear-gradient(to right, #fff, #007aff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700;">ProTech: The Future, Decoded.</h1>
-                <p style="font-size: 1rem; color: #a0aec0; max-width: 500px; margin: 0 auto 20px auto; line-height: 1.4;">Deep dives into AI, Gadgets, and the digital frontier.</p>
-                <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-                     <button onclick="showCategory('trends')" style="background: var(--accent-blue); color: white; border: none; padding: 8px 20px; border-radius: 6px; font-size: 0.9rem; font-weight: bold; cursor: pointer; transition: 0.3s;">Explore Trends</button>
-                     <button onclick="const el = document.querySelectorAll('h2')[1]; window.scrollTo({ top: el.offsetTop - 100, behavior: 'smooth' });" style="background: rgba(255,255,255,0.05); color: white; border: 1px solid #334155; padding: 8px 20px; border-radius: 6px; font-size: 0.9rem; font-weight: bold; cursor: pointer;">Latest Reviews</button>
-
-                    <div style="margin-top: 20px; display: flex; justify-content: center; width: 100%;">
-                        <div style="position: relative; width: 100%; max-width: 400px; box-sizing: border-box;">
-                            <input type="text" id="searchInput" onkeyup="liveSearch()" placeholder="Search articles..." 
-                                   style="width: 100%; padding: 10px 18px; border-radius: 25px; border: 1px solid #334155; background: rgba(15, 23, 42, 0.8); color: white; outline: none; font-size: 0.9rem; backdrop-filter: blur(10px); box-sizing: border-box;">
-                            <div id="searchResults" style="position: absolute; width: 100%; background: #12141c; border-radius: 12px; margin-top: 5px; z-index: 2000; text-align: left; max-height: 250px; overflow-y: auto; box-sizing: border-box;"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>`;
-
-
-        // 2. عرض الأقسام (Trends & Reviews)
-        ['trends', 'reviews'].forEach((catName) => {
-            const filtered = articles.filter(a => a.cat === catName).slice(0, 4);
-            let html = `<h2 style="text-transform: uppercase; color: var(--accent-blue); margin: 40px 0 20px 0; border-left: 4px solid var(--accent-blue); padding-left: 15px;">Latest ${catName}</h2>`;
-            html += `<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">`;
-            
-            filtered.forEach(article => {
-                const idx = articles.findIndex(a => a.title === article.title);
-                html += `
-                    <div class="widget" style="padding: 0; overflow: hidden; cursor: pointer;" onclick="showFullArticle(${idx})">
-                        <div style="width: 100%; height: 200px; background-image: url('${article.img}'); background-size: cover; background-position: center; background-color: #1a1d29;"></div>
-                        <div style="padding: 15px;"><h3 style="font-size: 1.1rem; margin: 0;">${article.title}</h3></div>
-                    </div>`;
-            });
-            html += `</div>`;
-            html += `<div style="width:100%; height:120px; background:#12141c; border:1px dashed #333; margin:40px 0; display:flex; align-items:center; justify-content:center; border-radius:12px;"><span style="color:#444;">[ AD SPACE - HOME ]</span></div>`;
-            container.innerHTML += html;
-        });
-
-        // 3. أقسام About و Contact أسفل الصفحة
-        container.innerHTML += `
-            <div class="widget" style="text-align: center; margin-top: 20px; border-top: 2px solid var(--accent-blue);">
-                <h2 style="color: var(--accent-blue);">About ProTech</h2>
-                <button onclick="showCategory('about')" style="background:none; border:none; color:var(--accent-blue); cursor:pointer; text-decoration:underline; font-weight:bold; font-size:1.1rem;">LEARN MORE ABOUT US</button>
+            .nav-list li a {
+                display: block;
+                padding: 20px 25px;
+                text-decoration: none;
+                color: white;
+                font-size: 0.85rem;
+                text-transform: uppercase;
+                transition: 0.3s;
+                cursor: pointer;
+            }
+            @media (max-width: 900px) {
+                .nav-list {
+                    display: none;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 70px;
+                    left: 0;
+                    width: 100%;
+                    background: var(--bg-header);
+                }
+                .nav-list.active {
+                    display: flex;
+                }
+            }
+            @media (min-width: 901px) {
+                .menu-toggle {
+                    display: none;
+                }
+            }
+            .wrapper {
+                max-width: 1200px;
+                margin: 40px auto;
+                padding: 0 20px;
+            }
+            .widget {
+                background: rgba(18, 20, 28, 0.7);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                padding: 25px;
+                border-radius: 12px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                margin-bottom: 30px;
+                animation: fadeInUp 0.6s ease forwards;
+            }
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            .btn-action {
+                width: 100%;
+                padding: 14px;
+                background: var(--accent-blue);
+                color: white;
+                border: none;
+                border-radius: 8px;
+                font-weight: 700;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+            .btn-action:hover {
+                box-shadow: 0 0 20px var(--accent-glow);
+                transform: translateY(-2px);
+            }
+            img {
+                background: linear-gradient(
+                    90deg,
+                    #1a1d29 25%,
+                    #24283b 50%,
+                    #1a1d29 75%
+                );
+                background-size: 200% 100%;
+                animation: loading-pulse 1.5s infinite;
+            }
+            @keyframes loading-pulse {
+                0% {
+                    background-position: 200% 0;
+                }
+                100% {
+                    background-position: -200% 0;
+                }
+            }
+            .widget img {
+                width: 100%;
+                height: auto;
+                display: block;
+                background-color: #1a1d29;
+            }
+            img {
+                background: #12141c
+                    url("https://via.placeholder.com/400x250/12141c/007aff?text=PRO+TECH")
+                    no-repeat center;
+                background-size: contain;
+                min-height: 200px;
+                width: 100%;
+                object-fit: cover;
+            }
+            .widget img {
+                width: 100%;
+                height: auto;
+                display: block;
+                object-fit: cover;
+                background-color: #1a1d2c;
+                min-height: 200px;
+                border-radius: 12px 12px 0 0;
+            }
+            .quick-tags {
+                background: #0d0f16;
+                padding: 12px 20px;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                border-bottom: 1px solid #1e293b;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            .tag-label {
+                color: var(--accent-blue);
+                font-weight: bold;
+                font-size: 0.8rem;
+                text-transform: uppercase;
+            }
+            .tag-item {
+                background: #1e293b;
+                color: #cbd5e1;
+                padding: 6px 15px;
+                border-radius: 20px;
+                font-size: 0.85rem;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+            .tag-item:hover {
+                background: var(--accent-blue);
+                color: white;
+            }
+            #searchInput {
+                width: 100%;
+                padding: 12px 20px;
+                border-radius: 25px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                background: rgba(255, 255, 255, 0.05) !important;
+                color: white;
+                outline: none;
+                font-size: 0.9rem;
+                backdrop-filter: blur(10px);
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            #searchInput:focus {
+                border-color: var(--accent-blue);
+                box-shadow: 0 0 20px var(--accent-glow);
+                background: rgba(255, 255, 255, 0.1) !important;
+                transform: scale(1.02);
+            }
+            #live-results-grid .widget:hover {
+                transform: translateY(-5px);
+                border-color: var(--accent-blue);
+            }
+            .share-buttons {
+                display: flex;
+                gap: 12px;
+                margin-top: 25px;
+                padding-top: 20px;
+                border-top: 1px solid var(--border-color);
+                align-items: center;
+            }
+            .share-btn {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                text-decoration: none;
+                font-size: 1.1rem;
+                transition: 0.3s ease;
+            }
+            .btn-fb {
+                background: #1877f2;
+            }
+            .btn-wa {
+                background: #25d366;
+            }
+            .share-btn:hover {
+                transform: translateY(-3px);
+                opacity: 0.8;
+            }
+            .page-transition {
+                animation: fadeInSlide 0.4s ease-out;
+            }
+            @keyframes fadeInSlide {
+                from {
+                    opacity: 0;
+                    transform: translateY(15px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        </style>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        />
+    </head>
+    <body>
+        <nav>
+            <a
+                onclick="showCategory('home')"
+                style="cursor: pointer; text-decoration: none"
+            >
+                <h2 class="logo" style="font-size: 1.5rem; margin: 0">
+                    PRO<span>TECH</span>
+                </h2>
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
-            <div class="widget" style="text-align: center; border: 1px dashed var(--border-color); margin-bottom: 50px; padding: 30px;">
-                <h3>Connect With Us</h3>
-                <div style="display: flex; justify-content: center; gap: 20px; margin: 20px 0;">
-                    <a href="#" style="color: #ff0000; text-decoration: none; font-weight: bold;">YouTube</a>
-                    <a href="#" style="color: #229ED9; text-decoration: none; font-weight: bold;">Telegram</a>
-                </div>
-                <button onclick="showCategory('contact')" style="background:var(--accent-blue); color:white; border:none; padding:10px 20px; border-radius:5px; cursor:pointer;">Contact Form</button>
-            </div>`;
-
-    } else {
-        // صفحات الأقسام الكاملة (Trends / Reviews)
-        const filtered = articles.filter(a => a.cat === category);
-        filtered.forEach((article, idx) => {
-            const globalIdx = articles.findIndex(a => a.title === article.title);
-            container.innerHTML += `
-                <article class="widget" style="padding: 0; overflow: hidden; margin-bottom:30px;">
-                    <div style="width: 100%; height: 300px; background-image: url('${article.img}'); background-size: cover; background-position: center; background-color: #1a1d29;"></div>
-                    <div style="padding: 25px;">
-                        <span style="color:var(--accent-blue); font-weight:700;">${article.cat.toUpperCase()}</span>
-                        <h2>${article.title}</h2>
-                        <button onclick="showFullArticle(${globalIdx})" style="background:none; border:none; color:var(--accent-blue); cursor:pointer; font-weight:bold; padding:0; font-size:1rem; text-decoration:underline;">READ MORE →</button>
-                    </div>
-                </article>`;
-            if ((idx + 1) % 2 === 0) {
-                container.innerHTML += `<div style="width:100%; height:100px; background:#0d0f16; border:1px dashed #222; margin-bottom:30px; display:flex; align-items:center; justify-content:center; border-radius:10px;"><span style="color:#333;">[ CATEGORY AD ]</span></div>`;
-            }
-        });
-    }
-    document.querySelector('.nav-list').classList.remove('active');
-}
-
-// دالة عرض المقال بالكامل
-
-// Hamburger Menu Logic
-document.getElementById('mobile-menu').addEventListener('click', function() {
-    document.querySelector('.nav-list').classList.toggle('active');
-});
-
-// Load Home
-window.onload = () => showCategory('home');
-
-
-
-/*12345678*/
-
-
-
-</script>
-<script>
-
-</script>
-<script>
-(function() {
-    // إنشاء شريط الروابط السفلي
-    const adsenseFooter = document.createElement('div');
-    adsenseFooter.style = `
-        background: #0d0f16;
-        padding: 30px 20px;
-        margin-top: 50px;
-        border-top: 1px solid #1e293b;
-        text-align: center;
-        font-family: sans-serif;
-    `;
-
-    adsenseFooter.innerHTML = `
-        <div style="margin-bottom: 15px;">
-            <a href="javascript:void(0)" onclick="showLegal('privacy')" style="color:#64748b; text-decoration:none; margin:0 10px; font-size:14px;">Privacy Policy</a>
-            <a href="javascript:void(0)" onclick="showLegal('terms')" style="color:#64748b; text-decoration:none; margin:0 10px; font-size:14px;">Terms of Service</a>
-            <a href="javascript:void(0)" onclick="showCategory('about')" style="color:#64748b; text-decoration:none; margin:0 10px; font-size:14px;">About Us</a>
-            <a href="javascript:void(0)" onclick="showCategory('contact')" style="color:#64748b; text-decoration:none; margin:0 10px; font-size:14px;">Contact Us</a>
+            <ul class="nav-list">
+                <li><a onclick="showCategory('home')">Home</a></li>
+                <li><a onclick="showCategory('trends')">Trends</a></li>
+                <li><a onclick="showCategory('reviews')">Reviews</a></li>
+                <li><a onclick="showCategory('about')">About Us</a></li>
+                <li><a onclick="showCategory('contact')">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="quick-tags">
+            <span class="tag-label">Hot:</span>
+            <div class="tag-item" onclick="setQuickSearch('iPhone 18')">
+                iPhone 18
+            </div>
+            <div class="tag-item" onclick="setQuickSearch('GTA VI')">
+                GTA VI
+            </div>
+            <div class="tag-item" onclick="setQuickSearch('Galaxy S26')">
+                Galaxy S26
+            </div>
+            <div class="tag-item" onclick="setQuickSearch('PS6')">PS6</div>
+            <div class="tag-item" onclick="setQuickSearch('Apple')">Apple</div>
+            <div class="tag-item" onclick="setQuickSearch('Samsung')">
+                Samsung
+            </div>
         </div>
-        <p style="color:#475569; font-size:12px;">&copy; 2026 ProTech Magazine. All rights reserved.</p>
-    `;
-
-    document.body.appendChild(adsenseFooter);
-
-    // وظيفة إظهار النصوص القانونية (Pop-up)
-    window.showLegal = function(type) {
-        const content = {
-            privacy: {
-                title: "Privacy Policy",
-                text: "We use cookies to personalize content and ads, to provide social media features and to analyze our traffic. We also share information about your use of our site with our advertising and analytics partners."
-            },
-            terms: {
-                title: "Terms of Service",
-                text: "By accessing ProTech, you agree to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws."
-            }
-        };
-
-        const modal = document.createElement('div');
-        modal.style = "position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:100000; display:flex; align-items:center; justify-content:center; padding:20px;";
-        modal.innerHTML = `
-            <div style="background:#1e293b; padding:30px; border-radius:12px; max-width:500px; border:1px solid #3b82f6; color:white;">
-                <h2 style="color:#3b82f6; margin-top:0;">\${content[type].title}</h2>
-                <p style="line-height:1.6; color:#cbd5e1;">\${content[type].text}</p>
-                <button onclick="this.parentElement.parentElement.remove()" style="background:#3b82f6; color:white; border:none; padding:10px 20px; border-radius:6px; cursor:pointer; width:100%; margin-top:20px; font-weight:bold;">Close</button>
-            </div>
-        `;
-        document.body.appendChild(modal);
-    };
-})();
-</script>
-<script>
-
-
-
-
-function checkUrlParams() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const articleId = urlParams.get('id');
-    if (articleId) {
-        const idx = articles.findIndex(a => a.id == articleId);
-        if (idx !== -1) {
-            showFullArticle(idx);
-        }
-    }
-}
-
-function showFullArticle(index, pushToHistory = true) {
-    const article = articles[index];
-    if (!article) return; 
-
-    const container = document.getElementById('articles-container');
-    window.scrollTo({top: 0, behavior: 'smooth'}); 
-    
-    if (pushToHistory) {
-        const newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?id=' + article.id;
-        window.history.pushState({page: 'article', index: index}, '', newurl);
-    }
-
-    document.title = article.title + " | ProTech";
-    
-    container.innerHTML = `
-        <article class="widget" style="padding: 0; overflow: hidden; border: none; background: transparent;">
-            <img src="${article.img}" style="width: 100%; max-height: 450px; object-fit: cover; border-radius: 15px; margin-bottom: 30px;">
-            <div style="padding: 0 10px;">
-                <span style="color:var(--accent-blue); font-weight:700; letter-spacing: 2px;">${article.cat.toUpperCase()}</span>
-                <h1 style="font-size: 2.5rem; line-height: 1.2; margin: 15px 0 25px 0;">${article.title}</h1>
-                <div style="font-size: 1.2rem; line-height: 1.8; color: var(--text-secondary);">
-                    ${article.content || article.desc}
-                </div>
-                <button onclick="window.history.back()" style="margin-top: 50px; background: #1e293b; color: white; border: 1px solid var(--border-color); padding: 12px 25px; border-radius: 8px; cursor: pointer; font-weight: bold;">
-                    ← Back to Feed
-                </button>
-            </div>
-        </article>
-    `;
-
-    if (typeof gtag === 'function') {
-        gtag('config', 'G-ZZ3D01HRPG', {'page_path': '/?id=' + article.id});
-    }
-}
-
-
-
-window.addEventListener('load', checkUrlParams);
-// دالة تشغيل الأزرار السريعة
-function setQuickSearch(term) {
-    showCategory('home');
-    const searchInput = document.getElementById('searchInput');
-    if (searchInput) {
-        searchInput.value = term;
-        liveSearch(); // تشغيل البحث فوراً
-        searchInput.focus(); // وضع المؤشر داخل الصندوق
-        window.scrollTo({top: searchInput.offsetTop - 100, behavior: 'smooth'});
-    }
-}
-
-
-function liveSearch() {
-    const query = document.getElementById('searchInput').value.toLowerCase();
-    const container = document.getElementById('articles-container');
-    const resultsDropdown = document.getElementById('searchResults');
-
-    // إخفاء القائمة المنسدلة الصغيرة لأننا سنعرض النتائج في الصفحة الكبيرة
-    resultsDropdown.innerHTML = '';
-
-    if (query.length < 2) {
-        // إذا مسح المستخدم البحث، نعود للصفحة الرئيسية
-        if (query.length === 0) showCategory('home');
-        return;
-    }
-
-    const matched = articles.filter(a => 
-        a.title.toLowerCase().includes(query) || 
-        a.desc.toLowerCase().includes(query)
-    );
-
-    // تحديث عنوان الصفحة ومحتواها بالنتائج
-    container.innerHTML = `
-        <div style="margin-bottom: 30px;">
-            <h2 style="color: var(--accent-blue);">Search Results for: "${query}"</h2>
-            <p style="color: var(--text-secondary);">${matched.length} articles found</p>
+        <div class="wrapper">
+            <main id="articles-container"></main>
         </div>
-        <div id="live-results-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;"></div>
-    `;
+        <script>
+                     const articles = [
+                {
+                    id: 23,
+                    title: "GTA VI: The Brutal 2026 Reality Check – Why Rockstar is Facing Its Biggest Crisis!",
+                    cat: "trends",
+                    desc: "The dream of a 2025 release is dead. Internal leaks from Edinburgh reveal a studio in chaos, a delayed November 2026 launch, and a multiplayer mode that might change gaming forever.",
+                    content: `
+                     <p>As we officially cross into 2026, the global gaming community is in a state of collective shock. What was once the most anticipated launch of 2025 has now officially shifted into the late 2026 calendar. But the delay is only the tip of the iceberg. <strong>Grand Theft Auto VI</strong> is currently navigating a minefield of technical debt, internal studio friction, and unprecedented expectations.</p>
 
-    const grid = document.getElementById('live-results-grid');
+                     <h3>The November 19th Deadline</h3>
+                     <p>Reliable sources within Rockstar Games and parent company Take-Two Interactive have confirmed that the internal launch target is now <strong>November 19, 2026</strong>. Why the massive gap? It’s reported that the RAGE Engine (version 9) is struggling with the hyper-realistic water physics and the AI density required for 'Vice City'. Developers are reportedly working 60-hour weeks to ensure the 'level of polish' that has become Rockstar's trademark, but at what cost?</p>
 
-    if (matched.length === 0) {
-        grid.innerHTML = `<div class="widget" style="grid-column: 1/-1; text-align: center; padding: 50px;">
-            <p style="font-size: 1.2rem; color: #64748b;">No articles found matching your search.</p>
-        </div>`;
-    } else {
-        matched.forEach(article => {
-            const globalIdx = articles.findIndex(a => a.id === article.id);
-            grid.innerHTML += `
-                <div class="widget" style="padding: 0; overflow: hidden; cursor: pointer; transition: 0.3s;" onclick="showFullArticle(${globalIdx})">
-                    <div style="width: 100%; height: 180px; background-image: url('${article.img}'); background-size: cover; background-position: center;"></div>
-                    <div style="padding: 15px;">
-                        <span style="color:var(--accent-blue); font-size: 0.8rem; font-weight: bold;">${article.cat.toUpperCase()}</span>
-                        <h3 style="font-size: 1rem; margin: 10px 0;">${article.title}</h3>
-                    </div>
-                </div>`;
-        });
-    }
-}
+                     <h3>32-Player Chaos: The New GTA Online</h3>
+                     <p>Leak after leak has flooded the forums, but one detail remains consistent: the evolution of <strong>GTA VI Online</strong>. Court documents from an ongoing employment dispute revealed that testers are currently stress-testing 32-player sessions in a fully dynamic environment. Unlike the previous generation, every building in the Leonida state is rumored to have some level of interior access, requiring massive server-side processing power. This 'Density over Scale' approach is what's causing the most significant delays.</p>
 
-window.onpopstate = function(event) {
-    if (event.state && event.state.index !== undefined) {
-        showFullArticle(event.state.index, false); // نضع false لمنع تكرار السجل
-    } else {
-        showCategory('home');
-    }
-};
+                     <h3>Internal Turmoil at Edinburgh HQ</h3>
+                     <p>The road hasn't just been technically difficult; it's been politically charged. In early 2026, Rockstar North faced a brief operational shutdown due to a heating system failure, but the real fire is coming from the staff. Ongoing 'return-to-office' mandates have sparked a unionization movement among QA testers and junior designers. Analysts fear that if a strike occurs mid-2026, even the November release date could be pushed into 2027.</p>
 
-</script>
-</body>
+                     <p>For the millions of PC gamers waiting, the silence is deafening. Historically, Rockstar releases on PC 12 to 18 months after consoles. This puts a potential PC release in <strong>early 2028</strong>, a timeline that many fans find unacceptable in the modern era of cross-platform gaming.</p>
+                     `,
+                    img: "https://images.unsplash.com/photo-1542751371-adc38448a05e"
+                },
+                {
+                    id: 22,
+                    title: "The $2,000 Smartphone Era: iPhone 18 Pro Max Leaks Reveal Apple's Riskiest Move!",
+                    cat: "trends",
+                    desc: "Is it a phone or a luxury computer? Exclusive supply chain reports from New York and Cupertino confirm a massive price hike for the 2026 lineup. Here is what you get for $2,000.",
+                    content: `
+                     <p>The tech world in the United States is reeling today as a series of high-level leaks from Apple’s logistics partners in Asia have essentially confirmed the 2026 pricing strategy. The <strong>iPhone 18 Pro Max</strong> is no longer just a smartphone; it is being positioned as a 'Mobile Workstation,' and the price tag reflects that transition.</p>
+
+                     <h3>Breaking the $2,000 Barrier</h3>
+                     <p>While the standard iPhone 18 is expected to hold steady at $899 to satisfy the mass market, the Pro series is moving into a different league. The base 256GB Pro Max is rumored to start at <strong>$1,399</strong>. However, for the first time ever, the 2TB 'Titanium Ultra' configuration will officially cross the <strong>$2,199</strong> mark. This would make it the most expensive non-foldable smartphone in history.</p>
+
+                     <h3>What Are You Paying For?</h3>
+                     <p>According to the leaks, the 2026 Pro Max will debut the <strong>A20 Bionic Chip</strong>, built on a revolutionary 2nm process. This chip isn't just faster; it's designed specifically for 'Local-LLM' AI. This means the iPhone 18 will be able to generate video, edit complex 3D files, and provide a personal AI assistant that works 100% offline. Furthermore, the 'True-All-Screen' design is finally here, with the FaceID sensors and selfie camera buried invisibly beneath the glass pixels.</p>
+
+                     <h3>Satellite-AI: Connectivity Anywhere</h3>
+                     <p>Perhaps the most 'American' feature of the new model is the integrated <strong>Satellite-AI linkage</strong>. Reportedly, Apple has secured a deal to allow iPhone 18 users in the US to send high-bandwidth messages and use AI search features even in the middle of the Mojave Desert or the Alaskan wilderness without a single bar of cellular signal. This 'Always-Connected' promise is Apple's primary justification for the premium price point.</p>
+                     `,
+                    img: "https://images.unsplash.com/photo-1616348436168-de43ad0db179"
+                },
+                {
+                    id: 21,
+                    title: "Starlink Mini: Why Elon Musk's New 'Backpack Internet' has the FCC Worried!",
+                    cat: "reviews",
+                    desc: "The 'Dead Zone' is officially dead. SpaceX is launching a laptop-sized satellite dish that runs on a power bank. But why are regulators trying to stop it?",
+                    content: `
+                     <p>For years, the dream of the digital nomad has been to work from anywhere—a beach in Mexico, a mountain in Colorado, or a van in the middle of nowhere. SpaceX is about to make that a reality with the <strong>Starlink Mini</strong>, a device so disruptive that it's already causing friction with the FCC in Washington.</p>
+
+                     <h3>Gigabit Speeds in Your Backpack</h3>
+                     <p>Recent FCC filings, uncovered by tech investigators in early 2026, show a new dish design roughly the size of a 14-inch MacBook. Unlike the bulky 'Dishy McFlatface' of old, the Starlink Mini features a built-in router and can be powered via a 100W USB-C PD power bank. This means you don't need a generator or a house; you just need a clear view of the sky and a backpack. Early tests suggest speeds of up to 200Mbps even in motion.</p>
+
+                     <h3>The Regulatory Battle</h3>
+                     <p>Why the controversy? The FCC is reportedly concerned about the massive influx of 'mobile' satellite users and the potential for radio frequency interference. Additionally, traditional US ISPs (Internet Service Providers) are lobbying hard against the device, fearing it will steal their rural customer base. Despite this, SpaceX is pushing for a <strong>June 2026</strong> commercial launch with a rumored hardware cost of just <strong>$299</strong>.</p>
+
+                     <h3>A New Era for US Infrastructure</h3>
+                     <p>The implications for emergency services and rural America are massive. Imagine every hiker having a lifeline, or every remote farm having instant high-speed access for AI-driven agriculture. The Starlink Mini isn't just a gadget; it's a fundamental shift in how we perceive 'being connected' in the modern world.</p>
+                     `,
+                    img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa"
+                },
+                {
+                    id: 20,
+                    title: "The Federal AI Act of 2026: Is This the End of Internet Freedom as We Know It?",
+                    cat: "trends",
+                    desc: "Washington has finally pulled the trigger. The most comprehensive AI regulation in history is now law. Find out how the new 'Watermark Mandate' affects your business and your privacy.",
+                    content: `
+                     <p>The landscape of American innovation changed forever this week as the <strong>Federal AI Act of 2026</strong> was signed into law. While politicians are calling it a 'Safety Victory,' entrepreneurs from Silicon Valley to New York are calling it a bureaucratic nightmare. This isn't just about ChatGPT anymore; this is about every piece of code running on the American internet.</p>
+
+                     <h3>The Watermark Mandate</h3>
+                     <p>The most controversial pillar of the act is the <strong>Universal Watermark Requirement</strong>. Starting in late 2026, any image, text, or video generated or even 'substantially edited' by AI must contain a cryptographic watermark. This means your social media filters, your AI-assisted emails, and your business marketing materials will all be flagged. Failure to comply could result in fines starting at $50,000 for small businesses.</p>
+
+                     <h3>Privacy vs. Security</h3>
+                     <p>For the average American consumer, the act is a double-edged sword. On one hand, it grants users the 'Right to Human Interaction,' meaning any customer service bot must immediately identify itself as non-human. On the other hand, the law grants the government unprecedented access to 'Training Data Sets' to ensure they aren't biased. This has raised massive red flags for privacy advocates who fear the government is simply creating a backdoor into the world’s most powerful AI models.</p>
+
+                     <h3>The Impact on Small Business</h3>
+                     <p>While tech giants like Microsoft and Google have the legal teams to navigate this 800-page document, US small businesses are struggling. New compliance officers are becoming the most in-demand job in America. If you use AI to automate your workflow, you are now legally responsible for any 'Algorithmic Bias' your tools might exhibit. It’s a brave new world, and the legal fees are just beginning.</p>
+                     `,
+                    img: "https://images.unsplash.com/photo-1677442136019-21780ecad995"
+                },
+                {
+                    id: 19,
+                    title: "Tesla Model 2 Spy Shots: Elon Musk’s $25k Game-Changer is Finally Real!",
+                    cat: "reviews",
+                    desc: "Forget the Cybertruck—this is the Tesla that will actually change the world. Exclusive photos from the Austin Gigafactory reveal a compact powerhouse that could kill the gas engine for good.",
+                    content: `
+                     <p>The 'cheap Tesla' has been a myth for years, a promise often made and frequently delayed. But in January 2026, the myth became reality. <strong>Spy shots</strong> leaked from a high-security testing track near the Texas Gigafactory have given us our first look at the vehicle the media is calling the <strong>Model 2</strong>.</p>
+
+                     <h3>Design: A Mini-Model Y?</h3>
+                     <p>The leaked images show a sleek, hatchback-style silhouette that borrows heavily from the Model Y but with a much shorter wheelbase. It looks aggressive, modern, and—most importantly—aerodynamic. Sources say Tesla has achieved a drag coefficient that will allow the car to get <strong>250 miles of range</strong> from a much smaller, cheaper LFP (Lithium Iron Phosphate) battery pack.</p>
+
+                     <h3>The $25,000 Question</h3>
+                     <p>Can Tesla really hit the $25,000 price point? Industry analysts in Detroit believe so, thanks to the new 'Unboxed' manufacturing process. By building the car in sub-assemblies and only joining them at the very end, Tesla has reportedly cut production costs by 40%. In the US market, after federal tax credits, this car could effectively cost under <strong>$18,000</strong> for some buyers, making it cheaper than a base-model Toyota Corolla.</p>
+
+                     <h3>The End of the Used Car Crisis?</h3>
+                     <p>If Tesla can scale the Model 2 by late 2026 as planned, it will send shockwaves through the entire US automotive industry. Used car prices, which have been inflated for years, would likely collapse as millions of buyers opt for a brand-new EV with full FSD (Full Self-Driving) capabilities. Elon Musk is betting the entire company on this 'Mass-Market' move, and based on these leaks, he might just win.</p>
+                     `,
+                    img: "https://images.unsplash.com/photo-1560958089-b8a1929cea89"
+                },
+                    {
+                    id: 18,
+                    title: "Apple Glasses 'Air' Leaks: The Device That Will Kill the Smartphone Era!",
+                    cat: "reviews",
+                    desc: "The wait is over. Exclusive leaks from Apple's supply chain in 2026 reveal a lightweight pair of glasses that do everything your iPhone can—and more.",
+                    content: `
+                     <p>For a decade, we’ve heard that Augmented Reality (AR) is the future. In 2026, Apple is finally ready to prove it. Moving away from the bulky Vision Pro, the new <strong>Apple Glasses 'Air'</strong> are designed to look exactly like a pair of high-end Ray-Bans, but the technology inside is pure science fiction.</p>
+
+                     <h3>The Death of the Screen</h3>
+                     <p>Why pull a glass slab out of your pocket when the digital world can be projected directly onto your retina? The 'Air' glasses use dual 4K Micro-LED projectors to overlay navigation, messages, and video calls onto the real world. According to leaked schematics, the device features a 'tetherless' design, using a new ultra-wideband protocol to offload 90% of the processing to your iPhone or Apple Watch, keeping the glasses cool and lightweight.</p>
+
+                     <h3>Privacy or Surveillance?</h3>
+                     <p>Apple is reportedly introducing a 'Physical Privacy Indicator'—a mechanical shutter that covers the sensors when not in use—to satisfy the strict <strong>Federal AI Act of 2026</strong>. Despite this, social critics in the US are already debating the ethics of 'always-on' facial recognition. Whether we like it or not, the era of looking down at our phones is ending; the era of looking through them has begun.</p>
+                     `,
+                    img: "https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b"
+                },
+                {
+                    id: 17,
+                    title: "Nintendo Switch 2 Pro: 4K Gaming in Your Pocket? New Performance Benchmarks Leaked!",
+                    cat: "reviews",
+                    desc: "Internal dev kits have surfaced! Discover how Nintendo's 2026 powerhouse is using Nvidia's AI to deliver PS5-level graphics on a handheld screen.",
+                    content: `
+                     <p>The gaming world has been begging for a hardware upgrade, and in 2026, Nintendo is delivering a masterstroke. The <strong>Switch 2 Pro</strong> isn't just a refresh; it's a generational leap that closes the gap between handheld convenience and home console power.</p>
+
+                     <h3>Powered by DLSS 3.5</h3>
+                     <p>Leaked benchmarks from a third-party developer in Tokyo suggest the Switch 2 Pro utilizes a custom Nvidia 'Thor' chip. By leveraging <strong>Deep Learning Super Sampling (DLSS 3.5)</strong>, the console can upscale an 1080p internal image to a crisp 4K when docked. For the first time, Zelda and Mario will look as sharp as the latest blockbuster titles on competing platforms. Early reports indicate that 'Tears of the Kingdom' will receive a free 4K 60fps patch on launch day.</p>
+
+                     <h3>The Backward Compatibility Miracle</h3>
+                     <p>The biggest fear for Nintendo fans was losing their digital library. However, 2026 leaks confirm a dual-slot system or a high-speed cartridge reader that supports all original Switch games with 'AI-enhanced' resolution. This move ensures that the Switch 2 Pro will have the largest launch library in gaming history from day one.</p>
+                     `,
+                    img: "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe"
+                },
+                {
+                    id: 16,
+                    title: "Sony's 'Project Trinity' Exposed: Is the PS5 Pro Already Obsolete?",
+                    cat: "reviews",
+                    desc: "A massive data breach at Sony has revealed 'Project Trinity'—a 2026 monster focused on Path-Tracing and 120fps gaming. Here is what's coming next.",
+                    content: `
+                     <p>A massive internal leak codenamed 'The Trinity Files' has sent shockwaves through the US gaming market. Sony is reportedly preparing a mid-gen monster that focuses on the one thing the original PS5 struggled with: <strong>Native Path-Tracing</strong>.</p>
+
+                     <h3>The 120fps Revolution</h3>
+                     <p>Project Trinity is rumored to feature a massive GPU upgrade with 33.5 teraflops of power. The goal? To make 60fps the 'minimum' and 120fps the standard for all first-party titles. US gamers are particularly excited about the 'AI-Upscaling' engine, which Sony claims will outperform Nvidia's current solutions, providing a photo-realistic experience that was previously only possible on $3,000 PCs.</p>
+
+                     <h3>A Late 2026 Launch</h3>
+                     <p>While Sony hasn't officially commented, the leaks suggest a <strong>November 2026</strong> launch window, strategically timed to compete with Rockstar's GTA VI. The console is expected to launch with a 'GTA VI Special Edition' bundle that could become the best-selling product in Sony’s history.</p>
+                     `,
+                    img: "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3"
+                },
+                {
+                    id: 15,
+                    title: "Samsung Galaxy Z Fold 8: The Triple-Fold 'Z' is Finally Here!",
+                    cat: "reviews",
+                    desc: "Why settle for a dual-screen when you can have three? Samsung's 2026 flagship unfolds into a massive 10.2-inch tablet. Is this the end of the iPad?",
+                    content: `
+                     <p>Samsung is doubling down on the foldable market. In 2026, the <strong>Galaxy Z Fold 8</strong> is breaking the mold by introducing a triple-fold design. Folded, it’s a slightly thick smartphone; unfolded twice, it’s a 10.2-inch cinema-grade tablet.</p>
+
+                     <h3>The 'Ironflex' Hinge</h3>
+                     <p>The main complaint about foldables has always been durability. Samsung’s response in 2026 is the <strong>Ironflex Hinge</strong>, a new titanium-based mechanism that is lab-tested for 500,000 folds. Leaked US patents show that the screen material has been replaced with a 'Self-Healing' polymer that can actually erase minor scratches from the S-Pen overnight.</p>
+
+                     <h3>The Desktop in Your Pocket</h3>
+                     <p>With a screen this large, Samsung is pushing 'DeX 2.0'. When fully unfolded, the Z Fold 8 can run a full desktop-class browser and up to four apps simultaneously. For American professionals who travel, this device finally delivers on the promise of leaving the laptop at home. The starting price? A staggering <strong>$1,899</strong>, but in 2026, it seems users are willing to pay for true innovation.</p>
+                     `,
+                    img: "https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=800"
+                },
+                {
+                    id: 14,
+                    title: "Google Pixel 11 Pro Leaks: The 'Under-Display' Camera is Perfected!",
+                    cat: "reviews",
+                    desc: "No holes, no notches, just pure screen. Google's 2026 flagship has finally solved the under-display camera puzzle. See the leaked photo quality!",
+                    content: `
+                     <p>Google has always been the king of software, but in 2026, they are taking the hardware crown. The <strong>Pixel 11 Pro</strong> leaks show a device that is 100% screen on the front. No punch-hole for the camera, no dynamic island—just a seamless, 144Hz LTPO OLED display.</p>
+
+                     <h3>The AI-Sensor Breakthrough</h3>
+                     <p>Previous under-display cameras suffered from 'foggy' images. Google's solution in 2026 is a new sensor that uses AI to 'reconstruct' the light that is blocked by the screen pixels. The result? Selfie quality that is indistinguishable from traditional cameras. US tech reviewers who have seen early prototypes claim that Google's <strong>Tensor G6 chip</strong> handles the image processing in real-time with zero lag.</p>
+
+                     <h3>The 'Magic Editor' Evolves</h3>
+                     <p>Beyond the camera, the Pixel 11 Pro is rumored to feature 'Real-Time Video Translation'. Imagine talking to someone in Japanese through your phone, and they hear your voice—in your tone—speaking Japanese perfectly in real-time. This is the 2026 vision of a connected world.</p>
+                     `,
+                    img: "https://images.unsplash.com/photo-1598327105666-5b89351aff97"
+                }
+                {
+                    id: 13,
+                    title: "The Great US Micro-Grid Revolution: How AI Saved Texas and Florida from Blackouts",
+                    cat: "trends",
+                    desc: "After the disastrous storms of 2025, America is rebuilding its power grid from the ground up. Inside the $100 billion shift to decentralized AI-managed energy.",
+                    content: `
+                     <p>For decades, the American power grid has been described as the largest, most complex machine ever built—and also one of the most fragile. However, as we move through 2026, a fundamental shift is occurring. Following the catastrophic grid failures during the winter of 2025, US cities are rapidly abandoning the 'Centralized Giant' model in favor of <strong>AI-Managed Micro-Grids</strong>.</p>
+
+                     <h3>The End of Massive Power Outages</h3>
+                     <p>In states like Texas and Florida, neighborhood-scale energy systems are becoming the new standard. These micro-grids combine local solar arrays, massive Tesla Megapacks, and a sophisticated AI 'Dispatcher'. In the event of a main grid failure, these communities 'island' themselves, staying powered for days while the rest of the city waits for repairs. In 2026, cities that have adopted this tech reported a 90% decrease in total blackout hours compared to the previous year.</p>
+
+                     <h3>The Economic Impact on US Homeowners</h3>
+                     <p>This isn't just about security; it's about the economy. New federal tax credits under the 2026 Energy Independence Act allow US homeowners to sell their excess battery storage back to the grid during peak times at premium rates. 'Energy Trading' has become a new side-hustle for thousands of Americans. Analysts in New York predict that by 2030, the traditional utility company will function more like an internet service provider rather than a sole energy source.</p>
+
+                     <h3>Technical Challenges: The Cyber-Security Factor</h3>
+                     <p>However, decentralization brings new risks. With millions of AI-controlled nodes managing the US energy supply, the Department of Energy has warned of increased cyber-vulnerabilities. To counter this, 2026 has seen the rise of 'Blockchain Energy Verification', ensuring that every kilowatt traded is secure from foreign interference. This is the new front line of American national security.</p>
+                     `,
+                    img: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e"
+                },
+                {
+                    id: 12,
+                    title: "Remote Work 2.0: Why US 'Zoom Towns' are Outperforming Silicon Valley in 2026",
+                    cat: "trends",
+                    desc: "The office mandate failed. Now, a new migration is reshaping the American landscape. Discover why states like West Virginia and Wyoming are the new tech hubs.",
+                    content: `
+                     <p>In 2024 and 2025, corporate America tried to force employees back to the office. By early 2026, that experiment has largely been declared a failure. A new phenomenon, <strong>Remote Work 2.0</strong>, is taking hold, and it is permanently altering the demographic and economic map of the United States.</p>
+
+                     <h3>The Rise of the 'Digital US Territories'</h3>
+                     <p>Tech workers are no longer just moving to Austin or Miami; they are heading to what economists call 'Zoom Towns'. Places like Morgantown, West Virginia, and Sheridan, Wyoming, are seeing a record influx of high-income professionals. These states have been aggressive, offering 'Remote Relocation Packages' that include tax breaks and $15,000 cash incentives. In 2026, the real estate market in these rural hubs is growing twice as fast as that of San Francisco or New York.</p>
+
+                     <h3>The Infrastructure Boom: Fiber in the Wilderness</h3>
+                     <p>The success of Remote Work 2.0 is underpinned by the massive deployment of SpaceX’s Starlink 3.0 and the 2026 Federal Broadband Initiative. High-speed fiber-optic corridors are being laid through the Appalachian Mountains and the Great Plains. For the first time in American history, your physical location has zero impact on your career potential at a Fortune 500 company. This is leading to a 'Brain Gain' for rural America, revitalizing local school systems and small-town economies.</p>
+
+                     <h3>The Corporate Shift: Results-Based Management</h3>
+                     <p>Companies that adapted to this trend are reporting 30% higher retention rates in 2026. The shift has forced a change in management styles, moving away from 'Hours at Desk' to 'AI-Verified Milestones'. While some traditional CEOs remain skeptical, the market has spoken: the most talented American workers are choosing flexibility over the corner office, and the corporations that don't adapt are simply being left behind.</p>
+                     `,
+                    img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+                },
+                {
+                    id: 11,
+                    title: "The AI Education Boom: How US Public Schools are Closing the Learning Gap",
+                    cat: "trends",
+                    desc: "Classrooms in 2026 look nothing like they did five years ago. From personalized AI tutors to VR history lessons—see how American students are making a record-breaking comeback.",
+                    content: `
+                     <p>The post-pandemic learning gap was once considered a permanent scar on the American education system. But as we reach the mid-point of 2026, the data tells a different story. US public schools are undergoing a massive technological renaissance, driven by <strong>Personalized AI Learning Paths</strong> that are yielding unprecedented results.</p>
+
+                     <h3>A Tutor for Every Student</h3>
+                     <p>In Chicago, Atlanta, and Los Angeles school districts, every student now has access to a 'State-Funded AI Mentor'. This isn't just a chatbot; it's a sophisticated LLM trained on the local curriculum that adapts in real-time to a child's reading level and emotional state. If a student struggles with a math concept, the AI detects the frustration and pivots to a different teaching method. In 2026, math and literacy scores in these pilot programs have jumped by an average of 35%—the largest single-year increase in US history.</p>
+
+                     <h3>The Evolving Role of the American Teacher</h3>
+                     <p>Critics feared that AI would replace teachers. Instead, it has liberated them. In 2026, teachers are spending 60% less time on grading and administrative tasks and more time on 'Human-Centric' education: mentorship, ethics, and collaborative projects. The AI handles the rote memorization and practice, while the teacher handles the inspiration. This shift has also addressed the chronic teacher shortage in the US, as burnout rates have plummeted for the first time in a decade.</p>
+
+                     <h3>The VR History Lab: Beyond the Textbook</h3>
+                     <p>History and science are no longer static pages in a book. Using lightweight VR headsets, students in 2026 can 'witness' the signing of the Declaration of Independence or walk through a human cell. These immersive experiences have proven to increase long-term information retention by nearly 70%. While the cost of this technology was a barrier in 2024, the 2026 'Tech-for-All' federal grant has made these tools standard in even the most underserved US districts.</p>
+                     `,
+                    img: "https://images.unsplash.com/photo-1509062522246-3755977927d7"
+                },
+                {
+                    id: 10,
+                    title: "Quantum Computing in the USA: The First Real-World Medical Miracles",
+                    cat: "trends",
+                    desc: "The 'Quantum Supremacy' era is officially here. Discover how US pharmaceutical companies in 2026 are using quantum processors to develop vaccines in weeks, not years.",
+                    content: `
+                     <p>For decades, quantum computing was a 'five-years-away' technology. In 2026, the wait is over. The United States has officially entered the <strong>Quantum Practicality Era</strong>, with the most significant impact being felt in the halls of biotech firms in Boston and San Francisco.</p>
+
+                     <h3>Simulating the Unsimulatable</h3>
+                     <p>Traditional supercomputers struggle with molecular simulation because the math is too complex. Quantum computers, however, speak the same language as nature. In early 2026, a US-based pharmaceutical giant announced they had successfully simulated the interaction of a new cancer-targeting protein in just 48 hours—a task that would have taken a traditional computer 10,000 years. This has cut the drug discovery phase of clinical trials by a staggering 80%.</p>
+
+                     <h3>The Race for the 'Unbreakable' Encryption</h3>
+                     <p>While the medical benefits are clear, the US government is also focused on the security implications. Quantum computers can theoretically crack all current encryption. In 2026, the Department of Homeland Security launched the 'Quantum-Shield' initiative, mandating that all US banks and government agencies switch to post-quantum cryptography. This 'Silent Arms Race' is the most expensive tech project in American history, surpassing even the Apollo missions in adjusted dollars.</p>
+
+                     <h3>Quantum-as-a-Service (QaaS)</h3>
+                     <p>You don't need to own a $50 million quantum fridge to use this power. In 2026, Amazon and Microsoft have launched 'Quantum-as-a-Service' through the cloud. Small US startups are now using quantum time to optimize everything from airline flight paths to the delivery routes of local courier services, resulting in a more efficient American economy and a significant reduction in carbon emissions.</p>
+                     `,
+                    img: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0"
+                },
+                {
+                    id: 9,
+                    title: "The Biotech Gold Rush: How 'Personalized Longevity' Became a US Mainstream Obsession",
+                    cat: "trends",
+                    desc: "Is 100 the new 80? In 2026, Americans are spending record amounts on AI-driven health monitoring and bio-hacking. Inside the movement to end aging.",
+                    content: `
+                     <p>In 2026, health is no longer about reacting to sickness; it's about optimizing your biology. The <strong>Longevity Tech</strong> movement has officially moved from the fringe circles of Silicon Valley to the mainstream American household. From New York to Seattle, the 'Bio-Hacking' industry is now a trillion-dollar sector.</p>
+
+                     <h3>The Wearable Pharmacy</h3>
+                     <p>The standard 'smartwatch' of 2024 has been replaced by 'Bio-Sensor Arrays'. In 2026, millions of Americans wear non-invasive patches that monitor continuous glucose levels, cortisol (stress), and even early cancer biomarkers in real-time. This data is fed into a personal AI health coach that doesn't just count steps, but tells you exactly what to eat and when to sleep based on your blood chemistry. Early data from 2026 insurance reports show a 15% drop in heart-related emergencies among active users.</p>
+
+                     <h3>The Rise of 'Longevity Clinics'</h3>
+                     <p>High-street 'Longevity Clinics' are popping up in major US cities, replacing traditional spas. These centers offer everything from NAD+ infusions to AI-guided cryotherapy. But the real 2026 breakthrough is 'Epigenetic Reprogramming'—treatments designed to 'turn off' aging genes. While currently expensive and strictly regulated by the FDA, the demand is so high that analysts predict these treatments will be as common as dental checkups by the end of the decade.</p>
+
+                     <h3>Social Implications: The Wealth-Health Gap</h3>
+                     <p>This biotech boom has sparked a fierce debate in Washington regarding the 'Wealth-Health Gap'. Critics argue that if only the wealthy can afford to 'age out' of aging, it will create a two-tier society in the US. In response, 2026 has seen the introduction of the 'Longevity for All' act, which aims to subsidize basic bio-monitoring tech for all Americans under Medicare, arguing that prevention is far cheaper than the $4 trillion the US spends annually on chronic disease treatment.</p>
+                     `,
+                    img: "https://images.unsplash.com/photo-1530210124550-912dc1381cb8"
+                },
+                {
+                    id: 8,
+                    title: "The Decentralized Finance (DeFi) Comeback: Why Wall Street is Finally Buying In",
+                    cat: "trends",
+                    desc: "After years of volatility, 2026 marks the 'Great Stabilization'. Discover how regulated blockchain protocols are saving US consumers billions in banking fees.",
+                    content: `
+                     <p>If 2022 was the year of the 'Crypto Crash', then 2026 is officially the year of the <strong>Institutional DeFi Renaissance</strong>. The difference this time? Regulation, transparency, and real-world utility. Blockchain technology is no longer a speculative toy; it's the plumbing for the new American financial system.</p>
+
+                     <h3>The End of the 'Three-Day' Bank Transfer</h3>
+                     <p>In 2026, the idea of waiting three days for a bank transfer or paying 3% for a credit card transaction seems primitive. Major US banks like JPMorgan and Goldman Sachs have integrated 'Regulated DeFi' protocols into their backend. This allows for near-instant settlement of everything from home mortgages to grocery payments. For the average American consumer, this has resulted in a 40% reduction in banking fees and the elimination of 'overdraft' traps that previously plagued low-income households.</p>
+
+                     <h3>Smart Contracts and the Legal System</h3>
+                     <p>2026 has seen the first widespread use of 'Smart Legal Contracts' in the US real estate market. Buying a home in 2026 can now be done in hours rather than weeks. The title, the escrow, and the funds are all locked in a transparent, AI-verified blockchain contract that executes automatically once all conditions are met. This has crippled the predatory 'middle-man' industries and made the US housing market more liquid and accessible to first-time buyers.</p>
+
+                     <h3>The FedCoin Debate</h3>
+                     <p>The most significant political story of late 2026 is the trial of the 'Digital Dollar' or 'FedCoin'. While the government argues it will make stimulus payments and tax refunds instant, privacy advocates are fighting to ensure that American's financial data remains private and not subject to government surveillance. The outcome of this debate will define the next fifty years of American capitalism, as we transition into a fully digital, decentralized global economy.</p>
+                     `,
+                    img: "https://images.unsplash.com/photo-1621761191319-c6fb62004040"
+                }
+                {
+                    id: 7,
+                    title: "Tesla Model 2 Long-Term Review: Is the $25,000 EV Really Enough?",
+                    cat: "reviews",
+                    desc: "We spent 30 days with Elon Musk's most affordable car yet. From range anxiety to build quality—here is the truth about the car that's killing gas engines.",
+                    content: `
+                     <p>After years of broken promises and 'production hell', the <strong>Tesla Model 2</strong> has finally hit the streets of America. At a starting price of $24,990 (before tax credits), it is the most important vehicle Tesla has ever made. But did they cut too many corners to reach that price point? We took it on a 1,000-mile road trip from Los Angeles to Seattle to find out.</p>
+
+                     <h3>The Interior: Minimalism or Just Cheap?</h3>
+                     <p>Inside, the Model 2 is even more stripped back than the Model 3. There is no instrument cluster, and for the first time, even the stalks for turn signals are gone, integrated into the steering wheel buttons. While the 'Unboxed' manufacturing process has made the cabin feel incredibly solid with zero rattles, some users might find the recycled ocean-plastic seats a bit firm for long drives. However, the legroom is surprisingly ample thanks to the new integrated battery chassis.</p>
+
+                     <h3>Range and Performance</h3>
+                     <p>Our 'Long Range' test unit delivered a consistent <strong>242 miles</strong> at highway speeds. Tesla’s new LFP battery tech handles 100% charging daily without degradation—a huge win for commuters. While it doesn't have the 'Ludicrous' speed of the Model S, the 0-60 mph in 5.8 seconds is more than enough to overtake traffic on the I-5. The real star, however, is the FSD (Full Self-Driving) version 13, which handled 90% of our trip without human intervention.</p>
+
+                     <h3>The Verdict</h3>
+                     <p>The Model 2 isn't a luxury car; it's a tool. It's the new 'People's Car' for the 2026 era. If you can live without a leather interior and a HUD, this is the best value-for-money vehicle in the United States today.</p>
+                     `,
+                    img: "https://images.unsplash.com/photo-1560958089-b8a1929cea89"
+                },
+                {
+                    id: 6,
+                    title: "Apple Glasses 'Air' Review: I Wore Them for a Week, and I'm Never Going Back",
+                    cat: "reviews",
+                    desc: "Apple's first pair of AR spectacles is here. Does the 'Air' finally replace the iPhone, or is it just an expensive accessory? Here is our deep dive.",
+                    content: `
+                     <p>The <strong>Apple Glasses 'Air'</strong> represent the most significant design challenge Cupertino has ever faced. Unlike the heavy Vision Pro, these weigh only 75 grams. After wearing them for seven days straight, the world feels 'empty' without them. Here is why.</p>
+
+                     <h3>Display and Optics: The Micro-LED Miracle</h3>
+                     <p>The 'Air' uses dual Micro-LED projectors that beam light directly onto the lens. In bright sunlight in New York City, the text remained perfectly legible. Whether it’s walking directions floating on the sidewalk or a private iMessage window that only I can see, the integration is seamless. There’s no 'screen door' effect; the digital objects look like they are physically present in the room.</p>
+
+                     <h3>Battery Life: The Achilles Heel</h3>
+                     <p>To keep the glasses light, Apple had to use a tiny battery. In our testing, we averaged about <strong>5 hours of active AR use</strong> before needing a charge in the included leather case. This means you aren't replacing your iPhone just yet—the 'Air' is still heavily dependent on your phone for processing and power management. However, for quick tasks, it’s a revelation.</p>
+
+                     <h3>Is it Worth $799?</h3>
+                     <p>For early adopters, yes. The ability to glance at your notifications without tilting your head down is a subtle but profound shift in human-tech interaction. It feels like having a superpower, even if you have to charge that superpower twice a day.</p>
+                     `,
+                    img: "https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b"
+                },
+                {
+                    id: 5,
+                    title: "Nintendo Switch 2 Pro Review: The Handheld King Retakes the Throne",
+                    cat: "reviews",
+                    desc: "4K docked gaming, DLSS 3.5, and full backward compatibility. We tested the Switch 2 Pro with 'Metroid Prime 4' and the results are breathtaking.",
+                    content: `
+                     <p>The <strong>Nintendo Switch 2 Pro</strong> arrives at a time when handheld PCs like the Steam Deck 3 are dominating the market. But Nintendo has a secret weapon: Optimization. The Switch 2 Pro doesn't just play games; it perfects them through AI.</p>
+
+                     <h3>The DLSS Difference</h3>
+                     <p>On the 8-inch OLED handheld screen, games run at a native 1080p and look incredibly sharp. But the real magic happens when you dock it. Thanks to the custom Nvidia 'Thor' chip and <strong>DLSS 3.5</strong>, the console outputs a reconstructed 4K signal that, in our side-by-side tests, looks nearly identical to a native 4K image from a PS5. Metroid Prime 4 at a locked 60fps in 4K is a sight to behold.</p>
+
+                     <h3>Hardware and Ergonomics</h3>
+                     <p>Nintendo has finally fixed the 'Joy-Con Drift' with new magnetic Hall Effect sensors. The console feels more premium, with a magnesium alloy frame and a much improved kickstand. The battery life is respectable, giving us about 4.5 hours on 'Zelda: Tears of the Kingdom' with the new 2026 'Pro-Enhancement' patch.</p>
+
+                     <h3>The Verdict</h3>
+                     <p>At $499, Nintendo is asking for a premium, but the library and the seamless transition from handheld to 4K home console justify every penny. It is, without a doubt, the best gaming hardware Nintendo has ever released.</p>
+                     `,
+                    img: "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe"
+                },
+                {
+                    id: 4,
+                    title: "Sony PS5 Pro (2026 Edition) Review: Is Path-Tracing Worth $699?",
+                    cat: "reviews",
+                    desc: "Sony's mid-generation beast promises native 4K with full Ray-Tracing. We pushed the hardware to its limit with GTA VI and Cyberpunk 2077.",
+                    content: `
+                     <p>The <strong>PS5 Pro</strong> (Codenamed Trinity) is Sony’s answer to the 'performance or fidelity' dilemma. In 2026, you no longer have to choose. This console is built for the gamer who refuses to compromise.</p>
+
+                     <h3>Path-Tracing: A New Reality</h3>
+                     <p>The standout feature is the dedicated Ray-Tracing hardware. In <strong>GTA VI</strong>, the reflections in the rain-slicked streets of Vice City are not just screenspace reflections; they are fully path-traced in real-time. The depth of lighting and shadows creates a level of immersion we have never seen on a console. Most titles now run at a 'Golden Standard' of 4K at 60fps with full effects enabled.</p>
+
+                     <h3>AI Upscaling: Sony's PSSR</h3>
+                     <p>Sony has introduced its own AI upscaler called <strong>PSSR (PlayStation Spectral Super Resolution)</strong>. It works remarkably well, cleaning up fine details in foliage and distant architecture. The console also features a massive 4TB NVMe SSD as standard, a necessary addition given that 2026 AAA titles are now regularly exceeding 250GB in size.</p>
+
+                     <h3>Who is it for?</h3>
+                     <p>If you have a 120Hz 4K TV and you want the absolute best version of GTA VI, the PS5 Pro is your only choice. It's a niche product for the hardcore enthusiast, but once you see path-tracing in motion, the base PS5 feels like a relic.</p>
+                     `,
+                    img: "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3"
+                },
+                {
+                    id: 3,
+                    title: "Samsung Galaxy Z Fold 8 Review: The Triple-Fold Future is finally in My Pocket",
+                    cat: "reviews",
+                    desc: "Samsung just turned a phone into a full-sized tablet. Is the 'Z' design a gimmick or the new standard for mobile productivity?",
+                    content: `
+                     <p>After seven years of refining the 'Book' fold, the <strong>Galaxy Z Fold 8</strong> takes a radical turn. The new 'Z' design features two hinges and three screen segments, unfolding into a massive 10.2-inch display. It’s the most ambitious piece of mobile hardware we’ve ever reviewed.</p>
+
+                     <h3>The Screen: A Cinema in Your Pocket</h3>
+                     <p>The 10.2-inch Dynamic AMOLED 6X display is breathtaking. Watching a movie in the 21:9 aspect ratio feels like holding a mini-IMAX screen. The new 'Ironflex' hinge system feels incredibly sturdy, and for the first time, the 'crease' is virtually invisible thanks to a new multi-layer polymer. Multi-tasking is where this device shines; you can have a Zoom call, a spreadsheet, and your notes all open at once without feeling cramped.</p>
+
+                     <h3>The Weight and Thickness</h3>
+                     <p>The trade-off is the bulk. Folded, the Z Fold 8 is nearly 16mm thick—about the same as two standard phones. It’s also heavy at 290g. Carrying this in a pair of jeans is noticeable, but the utility it provides often outweighs the pocket fatigue. Samsung has managed to fit a 5,500mAh battery split across the three segments, which surprisingly lasts a full work day.</p>
+
+                     <h3>The Verdict</h3>
+                     <p>At $1,899, the Z Fold 8 is a luxury item. But it’s also the first foldable that truly feels like it can replace both your phone and your tablet. For the power user, there is nothing else like it on the market.</p>
+                     `,
+                    img: "https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=800"
+                },
+                {
+                    id: 2,
+                    title: "Starlink Mini Review: The End of Internet Dead Zones is a Small White Box",
+                    cat: "reviews",
+                    desc: "We took the Starlink Mini into the depths of the Grand Canyon. It's small, it's fast, and it changes everything for rural America.",
+                    content: `
+                     <p>The <strong>Starlink Mini</strong> is perhaps SpaceX's most disruptive product yet. It’s a satellite dish the size of a laptop that fits in a standard backpack. We spent two weeks testing it in the most remote parts of the US to see if it lives up to the hype.</p>
+
+                     <h3>Setup and Speed</h3>
+                     <p>Setting up the Mini takes less than 60 seconds. You point it at the sky, plug it into a 100W USB-C power bank, and within moments, you have 150Mbps download speeds. In our tests at the bottom of the Grand Canyon, we were able to stream 4K video and conduct lag-free video calls. The latency averaged around 30ms—unheard of for a portable satellite system.</p>
+
+                     <h3>Portability and Build</h3>
+                     <p>The unit is IP67 rated, meaning it survived a desert dust storm and a sudden downpour during our testing. It weighs just 2.5 lbs, making it a viable option for hikers and digital nomads. The built-in WiFi 7 router provides enough range to cover a large campsite. The only downside? The $150/month 'Roam' subscription, which is a bit steep for casual users.</p>
+
+                     <h3>The Verdict</h3>
+                     <p>The Starlink Mini is a 10/10 product for its intended audience. If you work remotely or spend time in the American wilderness, this is the most important piece of gear you will buy this year. It is literally a 'Delete' button for dead zones.</p>
+                     `,
+                    img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa"
+                },
+                {
+                    id: 1,
+                    title: "Google Pixel 11 Pro Review: The Smartest Phone in the World Just Got a Soul",
+                    cat: "reviews",
+                    desc: "Google's 2026 flagship isn't about specs—it's about the AI that lives inside it. Is the 'Invisible Camera' enough to beat the iPhone 18?",
+                    content: `
+                     <p>The <strong>Pixel 11 Pro</strong> is the culmination of Google's 'AI-First' vision. While other companies are focused on more cameras or faster chips, Google has focused on making a phone that actually understands you. And yes, that under-display camera is finally perfect.</p>
+
+                     <h3>The Invisible Camera Breakthrough</h3>
+                     <p>The front-facing camera is completely invisible. There is no notch, no hole. When you open the camera app, the pixels above the lens become transparent. Thanks to the <strong>Tensor G6 chip</strong>, the 'haze' typical of under-display cameras is removed in real-time. The results are stunning—sharp, vibrant, and indistinguishable from a traditional selfie cam.</p>
+
+                     <h3>The 'Gemini Ultra' Integration</h3>
+                     <p>The real magic is the OS. The AI doesn't just wait for commands; it anticipates. If you have a flight, it doesn't just remind you; it monitors traffic, pre-orders your Uber, and suggests a podcast based on your flight duration. The 'Real-Time Interpreter' mode is now so fast that you can have a natural conversation with someone in another language with zero lag. It feels like the phone has a 'soul' that is working to make your life easier.</p>
+
+                     <h3>The Verdict</h3>
+                     <p>The Pixel 11 Pro is the best Android phone of 2026. It may not have the resale value of an iPhone, but in terms of sheer intelligence and display technology, it is currently in a league of its own.</p>
+                     `,
+                    img: "https://images.unsplash.com/photo-1598327105666-5b89351aff97"
+                }
+            ];
+                     function showCategory(category) {
+                         window.scrollTo({ top: 0, behavior: "smooth" });
+                         const container = document.getElementById("articles-container");
+                         container.innerHTML = "";
+                         container.classList.remove("page-transition");
+                         void container.offsetWidth;
+                         container.classList.add("page-transition");
+
+                         if (category === "about") {
+                             container.innerHTML = `<div class="widget" style="padding:40px;"><h1>About ProTech</h1><p>Leading source for tech leaks and digital trends.</p></div>`;
+                         } else if (category === "contact") {
+                             container.innerHTML = `<div class="widget" style="padding:40px;"><h1>Contact Us</h1><p>Email: contact@protech.com</p></div>`;
+                         } else if (category === "home") {
+                             container.innerHTML += `
+                     <div style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; padding: 40px 20px; border-radius: 20px; text-align: center; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                         <span style="background: var(--accent-blue); color: white; padding: 3px 12px; border-radius: 20px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold;">Evolution of Tech</span>
+                         <h1 style="font-size: clamp(1.5rem, 4vw, 2.2rem); font-family: 'Space Grotesk'; margin: 10px 0; background: linear-gradient(to right, #fff, #007aff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700;">ProTech: The Future, Decoded.</h1>
+                         <p style="font-size: 1rem; color: #a0aec0; max-width: 500px; margin: 0 auto 20px auto; line-height: 1.4;">Deep dives into AI, Gadgets, and the digital frontier.</p>
+                         <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                              <button onclick="showCategory('trends')" style="background: var(--accent-blue); color: white; border: none; padding: 8px 20px; border-radius: 6px; font-size: 0.9rem; font-weight: bold; cursor: pointer; transition: 0.3s;">Explore Trends</button>
+                              <button onclick="const el = document.querySelectorAll('h2')[1]; window.scrollTo({ top: el.offsetTop - 100, behavior: 'smooth' });" style="background: rgba(255,255,255,0.05); color: white; border: 1px solid #334155; padding: 8px 20px; border-radius: 6px; font-size: 0.9rem; font-weight: bold; cursor: pointer;">Latest Reviews</button>
+
+                             <div style="margin-top: 20px; display: flex; justify-content: center; width: 100%;">
+                                 <div style="position: relative; width: 100%; max-width: 400px; box-sizing: border-box;">
+                                     <input type="text" id="searchInput" onkeyup="liveSearch()" placeholder="Search articles..."
+                                            style="width: 100%; padding: 10px 18px; border-radius: 25px; border: 1px solid #334155; background: rgba(15, 23, 42, 0.8); color: white; outline: none; font-size: 0.9rem; backdrop-filter: blur(10px); box-sizing: border-box;">
+                                     <div id="searchResults" style="position: absolute; width: 100%; background: #12141c; border-radius: 12px; margin-top: 5px; z-index: 2000; text-align: left; max-height: 250px; overflow-y: auto; box-sizing: border-box;"></div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>`;
+
+                             ["trends", "reviews"].forEach(catName => {
+                                 const filtered = articles
+                                     .filter(a => a.cat === catName)
+                                     .slice(0, 4);
+                                 let html = `
+                     <div style="display:flex; justify-content:space-between; align-items:center; margin: 40px 0 20px 0;">
+                     <h2 style="text-transform: uppercase; color: var(--accent-blue); border-left: 4px solid var(--accent-blue); padding-left: 15px; margin:0;">Latest ${catName}</h2>
+                     <button onclick="showCategory('${catName}')" style="background:none; border:1px solid var(--accent-blue); color:var(--accent-blue); padding:5px 15px; border-radius:20px; cursor:pointer; font-size:0.8rem; font-weight:bold; transition:0.3s;">VIEW ALL</button>
+                     </div>`;
+
+                                 filtered.forEach(article => {
+                                     const idx = articles.findIndex(
+                                         a => a.title === article.title
+                                     );
+                                     html += `
+                             <div class="widget" style="padding: 0; overflow: hidden; cursor: pointer;" onclick="showFullArticle(${idx})">
+                                 <div style="width: 100%; height: 200px; background-image: url('${article.img}'); background-size: cover; background-position: center; background-color: #1a1d29;"></div>
+                                 <div style="padding: 15px;"><h3 style="font-size: 1.1rem; margin: 0;">${article.title}</h3></div>
+                             </div>`;
+                                 });
+                                 html += `</div>`;
+                                 html += `<div style="width:100%; height:120px; background:#12141c; border:1px dashed #333; margin:40px 0; display:flex; align-items:center; justify-content:center; border-radius:12px;"><span style="color:#444;">[ AD SPACE - HOME ]</span></div>`;
+                                 container.innerHTML += html;
+                             });
+
+                             container.innerHTML += `
+                     <div class="widget" style="text-align: center; margin-top: 20px; border-top: 2px solid var(--accent-blue);">
+                         <h2 style="color: var(--accent-blue);">About ProTech</h2>
+                         <button onclick="showCategory('about')" style="background:none; border:none; color:var(--accent-blue); cursor:pointer; text-decoration:underline; font-weight:bold; font-size:1.1rem;">LEARN MORE ABOUT US</button>
+                     </div>
+                     <div class="widget" style="text-align: center; border: 1px dashed var(--border-color); margin-bottom: 50px; padding: 30px;">
+                         <h3>Connect With Us</h3>
+                         <div style="display: flex; justify-content: center; gap: 20px; margin: 20px 0;">
+                             <a href="#" style="color: #ff0000; text-decoration: none; font-weight: bold;">YouTube</a>
+                             <a href="#" style="color: #229ED9; text-decoration: none; font-weight: bold;">Telegram</a>
+                         </div>
+                         <button onclick="showCategory('contact')" style="background:var(--accent-blue); color:white; border:none; padding:10px 20px; border-radius:5px; cursor:pointer;">Contact Form</button>
+                     </div>`;
+                         } else {
+                             const filtered = articles.filter(a => a.cat === category);
+                             filtered.forEach((article, idx) => {
+                                 const globalIdx = articles.findIndex(
+                                     a => a.title === article.title
+                                 );
+                                 container.innerHTML += `
+                         <article class="widget" style="padding: 0; overflow: hidden; margin-bottom:30px;">
+                             <div style="width: 100%; height: 300px; background-image: url('${
+                                 article.img
+                             }'); background-size: cover; background-position: center; background-color: #1a1d29;"></div>
+                             <div style="padding: 25px;">
+                                 <span style="color:var(--accent-blue); font-weight:700;">${article.cat.toUpperCase()}</span>
+                                 <h2>${article.title}</h2>
+                                 <button onclick="showFullArticle(${globalIdx})" style="background:none; border:none; color:var(--accent-blue); cursor:pointer; font-weight:bold; padding:0; font-size:1rem; text-decoration:underline;">READ MORE →</button>
+                             </div>
+                         </article>`;
+                                 if ((idx + 1) % 2 === 0) {
+                                     container.innerHTML += `<div style="width:100%; height:100px; background:#0d0f16; border:1px dashed #222; margin-bottom:30px; display:flex; align-items:center; justify-content:center; border-radius:10px;"><span style="color:#333;">[ CATEGORY AD ]</span></div>`;
+                                 }
+                             });
+                         }
+                         document.querySelector(".nav-list").classList.remove("active");
+                     }
+
+                     document
+                         .getElementById("mobile-menu")
+                         .addEventListener("click", function () {
+                             document
+                                 .querySelector(".nav-list")
+                                 .classList.toggle("active");
+                         });
+
+                     window.onload = () => showCategory("home");
+
+                     (function () {
+                         const adsenseFooter = document.createElement("div");
+                         adsenseFooter.style = `
+                     background: #0d0f16;
+                     padding: 30px 20px;
+                     margin-top: 50px;
+                     border-top: 1px solid #1e293b;
+                     text-align: center;
+                     font-family: sans-serif;
+                     `;
+
+                         adsenseFooter.innerHTML = `
+                     <div style="margin-bottom: 15px;">
+                     <a href="javascript:void(0)" onclick="showLegal('privacy')" style="color:#64748b; text-decoration:none; margin:0 10px; font-size:14px;">Privacy Policy</a>
+                     <a href="javascript:void(0)" onclick="showLegal('terms')" style="color:#64748b; text-decoration:none; margin:0 10px; font-size:14px;">Terms of Service</a>
+                     <a href="javascript:void(0)" onclick="showCategory('about')" style="color:#64748b; text-decoration:none; margin:0 10px; font-size:14px;">About Us</a>
+                     <a href="javascript:void(0)" onclick="showCategory('contact')" style="color:#64748b; text-decoration:none; margin:0 10px; font-size:14px;">Contact Us</a>
+                     </div>
+                     <p style="color:#475569; font-size:12px;">&copy; 2026 ProTech Magazine. All rights reserved.</p>
+                     `;
+
+                         document.body.appendChild(adsenseFooter);
+
+                         window.showLegal = function (type) {
+                             const content = {
+                                 privacy: {
+                                     title: "Privacy Policy",
+                                     text: "We use cookies to personalize content and ads, to provide social media features and to analyze our traffic. We also share information about your use of our site with our advertising and analytics partners."
+                                 },
+                                 terms: {
+                                     title: "Terms of Service",
+                                     text: "By accessing ProTech, you agree to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws."
+                                 }
+                             };
+
+                             const modal = document.createElement("div");
+                             modal.style =
+                                 "position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:100000; display:flex; align-items:center; justify-content:center; padding:20px;";
+                             modal.innerHTML = `
+                     <div style="background:#1e293b; padding:30px; border-radius:12px; max-width:500px; border:1px solid #3b82f6; color:white;">
+                         <h2 style="color:#3b82f6; margin-top:0;">\${content[type].title}</h2>
+                         <p style="line-height:1.6; color:#cbd5e1;">\${content[type].text}</p>
+                         <button onclick="this.parentElement.parentElement.remove()" style="background:#3b82f6; color:white; border:none; padding:10px 20px; border-radius:6px; cursor:pointer; width:100%; margin-top:20px; font-weight:bold;">Close</button>
+                     </div>
+                     `;
+                             document.body.appendChild(modal);
+                         };
+                     })();
+
+                     function checkUrlParams() {
+                         const urlParams = new URLSearchParams(window.location.search);
+                         const articleId = urlParams.get("id");
+                         if (articleId) {
+                             const idx = articles.findIndex(a => a.id == articleId);
+                             if (idx !== -1) {
+                                 showFullArticle(idx);
+                             }
+                         }
+                     }
+
+                     function showFullArticle(index, pushToHistory = true) {
+                         const article = articles[index];
+                         if (!article) return;
+
+                         const container = document.getElementById("articles-container");
+                         container.classList.remove("page-transition");
+                         void container.offsetWidth;
+                         container.classList.add("page-transition");
+
+                         window.scrollTo({ top: 0, behavior: "smooth" });
+
+                         const shareUrl = encodeURIComponent(
+                             window.location.origin +
+                                 window.location.pathname +
+                                 "?id=" +
+                                 article.id
+                         );
+                         const shareTitle = encodeURIComponent(article.title);
+
+                         if (pushToHistory) {
+                             const newurl =
+                                 window.location.protocol +
+                                 "//" +
+                                 window.location.host +
+                                 window.location.pathname +
+                                 "?id=" +
+                                 article.id;
+                             window.history.pushState(
+                                 { page: "article", index: index },
+                                 "",
+                                 newurl
+                             );
+                         }
+
+                         document.title = article.title + " | ProTech";
+
+                         const related = articles
+                             .filter(a => a.cat === article.cat && a.id !== article.id)
+                             .slice(0, 2);
+
+                         let relatedSection = "";
+                         if (related.length > 0) {
+                             relatedSection = `<h3 style="margin-top:40px; border-top:1px solid var(--border-color); padding-top:20px; color:var(--accent-blue);">Read Next</h3>
+                                   <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px;">`;
+                             related.forEach(rel => {
+                                 const rIdx = articles.findIndex(x => x.id === rel.id);
+                                 relatedSection += `
+                         <div onclick="showFullArticle(${rIdx})" style="cursor:pointer; background:var(--bg-card); border:1px solid var(--border-color); border-radius:10px; overflow:hidden;">
+                             <img src="${rel.img}" style="height:100px; width:100%; object-fit:cover; min-height:100px;">
+                             <p style="padding:8px; font-size:0.85rem; margin:0; font-weight:bold; line-height:1.3;">${rel.title}</p>
+                         </div>`;
+                             });
+                             relatedSection += `</div>`;
+                         }
+
+                         container.innerHTML = `
+                     <article class="widget" style="padding: 0; overflow: hidden; border: none; background: transparent;">
+                     <img src="${
+                         article.img
+                     }" style="width: 100%; max-height: 450px; object-fit: cover; border-radius: 15px; margin-bottom: 30px;">
+                     <div style="padding: 0 10px;">
+                         <span style="color:var(--accent-blue); font-weight:700; letter-spacing: 2px;">${article.cat.toUpperCase()}</span>
+                         <h1 style="font-size: 2.5rem; line-height: 1.2; margin: 15px 0 25px 0;">${
+                             article.title
+                         }</h1>
+
+                         <div class="share-buttons">
+                             <span style="color:var(--text-secondary); font-weight:bold; font-size:0.8rem; margin-right:5px;">SHARE:</span>
+                             <a href="https://www.facebook.com/sharer/sharer.php?u=${shareUrl}" target="_blank" class="share-btn btn-fb"><i class="fab fa-facebook-f"></i></a>
+                             <a href="https://api.whatsapp.com/send?text=${shareTitle}%20${shareUrl}" target="_blank" class="share-btn btn-wa"><i class="fab fa-whatsapp"></i></a>
+                             <a href="https://twitter.com/intent/tweet?text=${shareTitle}&url=${shareUrl}" target="_blank" class="share-btn btn-x"><i class="fab fa-x-twitter"></i></a>
+                         </div>
+
+                         <div style="font-size: 1.2rem; line-height: 1.8; color: var(--text-secondary); margin-top: 30px;">
+                             ${article.content || article.desc}
+                         </div>
+
+                         ${relatedSection}
+
+                         <button onclick="window.history.back()" style="margin-top: 30px; background: #1e293b; color: white; border: 1px solid var(--border-color); padding: 12px 25px; border-radius: 8px; cursor: pointer; font-weight: bold; width:100%;">
+                             ← Back to Feed
+                         </button>
+                     </div>
+                     </article>
+                     `;
+
+                         if (typeof gtag === "function") {
+                             gtag("config", "G-ZZ3D01HRPG", {
+                                 page_path: "/?id=" + article.id
+                             });
+                         }
+                     }
+
+                     window.addEventListener("load", checkUrlParams);
+                     function setQuickSearch(term) {
+                         showCategory("home");
+                         const searchInput = document.getElementById("searchInput");
+                         if (searchInput) {
+                             searchInput.value = term;
+                             liveSearch();
+                             searchInput.focus();
+                             window.scrollTo({
+                                 top: searchInput.offsetTop - 100,
+                                 behavior: "smooth"
+                             });
+                         }
+                     }
+
+                     function liveSearch() {
+                         const query = document
+                             .getElementById("searchInput")
+                             .value.toLowerCase();
+                         const container = document.getElementById("articles-container");
+                         const resultsDropdown =
+                             document.getElementById("searchResults");
+
+                         resultsDropdown.innerHTML = "";
+
+                         if (query.length < 2) {
+                             if (query.length === 0) showCategory("home");
+                             return;
+                         }
+
+                         const matched = articles.filter(
+                             a =>
+                                 a.title.toLowerCase().includes(query) ||
+                                 a.desc.toLowerCase().includes(query)
+                         );
+
+                         container.innerHTML = `
+                     <div style="margin-bottom: 30px;">
+                     <h2 style="color: var(--accent-blue);">Search Results for: "${query}"</h2>
+                     <p style="color: var(--text-secondary);">${matched.length} articles found</p>
+                     </div>
+                     <div id="live-results-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;"></div>
+                     `;
+
+                         const grid = document.getElementById("live-results-grid");
+
+                         if (matched.length === 0) {
+                             grid.innerHTML = `<div class="widget" style="grid-column: 1/-1; text-align: center; padding: 50px;">
+                     <p style="font-size: 1.2rem; color: #64748b;">No articles found matching your search.</p>
+                     </div>`;
+                         } else {
+                             matched.forEach(article => {
+                                 const globalIdx = articles.findIndex(
+                                     a => a.id === article.id
+                                 );
+                                 grid.innerHTML += `
+                         <div class="widget" style="padding: 0; overflow: hidden; cursor: pointer; transition: 0.3s;" onclick="showFullArticle(${globalIdx})">
+                             <div style="width: 100%; height: 180px; background-image: url('${
+                                 article.img
+                             }'); background-size: cover; background-position: center;"></div>
+                             <div style="padding: 15px;">
+                                 <span style="color:var(--accent-blue); font-size: 0.8rem; font-weight: bold;">${article.cat.toUpperCase()}</span>
+                                 <h3 style="font-size: 1rem; margin: 10px 0;">${
+                                     article.title
+                                 }</h3>
+                             </div>
+                         </div>`;
+                             });
+                         }
+                     }
+
+                     window.onpopstate = function (event) {
+                         if (event.state && event.state.index !== undefined) {
+                             showFullArticle(event.state.index, false);
+                         } else {
+                             showCategory("home");
+                         }
+                     };
+        </script>
+    </body>
 </html>
