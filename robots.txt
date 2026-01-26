@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://protechamd.netlify.app/sitemap.xml
+Sitemap: https://protechdaily.online/sitemap.xml
