@@ -321,11 +321,74 @@
                 window.scrollTo({ top: 0, behavior: "smooth" });
                 const container = document.getElementById("articles-container");
                 container.innerHTML = "";
+if (category === "about") {
+                    container.innerHTML = `
+                    <div class="widget" style="padding:40px; line-height:1.8; text-align: left;">
+                        <h1 style="color: var(--accent-blue); font-family: 'Space Grotesk'; font-size: 2.5rem; margin-bottom: 20px;">About ProTech</h1>
+                        
+                        <p style="font-size: 1.1rem; color: var(--text-primary);">
+                            Welcome to <strong>ProTech</strong>, your premier destination for high-fidelity tech leaks, digital trends, and in-depth reviews of the future's most anticipated gadgets. 
+                        </p>
 
-                if (category === "about") {
-                    container.innerHTML = `<div class="widget" style="padding:40px;"><h1>About ProTech</h1><p>Leading source for tech leaks and digital trends.</p></div>`;
-                } else if (category === "contact") {
-                    container.innerHTML = `<div class="widget" style="padding:40px;"><h1>Contact Us</h1><p>Email: contact@protech.com</p></div>`;
+                        <div style="margin: 30px 0; border-left: 4px solid var(--accent-blue); padding-left: 20px; background: #1a1d26; padding: 20px; border-radius: 0 10px 10px 0;">
+                            <h3 style="margin-top:0;">Our Mission</h3>
+                            <p style="color: var(--text-secondary); margin-bottom:0;">
+                                In an era where technology moves faster than ever, our mission is to decode the digital frontier. We provide our readers with verified leaks and expert analysis, helping you stay ahead of the curve in the 2026 tech landscape.
+                            </p>
+                        </div>
+
+                        <h3 style="color: var(--accent-blue);">What We Cover</h3>
+                        <ul style="color: var(--text-secondary); padding-left: 20px;">
+                            <li><strong>Next-Gen Hardware:</strong> Exclusive insights into upcoming smartphones, consoles, and wearable tech.</li>
+                            <li><strong>Future Software:</strong> Analysis of AI integration and the evolution of mobile and desktop operating systems.</li>
+                            <li><strong>Infrastructure:</strong> Updates on global connectivity, from Starlink advancements to 6G rollouts.</li>
+                        </ul>
+
+                        <h3 style="color: var(--accent-blue); margin-top:30px;">Why Trust ProTech?</h3>
+                        <p style="color: var(--text-secondary);">
+                            Our team consists of tech enthusiasts and industry analysts dedicated to journalistic integrity. We cross-reference every leak and provide context to every rumor, ensuring that our community receives the most accurate information possible.
+                        </p>
+
+                        <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 40px 0;">
+
+                        <div style="text-align: center;">
+                            <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                                Interested in collaborating or have a tip? <br>
+                                <a onclick="showCategory('contact')" style="color: var(--accent-blue); cursor: pointer; font-weight: bold; text-decoration: underline;">Reach out to our editorial team</a>.
+                            </p>
+                        </div>
+                    </div>`;
+} else if (category === "contact") {
+                    container.innerHTML = `
+                    <div class="widget" style="padding:40px; text-align: center;">
+                        <h1 style="color: var(--accent-blue); font-family: 'Space Grotesk'; font-size: 2.5rem; margin-bottom: 20px;">Get in Touch</h1>
+                        <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px auto;">
+                            Have a news tip, a question about a recent leak, or interested in advertising with ProTech? Our team is ready to hear from you.
+                        </p>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px;">
+                            <div style="background: #1a1d26; padding: 30px; border-radius: 15px; border: 1px solid var(--border-color);">
+                                <i class="fas fa-envelope" style="font-size: 2rem; color: var(--accent-blue); margin-bottom: 15px;"></i>
+                                <h3 style="margin: 10px 0;">Editorial & Tips</h3>
+                                <p style="color: var(--text-secondary); font-size: 0.9rem;">Send us your leaks and stories</p>
+                                <a href="mailto:contact@protechdaily.online" style="color: var(--accent-blue); font-weight: bold; text-decoration: none;">contact@protechdaily.online</a>
+                            </div>
+
+                            <div style="background: #1a1d26; padding: 30px; border-radius: 15px; border: 1px solid var(--border-color);">
+                                <i class="fas fa-ad" style="font-size: 2rem; color: var(--accent-blue); margin-bottom: 15px;"></i>
+                                <h3 style="margin: 10px 0;">Partnerships</h3>
+                                <p style="color: var(--text-secondary); font-size: 0.9rem;">For business and ads inquiries</p>
+                                <a href="mailto:admin@protechdaily.online" style="color: var(--accent-blue); font-weight: bold; text-decoration: none;">admin@protechdaily.online</a>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 50px; padding: 20px; border-top: 1px solid var(--border-color);">
+                            <p style="color: var(--text-secondary); font-size: 0.8rem;">
+                                <strong>Response Time:</strong> We typically respond to all professional inquiries within 24-48 business hours.
+                            </p>
+                        </div>
+                    </div>`;
+
                 } else if (category === "home") {
                     // قسم الهيرو (البحث سيبقى سليماً هنا)
                     container.innerHTML += `
