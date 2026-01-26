@@ -25,127 +25,230 @@
             rel="stylesheet"
         />
         <style>
-    :root {
-        --bg-body: #0a0b10;
-        --bg-card: #12141c;
-        --bg-header: #0d0f16;
-        --accent-blue: #007aff;
-        --accent-glow: rgba(0, 122, 255, 0.3);
-        --text-primary: #ffffff;
-        --text-secondary: #94a3b8;
-        --border-color: #1e293b;
-    }
-    body {
-        font-family: "Inter", sans-serif;
-        background-color: var(--bg-body);
-        color: var(--text-primary);
-        margin: 0; padding: 0; line-height: 1.6;
-    }
-    nav {
-        background: rgba(13, 15, 22, 0.9);
-        backdrop-filter: blur(12px);
-        border-bottom: 1px solid var(--border-color);
-        position: sticky; top: 0; z-index: 1000;
-        display: flex; justify-content: space-between;
-        align-items: center; min-height: 70px; padding: 0 40px;
-    }
-    .logo {
-        font-family: "Space Grotesk", sans-serif;
-        text-transform: uppercase; cursor: pointer;
-    }
-    .logo span { color: var(--accent-blue); text-shadow: 0 0 20px var(--accent-glow); }
-    
-    .nav-list { display: flex; list-style: none; margin: 0; padding: 0; }
-    .nav-list li a {
-        display: block; padding: 20px 25px; text-decoration: none;
-        color: white; font-size: 0.85rem; text-transform: uppercase; transition: 0.3s;
-        cursor: pointer;
-    }
+            :root {
+                --bg-body: #0a0b10;
+                --bg-card: #12141c;
+                --bg-header: #0d0f16;
+                --accent-blue: #007aff;
+                --accent-glow: rgba(0, 122, 255, 0.3);
+                --text-primary: #ffffff;
+                --text-secondary: #94a3b8;
+                --border-color: #1e293b;
+            }
+            body {
+                font-family: "Inter", sans-serif;
+                background-color: var(--bg-body);
+                color: var(--text-primary);
+                margin: 0;
+                padding: 0;
+                line-height: 1.6;
+            }
+            nav {
+                background: rgba(13, 15, 22, 0.9);
+                backdrop-filter: blur(12px);
+                border-bottom: 1px solid var(--border-color);
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                min-height: 70px;
+                padding: 0 40px;
+            }
+            .logo {
+                font-family: "Space Grotesk", sans-serif;
+                text-transform: uppercase;
+                cursor: pointer;
+            }
+            .logo span {
+                color: var(--accent-blue);
+                text-shadow: 0 0 20px var(--accent-glow);
+            }
 
-    /* --- إعادة الخطوط الثلاثة للموبايل --- */
-    .menu-toggle { display: none; cursor: pointer; flex-direction: column; gap: 6px; }
-    .bar { width: 25px; height: 3px; background-color: white; border-radius: 2px; transition: 0.3s; }
+            .nav-list {
+                display: flex;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+            .nav-list li a {
+                display: block;
+                padding: 20px 25px;
+                text-decoration: none;
+                color: white;
+                font-size: 0.85rem;
+                text-transform: uppercase;
+                transition: 0.3s;
+                cursor: pointer;
+            }
 
-    @media (max-width: 768px) {
-        .menu-toggle { display: flex; }
-        .nav-list {
-            display: none; flex-direction: column; position: absolute;
-            top: 70px; left: 0; width: 100%; background: var(--bg-header);
-            border-bottom: 1px solid var(--border-color);
-        }
-        nav { padding: 0 20px; }
-    }
+            /* --- إعادة الخطوط الثلاثة للموبايل --- */
+            .menu-toggle {
+                display: none;
+                cursor: pointer;
+                flex-direction: column;
+                gap: 6px;
+            }
+            .bar {
+                width: 25px;
+                height: 3px;
+                background-color: white;
+                border-radius: 2px;
+                transition: 0.3s;
+            }
 
-    .wrapper { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
+            @media (max-width: 768px) {
+                .menu-toggle {
+                    display: flex;
+                }
+                .nav-list {
+                    display: none;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 70px;
+                    left: 0;
+                    width: 100%;
+                    background: var(--bg-header);
+                    border-bottom: 1px solid var(--border-color);
+                }
+                nav {
+                    padding: 0 20px;
+                }
+            }
 
-    /* التصميم الجديد للمقالات فقط */
-    .widget { background: var(--bg-card); border-radius: 15px; border: 1px solid var(--border-color); overflow: hidden; }
-    
-    .article-card { position: relative; height: 350px; cursor: pointer; transition: 0.3s; }
-    .article-card:hover { transform: translateY(-10px); border-color: var(--accent-blue); }
+            .wrapper {
+                max-width: 1200px;
+                margin: 40px auto;
+                padding: 0 20px;
+            }
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 25px;
+            }
 
-    .widget-img {
-        position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-        background-size: cover; background-position: center; transition: 0.5s; z-index: 1;
-    }
-    .article-card:hover .widget-img { transform: scale(1.1); }
+            /* التصميم الجديد للمقالات فقط */
+            .widget {
+                background: var(--bg-card);
+                border-radius: 15px;
+                border: 1px solid var(--border-color);
+                overflow: hidden;
+            }
 
-    .widget-overlay {
-        position: absolute; bottom: 0; left: 0; width: 100%; height: 100%;
-        background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
-        z-index: 2;
-    }
+            .article-card {
+                position: relative;
+                height: 350px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+            .article-card:hover {
+                transform: translateY(-10px);
+                border-color: var(--accent-blue);
+            }
 
-    .widget-content { position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px; box-sizing: border-box; z-index: 3; }
-    .widget-content h3 { margin: 10px 0 0 0; font-size: 1.2rem; font-weight: 700; color: #fff; line-height: 1.3; }
-    
-    .cat-tag { background: var(--accent-blue); color: #fff; font-size: 0.7rem; padding: 3px 10px; border-radius: 4px; text-transform: uppercase; font-weight: bold; }
-                .quick-tags { 
-        display: flex; 
-        gap: 10px; 
-        overflow-x: auto; 
-        white-space: nowrap; 
-        padding: 15px 20px; 
-        scrollbar-width: none; 
-        -webkit-overflow-scrolling: touch;
-        position: sticky;
-        top: 70px;
-        background: var(--bg-body);
-        z-index: 999;
-        border-bottom: 1px solid var(--border-color);
-    }
-    .quick-tags::-webkit-scrollbar { display: none; }
+            .widget-img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-position: center;
+                transition: 0.5s;
+                z-index: 1;
+            }
+            .article-card:hover .widget-img {
+                transform: scale(1.1);
+            }
 
-    .tag-item { 
-        display: inline-block; 
-        background: #1e293b; 
-        padding: 8px 18px; 
-        border-radius: 20px; 
-        font-size: 0.85rem; 
-        cursor: pointer; 
-        border: 1px solid var(--border-color); 
-        flex-shrink: 0; 
-        transition: 0.3s;
-    }
+            .widget-overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(
+                    to top,
+                    rgba(0, 0, 0, 0.95) 0%,
+                    rgba(0, 0, 0, 0.4) 50%,
+                    transparent 100%
+                );
+                z-index: 2;
+            }
 
-    .tag-item:hover {
-        border-color: var(--accent-blue);
-        background: #2d3748;
-    }
+            .widget-content {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                padding: 20px;
+                box-sizing: border-box;
+                z-index: 3;
+            }
+            .widget-content h3 {
+                margin: 10px 0 0 0;
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: #fff;
+                line-height: 1.3;
+            }
 
-    .tag-item:first-child {
-        position: sticky;
-        left: 0;
-        z-index: 10;
-        background: var(--accent-blue);
-        color: white;
-        font-weight: bold;
-        border: none;
-        box-shadow: 10px 0 15px var(--bg-body);
-    }
+            .cat-tag {
+                background: var(--accent-blue);
+                color: #fff;
+                font-size: 0.7rem;
+                padding: 3px 10px;
+                border-radius: 4px;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+            .quick-tags {
+                display: flex;
+                gap: 10px;
+                overflow-x: auto;
+                white-space: nowrap;
+                padding: 15px 20px;
+                scrollbar-width: none;
+                -webkit-overflow-scrolling: touch;
+                position: sticky;
+                top: 70px;
+                background: var(--bg-body);
+                z-index: 999;
+                border-bottom: 1px solid var(--border-color);
+            }
+            .quick-tags::-webkit-scrollbar {
+                display: none;
+            }
 
-</style>
+            .tag-item {
+                display: inline-block;
+                background: #1e293b;
+                padding: 8px 18px;
+                border-radius: 20px;
+                font-size: 0.85rem;
+                cursor: pointer;
+                border: 1px solid var(--border-color);
+                flex-shrink: 0;
+                transition: 0.3s;
+            }
+
+            .tag-item:hover {
+                border-color: var(--accent-blue);
+                background: #2d3748;
+            }
+
+            .tag-item:first-child {
+                position: sticky;
+                left: 0;
+                z-index: 10;
+                background: var(--accent-blue);
+                color: white;
+                font-weight: bold;
+                border: none;
+                box-shadow: 10px 0 15px var(--bg-body);
+            }
+        </style>
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -175,36 +278,56 @@
             </ul>
         </nav>
         <div class="quick-tags">
-    <div class="tag-item">Hot</div>
-    <div class="tag-item" onclick="setQuickSearch('iPhone 18 Pro')">iPhone 18 Pro</div>
-    <div class="tag-item" onclick="setQuickSearch('GTA VI Leak')">GTA VI Leak</div>
-    <div class="tag-item" onclick="setQuickSearch('Galaxy S26 Ultra')">Galaxy S26 Ultra</div>
-    <div class="tag-item" onclick="setQuickSearch('RTX 6090')">RTX 6090</div>
-    <div class="tag-item" onclick="setQuickSearch('iOS 19 AI')">iOS 19 AI</div>
-    <div class="tag-item" onclick="setQuickSearch('Tesla Model 2')">Tesla Model 2</div>
-    <div class="tag-item" onclick="setQuickSearch('Switch 2 Pro')">Switch 2 Pro</div>
-    <div class="tag-item" onclick="setQuickSearch('Vision Pro 2')">Vision Pro 2</div>
-    <div class="tag-item" onclick="setQuickSearch('Starlink Mini')">Starlink Mini</div>
-    <div class="tag-item" onclick="setQuickSearch('PS6 Rumors')">PS6 Rumors</div>
-</div>
+            <div class="tag-item">Hot</div>
+            <div class="tag-item" onclick="setQuickSearch('iPhone 18 Pro')">
+                iPhone 18 Pro
+            </div>
+            <div class="tag-item" onclick="setQuickSearch('GTA VI Leak')">
+                GTA VI Leak
+            </div>
+            <div class="tag-item" onclick="setQuickSearch('Galaxy S26 Ultra')">
+                Galaxy S26 Ultra
+            </div>
+            <div class="tag-item" onclick="setQuickSearch('RTX 6090')">
+                RTX 6090
+            </div>
+            <div class="tag-item" onclick="setQuickSearch('iOS 19 AI')">
+                iOS 19 AI
+            </div>
+            <div class="tag-item" onclick="setQuickSearch('Tesla Model 2')">
+                Tesla Model 2
+            </div>
+            <div class="tag-item" onclick="setQuickSearch('Switch 2 Pro')">
+                Switch 2 Pro
+            </div>
+            <div class="tag-item" onclick="setQuickSearch('Vision Pro 2')">
+                Vision Pro 2
+            </div>
+            <div class="tag-item" onclick="setQuickSearch('Starlink Mini')">
+                Starlink Mini
+            </div>
+            <div class="tag-item" onclick="setQuickSearch('PS6 Rumors')">
+                PS6 Rumors
+            </div>
+        </div>
         <div class="wrapper">
             <main id="articles-container"></main>
         </div>
         <script src="data.js"></script>
-<script>
+        <script>
             function showCategory(category) {
-document.querySelector(".nav-list").style.display = "none";
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    const container = document.getElementById("articles-container");
-    container.innerHTML = "";
+                document.querySelector(".nav-list").style.display = "none";
+                window.scrollTo({ top: 0, behavior: "smooth" });
+                const container = document.getElementById("articles-container");
+                container.innerHTML = "";
 
-    if (category === "about") {
-        container.innerHTML = `<div class="widget" style="padding:40px;"><h1>About ProTech</h1><p>Leading source for tech leaks and digital trends.</p></div>`;
-    } else if (category === "contact") {
-        container.innerHTML = `<div class="widget" style="padding:40px;"><h1>Contact Us</h1><p>Email: contact@protech.com</p></div>`;
-    } else if (category === "home") {
-        // قسم الهيرو (البحث سيبقى سليماً هنا)
-        container.innerHTML += `
+                if (category === "about") {
+                    container.innerHTML = `<div class="widget" style="padding:40px;"><h1>About ProTech</h1><p>Leading source for tech leaks and digital trends.</p></div>`;
+                } else if (category === "contact") {
+                    container.innerHTML = `<div class="widget" style="padding:40px;"><h1>Contact Us</h1><p>Email: contact@protech.com</p></div>`;
+                } else if (category === "home") {
+                    // قسم الهيرو (البحث سيبقى سليماً هنا)
+                    container.innerHTML += `
          <div style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; padding: 60px 20px; border-radius: 20px; text-align: center; margin-bottom: 30px;">
              <h1 style="font-family: 'Space Grotesk'; font-size: 2.5rem; margin-bottom: 20px;">ProTech: The Future, Decoded.</h1>
              <div style="position: relative; max-width: 500px; margin: 0 auto;">
@@ -214,13 +337,20 @@ document.querySelector(".nav-list").style.display = "none";
              </div>
          </div>`;
 
-        ["trends", "reviews"].forEach(catName => {
-            container.innerHTML += `<h2 style="color: var(--accent-blue); margin: 40px 0 20px 0;">LATEST ${catName.toUpperCase()}</h2>
+                    ["trends", "reviews"].forEach(catName => {
+                        container.innerHTML += `<h2 style="color: var(--accent-blue); margin: 40px 0 20px 0;">LATEST ${catName.toUpperCase()}</h2>
                                     <div class="grid" id="grid-${catName}"></div>`;
-            const catGrid = document.getElementById(`grid-${catName}`);
-            articles.filter(a => a.cat === catName).slice(0, 4).forEach(article => {
-                const idx = articles.findIndex(a => a.id === article.id);
-                catGrid.innerHTML += `
+                        const catGrid = document.getElementById(
+                            `grid-${catName}`
+                        );
+                        articles
+                            .filter(a => a.cat === catName)
+                            .slice(0, 4)
+                            .forEach(article => {
+                                const idx = articles.findIndex(
+                                    a => a.id === article.id
+                                );
+                                catGrid.innerHTML += `
                     <div class="widget article-card" onclick="window.location.href='post.html?id=${article.id}'"
                   >
                         <div class="widget-img" style="background-image: url('${article.img}')"></div>
@@ -230,15 +360,19 @@ document.querySelector(".nav-list").style.display = "none";
                             <h3>${article.title}</h3>
                         </div>
                     </div>`;
-            });
-        });
-    } else {
-        // صفحات الأقسام
-        container.innerHTML = `<h1 style="margin-bottom:30px;">${category.toUpperCase()}</h1><div class="grid" id="cat-grid"></div>`;
-        const grid = document.getElementById("cat-grid");
-        articles.filter(a => a.cat === category).forEach(article => {
-            const idx = articles.findIndex(a => a.id === article.id);
-            grid.innerHTML += `
+                            });
+                    });
+                } else {
+                    // صفحات الأقسام
+                    container.innerHTML = `<h1 style="margin-bottom:30px;">${category.toUpperCase()}</h1><div class="grid" id="cat-grid"></div>`;
+                    const grid = document.getElementById("cat-grid");
+                    articles
+                        .filter(a => a.cat === category)
+                        .forEach(article => {
+                            const idx = articles.findIndex(
+                                a => a.id === article.id
+                            );
+                            grid.innerHTML += `
                 <div class="widget article-card" onclick="window.location.href='post.html?id=${article.id}'"
                 >
                     <div class="widget-img" style="background-image: url('${article.img}')"></div>
@@ -248,21 +382,30 @@ document.querySelector(".nav-list").style.display = "none";
                         <h3>${article.title}</h3>
                     </div>
                 </div>`;
-        });
-    }
-}
-
-            document.getElementById("mobile-menu").addEventListener("click", function () {
-                const navList = document.querySelector(".nav-list");
-                if (navList.style.display === "flex") {
-                    navList.style.display = "none";
-                } else {
-                    navList.style.display = "flex";
+                        });
                 }
-            });
+            }
 
-            window.onload = () => showCategory("home");
+            document
+                .getElementById("mobile-menu")
+                .addEventListener("click", function () {
+                    const navList = document.querySelector(".nav-list");
+                    if (navList.style.display === "flex") {
+                        navList.style.display = "none";
+                    } else {
+                        navList.style.display = "flex";
+                    }
+                });
+            window.onload = () => {
+                const params = new URLSearchParams(window.location.search);
+                const category = params.get("cat");
 
+                if (category) {
+                    showCategory(category);
+                } else {
+                    showCategory("home");
+                }
+            };
             (function () {
                 const adsenseFooter = document.createElement("div");
                 adsenseFooter.style = `
@@ -366,7 +509,9 @@ document.querySelector(".nav-list").style.display = "none";
                             a => a.id === article.id
                         );
                         grid.innerHTML += `
-                         <div class="widget" style="padding: 0; overflow: hidden; cursor: pointer; transition: 0.3s;" onclick="window.location.href='post.html?id=${article.id}'"
+                         <div class="widget" style="padding: 0; overflow: hidden; cursor: pointer; transition: 0.3s;" onclick="window.location.href='post.html?id=${
+                             article.id
+                         }'"
                          >
                              <div style="width: 100%; height: 180px; background-image: url('${
                                  article.img
