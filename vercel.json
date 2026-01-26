@@ -1,4 +1,32 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/apple-vision-pro-2026-review", "destination": "/post.html?id=26" },
+    { "source": "/galaxy-s26-leak-design-overhaul", "destination": "/post.html?id=25" },
+    { "source": "/10-tech-gadgets-2026-vouch", "destination": "/post.html?id=24" },
+    { "source": "/gta-vi-2026-reality-check-crisis", "destination": "/post.html?id=23" },
+    { "source": "/iphone-18-pro-max-leaks-price-hike", "destination": "/post.html?id=22" },
+    { "source": "/starlink-mini-elon-musk-backpack-internet", "destination": "/post.html?id=21" },
+    { "source": "/federal-ai-act-2026-internet-freedom", "destination": "/post.html?id=20" },
+    { "source": "/tesla-model-2-spy-shots-release", "destination": "/post.html?id=19" },
+    { "source": "/apple-glasses-air-leaks-smartphone-death", "destination": "/post.html?id=18" },
+    { "source": "/nintendo-switch-2-pro-4k-benchmarks", "destination": "/post.html?id=17" },
+    { "source": "/sony-project-trinity-ps5-pro-leaks", "destination": "/post.html?id=16" },
+    { "source": "/samsung-galaxy-z-fold-8-triple-fold", "destination": "/post.html?id=15" },
+    { "source": "/google-pixel-11-pro-under-display-camera", "destination": "/post.html?id=14" },
+    { "source": "/us-micro-grid-revolution-energy-ai", "destination": "/post.html?id=13" },
+    { "source": "/remote-work-2-zoom-towns-tech-hubs", "destination": "/post.html?id=12" },
+    { "source": "/ai-education-us-public-schools-learning-gap", "destination": "/post.html?id=11" },
+    { "source": "/quantum-computing-usa-medical-miracles", "destination": "/post.html?id=10" },
+    { "source": "/biotech-gold-rush-personalized-longevity", "destination": "/post.html?id=9" },
+    { "source": "/defi-comeback-wall-street-blockchain", "destination": "/post.html?id=8" },
+    { "source": "/tesla-model-2-long-term-review", "destination": "/post.html?id=7" },
+    { "source": "/apple-glasses-air-one-week-review", "destination": "/post.html?id=6" },
+    { "source": "/nintendo-switch-2-pro-handheld-king-review", "destination": "/post.html?id=5" },
+    { "source": "/sony-ps5-pro-2026-path-tracing-review", "destination": "/post.html?id=4" },
+    { "source": "/samsung-galaxy-z-fold-8-tablet-review", "destination": "/post.html?id=3" },
+    { "source": "/starlink-mini-backpack-satellite-review", "destination": "/post.html?id=2" },
+    { "source": "/google-pixel-11-pro-smartest-phone-review", "destination": "/post.html?id=1" }
+  ]
 }
