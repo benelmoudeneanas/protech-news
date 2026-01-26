@@ -53,6 +53,36 @@
             .logo span {
                 color: var(--accent-blue);
             }
+
+            .nav-list {
+                display: flex;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+            .nav-list li a {
+                text-decoration: none;
+                color: white;
+                padding: 20px 25px;
+                display: block;
+                font-size: 0.85rem;
+                text-transform: uppercase;
+                transition: 0.3s;
+            }
+
+            .menu-toggle {
+                display: none;
+                cursor: pointer;
+                flex-direction: column;
+                gap: 6px;
+            }
+            .bar {
+                width: 25px;
+                height: 3px;
+                background-color: white;
+                border-radius: 2px;
+            }
+
             .wrapper {
                 max-width: 800px;
                 margin: 40px auto;
@@ -82,10 +112,6 @@
                 transition: 0.3s;
                 text-decoration: none;
             }
-            .share-btn:hover {
-                color: var(--accent-blue);
-                transform: translateY(-3px);
-            }
             .content {
                 font-size: 1.2rem;
                 line-height: 1.8;
@@ -105,18 +131,27 @@
                 text-align: center;
                 text-decoration: none;
                 margin-top: 50px;
-                transition: 0.3s;
             }
-            .back-btn:hover {
-                background: #2d3748;
-                border-color: var(--accent-blue);
-            }
+
             @media (max-width: 768px) {
                 nav {
                     padding: 0 20px;
                 }
-                .wrapper {
-                    margin: 20px auto;
+                .menu-toggle {
+                    display: flex !important;
+                }
+                .nav-list {
+                    display: none;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 70px;
+                    left: 0;
+                    width: 100%;
+                    background: var(--bg-card);
+                    border-bottom: 1px solid var(--border-color);
+                }
+                .nav-list.active {
+                    display: flex;
                 }
             }
         </style>
@@ -124,8 +159,21 @@
     <body>
         <nav>
             <a href="index.html" class="logo">PRO<span>TECH</span></a>
-        </nav>
 
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html?cat=trends">Trends</a></li>
+    <li><a href="index.html?cat=reviews">Reviews</a></li>
+    <li><a href="index.html?cat=about">About Us</a></li>
+    <li><a href="index.html?cat=contact">Contact</a></li>
+</ul>
+        </nav>
         <div class="wrapper">
             <main id="post-content"></main>
         </div>
@@ -180,9 +228,13 @@
                 </article>
             `;
             }
-
-            // تشغيل الدالة عند تحميل الصفحة
             window.onload = loadArticle;
+            document
+                .getElementById("mobile-menu")
+                .addEventListener("click", function () {
+                    const navList = document.querySelector(".nav-list");
+                    navList.classList.toggle("active");
+                });
         </script>
     </body>
 </html>
