@@ -321,7 +321,7 @@
                 window.scrollTo({ top: 0, behavior: "smooth" });
                 const container = document.getElementById("articles-container");
                 container.innerHTML = "";
-if (category === "about") {
+                if (category === "about") {
                     container.innerHTML = `
                     <div class="widget" style="padding:40px; line-height:1.8; text-align: left;">
                         <h1 style="color: var(--accent-blue); font-family: 'Space Grotesk'; font-size: 2.5rem; margin-bottom: 20px;">About ProTech</h1>
@@ -358,7 +358,7 @@ if (category === "about") {
                             </p>
                         </div>
                     </div>`;
-} else if (category === "contact") {
+                } else if (category === "contact") {
                     container.innerHTML = `
                     <div class="widget" style="padding:40px; text-align: center;">
                         <h1 style="color: var(--accent-blue); font-family: 'Space Grotesk'; font-size: 2.5rem; margin-bottom: 20px;">Get in Touch</h1>
@@ -388,7 +388,6 @@ if (category === "about") {
                             </p>
                         </div>
                     </div>`;
-
                 } else if (category === "home") {
                     // قسم الهيرو (البحث سيبقى سليماً هنا)
                     container.innerHTML += `
@@ -472,24 +471,18 @@ if (category === "about") {
             };
             (function () {
                 const adsenseFooter = document.createElement("div");
-                adsenseFooter.style = `
-                     background: #0d0f16;
-                     padding: 30px 20px;
-                     margin-top: 50px;
-                     border-top: 1px solid #1e293b;
-                     text-align: center;
-                     font-family: sans-serif;
-                     `;
+                adsenseFooter.style.cssText =
+                    "background:#0d0f16; padding:30px 20px; margin-top:50px; border-top:1px solid #1e293b; text-align:center; font-family:sans-serif;";
 
                 adsenseFooter.innerHTML = `
-                     <div style="margin-bottom: 15px;">
-                     <a href="javascript:void(0)" onclick="showLegal('privacy')" style="color:#64748b; text-decoration:none; margin:0 10px; font-size:14px;">Privacy Policy</a>
-                     <a href="javascript:void(0)" onclick="showLegal('terms')" style="color:#64748b; text-decoration:none; margin:0 10px; font-size:14px;">Terms of Service</a>
-                     <a href="javascript:void(0)" onclick="showCategory('about')" style="color:#64748b; text-decoration:none; margin:0 10px; font-size:14px;">About Us</a>
-                     <a href="javascript:void(0)" onclick="showCategory('contact')" style="color:#64748b; text-decoration:none; margin:0 10px; font-size:14px;">Contact Us</a>
-                     </div>
-                     <p style="color:#475569; font-size:12px;">&copy; 2026 ProTech Magazine. All rights reserved.</p>
-                     `;
+        <div style="margin-bottom: 15px; display:flex; justify-content:center; gap:15px; flex-wrap:wrap;">
+            <a href="javascript:void(0)" onclick="showLegal('privacy')" style="color:#64748b; text-decoration:none; font-size:14px;">Privacy Policy</a>
+            <a href="javascript:void(0)" onclick="showLegal('terms')" style="color:#64748b; text-decoration:none; font-size:14px;">Terms of Service</a>
+            <a href="javascript:void(0)" onclick="showCategory('about')" style="color:#64748b; text-decoration:none; font-size:14px;">About Us</a>
+            <a href="javascript:void(0)" onclick="showCategory('contact')" style="color:#64748b; text-decoration:none; font-size:14px;">Contact Us</a>
+        </div>
+        <p style="color:#475569; font-size:12px; margin:0;">&copy; 2026 ProTech Magazine. All rights reserved.</p>
+    `;
 
                 document.body.appendChild(adsenseFooter);
 
@@ -497,24 +490,26 @@ if (category === "about") {
                     const content = {
                         privacy: {
                             title: "Privacy Policy",
-                            text: "We use cookies to personalize content and ads, to provide social media features and to analyze our traffic. We also share information about your use of our site with our advertising and analytics partners."
+                            text: "At ProTech, we prioritize your privacy. We use cookies and similar technologies to analyze site traffic, personalize content, and serve relevant advertisements through partners like Google AdSense. By continuing to use our site, you consent to our data collection practices as outlined in this policy."
                         },
                         terms: {
                             title: "Terms of Service",
-                            text: "By accessing ProTech, you agree to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws."
+                            text: "Welcome to ProTech. By using our website, you agree to comply with these terms. All content, including tech leaks and reviews, is for informational purposes only. Unauthorized reproduction of our original material is strictly prohibited."
                         }
                     };
 
                     const modal = document.createElement("div");
-                    modal.style =
-                        "position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:100000; display:flex; align-items:center; justify-content:center; padding:20px;";
+                    modal.id = "legal-modal-overlay";
+                    modal.style.cssText =
+                        "position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:100000; display:flex; align-items:center; justify-content:center; padding:15px; box-sizing:border-box;";
+
                     modal.innerHTML = `
-                     <div style="background:#1e293b; padding:30px; border-radius:12px; max-width:500px; border:1px solid #3b82f6; color:white;">
-                         <h2 style="color:#3b82f6; margin-top:0;">\${content[type].title}</h2>
-                         <p style="line-height:1.6; color:#cbd5e1;">\${content[type].text}</p>
-                         <button onclick="this.parentElement.parentElement.remove()" style="background:#3b82f6; color:white; border:none; padding:10px 20px; border-radius:6px; cursor:pointer; width:100%; margin-top:20px; font-weight:bold;">Close</button>
-                     </div>
-                     `;
+            <div style="background:#1e293b; padding:25px; border-radius:15px; width:100%; max-width:400px; border:1px solid #3b82f6; color:white; box-sizing:border-box; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                <h2 style="color:#3b82f6; margin:0 0 15px 0; font-size:1.5rem;">${content[type].title}</h2>
+                <p style="line-height:1.6; color:#cbd5e1; font-size:0.95rem; margin-bottom:20px;">${content[type].text}</p>
+                <button onclick="document.getElementById('legal-modal-overlay').remove()" style="background:#3b82f6; color:white; border:none; padding:12px; border-radius:8px; cursor:pointer; width:100%; font-weight:bold; font-size:1rem;">Close</button>
+            </div>
+        `;
                     document.body.appendChild(modal);
                 };
             })();
@@ -531,7 +526,6 @@ if (category === "about") {
                     });
                 }
             }
-
             function liveSearch() {
                 const query = document
                     .getElementById("searchInput")
