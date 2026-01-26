@@ -226,5 +226,32 @@
                     navList.classList.toggle("active");
                 });
         </script>
+<footer style="background:#0d0f16; padding:30px 20px; margin-top:50px; border-top:1px solid #1e293b; text-align:center; font-family:sans-serif;">
+    <div style="margin-bottom: 15px; display:flex; justify-content:center; gap:15px; flex-wrap:wrap;">
+        <a href="javascript:void(0)" onclick="showLegal('privacy')" style="color:#64748b; text-decoration:none; font-size:14px;">Privacy Policy</a>
+        <a href="javascript:void(0)" onclick="showLegal('terms')" style="color:#64748b; text-decoration:none; font-size:14px;">Terms of Service</a>
+        <a href="/" style="color:#64748b; text-decoration:none; font-size:14px;">Home</a>
+    </div>
+    <p style="color:#475569; font-size:12px; margin:0;">&copy; 2026 ProTech Magazine. All rights reserved.</p>
+</footer>
+
+<script>
+window.showLegal = function (type) {
+    const content = {
+        privacy: { title: "Privacy Policy", text: "At ProTech, we prioritize your privacy. We use cookies to analyze site traffic and serve relevant ads through Google AdSense." },
+        terms: { title: "Terms of Service", text: "By using our website, you agree to comply with these terms. Content is for informational purposes only." }
+    };
+    const modal = document.createElement("div");
+    modal.id = "legal-modal-overlay";
+    modal.style.cssText = "position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:100000; display:flex; align-items:center; justify-content:center; padding:15px; box-sizing:border-box;";
+    modal.innerHTML = `
+        <div style="background:#1e293b; padding:25px; border-radius:15px; width:90%; max-width:400px; border:1px solid #3b82f6; color:white; box-sizing:border-box; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+            <h2 style="color:#3b82f6; margin:0 0 15px 0;">` + content[type].title + `</h2>
+            <p style="line-height:1.6; color:#cbd5e1; font-size:0.95rem;">` + content[type].text + `</p>
+            <button onclick="document.getElementById('legal-modal-overlay').remove()" style="background:#3b82f6; color:white; border:none; padding:12px; border-radius:8px; cursor:pointer; width:100%; font-weight:bold; margin-top:15px;">Close</button>
+        </div>`;
+    document.body.appendChild(modal);
+};
+</script>
     </body>
 </html>
