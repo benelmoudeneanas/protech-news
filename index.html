@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-<link rel="icon" type="image/png" href="favicon.png">
+        <link rel="icon" type="image/png" href="favicon.png" />
         <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=G-ZZ3D01HRPG"
@@ -352,7 +352,7 @@
                                     a => a.id === article.id
                                 );
                                 catGrid.innerHTML += `
-                    <div class="widget article-card" onclick="window.location.href='post.html?id=${article.id}'"
+                    <div class="widget article-card" onclick="window.location.href='/${article.slug}'"
                   >
                         <div class="widget-img" style="background-image: url('${article.img}')"></div>
                         <div class="widget-overlay"></div>
