@@ -374,7 +374,7 @@
                                 a => a.id === article.id
                             );
                             grid.innerHTML += `
-                <div class="widget article-card" onclick="window.location.href='post.html?id=${article.id}'"
+                <div class="widget article-card" onclick="window.location.href='/${article.slug}'"
                 >
                     <div class="widget-img" style="background-image: url('${article.img}')"></div>
                     <div class="widget-overlay"></div>
@@ -510,8 +510,8 @@
                             a => a.id === article.id
                         );
                         grid.innerHTML += `
-                         <div class="widget" style="padding: 0; overflow: hidden; cursor: pointer; transition: 0.3s;" onclick="window.location.href='post.html?id=${
-                             article.id
+                         <div class="widget" style="padding: 0; overflow: hidden; cursor: pointer; transition: 0.3s;" onclick="window.location.href='/${
+                             article.slug
                          }'"
                          >
                              <div style="width: 100%; height: 180px; background-image: url('${
