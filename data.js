@@ -1,5 +1,36 @@
 const articles = [
 {
+    id: 29,
+    title: "Samsung's Galaxy Z Tri-Fold: The End of Tablets is Closer Than We Thought",
+    slug: "galaxy-z-trifold-leaks-samsung-future",
+    cat: "trends",
+    img: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800",
+    desc: "Samsung is officially moving beyond the dual-fold. The Galaxy Z Tri-Fold is set to redefine productivity with a massive 11-inch unfolding display.",
+    content: `
+        <p>The era of simple foldable phones is about to be eclipsed. Reliable supply chain leaks suggest that Samsung is finalizing the <b>Galaxy Z Tri-Fold</b>, a device that folds twice to transform from a standard smartphone into a full-sized <b>11-inch workstation</b>.</p>
+        
+        <h3>The 'S' Fold Mechanism</h3>
+        <p>Unlike the current Fold 6, the Tri-Fold utilizes a dual-hinge system. One hinge folds inward while the other folds outward (an 'S' shape), allowing part of the internal screen to act as the cover display. This eliminates the need for a separate outer screen, potentially making the device <b>thinner than the current Fold series</b> when closed.</p>
+        
+        <div style="background: #111; border: 1px solid #007aff; padding: 20px; border-radius: 12px; margin: 25px 0;">
+            <h4 style="margin-top: 0; color: #007aff; font-family: 'Space Grotesk';">Why This Matters for Reddit:</h4>
+            <ul style="margin-bottom: 0; color: #94a3b8; font-size: 0.95rem;">
+                <li><b>True Multitasking:</b> Run three full-sized apps side-by-side without scaling issues.</li>
+                <li><b>The Tablet Killer:</b> At 11 inches, it matches the iPad Pro but fits in your pocket.</li>
+                <li><b>New Armor Hinge:</b> Samsung is reportedly using a carbon-fiber hinge to reduce weight.</li>
+            </ul>
+        </div>
+
+        <h3>The Specs (Leaked)</h3>
+        <p>Expect the <b>Snapdragon 8 Gen 4</b> (optimized for foldables) and a massive 24GB of RAM to handle the triple-screen multitasking. The battery is rumored to be a 'stacked' silicon-carbon battery to maintain a slim profile while providing enough juice for the giant panel.</p>
+
+        <h3>Price and Availability</h3>
+        <p>Rumors point to a "Concept Edition" launch in <b>late 2025</b>. The price tag? Early estimates suggest it could start at <b>$2,499</b>, making it the most expensive consumer smartphone ever made by Samsung.</p>
+        
+        <p style="font-style: italic; color: #64748b;">Is a Tri-Fold overkill, or is this the natural evolution of the smartphone? Let us know in the comments.</p>
+    `
+},
+{
     id: 28,
     title: "PS6: Everything We Know About Sony's Next-Gen Powerhouse",
     slug: "ps6-leaks-release-date-specs",
