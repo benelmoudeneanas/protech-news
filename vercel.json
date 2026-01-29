@@ -2,7 +2,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/galaxy-z-trifold-leaks-samsung-future", "destination": "/post?id=29" },
+    { "source": "/galaxy-z-trifold-launch-leak-specs", "destination": "/post?id=29" },
     { "source": "/ps6-leaks-release-date-specs", "destination": "/post?id=28" },
     { "source": "/samsung-galaxy-s26-ultra-leak-production-pricing", "destination": "/post?id=27" },
     { "source": "/apple-vision-pro-2026-review", "destination": "/post?id=26" },
