@@ -260,7 +260,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <option value="50000">50,000 (Ultimate)</option>
                 </select>
             </div>
-            <button class="claim-btn" onclick="processRequest()">CONFIRM & GENERATE</button>
+            <button class="claim-btn" onclick="dataLayer.push({'event': 'form_submitted', 'game': document.getElementById('popupTitle').innerText}); processRequest()">CONFIRM & GENERATE</button>
         </div>
 
         <div class="loading-bar" id="loadingBar">
