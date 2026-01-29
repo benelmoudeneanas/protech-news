@@ -1,35 +1,34 @@
 const articles = [
 {
     id: 29,
-    title: "Samsung's Galaxy Z Tri-Fold: The End of Tablets is Closer Than We Thought",
-    slug: "galaxy-z-trifold-leaks-samsung-future",
+    title: "URGENT: Samsung's Galaxy Z Tri-Fold Launch is Imminent – The Tablet Era Ends Tomorrow?",
+    slug: "galaxy-z-trifold-launch-leak-specs",
     cat: "trends",
-    img: "https://image2url.com/r2/default/images/1769696287024-2b2cbcee-0434-460c-a8ad-8f5c4285fc07.jpg",
-    desc: "Samsung is officially moving beyond the dual-fold. The Galaxy Z Tri-Fold is set to redefine productivity with a massive 11-inch unfolding display.",
+    img: "https://image2url.com/r2/default/images/1769697046930-ccc8334e-7eeb-447b-87b3-f756c344cbfb.jpg",
+    desc: "Breaking: New supply chain leaks suggest Samsung will unveil the world's first Tri-Fold smartphone within the next 48 hours. Is the iPad finally in trouble?",
     content: `
-        <p>The era of simple foldable phones is about to be eclipsed. Reliable supply chain leaks suggest that Samsung is finalizing the <b>Galaxy Z Tri-Fold</b>, a device that folds twice to transform from a standard smartphone into a full-sized <b>11-inch workstation</b>.</p>
+        <p>The tech world is in a state of shock. After months of speculation, major industry leakers are now pointing to a <b>surprise reveal</b> of the <b>Galaxy Z Tri-Fold</b> within the next 24 to 48 hours. This isn't just another phone; it's the official death of the tablet as we know it.</p>
         
-        <h3>The 'S' Fold Mechanism</h3>
-        <p>Unlike the current Fold 6, the Tri-Fold utilizes a dual-hinge system. One hinge folds inward while the other folds outward (an 'S' shape), allowing part of the internal screen to act as the cover display. This eliminates the need for a separate outer screen, potentially making the device <b>thinner than the current Fold series</b> when closed.</p>
+        <h3>The 'Hidden' Reveal</h3>
+        <p>Rumors suggest Samsung might showcase the device at a flash event or via a massive digital premiere tomorrow. The device reportedly features a dual-hinge 'S-fold' design that expands from a 6.2-inch phone to a massive <b>11.5-inch OLED display</b>.</p>
         
-        <div style="background: #111; border: 1px solid #007aff; padding: 20px; border-radius: 12px; margin: 25px 0;">
-            <h4 style="margin-top: 0; color: #007aff; font-family: 'Space Grotesk';">Why This Matters for Reddit:</h4>
+        <div style="background: #111; border: 1px solid #ff4500; padding: 20px; border-radius: 12px; margin: 25px 0;">
+            <h4 style="margin-top: 0; color: #ff4500; font-family: 'Space Grotesk';">Last-Minute Leaked Specs:</h4>
             <ul style="margin-bottom: 0; color: #94a3b8; font-size: 0.95rem;">
-                <li><b>True Multitasking:</b> Run three full-sized apps side-by-side without scaling issues.</li>
-                <li><b>The Tablet Killer:</b> At 11 inches, it matches the iPad Pro but fits in your pocket.</li>
-                <li><b>New Armor Hinge:</b> Samsung is reportedly using a carbon-fiber hinge to reduce weight.</li>
+                <li><b>Display:</b> 11.5-inch 'Infinite Flex' Triple Panel.</li>
+                <li><b>Processor:</b> Snapdragon 8 Gen 4 (Overclocked).</li>
+                <li><b>Thickness:</b> Only 11mm when folded (thinner than two iPhones).</li>
+                <li><b>Price:</b> Expected around $2,499 for the Founders Edition.</li>
             </ul>
         </div>
 
-        <h3>The Specs (Leaked)</h3>
-        <p>Expect the <b>Snapdragon 8 Gen 4</b> (optimized for foldables) and a massive 24GB of RAM to handle the triple-screen multitasking. The battery is rumored to be a 'stacked' silicon-carbon battery to maintain a slim profile while providing enough juice for the giant panel.</p>
+        <h3>Why the Internet is Exploding</h3>
+        <p>If the launch happens tomorrow, Samsung will beat every competitor (including Huawei) to the global market with a polished, consumer-ready tri-fold. The productivity potential of a pocketable 11-inch screen is driving Reddit's r/Technology and r/Android communities into a frenzy.</p>
 
-        <h3>Price and Availability</h3>
-        <p>Rumors point to a "Concept Edition" launch in <b>late 2025</b>. The price tag? Early estimates suggest it could start at <b>$2,499</b>, making it the most expensive consumer smartphone ever made by Samsung.</p>
-        
-        <p style="font-style: italic; color: #64748b;">Is a Tri-Fold overkill, or is this the natural evolution of the smartphone? Let us know in the comments.</p>
+        <p style="font-style: italic; color: #007aff; font-weight: bold;">Update: We are monitoring the official Samsung channels. Stay tuned for the live coverage of the announcement.</p>
     `
 },
+
 {
     id: 28,
     title: "PS6: Everything We Know About Sony's Next-Gen Powerhouse",
