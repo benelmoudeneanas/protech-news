@@ -3,7 +3,7 @@ const articles = [
     id: 27,
     slug: "samsung-galaxy-s26-ultra-leak-production-pricing",
     title: "Samsung Galaxy S26 Ultra: Release Date, Price, and Production Strategy Leaked",
-    cat: "leaks",
+    cat: "trends",
     desc: "The 'Ultra' remains the king as Samsung gears up for its 2026 flagship launch. Recent data reveals a massive focus on the premium model and a surprisingly stable pricing strategy.",
     content: `
         <p>As we approach the first quarter of 2026, the tech world is buzzing with anticipation for Samsung’s next big reveal. Recent leaks have shed light on the production strategy for the <strong>Galaxy S26 series</strong>, and it’s clear that Samsung is putting all its chips on the <strong>Ultra</strong> model.</p>
