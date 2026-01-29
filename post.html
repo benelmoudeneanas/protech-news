@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <link rel="icon" type="image/png" href="favicon.png" />
+        <!-- Google Tag Manager -->
         <script>
             (function (w, d, s, l, i) {
                 w[l] = w[l] || [];
@@ -17,6 +18,7 @@
                 f.parentNode.insertBefore(j, f);
             })(window, document, "script", "dataLayer", "GTM-W5BV7BH4");
         </script>
+        <!-- End Google Tag Manager -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>ProTech | Article</title>
@@ -33,7 +35,6 @@
                 --bg-body: #0a0b10;
                 --bg-card: #12141c;
                 --accent-blue: #007aff;
-                --accent-glow: rgba(0, 122, 255, 0.3);
                 --text-primary: #ffffff;
                 --text-secondary: #94a3b8;
                 --border-color: #1e293b;
@@ -106,6 +107,8 @@
                 text-transform: uppercase;
                 font-weight: bold;
             }
+
+            /* تصميم زر المشاركة الموحد */
             .share-trigger {
                 display: flex;
                 align-items: center;
@@ -124,6 +127,7 @@
                 background: var(--accent-blue);
                 border-color: var(--accent-blue);
             }
+
             .content {
                 font-size: 1.2rem;
                 line-height: 1.8;
@@ -144,36 +148,24 @@
                 text-decoration: none;
                 margin-top: 50px;
             }
-            
-            /* تصميم الزر العائم */
-            .floating-offers-btn {
-                position: fixed;
-                bottom: 30px;
-                right: 30px;
-                background: var(--accent-blue);
-                color: white;
-                width: 60px;
-                height: 60px;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 1.5rem;
-                z-index: 2000;
-                box-shadow: 0 0 20px var(--accent-glow);
-                text-decoration: none;
-                transition: 0.3s;
-            }
-            .floating-offers-btn:hover { transform: scale(1.1); }
-
             @media (max-width: 768px) {
-                nav { padding: 0 20px; }
+                nav {
+                    padding: 0 20px;
+                }
             }
         </style>
     </head>
     <body>
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W5BV7BH4" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
-        
+        <!-- Google Tag Manager (noscript) -->
+        <noscript
+            ><iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-W5BV7BH4"
+                height="0"
+                width="0"
+                style="display: none; visibility: hidden"
+            ></iframe
+        ></noscript>
+        <!-- End Google Tag Manager (noscript) -->
         <nav>
             <a href="index.html" class="logo">PRO<span>TECH</span></a>
             <ul class="nav-list">
@@ -205,26 +197,36 @@
             }
 
             async function shareArticle(platform, title) {
-                const url = encodeURIComponent(window.location.href);
-                const text = encodeURIComponent(title);
-                let shareUrl = "";
-                switch (platform) {
-                    case "twitter": shareUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`; break;
-                    case "reddit": shareUrl = `https://www.reddit.com/submit?url=${url}&title=${text}`; break;
-                    case "facebook": shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`; break;
-                }
-                window.open(shareUrl, "_blank", "width=600,height=400");
-            }
+    const url = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent(title);
+    let shareUrl = '';
 
+    switch (platform) {
+        case 'twitter':
+            shareUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
+            break;
+        case 'reddit':
+            shareUrl = `https://www.reddit.com/submit?url=${url}&title=${text}`;
+            break;
+        case 'facebook':
+            shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+            break;
+    }
+
+    window.open(shareUrl, '_blank', 'width=600,height=400');
+}
             function loadArticle() {
                 const params = new URLSearchParams(window.location.search);
                 const id = params.get("id");
                 const path = window.location.pathname.replace("/", "");
-                const article = articles.find(a => a.id == id || a.slug === path);
+                const article = articles.find(
+                    a => a.id == id || a.slug === path
+                );
                 const container = document.getElementById("post-content");
 
                 if (!article) {
-                    container.innerHTML = "<h1 style='text-align:center;'>Article Not Found</h1>";
+                    container.innerHTML =
+                        "<h1 style='text-align:center;'>Article Not Found</h1>";
                     return;
                 }
 
@@ -235,47 +237,139 @@
                     <article>
                         <img src="${article.img}" class="article-img">
                         <span class="cat-tag">${article.cat}</span>
-                        <h1 style="font-size: 2.5rem; margin: 20px 0;">${article.title}</h1>
+                        <h1 style="font-size: 2.5rem; margin: 20px 0;">${
+                            article.title
+                        }</h1>
+                        
                         <div style="padding: 20px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); display: flex; gap: 10px; flex-wrap: wrap;">
-                            <button class="share-trigger" onclick="shareArticle('twitter', '${article.title}')" style="background: #000; border: none;"><i class="fa-brands fa-x-twitter"></i> X</button>
-                            <button class="share-trigger" onclick="shareArticle('facebook', '${article.title}')" style="background: #1877f2; border: none;"><i class="fa-brands fa-facebook-f"></i> Facebook</button>
-                            <button class="share-trigger" onclick="shareArticle('reddit', '${article.title}')" style="background: #ff4500; border: none;"><i class="fa-brands fa-reddit-alien"></i> Reddit</button>
-                        </div>
-                        <div class="content">${article.content || article.desc}</div>
+    <button class="share-trigger" onclick="shareArticle('twitter', '${article.title}')" style="background: #000; border: none;">
+        <i class="fa-brands fa-x-twitter"></i> X
+    </button>
+    <button class="share-trigger" onclick="shareArticle('facebook', '${article.title}')" style="background: #1877f2; border: none;">
+        <i class="fa-brands fa-facebook-f"></i> Facebook
+    </button>
+    <button class="share-trigger" onclick="shareArticle('reddit', '${article.title}')" style="background: #ff4500; border: none;">
+        <i class="fa-brands fa-reddit-alien"></i> Reddit
+    </button>
+</div>
+                        <div class="content">${
+                            article.content || article.desc
+                        }</div>
                         <a href="index.html" class="back-btn">← Back to Home</a>
-                    </article>`;
+                        <div style="max-width: 800px; margin: 40px auto; padding: 0 20px;">
+    
+    <div style="text-align: left; margin-bottom: 30px;">
+        <a href="/" style="text-decoration: none; color: var(--accent-blue); font-size: 0.85rem; font-weight: bold; border: 1px solid var(--accent-blue); padding: 5px 12px; border-radius: 5px; transition: 0.3s;">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+    </div>
+
+    <h3 style="color: #fff; font-family: 'Space Grotesk'; border-left: 4px solid var(--accent-blue); padding-left: 15px; margin-bottom: 20px;">Related Articles</h3>
+    
+    <div id="related-posts-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+        <div class="widget article-card" style="height: 200px;" onclick="window.location.href='#'">
+            <div class="widget-img" style="background-image: url('https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=500')"></div>
+            <div class="widget-overlay"></div>
+            <div class="widget-content">
+                <h4 style="font-size: 0.9rem; margin: 0;">Next-Gen Galaxy S26 Ultra Leaks</h4>
+            </div>
+        </div>
+        
+        <div class="widget article-card" style="height: 200px;" onclick="window.location.href='#'">
+            <div class="widget-img" style="background-image: url('https://images.unsplash.com/photo-1510557880182-3d4d3cba3f21?w=500')"></div>
+            <div class="widget-overlay"></div>
+            <div class="widget-content">
+                <h4 style="font-size: 0.9rem; margin: 0;">iPhone 18 Pro Camera Rumors</h4>
+            </div>
+        </div>
+    </div>
+</div>
+                    </article>
+                `;
             }
             window.onload = loadArticle;
         </script>
-
-        <a href="offers.html" class="floating-offers-btn" title="Gaming Rewards">
-            <i class="fas fa-gamepad"></i>
-        </a>
-
-        <footer style="background: #0d0f16; padding: 30px 20px; margin-top: 50px; border-top: 1px solid #1e293b; text-align: center; font-family: sans-serif;">
-            <div style="margin-bottom: 15px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-                <a href="javascript:void(0)" onclick="showLegal('privacy')" style="color: #64748b; text-decoration: none; font-size: 14px;">Privacy Policy</a>
-                <a href="javascript:void(0)" onclick="showLegal('terms')" style="color: #64748b; text-decoration: none; font-size: 14px;">Terms of Service</a>
-                <a href="index.html" style="color: #64748b; text-decoration: none; font-size: 14px;">Home</a>
+        <footer
+            style="
+                background: #0d0f16;
+                padding: 30px 20px;
+                margin-top: 50px;
+                border-top: 1px solid #1e293b;
+                text-align: center;
+                font-family: sans-serif;
+            "
+        >
+            <div
+                style="
+                    margin-bottom: 15px;
+                    display: flex;
+                    justify-content: center;
+                    gap: 15px;
+                    flex-wrap: wrap;
+                "
+            >
+                <a
+                    href="javascript:void(0)"
+                    onclick="showLegal('privacy')"
+                    style="
+                        color: #64748b;
+                        text-decoration: none;
+                        font-size: 14px;
+                    "
+                    >Privacy Policy</a
+                >
+                <a
+                    href="javascript:void(0)"
+                    onclick="showLegal('terms')"
+                    style="
+                        color: #64748b;
+                        text-decoration: none;
+                        font-size: 14px;
+                    "
+                    >Terms of Service</a
+                >
+                <a
+                    href="/"
+                    style="
+                        color: #64748b;
+                        text-decoration: none;
+                        font-size: 14px;
+                    "
+                    >Home</a
+                >
             </div>
-            <p style="color: #475569; font-size: 12px; margin: 0">&copy; 2026 ProTech Magazine. All rights reserved.</p>
+            <p style="color: #475569; font-size: 12px; margin: 0">
+                &copy; 2026 ProTech Magazine. All rights reserved.
+            </p>
         </footer>
 
         <script>
             window.showLegal = function (type) {
                 const content = {
-                    privacy: { title: "Privacy Policy", text: "At ProTech, we prioritize your privacy. We use cookies to analyze site traffic and serve relevant ads through Google AdSense." },
-                    terms: { title: "Terms of Service", text: "By using our website, you agree to comply with these terms. Content is for informational purposes only." }
+                    privacy: {
+                        title: "Privacy Policy",
+                        text: "At ProTech, we prioritize your privacy. We use cookies to analyze site traffic and serve relevant ads through Google AdSense."
+                    },
+                    terms: {
+                        title: "Terms of Service",
+                        text: "By using our website, you agree to comply with these terms. Content is for informational purposes only."
+                    }
                 };
                 const modal = document.createElement("div");
                 modal.id = "legal-modal-overlay";
-                modal.style.cssText = "position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:100000; display:flex; align-items:center; justify-content:center; padding:15px; box-sizing:border-box;";
-                modal.innerHTML = `
-                <div style="background:#1e293b; padding:25px; border-radius:15px; width:90%; max-width:400px; border:1px solid #3b82f6; color:white; box-sizing:border-box; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                    <h2 style="color:#3b82f6; margin:0 0 15px 0;">${content[type].title}</h2>
-                    <p style="line-height:1.6; color:#cbd5e1; font-size:0.95rem;">${content[type].text}</p>
-                    <button onclick="document.getElementById('legal-modal-overlay').remove()" style="background:#3b82f6; color:white; border:none; padding:12px; border-radius:8px; cursor:pointer; width:100%; font-weight:bold; margin-top:15px;">Close</button>
-                </div>`;
+                modal.style.cssText =
+                    "position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:100000; display:flex; align-items:center; justify-content:center; padding:15px; box-sizing:border-box;";
+                modal.innerHTML =
+                    `
+        <div style="background:#1e293b; padding:25px; border-radius:15px; width:90%; max-width:400px; border:1px solid #3b82f6; color:white; box-sizing:border-box; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+            <h2 style="color:#3b82f6; margin:0 0 15px 0;">` +
+                    content[type].title +
+                    `</h2>
+            <p style="line-height:1.6; color:#cbd5e1; font-size:0.95rem;">` +
+                    content[type].text +
+                    `</p>
+            <button onclick="document.getElementById('legal-modal-overlay').remove()" style="background:#3b82f6; color:white; border:none; padding:12px; border-radius:8px; cursor:pointer; width:100%; font-weight:bold; margin-top:15px;">Close</button>
+        </div>`;
                 document.body.appendChild(modal);
             };
         </script>
