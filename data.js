@@ -4,7 +4,7 @@ const articles = [
     title: "Samsung's Galaxy Z Tri-Fold: The End of Tablets is Closer Than We Thought",
     slug: "galaxy-z-trifold-leaks-samsung-future",
     cat: "trends",
-    img: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800",
+    img: "https://image2url.com/r2/default/images/1769696287024-2b2cbcee-0434-460c-a8ad-8f5c4285fc07.jpg",
     desc: "Samsung is officially moving beyond the dual-fold. The Galaxy Z Tri-Fold is set to redefine productivity with a massive 11-inch unfolding display.",
     content: `
         <p>The era of simple foldable phones is about to be eclipsed. Reliable supply chain leaks suggest that Samsung is finalizing the <b>Galaxy Z Tri-Fold</b>, a device that folds twice to transform from a standard smartphone into a full-sized <b>11-inch workstation</b>.</p>
