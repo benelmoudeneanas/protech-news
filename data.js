@@ -1,5 +1,39 @@
 const articles = [
 {
+    id: 30,
+    title: "iOS 26.3 Beta 3 Released: Is Siri 2.0 with Gemini AI Finally Coming?",
+    slug: "ios-26-3-beta-3-features-siri-gemini-ai",
+    cat: "trends",
+    img: "https://images.unsplash.com/photo-1621330396173-e41b1cafd17f?w=800",
+    desc: "Apple releases iOS 26.3 Beta 3 with major connectivity fixes and hints at a massive Siri 2.0 upgrade featuring Gemini AI integration.",
+    content: `
+        <p>Apple has officially dropped <b>iOS 26.3 Beta 3</b>. While this update focuses heavily on system stability and bug fixes, the real excitement lies in what it prepares for the near future: a complete AI overhaul for Siri.</p>
+        
+        <h3>Key Enhancements and Connectivity</h3>
+        <p>The latest beta brings much-needed refinements to the iPhone ecosystem:</p>
+        <ul>
+            <li><b>Improved Connectivity:</b> A new modem firmware update resolves previous signal drop issues, ensuring more stable network performance.</li>
+            <li><b>Advanced Privacy:</b> A new location precision feature gives users granular control over how their location data is shared with mobile networks.</li>
+            <li><b>eSIM Transfers:</b> Enhanced cross-platform eSIM movement, making it easier to switch devices in supported regions like Japan.</li>
+        </ul>
+
+        <div style="background: #1e293b; padding: 20px; border-radius: 12px; margin: 25px 0; border-left: 4px solid #007aff;">
+            <h4 style="margin-top: 0; color: #007aff;">Major Fixes & Known Issues:</h4>
+            <ul style="margin-bottom: 0;">
+                <li><b>Fixed:</b> Camera bugs, including the blue tint in photos and flash freezing, are now resolved.</li>
+                <li><b>Ongoing:</b> The persistent keyboard lag and misinterpreted inputs remain a frustration for beta users.</li>
+                <li><b>Ongoing:</b> CarPlay connectivity issues have yet to see a definitive fix in this build.</li>
+            </ul>
+        </div>
+
+        <h3>The Road to Siri 2.0 and Gemini AI</h3>
+        <p>The most groundbreaking news hidden within the rumors following this update is <b>Siri 2.0</b>. Expected with the upcoming iOS 26.4, Apple is reportedly integrating <b>Gemini AI</b> to transform Siri into a more intuitive and powerful voice assistant. This move marks a massive shift in Apple’s AI strategy, moving towards a more open and capable assistant ecosystem.</p>
+
+        <h3>Release Timeline</h3>
+        <p>Expect a Release Candidate (RC) in early February, with the full public launch of iOS 26.3 anticipated by <b>mid-February 2026</b>. Performance remains steady, with users reporting a solid 10–12 hours of screen-on time.</p>
+    `
+},
+{
     id: 29,
     title: "URGENT: Samsung's Galaxy Z Tri-Fold Launch is Imminent – The Tablet Era Ends Tomorrow?",
     slug: "galaxy-z-trifold-launch-leak-specs",
