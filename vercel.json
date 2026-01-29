@@ -2,8 +2,8 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/ps6-leaks-release-date-specs", "destination": "/post?id=26" },
-    { "source": "/samsung-galaxy-s26-ultra-leak-production-pricing", "destination": "/post?id=26" },
+    { "source": "/ps6-leaks-release-date-specs", "destination": "/post?id=28" },
+    { "source": "/samsung-galaxy-s26-ultra-leak-production-pricing", "destination": "/post?id=27" },
     { "source": "/apple-vision-pro-2026-review", "destination": "/post?id=26" },
     { "source": "/galaxy-s26-leak-design-overhaul", "destination": "/post?id=25" },
     { "source": "/10-tech-gadgets-2026-vouch", "destination": "/post?id=24" },
