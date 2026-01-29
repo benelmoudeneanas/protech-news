@@ -1,5 +1,35 @@
 const articles = [
 {
+    id: 28,
+    title: "PS6: Everything We Know About Sony's Next-Gen Powerhouse",
+    slug: "ps6-leaks-release-date-specs",
+    cat: "trends",
+    img: "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=800",
+    desc: "The gaming world is buzzing with PlayStation 6 rumors. From 8K native gaming to revolutionary AI integration, here is the future of gaming.",
+    content: `
+        <p>While the PS5 Pro is still fresh in our minds, industry insiders and leakers are already looking ahead to the <b>PlayStation 6 (PS6)</b>. Sony is reportedly already in the early stages of development for its next-gen masterpiece.</p>
+        
+        <h3>Release Date Expectations</h3>
+        <p>According to leaked documents from Sony's recent legal filings, the PS6 is not expected to arrive before <b>2027 or 2028</b>. This follows the traditional 7-year life cycle of gaming consoles.</p>
+        
+        <h3>The Power of AI: PSSR 2.0</h3>
+        <p>The biggest leap in the PS6 won't just be raw power, but <b>Artificial Intelligence</b>. Sony is working on an advanced version of PlayStation Spectral Super Resolution (PSSR) that could allow games to run at <b>4K 120fps</b> or even <b>8K</b> with path-tracing enabled, something impossible on current hardware.</p>
+        
+        <div style="background: #1e293b; padding: 20px; border-radius: 12px; margin: 20px 0; border-left: 4px solid #007aff;">
+            <h4 style="margin-top: 0; color: #007aff;">Rumored Specs:</h4>
+            <ul style="margin-bottom: 0;">
+                <li>New AMD Zen 6 Architecture</li>
+                <li>Next-Gen RDNA 5 Graphics</li>
+                <li>Ultra-Fast Gen 5 SSD (Near-zero loading)</li>
+                <li>Dynamic AI-driven DualSense 3 Controller</li>
+            </ul>
+        </div>
+
+        <h3>Backward Compatibility</h3>
+        <p>Good news for collectors: internal sources suggest that Sony is making <b>full backward compatibility</b> a priority for the PS6, meaning your entire PS4 and PS5 library will be playable with enhanced performance from day one.</p>
+    `
+},
+{
     id: 27,
     slug: "samsung-galaxy-s26-ultra-leak-production-pricing",
     title: "Samsung Galaxy S26 Ultra: Release Date, Price, and Production Strategy Leaked",
