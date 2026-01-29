@@ -300,9 +300,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     ];
 
     const grid = document.getElementById('gamesGrid');
-    games.forEach(game => {
+        games.forEach(game => {
         grid.innerHTML += `
-            <div class="game-card" onclick="openLanding('${game.name}', '${game.currency}', '${game.icon}')">
+            <div class="game-card" onclick="dataLayer.push({'event': 'generate_click', 'game': '${game.name}'}); openLanding('${game.name}', '${game.currency}', '${game.icon}')">
                 <i class="${game.icon} currency-icon"></i>
                 <h3>${game.name}</h3>
                 <span class="reward-type">Free ${game.currency}</span>
@@ -310,7 +310,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         `;
     });
-
     let currentCpaUrl = "https://bestlocker.eu/iframe/818620fa-fbb2-11f0-ab0c-8a5fb7be40ea";
 
     function openLanding(name, currency, icon) {
