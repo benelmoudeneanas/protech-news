@@ -406,7 +406,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 modal.style.display = (modal.style.display === 'block') ? 'none' : 'block';
                 if(modal.style.display === 'block') document.getElementById('searchInputModal').focus();
             }
-
             function liveSearchModal() {
                 const query = document.getElementById("searchInputModal").value.toLowerCase();
                 const resultsContainer = document.getElementById("modalSearchResults");
@@ -492,38 +491,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </p>
                         </div>
                     </div>`;
-                } else if (category === "home") {
-                    // قسم الهيرو (البحث سيبقى سليماً هنا)
+                                } else if (category === "home") {
                     container.innerHTML += `
          <div style="background: linear-gradient(rgba(0,122,255,0.05), transparent); padding: 50px 20px; border-radius: 20px; text-align: center; margin-bottom: 30px; border: 1px solid var(--border-color);">
-    <h1 style="font-family: 'Space Grotesk'; font-size: 2.5rem; color: #fff;">Exploring the <span style="color: var(--accent-blue);">Digital Frontier</span></h1>
-    <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">Latest leaks, tech reviews, and future trends of 2026.</p>
-</div>
-                </div>
+            <h1 style="font-family: 'Space Grotesk'; font-size: 2.5rem; color: #fff;">Exploring the <span style="color: var(--accent-blue);">Digital Frontier</span></h1>
+            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">Latest leaks, tech reviews, and future trends of 2026.</p>
          </div>`;
+
                     ["trends", "reviews"].forEach(catName => {
-                        container.innerHTML += `<h2 style="color: var(--accent-blue); margin: 40px 0 20px 0;">LATEST ${catName.toUpperCase()}</h2>
-                                    <div class="grid" id="grid-${catName}"></div>`;
-                        const catGrid = document.getElementById(
-                            `grid-${catName}`
-                        );
+                        container.innerHTML += `
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin: 40px 0 20px 0;">
+                                <h2 style="color: var(--accent-blue); margin: 0; font-size: 1.2rem;">LATEST ${catName.toUpperCase()}</h2>
+                                <a onclick="showCategory('${catName}')" style="color: var(--accent-blue); cursor: pointer; font-weight: bold; font-size: 0.9rem;">View All →</a>
+                            </div>
+                            <div class="grid" id="grid-${catName}"></div>`;
+                            
+                        const catGrid = document.getElementById(`grid-${catName}`);
                         articles
                             .filter(a => a.cat === catName)
                             .slice(0, 4)
                             .forEach(article => {
-                                const idx = articles.findIndex(
-                                    a => a.id === article.id
-                                );
                                 catGrid.innerHTML += `
-                    <div class="widget article-card" onclick="window.location.href='/${article.slug}'"
-                  >
-                        <div class="widget-img" style="background-image: url('${article.img}')"></div>
-                        <div class="widget-overlay"></div>
-                        <div class="widget-content">
-                            <span class="cat-tag">${article.cat}</span>
-                            <h3>${article.title}</h3>
-                        </div>
-                    </div>`;
+                                    <div class="widget article-card" onclick="window.location.href='/${article.slug}'">
+                                        <div class="widget-img" style="background-image: url('${article.img}')"></div>
+                                        <div class="widget-overlay"></div>
+                                        <div class="widget-content">
+                                            <span class="cat-tag">${article.cat}</span>
+                                            <h3>${article.title}</h3>
+                                        </div>
+                                    </div>`;
                             });
                     });
                 } else {
