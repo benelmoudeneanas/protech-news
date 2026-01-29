@@ -4,7 +4,7 @@ const articles = [
     title: "iOS 26.3 Beta 3 Released: Is Siri 2.0 with Gemini AI Finally Coming?",
     slug: "ios-26-3-beta-3-features-siri-gemini-ai",
     cat: "trends",
-    img: "https://images.unsplash.com/photo-1621330396173-e41b1cafd17f?w=800",
+    img: "https://image2url.com/r2/default/images/1769715825512-e9f0b691-1989-4b06-9699-e45254040b7a.webp",
     desc: "Apple releases iOS 26.3 Beta 3 with major connectivity fixes and hints at a massive Siri 2.0 upgrade featuring Gemini AI integration.",
     content: `
         <p>Apple has officially dropped <b>iOS 26.3 Beta 3</b>. While this update focuses heavily on system stability and bug fixes, the real excitement lies in what it prepares for the near future: a complete AI overhaul for Siri.</p>
