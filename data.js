@@ -34,7 +34,7 @@ const articles = [
         <h3>What’s New?</h3>
         <p>Beyond the numbers, the S26 series is rumored to feature <strong>faster charging speeds</strong> and new <strong>privacy-focused display technology</strong> to keep its edge in the luxury smartphone market.</p>
     `,
-    img: "https://i.ibb.co/MkXwGQsn/image.jpg"
+    img: "https://image2url.com/r2/default/images/1769690847285-a2fcba3e-68e6-4288-8667-a576800328e4.jpg"
 },
 {
     id: 26,
