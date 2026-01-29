@@ -205,6 +205,20 @@
     <div class="header-section">
         <a href="index.html" style="color: var(--text-secondary); text-decoration: none; font-size: 0.9rem;"><i class="fas fa-arrow-left"></i> Back to Tech News</a>
         <h1>Global Rewards Hub</h1>
+        <div id="timer" style="background: rgba(255, 0, 0, 0.1); color: #ff4d4d; display: inline-block; padding: 5px 15px; border-radius: 20px; font-weight: bold; margin-top: 15px; border: 1px solid #ff4d4d; font-size: 0.9rem;">
+    <i class="fas fa-clock"></i> Offer ends in: <span id="countdown">09:55</span>
+</div>
+
+<script>
+    // كود بسيط لتشغيل العداد
+    let time = 595; 
+    setInterval(() => {
+        let min = Math.floor(time / 60);
+        let sec = time % 60;
+        document.getElementById('countdown').innerText = `${min}:${sec < 10 ? '0' : ''}${sec}`;
+        if (time > 0) time--;
+    }, 1000);
+</script>
         <p style="color: var(--text-secondary);">Select a game to generate your digital assets</p>
     </div>
 
@@ -217,7 +231,7 @@
         <div id="popupIcon" style="font-size: 3rem; margin-bottom: 15px;"></div>
         <h2 id="popupTitle" style="margin-bottom: 5px; font-family: 'Space Grotesk';">Game Name</h2>
         <p id="popupDesc" style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 25px;">Enter details to start generation</p>
-        
+
         <div id="userForm">
             <div class="input-group">
                 <label>Username / ID</label>
@@ -312,7 +326,7 @@
         document.getElementById('userForm').style.display = 'none';
         document.getElementById('loadingBar').style.display = 'block';
         document.getElementById('statusText').style.display = 'block';
-        
+
         startProgress();
     }
 
@@ -321,16 +335,15 @@
         const bar = document.getElementById('progressBar');
         const status = document.getElementById('statusText');
         const final = document.getElementById('finalStep');
-        
+
         const interval = setInterval(() => {
             step += Math.random() * 10;
             if (step > 100) step = 100;
             bar.style.width = step + '%';
-
-            if (step < 25) status.innerText = "FINDING USER: " + document.getElementById('username').value.toUpperCase();
-            else if (step < 50) status.innerText = "PREPARING REWARD PACKS...";
-            else if (step < 80) status.innerText = "ENCRYPTING DATA...";
-            else status.innerText = "PENDING HUMAN VERIFICATION!";
+            if (step < 25) status.innerHTML = '<i class="fas fa-search"></i> FINDING USER: ' + document.getElementById('username').value.toUpperCase();
+else if (step < 50) status.innerHTML = '<i class="fas fa-check-circle" style="color: #00ff00;"></i> PREPARING REWARD PACKS...';
+else if (step < 80) status.innerHTML = '<i class="fas fa-shield-alt" style="color: #00ff00;"></i> ENCRYPTING DATA...';
+else status.innerHTML = '<i class="fas fa-exclamation-triangle" style="color: #ffcc00;"></i> PENDING HUMAN VERIFICATION!';
 
             if (step === 100) {
                 clearInterval(interval);
@@ -338,15 +351,33 @@
             }
         }, 300);
     }
-
     function closePopup() {
-        document.getElementById('landingPopup').style.display = 'none';
+
+ document.getElementById('landingPopup').style.display = 'none';
     }
 
     function redirectToCPA() {
         window.location.href = currentCpaUrl;
     }
 </script>
+        <div class="container" style="margin-top: 50px; border-top: 1px solid #1e293b; padding-top: 30px; margin-bottom: 50px;">
+            <h3 style="text-align: center; color: #94a3b8; font-size: 1rem; margin-bottom: 20px; font-family: 'Inter', sans-serif;">Recent Activity</h3>
+            
+            <div style="background: #12141c; padding: 15px; border-radius: 10px; margin-bottom: 10px; border: 1px solid #1e293b; display: flex; align-items: center; gap: 15px; max-width: 500px; margin-left: auto; margin-right: auto;">
+                <div style="width: 40px; height: 40px; background: #333; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="fas fa-user" style="color: #007aff;"></i></div>
+                <div style="text-align: left;">
+                    <p style="margin: 0; font-size: 0.85rem; font-weight: bold; color: #fff;">Alex_Gaming102</p>
+                    <p style="margin: 0; font-size: 0.75rem; color: #00ff00;">Just received 5000 Credits! It works!</p>
+                </div>
+            </div>
 
+            <div style="background: #12141c; padding: 15px; border-radius: 10px; border: 1px solid #1e293b; display: flex; align-items: center; gap: 15px; max-width: 500px; margin-left: auto; margin-right: auto;">
+                <div style="width: 40px; height: 40px; background: #333; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="fas fa-user" style="color: #007aff;"></i></div>
+                <div style="text-align: left;">
+                    <p style="margin: 0; font-size: 0.85rem; font-weight: bold; color: #fff;">Sara_Tech</p>
+                    <p style="margin: 0; font-size: 0.75rem; color: #00ff00;">Verified and unlocked in 2 minutes. Thanks ProTech!</p>
+                </div>
+            </div>
+        </div>
 </body>
 </html>
