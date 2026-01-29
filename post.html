@@ -233,57 +233,56 @@
                 updateMetaTags(article);
                 document.title = article.title + " | ProTech";
 
-                container.innerHTML = `
+                                container.innerHTML = `
                     <article>
                         <img src="${article.img}" class="article-img">
                         <span class="cat-tag">${article.cat}</span>
-                        <h1 style="font-size: 2.5rem; margin: 20px 0;">${
-                            article.title
-                        }</h1>
+                        <h1 style="font-size: 2.5rem; margin: 20px 0;">${article.title}</h1>
                         
                         <div style="padding: 20px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); display: flex; gap: 10px; flex-wrap: wrap;">
-    <button class="share-trigger" onclick="shareArticle('twitter', '${article.title}')" style="background: #000; border: none;">
-        <i class="fa-brands fa-x-twitter"></i> X
-    </button>
-    <button class="share-trigger" onclick="shareArticle('facebook', '${article.title}')" style="background: #1877f2; border: none;">
-        <i class="fa-brands fa-facebook-f"></i> Facebook
-    </button>
-    <button class="share-trigger" onclick="shareArticle('reddit', '${article.title}')" style="background: #ff4500; border: none;">
-        <i class="fa-brands fa-reddit-alien"></i> Reddit
-    </button>
-</div>
-                        <div class="content">${
-                            article.content || article.desc
-                        }</div>
-                        <a href="index.html" class="back-btn">← Back to Home</a>
-                        <div style="max-width: 800px; margin: 40px auto; padding: 0 20px;">
-    
-    <div style="text-align: left; margin-bottom: 30px;">
-        <a href="/" style="text-decoration: none; color: var(--accent-blue); font-size: 0.85rem; font-weight: bold; border: 1px solid var(--accent-blue); padding: 5px 12px; border-radius: 5px; transition: 0.3s;">
-            <i class="fas fa-arrow-left"></i> Back to Home
-        </a>
-    </div>
+                            <button class="share-trigger" onclick="shareArticle('twitter', '${article.title}')" style="background: #000; border: none;">
+                                <i class="fa-brands fa-x-twitter"></i> X
+                            </button>
+                            <button class="share-trigger" onclick="shareArticle('facebook', '${article.title}')" style="background: #1877f2; border: none;">
+                                <i class="fa-brands fa-facebook-f"></i> Facebook
+                            </button>
+                            <button class="share-trigger" onclick="shareArticle('reddit', '${article.title}')" style="background: #ff4500; border: none;">
+                                <i class="fa-brands fa-reddit-alien"></i> Reddit
+                            </button>
+                        </div>
 
-    <h3 style="color: #fff; font-family: 'Space Grotesk'; border-left: 4px solid var(--accent-blue); padding-left: 15px; margin-bottom: 20px;">Related Articles</h3>
-    
-    <div id="related-posts-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-        <div class="widget article-card" style="height: 200px;" onclick="window.location.href='#'">
-            <div class="widget-img" style="background-image: url('https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=500')"></div>
-            <div class="widget-overlay"></div>
-            <div class="widget-content">
-                <h4 style="font-size: 0.9rem; margin: 0;">Next-Gen Galaxy S26 Ultra Leaks</h4>
-            </div>
-        </div>
-        
-        <div class="widget article-card" style="height: 200px;" onclick="window.location.href='#'">
-            <div class="widget-img" style="background-image: url('https://images.unsplash.com/photo-1510557880182-3d4d3cba3f21?w=500')"></div>
-            <div class="widget-overlay"></div>
-            <div class="widget-content">
-                <h4 style="font-size: 0.9rem; margin: 0;">iPhone 18 Pro Camera Rumors</h4>
-            </div>
-        </div>
-    </div>
-</div>
+                        <div class="content">${article.content || article.desc}</div>
+
+                        <div style="border-top: 1px solid #1e293b; margin-top: 40px; padding-top: 30px; font-family: 'Inter', sans-serif;">
+                            
+                            <div style="text-align: left; margin-bottom: 30px;">
+                                <a href="index.html" style="text-decoration: none; color: #007aff; font-size: 0.8rem; font-weight: bold; border: 1px solid #007aff; padding: 6px 15px; border-radius: 5px; display: inline-flex; align-items: center; gap: 8px;">
+                                    <i class="fas fa-arrow-left"></i> Back to Home
+                                </a>
+                            </div>
+
+                            <h3 style="color: #fff; font-family: 'Space Grotesk'; font-size: 1.2rem; margin-bottom: 20px; text-align: left;">Related Articles</h3>
+                            
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                                
+                                <div onclick="window.location.href='#'" style="position: relative; height: 180px; border-radius: 12px; overflow: hidden; cursor: pointer; border: 1px solid #1e293b;">
+                                    <div style="position: absolute; width: 100%; height: 100%; background-image: url('https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=500'); background-size: cover; background-position: center;"></div>
+                                    <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);"></div>
+                                    <div style="position: absolute; bottom: 15px; left: 15px; right: 15px;">
+                                        <h4 style="color: #fff; font-size: 0.85rem; margin: 0; line-height: 1.3;">Next-Gen Galaxy S26 Ultra Leaks</h4>
+                                    </div>
+                                </div>
+
+                                <div onclick="window.location.href='#'" style="position: relative; height: 180px; border-radius: 12px; overflow: hidden; cursor: pointer; border: 1px solid #1e293b;">
+                                    <div style="position: absolute; width: 100%; height: 100%; background-image: url('https://images.unsplash.com/photo-1510557880182-3d4d3cba3f21?w=500'); background-size: cover; background-position: center;"></div>
+                                    <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);"></div>
+                                    <div style="position: absolute; bottom: 15px; left: 15px; right: 15px;">
+                                        <h4 style="color: #fff; font-size: 0.85rem; margin: 0; line-height: 1.3;">iPhone 18 Pro Camera Rumors</h4>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
                     </article>
                 `;
             }
