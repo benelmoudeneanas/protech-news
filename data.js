@@ -1,5 +1,36 @@
 const articles = [
 {
+    id: 31,
+    title: "Galaxy S26 Pricing Leak: The Ultra is Getting Cheaper, But There is a Catch",
+    slug: "samsung-galaxy-s26-price-leak-ultra-cheaper",
+    cat: "trends",
+    img: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=800",
+    desc: "New reports reveal a confusing pricing strategy for the Galaxy S26. While the base models see a price hike due to RAM scarcity, the Ultra is set to become more affordable.",
+    content: `
+        <p>The smartphone market is facing a strange shift. Recent leaks from Swedish dealer data suggest that Samsung is restructuring the <b>Galaxy S26 pricing</b> in a way we didn't expect. While some users will pay more, the high-end flagship might actually be a bargain this year.</p>
+        
+        <h3>The RAM Scarcity Tax</h3>
+        <p>Why is the price going up? The rising demand for high-bandwidth memory (AI-focused DRAM) has made components scarcer and more expensive. As a result, Samsung is reportedly increasing the price of the base <b>Galaxy S26 by an estimated €100</b>.</p>
+        
+        <div style="background: #111; border: 1px solid #007aff; padding: 20px; border-radius: 12px; margin: 25px 0;">
+            <h4 style="margin-top: 0; color: #007aff; font-family: 'Space Grotesk';">Leaked Pricing (256GB Models):</h4>
+            <ul style="margin-bottom: 0; color: #94a3b8; font-size: 0.95rem; list-style: none; padding: 0;">
+                <li>🔥 <b>Galaxy S26:</b> €1,049</li>
+                <li>🔥 <b>Galaxy S26+:</b> €1,299</li>
+                <li>✅ <b>Galaxy S26 Ultra:</b> €1,399 (Cheaper than S25 Ultra!)</li>
+            </ul>
+        </div>
+
+        <h3>The Ultra Surprise</h3>
+        <p>In a shocking move, the <b>Galaxy S26 Ultra</b> is expected to be nearly <b>€100 cheaper</b> than its predecessor. To achieve this, rumors suggest Samsung might ditch the 128GB variant entirely, setting 256GB as the new floor. However, the 'catch' might be the end of free storage upgrades during pre-orders for the Ultra model.</p>
+
+        <h3>New Features to Watch</h3>
+        <p>Beyond the price, the S26 series is rumored to include a new <b>'Privacy Display'</b> feature and significant upgrades to the battery and camera systems. This makes the Ultra particularly attractive for high-end users if the price cut holds true.</p>
+        
+        <p style="font-style: italic; color: #64748b;">Will the lower Ultra price push more people to the high end, or will the base model hike drive fans away? Let us know in the comments.</p>
+    `
+},
+{
     id: 30,
     title: "iOS 26.3 Beta 3 Released: Is Siri 2.0 with Gemini AI Finally Coming?",
     slug: "ios-26-3-beta-3-features-siri-gemini-ai",
