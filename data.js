@@ -182,7 +182,7 @@ const articles = [
         <h3>The Verdict: Is it for Everyone?</h3>
         <p>While the price has slightly dipped thanks to the introduction of the 'Vision Air' model, the Pro remains a premium investment. However, for creatives, remote engineers, and those who want a 100-inch private cinema in a studio apartment, the 2026 Vision Pro is the first version that feels like a necessity rather than a curiosity. Apple has finally turned its 'spatial computer' into a tool you’ll actually want to use every day.</p>
     `,
-    img: "https://i.ibb.co/MkXwGQsn/image.jpg"
+    img: "https://image2url.com/r2/default/images/1769772829799-b5886ffc-75de-4d57-a41d-850f3db74162.jpg"
 },
 {
     id: 25,
