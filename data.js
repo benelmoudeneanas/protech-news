@@ -352,7 +352,7 @@ const articles = [
                      <h3>Privacy or Surveillance?</h3>
                      <p>Apple is reportedly introducing a 'Physical Privacy Indicator'—a mechanical shutter that covers the sensors when not in use—to satisfy the strict <strong>Federal AI Act of 2026</strong>. Despite this, social critics in the US are already debating the ethics of 'always-on' facial recognition. Whether we like it or not, the era of looking down at our phones is ending; the era of looking through them has begun.</p>
                      `,
-                    img: "https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b"
+                    img: "https://image2url.com/r2/default/images/1769772982508-d2d29b7c-4aa2-4d15-a1e9-0257a0d60359.jpg"
                 },
                 {
                     id: 17,
