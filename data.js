@@ -4,7 +4,7 @@ const articles = [
     title: "Galaxy S26 Pricing Leak: The Ultra is Getting Cheaper, But There is a Catch",
     slug: "samsung-galaxy-s26-price-leak-ultra-cheaper",
     cat: "trends",
-    img: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=800",
+    img: "https://image2url.com/r2/default/images/1769772608367-bc3adf52-c4b5-4c72-aef0-6dfae39ebb2b.jpg",
     desc: "New reports reveal a confusing pricing strategy for the Galaxy S26. While the base models see a price hike due to RAM scarcity, the Ultra is set to become more affordable.",
     content: `
         <p>The smartphone market is facing a strange shift. Recent leaks from Swedish dealer data suggest that Samsung is restructuring the <b>Galaxy S26 pricing</b> in a way we didn't expect. While some users will pay more, the high-end flagship might actually be a bargain this year.</p>
