@@ -369,7 +369,7 @@ const articles = [
                      <h3>The Backward Compatibility Miracle</h3>
                      <p>The biggest fear for Nintendo fans was losing their digital library. However, 2026 leaks confirm a dual-slot system or a high-speed cartridge reader that supports all original Switch games with 'AI-enhanced' resolution. This move ensures that the Switch 2 Pro will have the largest launch library in gaming history from day one.</p>
                      `,
-                    img: "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe"
+                    img: "https://image2url.com/r2/default/images/1769773142749-1494d693-ba8d-4d56-b534-599c1ec4dc94.webp"
                 },
                 {
                     id: 16,
