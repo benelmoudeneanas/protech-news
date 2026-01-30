@@ -403,7 +403,7 @@ const articles = [
                      <h3>The Desktop in Your Pocket</h3>
                      <p>With a screen this large, Samsung is pushing 'DeX 2.0'. When fully unfolded, the Z Fold 8 can run a full desktop-class browser and up to four apps simultaneously. For American professionals who travel, this device finally delivers on the promise of leaving the laptop at home. The starting price? A staggering <strong>$1,899</strong>, but in 2026, it seems users are willing to pay for true innovation.</p>
                      `,
-                    img: "https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=800"
+                    img: "https://image2url.com/r2/default/images/1769773307274-f428b218-ec6c-4484-bec2-848f8a57d9e8.jpg"
                 },
                 {
                     id: 14,
