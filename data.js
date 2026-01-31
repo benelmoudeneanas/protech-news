@@ -1,6 +1,6 @@
 const articles = [
 {
-    id: 34,
+    id: 33,
     title: "Instagram to Empower Users with 'Leave Close Friends List' Feature",
     slug: "instagram-close-friends-exit-feature-meta-update",
     cat: "tech-news",
