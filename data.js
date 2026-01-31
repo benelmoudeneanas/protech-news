@@ -1,9 +1,9 @@
 const articles = [
 {
-    "id": 34,
+    id: 34,
     "title": "Instagram to Empower Users with 'Leave Close Friends List' Feature",
-    "slug": "instagram-close-friends-exit-feature-meta-update",
-    "cat": "tech-news",
+    slug: "instagram-close-friends-exit-feature-meta-update",
+    cat: "tech-news",
     "img": "https://image2url.com/r2/default/images/1769819427149-b444153a-cd61-4e5c-b3b1-e8b3ea2e712a.jpg",
     "desc": "Meta confirms it is developing a privacy-centric tool allowing users to voluntarily opt-out of someone else's Close Friends circle.",
     "content": `
@@ -36,10 +36,10 @@ const articles = [
     `
 }،
 {
-    "id": 32,
-    "title": "iPhone 17 Sales Shatter Records as Apple enters 'Supply Chase Mode'—But the Mac is Struggling",
-    "slug": "apple-iphone-17-record-sales-google-gemini-ai",
-    "cat": "trends",
+    id: 32,
+    title: "iPhone 17 Sales Shatter Records as Apple enters 'Supply Chase Mode'—But the Mac is Struggling",
+    slug: "apple-iphone-17-record-sales-google-gemini-ai",
+    cat: "trends",
     "img": "https://image2url.com/r2/default/images/1769819427149-b444153a-cd61-4e5c-b3b1-e8b3ea2e712a.jpg",
     "desc": "Apple just posted a massive $144B revenue beat fueled by an iPhone 17 supercycle, while confirming a game-changing AI pivot with Google Gemini.",
     "content": `
