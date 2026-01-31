@@ -1,5 +1,36 @@
 const articles = [
 {
+    "id": 32,
+    "title": "iPhone 17 Sales Shatter Records as Apple enters 'Supply Chase Mode'—But the Mac is Struggling",
+    "slug": "apple-iphone-17-record-sales-google-gemini-ai",
+    "cat": "trends",
+    "img": "https://image2url.com/r2/default/images/1769819427149-b444153a-cd61-4e5c-b3b1-e8b3ea2e712a.jpg",
+    "desc": "Apple just posted a massive $144B revenue beat fueled by an iPhone 17 supercycle, while confirming a game-changing AI pivot with Google Gemini.",
+    "content": `
+        <p>Apple is firing on all cylinders—mostly. The tech giant just dropped its Q4 earnings report, revealing that the <b>iPhone 17</b> has triggered a massive global sales surge, even as other hardware pillars like the Mac and Apple Watch begin to wobble.</p>
+        
+        <h3>The iPhone 17 Supercycle is Real</h3>
+        <p>Demand for the latest flagship has been so high that CEO Tim Cook admitted the company is currently in <b>"supply chase mode."</b> With a 16% revenue jump to $144 billion, this represents Apple's most aggressive growth spurt since 2021.</p>
+        
+        <div style="background: #111; border: 1px solid #ff3b30; padding: 20px; border-radius: 12px; margin: 25px 0;">
+            <h4 style="margin-top: 0; color: #ff3b30; font-family: 'Space Grotesk';">Q4 Hardware Performance:</h4>
+            <ul style="margin-bottom: 0; color: #94a3b8; font-size: 0.95rem; list-style: none; padding: 0;">
+                <li>📱 <b>iPhone Sales:</b> All-time record high</li>
+                <li>💻 <b>Mac Revenue:</b> 📉 Down 7%</li>
+                <li>⌚ <b>Wearables/AirPods:</b> 📉 Down 3%</li>
+            </ul>
+        </div>
+
+        <h3>The Google Gemini Pivot</h3>
+        <p>The biggest tech news isn't just the hardware; it's the brains behind it. Apple has officially confirmed a partnership with <b>Google Gemini</b> to power the next generation of Siri. While investors are nervous about Apple's "conservative" $16B AI spend compared to Microsoft's $37B, Apple is betting on a polished, "pleasurable" AI experience rather than rushing glitchy features to market.</p>
+
+        <h3>Why the Mac is Dipping</h3>
+        <p>While the iPhone dominates, the Mac is facing a post-upgrade slump, with sales dropping over 7%. Analysts suggest that without a major "AI-PC" hardware hook, consumers are holding onto their current M-series chips longer than expected.</p>
+        
+        <p style="font-style: italic; color: #64748b;">Is the iPhone 17 enough to keep Apple on top, or does the Mac's decline signal a problem? Drop your thoughts below.</p>
+    `
+},
+{
     id: 31,
     title: "Galaxy S26 Pricing Leak: The Ultra is Getting Cheaper, But There is a Catch",
     slug: "samsung-galaxy-s26-price-leak-ultra-cheaper",
