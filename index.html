@@ -475,8 +475,8 @@
                 );
                 matched.forEach(article => {
                     resultsContainer.innerHTML += `
-                        <div style="padding: 15px; border-bottom: 1px solid #1e293b; cursor: pointer;" onclick="window.location.href='/${article.slug}'">
-                            <h4 style="margin: 0; color: white;">${article.title}</h4>
+                        <div style="padding: 15px; border-bottom: 1px solid #1e293b; cursor: pointer;" onclick="window.location.href='/article/${article.slug}'">
+    <h4 style="margin: 0; color: white;">${article.title}</h4>
                         </div>`;
                 });
             }
@@ -493,7 +493,7 @@
                     const feedArticles = articles.slice(1);
 
                     container.innerHTML += `
-    <div onclick="window.location.href='/${mainHero.slug}'" style="position: relative; cursor: pointer; margin-bottom: 30px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); height: 200px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 40px -10px rgba(0,0,0,0.6);">
+    <div onclick="window.location.href='/article/${mainHero.slug}'" style="position: relative; cursor: pointer; margin-bottom: 30px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); height: 200px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 40px -10px rgba(0,0,0,0.6);">
         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('${mainHero.img}'); background-size: cover; background-position: center; filter: blur(16px) brightness(0.3); transform: scale(1.1); z-index: 1;"></div>
         <div style="position: relative; z-index: 2; padding: 20px; text-align: center; width: 100%;">
             <div style="margin-bottom: 10px;">
@@ -510,7 +510,7 @@
                     const feedGrid = document.getElementById("main-feed-grid");
                     feedArticles.forEach(article => {
                         feedGrid.innerHTML += `
-        <div class="widget article-card" onclick="window.location.href='/${article.slug}'" style="border: 1px solid var(--border-color);">
+        <div class="widget article-card" onclick="window.location.href='/article/${article.slug}'" style="border: 1px solid var(--border-color);">
             <div class="widget-img" style="background-image: url('${article.img}')"></div>
             <div class="widget-overlay"></div>
             <div class="widget-content">
@@ -535,7 +535,8 @@
                             .slice(0, 4)
                             .forEach(article => {
                                 catGrid.innerHTML += `
-                                    <div class="widget article-card" onclick="window.location.href='/${article.slug}'">
+                                    <div class="widget article-card" onclick="window.location.href='/article/${article.slug}'"
+                                  >
                                         <div class="widget-img" style="background-image: url('${article.img}')"></div>
                                         <div class="widget-overlay"></div>
                                         <div class="widget-content">
@@ -556,7 +557,7 @@
                                 a => a.id === article.id
                             );
                             grid.innerHTML += `
-                <div class="widget article-card" onclick="window.location.href='/${article.slug}'"
+                <div class="widget article-card" onclick="window.location.href='/article/${article.slug}'"
                 >
                     <div class="widget-img" style="background-image: url('${article.img}')"></div>
                     <div class="widget-overlay"></div>
@@ -678,9 +679,7 @@
                             a => a.id === article.id
                         );
                         grid.innerHTML += `
-                         <div class="widget" style="padding: 0; overflow: hidden; cursor: pointer; transition: 0.3s;" onclick="window.location.href='/${
-                             article.slug
-                         }'"
+                         <div class="widget" style="padding: 0; overflow: hidden; cursor: pointer; transition: 0.3s;" onclick="window.location.href='/article/${article.slug}'"
                          >
                              <div style="width: 100%; height: 180px; background-image: url('${
                                  article.img
