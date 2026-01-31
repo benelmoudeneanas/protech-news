@@ -34,7 +34,7 @@ const articles = [
         
         <p style="font-style: italic; color: #64748b;">Would you use this feature to quietly exit a 'Close Friends' list, or do you find it too confrontational? Let us know in the comments.</p>
     `
-}،
+},
 {
     id: 32,
     title: "iPhone 17 Sales Shatter Records as Apple enters 'Supply Chase Mode'—But the Mac is Struggling",
