@@ -2,6 +2,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
+    { "source": "/apple-iphone-17-record-sales-google-gemini-ai", "destination": "/post?id=31" },
     { "source": "/samsung-galaxy-s26-price-leak-ultra-cheaper", "destination": "/post?id=31" },
     { "source": "/ios-26-3-beta-3-features-siri-gemini-ai", "destination": "/post?id=30" },
     { "source": "/galaxy-z-trifold-launch-leak-specs", "destination": "/post?id=29" },
