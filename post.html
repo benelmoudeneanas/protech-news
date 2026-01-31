@@ -254,21 +254,32 @@
 
             // 4. تحميل المقال بذكاء
             function loadArticle() {
-                const path = window.location.pathname.split("/").pop();
-                const currentSlug = path.replace(".html", "");
+                const path = window.location.pathname;
+                const currentSlug = path.split("/").filter(Boolean).pop();
+
+                if (
+                    !currentSlug ||
+                    currentSlug === "index" ||
+                    currentSlug === "post"
+                ) {
+                    return;
+                }
 
                 const article = articles.find(a => a.slug === currentSlug);
                 const container = document.getElementById("post-content");
 
                 if (!article) {
-                    container.innerHTML = "<h1>Article Not Found</h1>";
+                    container.innerHTML = `
+            <div style="text-align:center; padding:100px;">
+                <h1>Article Not Found</h1>
+                <p>Slug: ${currentSlug}</p>
+                <a href="index.html" style="color:var(--accent-blue)">Return Home</a>
+            </div>`;
                     return;
                 }
 
-                // تحديث SEO وعنوان الصفحة
                 document.title = article.title + " | ProTech";
 
-                // حساب وقت القراءة
                 const words = (article.content || "").split(/\s+/).length;
                 const readTime = Math.ceil(words / 200);
 
@@ -283,18 +294,9 @@
                 article.desc
             }</p>
         </div>
-
         <img src="${
             article.img
         }" class="article-img" style="width:100%; border-radius:24px; margin-bottom:30px; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
-
-        <div style="display: flex; gap: 10px; margin-bottom: 40px;">
-            <button onclick="share('x', '${
-                article.title
-            }')" style="flex:1; padding:12px; border-radius:12px; background:#000; color:white; border:none; cursor:pointer; font-weight:bold;"><i class="fa-brands fa-x-twitter"></i> X</button>
-            <button onclick="copyLink()" style="flex:1; padding:12px; border-radius:12px; background:#2d3748; color:white; border:none; cursor:pointer; font-weight:bold;"><i class="fas fa-link"></i> Copy</button>
-        </div>
-
         <div class="content">
             ${article.content}
         </div>
