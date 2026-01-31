@@ -1,12 +1,12 @@
 const articles = [
 {
     id: 34,
-    "title": "Instagram to Empower Users with 'Leave Close Friends List' Feature",
+    title: "Instagram to Empower Users with 'Leave Close Friends List' Feature",
     slug: "instagram-close-friends-exit-feature-meta-update",
     cat: "tech-news",
-    "img": "https://image2url.com/r2/default/images/1769819427149-b444153a-cd61-4e5c-b3b1-e8b3ea2e712a.jpg",
-    "desc": "Meta confirms it is developing a privacy-centric tool allowing users to voluntarily opt-out of someone else's Close Friends circle.",
-    "content": `
+    img: "https://image2url.com/r2/default/images/1769819427149-b444153a-cd61-4e5c-b3b1-e8b3ea2e712a.jpg",
+    desc: "Meta confirms it is developing a privacy-centric tool allowing users to voluntarily opt-out of someone else's Close Friends circle.",
+    content: `
         <p>Instagram is finally addressing a long-standing social dilemma. Meta recently confirmed to <i>TechCrunch</i> that it is working on a feature that will allow users to <b>remove themselves</b> from another person's \"Close Friends\" list, providing more control over their digital presence.</p>
         
         <h3>Privacy Over Social Pressure</h3>
@@ -40,9 +40,9 @@ const articles = [
     title: "iPhone 17 Sales Shatter Records as Apple enters 'Supply Chase Mode'—But the Mac is Struggling",
     slug: "apple-iphone-17-record-sales-google-gemini-ai",
     cat: "trends",
-    "img": "https://image2url.com/r2/default/images/1769819427149-b444153a-cd61-4e5c-b3b1-e8b3ea2e712a.jpg",
-    "desc": "Apple just posted a massive $144B revenue beat fueled by an iPhone 17 supercycle, while confirming a game-changing AI pivot with Google Gemini.",
-    "content": `
+    img: "https://image2url.com/r2/default/images/1769819427149-b444153a-cd61-4e5c-b3b1-e8b3ea2e712a.jpg",
+    desc: "Apple just posted a massive $144B revenue beat fueled by an iPhone 17 supercycle, while confirming a game-changing AI pivot with Google Gemini.",
+    content: `
         <p>Apple is firing on all cylinders—mostly. The tech giant just dropped its Q4 earnings report, revealing that the <b>iPhone 17</b> has triggered a massive global sales surge, even as other hardware pillars like the Mac and Apple Watch begin to wobble.</p>
         
         <h3>The iPhone 17 Supercycle is Real</h3>
