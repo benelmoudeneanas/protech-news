@@ -3,7 +3,7 @@
   "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/:slug",
+      "source": "/article/:slug",
       "destination": "/post.html"
     }
   ]
