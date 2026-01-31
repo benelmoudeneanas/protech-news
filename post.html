@@ -251,11 +251,14 @@
                 };
                 window.open(links[platform], "_blank", "width=600,height=400");
             }
-
-            // 4. تحميل المقال بذكاء
             function loadArticle() {
                 const path = window.location.pathname;
-                const currentSlug = path.split("/").filter(Boolean).pop();
+                // استخراج الـ slug مع تنظيف الرابط من .html أو أي علامات مائلة إضافية
+                let currentSlug = path.split("/").filter(Boolean).pop();
+
+                if (currentSlug) {
+                    currentSlug = currentSlug.replace(".html", "");
+                }
 
                 if (
                     !currentSlug ||
@@ -273,7 +276,7 @@
             <div style="text-align:center; padding:100px;">
                 <h1>Article Not Found</h1>
                 <p>Slug: ${currentSlug}</p>
-                <a href="index.html" style="color:var(--accent-blue)">Return Home</a>
+                <a href="/" style="color:var(--accent-blue)">Return Home</a>
             </div>`;
                     return;
                 }
