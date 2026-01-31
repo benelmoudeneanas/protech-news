@@ -1,5 +1,41 @@
 const articles = [
 {
+    "id": 34,
+    "title": "Instagram to Empower Users with 'Leave Close Friends List' Feature",
+    "slug": "instagram-close-friends-exit-feature-meta-update",
+    "cat": "tech-news",
+    "img": "https://image2url.com/r2/default/images/1769819427149-b444153a-cd61-4e5c-b3b1-e8b3ea2e712a.jpg",
+    "desc": "Meta confirms it is developing a privacy-centric tool allowing users to voluntarily opt-out of someone else's Close Friends circle.",
+    "content": `
+        <p>Instagram is finally addressing a long-standing social dilemma. Meta recently confirmed to <i>TechCrunch</i> that it is working on a feature that will allow users to <b>remove themselves</b> from another person's \"Close Friends\" list, providing more control over their digital presence.</p>
+        
+        <h3>Privacy Over Social Pressure</h3>
+        <p>Since the launch of Close Friends in 2018, the feature has been a one-way street: only the creator could add or remove people. The upcoming update, currently in internal prototyping, aims to change that power dynamic.</p>
+        
+        <div style="background: #111; border: 1px solid #0095f6; padding: 20px; border-radius: 12px; margin: 25px 0;">
+            <h4 style="margin-top: 0; color: #0095f6; font-family: 'Space Grotesk';">Key Discovery Details:</h4>
+            <ul style="margin-bottom: 0; color: #94a3b8; font-size: 0.95rem; list-style: none; padding: 0;">
+                <li>🔍 <b>Discovered by:</b> Reverse engineer Alessandro Paluzzi.</li>
+                <li>⚠️ <b>The Catch:</b> Once you leave, you lose access to that person's private content instantly.</li>
+                <li>🛠️ <b>Status:</b> Early development (not yet in public testing).</li>
+            </ul>
+        </div>
+
+        <h3>Competitive Edge & Subscriptions</h3>
+        <p>By implementing this, Instagram catches up to competitors like <b>Snapchat</b>, which already allows users to exit private stories. But that's not all—Meta is also exploring <b>premium subscriptions</b> for Instagram, Facebook, and WhatsApp. These paid tiers may offer exclusive perks such as:</p>
+        <ul>
+            <li>Unlimited audience lists for refined sharing.</li>
+            <li>Tools to see who isn't following you back.</li>
+            <li>The ability to view Stories anonymously.</li>
+        </ul>
+
+        <h3>What This Means for You</h3>
+        <p>While some might find it awkward to leave a friend's list, this move signals Meta's shift toward giving users \"more control over how they share and connect\" without forcing them into social circles they'd rather avoid.</p>
+        
+        <p style="font-style: italic; color: #64748b;">Would you use this feature to quietly exit a 'Close Friends' list, or do you find it too confrontational? Let us know in the comments.</p>
+    `
+}،
+{
     "id": 32,
     "title": "iPhone 17 Sales Shatter Records as Apple enters 'Supply Chase Mode'—But the Mac is Struggling",
     "slug": "apple-iphone-17-record-sales-google-gemini-ai",
