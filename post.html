@@ -252,19 +252,12 @@
                 window.open(links[platform], "_blank", "width=600,height=400");
             }
             function loadArticle() {
-                // جلب المسار وتنظيفه من العلامات المائلة الزائدة
                 const path = window.location.pathname;
-                const pathSegments = path
-                    .split("/")
-                    .filter(segment => segment.length > 0);
-
-                // الحصول على الـ slug الأخير وحذف .html إذا وجد
-                let currentSlug = pathSegments.pop();
-                if (currentSlug) {
-                    currentSlug = currentSlug.replace(".html", "");
-                }
-
-                // إذا لم يجد slug أو كان الرابط هو الملف نفسه، نوقف الدالة
+                const pathSegments = path.split("/").filter(s => s.length > 0);
+                let currentSlug = pathSegments[pathSegments.length - 1];
+if (currentSlug) {
+    currentSlug = currentSlug.replace(".html", "");
+}
                 if (
                     !currentSlug ||
                     currentSlug === "post" ||
