@@ -123,32 +123,32 @@
                     padding: 0 20px;
                 }
                 .nav-list li a {
-                    display: flex;
-                    align-items: center;
-                    gap: 15px; /* المسافة بين الأيقونة والنص */
-                    padding: 20px 30px;
-                    text-decoration: none;
-                    color: white;
-                    font-family: "Space Grotesk", sans-serif; /* الخط العصري للموقع */
-                    font-size: 1rem;
-                    font-weight: 500;
-                    text-transform: uppercase;
-                    letter-spacing: 1px;
-                    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-                    transition: 0.3s;
-                    text-align: left; /* محاذاة النص لليسر مع الأيقونة */
-                }
+    display: flex;
+    align-items: center;
+    gap: 15px; /* المسافة بين الأيقونة والنص */
+    padding: 20px 30px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Space Grotesk', sans-serif; /* الخط العصري للموقع */
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    transition: 0.3s;
+    text-align: left; /* محاذاة النص لليسر مع الأيقونة */
+}
 
-                .nav-list li a i {
-                    color: var(--accent-blue); /* تلوين الأيقونات بالأزرق */
-                    width: 20px; /* توحيد عرض الأيقونات لترتيب النص عمودياً */
-                    font-size: 1.1rem;
-                }
+.nav-list li a i {
+    color: var(--accent-blue); /* تلوين الأيقونات بالأزرق */
+    width: 20px; /* توحيد عرض الأيقونات لترتيب النص عمودياً */
+    font-size: 1.1rem;
+}
 
-                .nav-list li a:active {
-                    background: rgba(0, 122, 255, 0.1);
-                    color: var(--accent-blue);
-                }
+.nav-list li a:active {
+    background: rgba(0, 122, 255, 0.1);
+    color: var(--accent-blue);
+}
                 .grid {
                     grid-template-columns: 1fr;
                     gap: 20px;
@@ -390,31 +390,13 @@
                     <span class="bar"></span>
                 </div>
             </div>
-            <ul class="nav-list">
-                <li>
-                    <a onclick="showCategory('home')"
-                        ><i class="fas fa-home"></i> Home</a
-                    >
-                </li>
-                <li>
-                    <a onclick="showCategory('home')"
-                        ><i class="fas fa-bolt"></i> The Feed</a
-                    >
-                </li>
-                <li>
-                    <a href="offers.html"><i class="fas fa-tag"></i> Offers</a>
-                </li>
-                <li>
-                    <a href="about.html"
-                        ><i class="fas fa-info-circle"></i> About Us</a
-                    >
-                </li>
-                <li>
-                    <a href="contact.html"
-                        ><i class="fas fa-envelope"></i> Contact</a
-                    >
-                </li>
-            </ul>
+<ul class="nav-list">
+    <li><a onclick="showCategory('home')"><i class="fas fa-home"></i> Home</a></li>
+    <li><a onclick="showCategory('home')"><i class="fas fa-bolt"></i> The Feed</a></li>
+    <li><a href="offers.html"><i class="fas fa-tag"></i> Offers</a></li>
+    <li><a onclick="showCategory('about')"><i class="fas fa-info-circle"></i> About Us</a></li>
+    <li><a onclick="showCategory('contact')"><i class="fas fa-envelope"></i> Contact</a></li>
+</ul>
         </nav>
         <div class="quick-tags">
             <div class="tag-item">Hot</div>
@@ -475,25 +457,125 @@
                 );
                 matched.forEach(article => {
                     resultsContainer.innerHTML += `
-                        <div style="padding: 15px; border-bottom: 1px solid #1e293b; cursor: pointer;" onclick="window.location.href='/article/${article.slug}'">
-    <h4 style="margin: 0; color: white;">${article.title}</h4>
+                        <div style="padding: 15px; border-bottom: 1px solid #1e293b; cursor: pointer;" onclick="window.location.href='/${article.slug}'">
+                            <h4 style="margin: 0; color: white;">${article.title}</h4>
                         </div>`;
                 });
             }
             function showCategory(category) {
-                if (window.innerWidth <= 768) {
-                    document.querySelector(".nav-list").style.display = "none";
-                }
-
+                document.querySelector(".nav-list").style.display = "none";
                 window.scrollTo({ top: 0, behavior: "smooth" });
                 const container = document.getElementById("articles-container");
                 container.innerHTML = "";
-                if (category === "home") {
-                    const mainHero = articles[0];
-                    const feedArticles = articles.slice(1);
+                if (category === "about") {
+    container.innerHTML = `
+    <div style="display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 60px 0;">
+        <div style="max-width: 900px; width: 100%; padding: 0 20px;">
+            
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h1 style="font-family: 'Space Grotesk'; font-size: 3.5rem; color: #fff; margin: 0;">Beyond <span style="color: var(--accent-blue);">Limits</span></h1>
+                <p style="color: var(--text-secondary); font-size: 1.2rem; margin-top: 10px; letter-spacing: 1px; text-transform: uppercase;">Decoding the Digital Frontier of 2026</p>
+            </div>
 
-                    container.innerHTML += `
-    <div onclick="window.location.href='/article/${mainHero.slug}'" style="position: relative; cursor: pointer; margin-bottom: 30px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); height: 200px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 40px -10px rgba(0,0,0,0.6);">
+            <div class="widget" style="padding: 40px; border: 1px solid var(--border-color); background: rgba(18, 20, 28, 0.8); backdrop-filter: blur(20px); border-radius: 20px;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
+                    
+                    <div style="border-left: 3px solid var(--accent-blue); padding-left: 25px;">
+                        <h2 style="font-family: 'Space Grotesk'; color: #fff; font-size: 1.5rem; margin-bottom: 15px;">Our Mission</h2>
+                        <p style="color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem;">
+                            ProTech isn't just a news site; it's a window into the future. Our goal is to filter the noise of the tech world and deliver high-fidelity leaks, deep reviews, and strategic insights for the 2026 digital landscape.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 style="font-family: 'Space Grotesk'; color: #fff; font-size: 1.5rem; margin-bottom: 15px;">The Edge</h2>
+                        <ul style="list-style: none; padding: 0; color: var(--text-secondary); font-size: 0.9rem; line-height: 2;">
+                            <li><i class="fas fa-check" style="color: var(--accent-blue); margin-right: 10px;"></i> Exclusive Future Leaks</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-blue); margin-right: 10px;"></i> AI Infrastructure Tracking</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-blue); margin-right: 10px;"></i> Verified Hardware Reports</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin-top: 50px; padding-top: 30px; border-top: 1px solid var(--border-color); text-align: center;">
+                    <h3 style="font-family: 'Space Grotesk'; color: #fff; margin-bottom: 20px;">Why Trust ProTech?</h3>
+                    <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto; line-height: 1.8;">
+                        Every rumor is cross-referenced, and every review is tested by enthusiasts. We believe in journalistic integrity and the power of accurate information in an era of rapid innovation.
+                    </p>
+                </div>
+
+                <div style="margin-top: 40px; text-align: center;">
+                    <button onclick="showCategory('contact')" style="background: transparent; border: 2px solid var(--accent-blue); color: #fff; padding: 12px 30px; border-radius: 50px; font-weight: bold; cursor: pointer; transition: 0.3s; font-family: 'Space Grotesk';" onmouseover="this.style.background='var(--accent-blue)'" onmouseout="this.style.background='transparent'">
+                        Get in Touch
+                    </button>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: center; gap: 40px; margin-top: 40px; opacity: 0.5; color: white;">
+    <i class="fab fa-apple" title="Apple"></i>
+    <i class="fas fa-microchip" title="Hardware/Nvidia"></i>
+    <i class="fab fa-microsoft" title="Microsoft"></i>
+    <i class="fab fa-google" title="Google"></i>
+</div>
+        </div>
+    </div>`;
+} else if (category === "contact") {
+    container.innerHTML = `
+    <div style="display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 40px 0;">
+        <div style="max-width: 900px; width: 100%; padding: 0 20px;">
+            
+            <div style="text-align: center; margin-bottom: 50px;">
+                <h1 style="font-family: 'Space Grotesk'; font-size: 3rem; color: #fff; margin-bottom: 10px;">Get In <span style="color: var(--accent-blue);">Touch</span></h1>
+                <p style="color: var(--text-secondary); font-size: 1.1rem;">Have a tip, a partnership proposal, or just want to say hi?</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                
+                <div style="display: flex; flex-direction: column; gap: 20px;">
+                    <div class="widget" style="padding: 25px; border: 1px solid var(--border-color); background: rgba(18, 20, 28, 0.5); backdrop-filter: blur(10px);">
+                        <i class="fas fa-paper-plane" style="color: var(--accent-blue); font-size: 1.5rem; margin-bottom: 15px;"></i>
+                        <h3 style="font-family: 'Space Grotesk'; color: #fff; margin: 0 0 10px 0;">Editorial & Tips</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 15px;">Share your exclusive leaks with us.</p>
+                        <a href="mailto:contact.protechdaily@gmail.com" style="color: var(--accent-blue); font-weight: 700; text-decoration: none; font-size: 0.9rem; word-break: break-all;">contact.protechdaily@gmail.com</a>
+                    </div>
+
+                    <div class="widget" style="padding: 25px; border: 1px solid var(--border-color); background: rgba(18, 20, 28, 0.5); backdrop-filter: blur(10px);">
+                        <i class="fas fa-handshake" style="color: var(--accent-blue); font-size: 1.5rem; margin-bottom: 15px;"></i>
+                        <h3 style="font-family: 'Space Grotesk'; color: #fff; margin: 0 0 10px 0;">Partnerships</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 15px;">For advertising and business inquiries.</p>
+                        <a href="mailto:master.protechdaily@gmail.com" style="color: var(--accent-blue); font-weight: 700; text-decoration: none; font-size: 0.9rem; word-break: break-all;">master.protechdaily@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="widget" style="padding: 35px; border: 1px solid var(--border-color); background: var(--bg-card);">
+                    <form action="https://formspree.io/f/xrekrvzg" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+                        <div>
+                            <label style="display: block; color: var(--text-secondary); font-size: 0.7rem; font-weight: 800; letter-spacing: 1.5px; margin-bottom: 8px;">FULL NAME</label>
+                            <input type="text" name="name" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-body); color: white; outline: none; box-sizing: border-box; transition: 0.3s;" onfocus="this.style.borderColor='var(--accent-blue)'" onblur="this.style.borderColor='var(--border-color)'">
+                        </div>
+                        <div>
+                            <label style="display: block; color: var(--text-secondary); font-size: 0.7rem; font-weight: 800; letter-spacing: 1.5px; margin-bottom: 8px;">EMAIL ADDRESS</label>
+                            <input type="email" name="email" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-body); color: white; outline: none; box-sizing: border-box; transition: 0.3s;" onfocus="this.style.borderColor='var(--accent-blue)'" onblur="this.style.borderColor='var(--border-color)'">
+                        </div>
+                        <div>
+                            <label style="display: block; color: var(--text-secondary); font-size: 0.7rem; font-weight: 800; letter-spacing: 1.5px; margin-bottom: 8px;">YOUR MESSAGE</label>
+                            <textarea name="message" rows="4" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-body); color: white; outline: none; box-sizing: border-box; resize: none; transition: 0.3s;" onfocus="this.style.borderColor='var(--accent-blue)'" onblur="this.style.borderColor='var(--border-color)'"></textarea>
+                        </div>
+                        <button type="submit" style="background: var(--accent-blue); color: white; border: none; padding: 16px; border-radius: 8px; font-weight: 900; cursor: pointer; font-family: 'Space Grotesk'; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; box-shadow: 0 4px 15px var(--accent-glow);">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>`;
+} else if (category === "home") {
+    const mainHero = articles[0]; 
+    const feedArticles = articles.slice(1);
+
+    container.innerHTML += `
+    <div onclick="window.location.href='/${mainHero.slug}'" style="position: relative; cursor: pointer; margin-bottom: 30px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); height: 200px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 40px -10px rgba(0,0,0,0.6);">
         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('${mainHero.img}'); background-size: cover; background-position: center; filter: blur(16px) brightness(0.3); transform: scale(1.1); z-index: 1;"></div>
         <div style="position: relative; z-index: 2; padding: 20px; text-align: center; width: 100%;">
             <div style="margin-bottom: 10px;">
@@ -507,10 +589,10 @@
         <h2 style="color: #fff; margin: 0; font-size: 1.2rem; font-family: 'Space Grotesk'; letter-spacing: 1px;"><span style="color: var(--accent-blue);">⚡</span> THE FEED</h2>
     </div>
     <div class="grid" id="main-feed-grid"></div>`;
-                    const feedGrid = document.getElementById("main-feed-grid");
-                    feedArticles.forEach(article => {
-                        feedGrid.innerHTML += `
-        <div class="widget article-card" onclick="window.location.href='/article/${article.slug}'" style="border: 1px solid var(--border-color);">
+    const feedGrid = document.getElementById("main-feed-grid");
+    feedArticles.forEach(article => {
+        feedGrid.innerHTML += `
+        <div class="widget article-card" onclick="window.location.href='/${article.slug}'" style="border: 1px solid var(--border-color);">
             <div class="widget-img" style="background-image: url('${article.img}')"></div>
             <div class="widget-overlay"></div>
             <div class="widget-content">
@@ -518,7 +600,7 @@
                 <h3 style="font-size: 1rem; margin-top: 8px; line-height: 1.4;">${article.title}</h3>
             </div>
         </div>`;
-                    });
+    });
                     ["trends", "reviews"].forEach(catName => {
                         container.innerHTML += `
                             <div style="display: flex; justify-content: space-between; align-items: center; margin: 40px 0 20px 0;">
@@ -535,8 +617,7 @@
                             .slice(0, 4)
                             .forEach(article => {
                                 catGrid.innerHTML += `
-                                    <div class="widget article-card" onclick="window.location.href='/article/${article.slug}'"
-                                  >
+                                    <div class="widget article-card" onclick="window.location.href='/${article.slug}'">
                                         <div class="widget-img" style="background-image: url('${article.img}')"></div>
                                         <div class="widget-overlay"></div>
                                         <div class="widget-content">
@@ -557,7 +638,7 @@
                                 a => a.id === article.id
                             );
                             grid.innerHTML += `
-                <div class="widget article-card" onclick="window.location.href='/article/${article.slug}'"
+                <div class="widget article-card" onclick="window.location.href='/${article.slug}'"
                 >
                     <div class="widget-img" style="background-image: url('${article.img}')"></div>
                     <div class="widget-overlay"></div>
@@ -570,15 +651,16 @@
                 }
             }
 
-            document.getElementById("mobile-menu").addEventListener("click", function () {
-    const navList = document.querySelector(".nav-list");
-    // هذا الكود يضمن فتح وإغلاق القائمة بسلاسة في الموبايل
-    if (navList.style.display === "flex") {
-        navList.style.display = "none";
-    } else {
-        navList.style.display = "flex";
-    }
-});
+            document
+                .getElementById("mobile-menu")
+                .addEventListener("click", function () {
+                    const navList = document.querySelector(".nav-list");
+                    if (navList.style.display === "flex") {
+                        navList.style.display = "none";
+                    } else {
+                        navList.style.display = "flex";
+                    }
+                });
             window.onload = () => {
                 const params = new URLSearchParams(window.location.search);
                 const category = params.get("cat");
@@ -679,7 +761,9 @@
                             a => a.id === article.id
                         );
                         grid.innerHTML += `
-                         <div class="widget" style="padding: 0; overflow: hidden; cursor: pointer; transition: 0.3s;" onclick="window.location.href='/article/${article.slug}'"
+                         <div class="widget" style="padding: 0; overflow: hidden; cursor: pointer; transition: 0.3s;" onclick="window.location.href='/${
+                             article.slug
+                         }'"
                          >
                              <div style="width: 100%; height: 180px; background-image: url('${
                                  article.img
@@ -696,51 +780,13 @@
             }
         </script>
         <div id="searchModal">
-            <div
-                style="
-                    width: 100%;
-                    max-width: 600px;
-                    margin: 0 auto;
-                    position: relative;
-                    padding: 0 15px;
-                    box-sizing: border-box;
-                "
-            >
-                <i
-                    class="fas fa-times"
-                    onclick="toggleSearchModal()"
-                    style="
-                        position: absolute;
-                        right: 20px;
-                        top: -45px;
-                        color: white;
-                        cursor: pointer;
-                        font-size: 1.5rem;
-                    "
-                ></i>
-                <input
-                    type="text"
-                    id="searchInputModal"
-                    onkeyup="liveSearchModal()"
-                    placeholder="Search articles..."
-                    style="
-                        width: 100%;
-                        padding: 15px;
-                        border-radius: 10px;
-                        border: 1px solid var(--accent-blue);
-                        background: #12141c;
-                        color: white;
-                        font-size: 1.1rem;
-                        outline: none;
-                        box-sizing: border-box;
-                    "
-                />
-                <div
-                    id="modalSearchResults"
-                    style="margin-top: 20px; max-height: 70vh; overflow-y: auto"
-                ></div>
-            </div>
-        </div>
+    <div style="width: 100%; max-width: 600px; margin: 0 auto; position: relative; padding: 0 15px; box-sizing: border-box;">
+        <i class="fas fa-times" onclick="toggleSearchModal()" style="position: absolute; right: 20px; top: -45px; color: white; cursor: pointer; font-size: 1.5rem;"></i>
+        <input type="text" id="searchInputModal" onkeyup="liveSearchModal()" placeholder="Search articles..." 
+               style="width: 100%; padding: 15px; border-radius: 10px; border: 1px solid var(--accent-blue); background: #12141c; color: white; font-size: 1.1rem; outline: none; box-sizing: border-box;">
+        <div id="modalSearchResults" style="margin-top: 20px; max-height: 70vh; overflow-y: auto;"></div>
+    </div>
+</div>
         <a
             href="offers.html"
             class="floating-offers-btn"
