@@ -2,6 +2,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
+    { "source": "/iphone-18-pro-max-camera-leaks-variable-aperture-teleconverter", "destination": "/post?id=32" },
     { "source": "/instagram-close-friends-exit-feature-meta-update", "destination": "/post?id=33" },
     { "source": "/apple-iphone-17-record-sales-google-gemini-ai", "destination": "/post?id=32" },
     { "source": "/samsung-galaxy-s26-price-leak-ultra-cheaper", "destination": "/post?id=31" },
