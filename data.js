@@ -105,7 +105,7 @@ const articles = [
     id: 31,
     title: "Galaxy S26 Pricing Leak: The Ultra is Getting Cheaper, But There is a Catch",
     slug: "samsung-galaxy-s26-price-leak-ultra-cheaper",
-    cat: "trends",
+    cat: "leaks",
     img: "https://image2url.com/r2/default/images/1769772608367-bc3adf52-c4b5-4c72-aef0-6dfae39ebb2b.jpg",
     desc: "New reports reveal a confusing pricing strategy for the Galaxy S26. While the base models see a price hike due to RAM scarcity, the Ultra is set to become more affordable.",
     content: `
@@ -136,7 +136,7 @@ const articles = [
     id: 30,
     title: "iOS 26.3 Beta 3 Released: Is Siri 2.0 with Gemini AI Finally Coming?",
     slug: "ios-26-3-beta-3-features-siri-gemini-ai",
-    cat: "trends",
+    cat: "tech-news",
     img: "https://image2url.com/r2/default/images/1769715825512-e9f0b691-1989-4b06-9699-e45254040b7a.webp",
     desc: "Apple releases iOS 26.3 Beta 3 with major connectivity fixes and hints at a massive Siri 2.0 upgrade featuring Gemini AI integration.",
     content: `
@@ -170,7 +170,7 @@ const articles = [
     id: 29,
     title: "URGENT: Samsung's Galaxy Z Tri-Fold Launch is Imminent – The Tablet Era Ends Tomorrow?",
     slug: "galaxy-z-trifold-launch-leak-specs",
-    cat: "trends",
+    cat: "leaks",
     img: "https://image2url.com/r2/default/images/1769697046930-ccc8334e-7eeb-447b-87b3-f756c344cbfb.jpg",
     desc: "Breaking: New supply chain leaks suggest Samsung will unveil the world's first Tri-Fold smartphone within the next 48 hours. Is the iPad finally in trouble?",
     content: `
@@ -200,7 +200,7 @@ const articles = [
     id: 28,
     title: "PS6: Everything We Know About Sony's Next-Gen Powerhouse",
     slug: "ps6-leaks-release-date-specs",
-    cat: "trends",
+    cat: "leaks",
     img: "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=800",
     desc: "The gaming world is buzzing with PlayStation 6 rumors. From 8K native gaming to revolutionary AI integration, here is the future of gaming.",
     content: `
@@ -230,7 +230,7 @@ const articles = [
     id: 27,
     slug: "samsung-galaxy-s26-ultra-leak-production-pricing",
     title: "Samsung Galaxy S26 Ultra: Release Date, Price, and Production Strategy Leaked",
-    cat: "trends",
+    cat: "leaks",
     desc: "The 'Ultra' remains the king as Samsung gears up for its 2026 flagship launch. Recent data reveals a massive focus on the premium model and a surprisingly stable pricing strategy.",
     content: `
         <p>As we approach the first quarter of 2026, the tech world is buzzing with anticipation for Samsung’s next big reveal. Recent leaks have shed light on the production strategy for the <strong>Galaxy S26 series</strong>, and it’s clear that Samsung is putting all its chips on the <strong>Ultra</strong> model.</p>
@@ -290,7 +290,7 @@ const articles = [
     id: 25,
     slug: "galaxy-s26-leak-design-overhaul",
     title: "Galaxy S26 Leak: Samsung Planning a Major Design Overhaul You’ll Love",
-    cat: "trends",
+    cat: "leaks",
     desc: "Samsung is reportedly breaking its design cycle with the Galaxy S26. From the 'Slim' profile to a revolutionary camera integration, here is the deep dive into the 2026 flagship.",
     content: `
         <p>The tech world is buzzing with excitement as the first major leaks for the <strong>Galaxy S26</strong> series surface. After several years of iterative updates and familiar aesthetics, Samsung appears ready to challenge the status quo in 2026 with a design language that emphasizes elegance, extreme thinness, and futuristic materials.</p>
@@ -313,7 +313,7 @@ const articles = [
     id: 24,
     slug: "10-tech-gadgets-2026-vouch",
     title: "10 Mind-Blowing Tech Gadgets I Vouch for in 2026: The Dawn of Ambient Intelligence!",
-    cat: "trends",
+    cat: "future",
     desc: "The 2026 gadget lineup has officially moved past the 'AI hype' into pure utility. From holographic communication to bio-integrated health trackers, here are the 10 devices redefining our reality this year.",
     content: `
                      <p>As we settle into 2026, the tech industry has undergone a massive transformation. We are no longer just using gadgets; we are living within an ecosystem of <strong>Ambient Intelligence</strong>. The focus this year has shifted from 'what a device can do' to 'how seamlessly it disappears into our lives'. After testing the first wave of 2026 releases, these are the 10 gadgets that have earned a permanent spot in my tech arsenal.</p>
@@ -341,7 +341,7 @@ const articles = [
     id: 23,
     slug: "gta-vi-2026-reality-check-crisis",
     title: "GTA VI: The Brutal 2026 Reality Check – Why Rockstar is Facing Its Biggest Crisis!",
-    cat: "trends",
+    cat: "leaks",
     desc: "The dream of a 2025 release is dead. Internal leaks from Edinburgh reveal a studio in chaos, a delayed November 2026 launch, and a multiplayer mode that might change gaming forever.",
     content: `
                      <p>As we officially cross into 2026, the global gaming community is in a state of collective shock. What was once the most anticipated launch of 2025 has now officially shifted into the late 2026 calendar. But the delay is only the tip of the iceberg. <strong>Grand Theft Auto VI</strong> is currently navigating a minefield of technical debt, internal studio friction, and unprecedented expectations.</p>
@@ -363,7 +363,7 @@ const articles = [
     id: 22,
     slug: "iphone-18-pro-max-leaks-price-hike",
     title: "The $2,000 Smartphone Era: iPhone 18 Pro Max Leaks Reveal Apple's Riskiest Move!",
-    cat: "trends",
+    cat: "leaks",
     desc: "Is it a phone or a luxury computer? Exclusive supply chain reports from New York and Cupertino confirm a massive price hike for the 2026 lineup. Here is what you get for $2,000.",
     content: `
                      <p>The tech world in the United States is reeling today as a series of high-level leaks from Apple’s logistics partners in Asia have essentially confirmed the 2026 pricing strategy. The <strong>iPhone 18 Pro Max</strong> is no longer just a smartphone; it is being positioned as a 'Mobile Workstation,' and the price tag reflects that transition.</p>
@@ -403,7 +403,7 @@ const articles = [
                     id: 20,
                     slug: "federal-ai-act-2026-internet-freedom",
                     title: "The Federal AI Act of 2026: Is This the End of Internet Freedom as We Know It?",
-                    cat: "trends",
+                    cat: "tech-news",
                     desc: "Washington has finally pulled the trigger. The most comprehensive AI regulation in history is now law. Find out how the new 'Watermark Mandate' affects your business and your privacy.",
                     content: `
                      <p>The landscape of American innovation changed forever this week as the <strong>Federal AI Act of 2026</strong> was signed into law. While politicians are calling it a 'Safety Victory,' entrepreneurs from Silicon Valley to New York are calling it a bureaucratic nightmare. This isn't just about ChatGPT anymore; this is about every piece of code running on the American internet.</p>
@@ -443,7 +443,7 @@ const articles = [
                     id: 18,
                     slug: "apple-glasses-air-leaks-smartphone-death",
                     title: "Apple Glasses 'Air' Leaks: The Device That Will Kill the Smartphone Era!",
-                    cat: "reviews",
+                    cat: "leaks",
                     desc: "The wait is over. Exclusive leaks from Apple's supply chain in 2026 reveal a lightweight pair of glasses that do everything your iPhone can—and more.",
                     content: `
                      <p>For a decade, we’ve heard that Augmented Reality (AR) is the future. In 2026, Apple is finally ready to prove it. Moving away from the bulky Vision Pro, the new <strong>Apple Glasses 'Air'</strong> are designed to look exactly like a pair of high-end Ray-Bans, but the technology inside is pure science fiction.</p>
@@ -494,7 +494,7 @@ const articles = [
                     id: 15,
                     slug: "samsung-galaxy-z-fold-8-triple-fold",
                     title: "Samsung Galaxy Z Fold 8: The Triple-Fold 'Z' is Finally Here!",
-                    cat: "reviews",
+                    cat: "leaks",
                     desc: "Why settle for a dual-screen when you can have three? Samsung's 2026 flagship unfolds into a massive 10.2-inch tablet. Is this the end of the iPad?",
                     content: `
                      <p>Samsung is doubling down on the foldable market. In 2026, the <strong>Galaxy Z Fold 8</strong> is breaking the mold by introducing a triple-fold design. Folded, it’s a slightly thick smartphone; unfolded twice, it’s a 10.2-inch cinema-grade tablet.</p>
@@ -528,7 +528,7 @@ const articles = [
                     id: 13,
                     slug: "us-micro-grid-revolution-energy-ai",
                     title: "The Great US Micro-Grid Revolution: How AI Saved Texas and Florida from Blackouts",
-                    cat: "trends",
+                    cat: "tech-news",
                     desc: "After the disastrous storms of 2025, America is rebuilding its power grid from the ground up. Inside the $100 billion shift to decentralized AI-managed energy.",
                     content: `
                      <p>For decades, the American power grid has been described as the largest, most complex machine ever built—and also one of the most fragile. However, as we move through 2026, a fundamental shift is occurring. Following the catastrophic grid failures during the winter of 2025, US cities are rapidly abandoning the 'Centralized Giant' model in favor of <strong>AI-Managed Micro-Grids</strong>.</p>
@@ -548,7 +548,7 @@ const articles = [
                     id: 12,
                     slug: "remote-work-2-zoom-towns-tech-hubs",
                     title: "Remote Work 2.0: Why US 'Zoom Towns' are Outperforming Silicon Valley in 2026",
-                    cat: "trends",
+                    cat: "tech-news",
                     desc: "The office mandate failed. Now, a new migration is reshaping the American landscape. Discover why states like West Virginia and Wyoming are the new tech hubs.",
                     content: `
                      <p>In 2024 and 2025, corporate America tried to force employees back to the office. By early 2026, that experiment has largely been declared a failure. A new phenomenon, <strong>Remote Work 2.0</strong>, is taking hold, and it is permanently altering the demographic and economic map of the United States.</p>
@@ -568,7 +568,7 @@ const articles = [
                     id: 11,
                     slug: "ai-education-us-public-schools-learning-gap",
                     title: "The AI Education Boom: How US Public Schools are Closing the Learning Gap",
-                    cat: "trends",
+                    cat: "tech-news",
                     desc: "Classrooms in 2026 look nothing like they did five years ago. From personalized AI tutors to VR history lessons—see how American students are making a record-breaking comeback.",
                     content: `
                      <p>The post-pandemic learning gap was once considered a permanent scar on the American education system. But as we reach the mid-point of 2026, the data tells a different story. US public schools are undergoing a massive technological renaissance, driven by <strong>Personalized AI Learning Paths</strong> that are yielding unprecedented results.</p>
@@ -588,7 +588,7 @@ const articles = [
                     id: 10,
                     slug: "quantum-computing-usa-medical-miracles",
                     title: "Quantum Computing in the USA: The First Real-World Medical Miracles",
-                    cat: "trends",
+                    cat: "tech-news",
                     desc: "The 'Quantum Supremacy' era is officially here. Discover how US pharmaceutical companies in 2026 are using quantum processors to develop vaccines in weeks, not years.",
                     content: `
                      <p>For decades, quantum computing was a 'five-years-away' technology. In 2026, the wait is over. The United States has officially entered the <strong>Quantum Practicality Era</strong>, with the most significant impact being felt in the halls of biotech firms in Boston and San Francisco.</p>
@@ -608,7 +608,7 @@ const articles = [
                     id: 9,
                     slug: "biotech-gold-rush-personalized-longevity",
                     title: "The Biotech Gold Rush: How 'Personalized Longevity' Became a US Mainstream Obsession",
-                    cat: "trends",
+                    cat: "tech-news",
                     desc: "Is 100 the new 80? In 2026, Americans are spending record amounts on AI-driven health monitoring and bio-hacking. Inside the movement to end aging.",
                     content: `
                      <p>In 2026, health is no longer about reacting to sickness; it's about optimizing your biology. The <strong>Longevity Tech</strong> movement has officially moved from the fringe circles of Silicon Valley to the mainstream American household. From New York to Seattle, the 'Bio-Hacking' industry is now a trillion-dollar sector.</p>
@@ -628,7 +628,7 @@ const articles = [
                     id: 8,
                     slug: "defi-comeback-wall-street-blockchain",
                     title: "The Decentralized Finance (DeFi) Comeback: Why Wall Street is Finally Buying In",
-                    cat: "trends",
+                    cat: "tech-news",
                     desc: "After years of volatility, 2026 marks the 'Great Stabilization'. Discover how regulated blockchain protocols are saving US consumers billions in banking fees.",
                     content: `
                      <p>If 2022 was the year of the 'Crypto Crash', then 2026 is officially the year of the <strong>Institutional DeFi Renaissance</strong>. The difference this time? Regulation, transparency, and real-world utility. Blockchain technology is no longer a speculative toy; it's the plumbing for the new American financial system.</p>
