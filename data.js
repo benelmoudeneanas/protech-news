@@ -3,7 +3,7 @@ const articles = [
     id: 34,
     title: "iPhone 18 Pro Max Leaks Suggest a Revolution in Mobile Photography",
     slug: "iphone-18-pro-max-camera-leaks-variable-aperture-teleconverter",
-
+    cat: "leaks",
     img: "https://image2url.com/r2/default/images/1769949478813-390972d7-bbd8-42f8-b27a-fa059c84f16e.jpg",
     desc: "Leaked reports indicate Apple is testing professional-grade hardware including variable aperture and teleconverter technology for its 2026 flagship.",
     content: `
