@@ -1,541 +1,575 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | ProTech Daily</title>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contact ProTech - Get in touch with our team. Email us or follow us on social media." />
+    <title>Contact Us | ProTech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;900&family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <style>
-        /* ============ RESET & ROOT ============ */
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
         :root {
-            --bg-deep: #060709;
-            --bg-surface: #0e1117;
-            --bg-card: #141821;
-            --bg-card-hover: #1a1f2e;
-            --accent: #00d4ff;
-            --accent-dim: rgba(0, 212, 255, 0.12);
-            --accent-glow: rgba(0, 212, 255, 0.35);
-            --accent2: #7c6ff5;
-            --accent2-dim: rgba(124, 111, 245, 0.12);
-            --text-primary: #f0f2f5;
-            --text-secondary: #6b7a94;
-            --text-muted: #3d4a5e;
-            --border: rgba(255,255,255,0.06);
-            --border-hover: rgba(0, 212, 255, 0.2);
-            --input-bg: #0b0d12;
+            --bg-body: #0a0b10;
+            --bg-card: #12141c;
+            --bg-header: #0d0f16;
+            --accent-blue: #007aff;
+            --accent-purple: #8b5cf6;
+            --accent-cyan: #06b6d4;
+            --accent-pink: #ec4899;
+            --accent-orange: #f59e0b;
+            --accent-glow: rgba(0, 122, 255, 0.3);
+            --text-primary: #ffffff;
+            --text-secondary: #94a3b8;
+            --border-color: #1e293b;
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --gradient-gold: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
         }
 
-        html { scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'DM Sans', sans-serif;
-            background: var(--bg-deep);
+            font-family: "Inter", sans-serif;
+            background: var(--bg-body);
             color: var(--text-primary);
-            min-height: 100vh;
-            overflow-x: hidden;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        /* ============ AMBIENT ============ */
-        .ambient {
-            position: fixed; inset: 0; z-index: 0; pointer-events: none;
+        /* Animated Background */
+        .animated-bg {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1; opacity: 0.04;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(0, 122, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
+            animation: bgShift 25s ease-in-out infinite;
         }
-        .ambient::before {
-            content: '';
-            position: absolute;
-            top: -25%; right: -15%;
-            width: 60%; height: 65%;
-            background: radial-gradient(ellipse, rgba(0, 212, 255, 0.06) 0%, transparent 70%);
-            filter: blur(70px);
-            animation: ambientDrift1 14s ease-in-out infinite alternate;
-        }
-        .ambient::after {
-            content: '';
-            position: absolute;
-            bottom: -15%; left: -10%;
-            width: 50%; height: 55%;
-            background: radial-gradient(ellipse, rgba(124, 111, 245, 0.05) 0%, transparent 70%);
-            filter: blur(90px);
-            animation: ambientDrift2 18s ease-in-out infinite alternate;
-        }
-        @keyframes ambientDrift1 { to { transform: translate(-7%, 4%); } }
-        @keyframes ambientDrift2 { to { transform: translate(5%, -6%); } }
-
-        .grain {
-            position: fixed; inset: 0; z-index: 1; pointer-events: none; opacity: 0.3;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
-            background-size: 200px 200px;
+        @keyframes bgShift {
+            0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+            50% { transform: translate(3%, 3%) rotate(5deg) scale(1.05); }
         }
 
-        /* ============ NAV ============ */
+        /* ========== NAVIGATION ========== */
         nav {
-            position: sticky; top: 0; z-index: 100;
+            background: rgba(13, 15, 22, 0.98);
+            backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            position: sticky; top: 0; z-index: 1000;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+        .nav-container {
+            max-width: 1400px; margin: 0 auto;
             display: flex; justify-content: space-between; align-items: center;
-            padding: 0 clamp(20px, 5vw, 60px);
-            height: 72px;
-            background: rgba(6, 7, 9, 0.7);
-            backdrop-filter: blur(20px) saturate(1.4);
-            border-bottom: 1px solid var(--border);
+            padding: 0 40px; min-height: 80px;
         }
         .logo {
-            font-family: 'Syne', sans-serif;
-            font-weight: 800;
-            font-size: 1.35rem;
-            text-decoration: none;
-            color: var(--text-primary);
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 2rem; font-weight: 900; text-transform: uppercase;
+            cursor: pointer; letter-spacing: -1.5px;
+            transition: all 0.3s ease; text-decoration: none; color: white;
         }
-        .logo span { color: var(--accent); }
+        .logo:hover { transform: translateY(-2px); }
+        .logo span {
+            background: linear-gradient(135deg, #007aff 0%, #00d4ff 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+            filter: drop-shadow(0 0 25px rgba(0, 122, 255, 0.6));
+            animation: glow 3s ease-in-out infinite;
+        }
+        @keyframes glow {
+            0%, 100% { filter: drop-shadow(0 0 25px rgba(0, 122, 255, 0.6)); }
+            50% { filter: drop-shadow(0 0 35px rgba(0, 212, 255, 0.8)); }
+        }
+        .nav-list { display: flex; list-style: none; gap: 8px; align-items: center; }
+        .nav-list li a {
+            display: flex; align-items: center; gap: 10px;
+            padding: 12px 22px; text-decoration: none;
+            color: var(--text-secondary); font-size: 0.95rem;
+            font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer; border-radius: 12px;
+        }
+        .nav-list li a i { font-size: 1.1rem; transition: all 0.3s ease; }
+        .nav-list li a:hover { color: white; background: rgba(0, 122, 255, 0.15); transform: translateY(-3px); }
+        .nav-list li a:hover i { transform: scale(1.2) rotate(5deg); color: var(--accent-blue); }
+        .nav-list li a.active-link { color: white; background: rgba(0, 122, 255, 0.15); }
+        .nav-list li a.active-link i { color: var(--accent-blue); }
 
-        .nav-links { display: flex; gap: 32px; list-style: none; }
-        .nav-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.78rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            transition: color 0.3s;
-            position: relative;
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none; cursor: pointer; flex-direction: column;
+            gap: 6px; padding: 10px; border-radius: 10px; transition: all 0.3s ease;
         }
-        .nav-links a::after {
-            content: '';
-            position: absolute; bottom: -6px; left: 0;
-            width: 0; height: 1px;
-            background: var(--accent);
-            transition: width 0.4s ease;
-        }
-        .nav-links a:hover { color: var(--accent); }
-        .nav-links a:hover::after { width: 100%; }
-        .nav-links a.active { color: var(--accent); }
-        .nav-links a.active::after { width: 100%; }
+        .menu-toggle:hover { background: rgba(255, 255, 255, 0.08); }
+        .bar { width: 30px; height: 3px; background: white; border-radius: 3px; transition: all 0.3s ease; }
+        .menu-toggle.active .bar:nth-child(1) { transform: rotate(45deg) translateY(11px); }
+        .menu-toggle.active .bar:nth-child(2) { opacity: 0; }
+        .menu-toggle.active .bar:nth-child(3) { transform: rotate(-45deg) translateY(-11px); }
 
-        /* ============ HERO ============ */
-        .hero {
-            position: relative; z-index: 2;
-            padding: clamp(80px, 12vw, 140px) clamp(20px, 5vw, 60px) clamp(50px, 8vw, 80px);
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
+        /* ========== PAGE HERO ========== */
+        .page-hero {
+            position: relative; padding: 100px 40px 80px; text-align: center; overflow: hidden;
         }
-        .hero-tag {
+        .page-hero::before {
+            content: ''; position: absolute; top: -50%; left: 50%; transform: translateX(-50%);
+            width: 800px; height: 800px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 122, 255, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-badge {
             display: inline-flex; align-items: center; gap: 8px;
-            background: var(--accent-dim);
-            border: 1px solid rgba(0, 212, 255, 0.15);
-            border-radius: 50px;
-            padding: 6px 16px;
-            font-size: 0.72rem;
-            font-weight: 500;
-            color: var(--accent);
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            margin-bottom: 32px;
-            opacity: 0; animation: fadeUp 0.7s 0.15s forwards;
+            background: var(--gradient-gold); color: white;
+            padding: 10px 24px; border-radius: 50px;
+            font-size: 0.8rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 1px; margin-bottom: 30px;
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.5);
+            animation: pulse 2.5s ease-in-out infinite;
+            position: relative; z-index: 1;
         }
-        .hero-tag .dot {
-            width: 6px; height: 6px; border-radius: 50%;
-            background: var(--accent);
-            animation: pulse 2s infinite;
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 8px 25px rgba(245, 158, 11, 0.5); }
+            50% { box-shadow: 0 8px 35px rgba(245, 158, 11, 0.7); }
         }
-        @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.3; } }
-
-        .hero h1 {
-            font-family: 'Syne', sans-serif;
-            font-weight: 800;
-            font-size: clamp(2.6rem, 6.5vw, 4.6rem);
-            line-height: 1.1;
-            color: var(--text-primary);
-            letter-spacing: -0.03em;
-            opacity: 0; animation: fadeUp 0.8s 0.3s forwards;
+        .page-hero h1 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 3.8rem; font-weight: 900; line-height: 1.1;
+            margin-bottom: 22px; position: relative; z-index: 1;
+            animation: fadeInUp 0.8s ease;
         }
-        .hero h1 .accent { color: var(--accent); }
-
-        .hero-sub {
-            margin-top: 22px;
-            color: var(--text-secondary);
-            font-size: clamp(0.9rem, 1.7vw, 1.05rem);
-            font-weight: 300;
-            max-width: 520px;
-            margin-left: auto; margin-right: auto;
-            line-height: 1.8;
-            opacity: 0; animation: fadeUp 0.8s 0.45s forwards;
+        .page-hero h1 .gradient-text {
+            background: linear-gradient(135deg, #007aff 0%, #00d4ff 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .page-hero p {
+            color: var(--text-secondary); font-size: 1.15rem;
+            max-width: 580px; margin: 0 auto; line-height: 1.8;
+            position: relative; z-index: 1;
+            animation: fadeInUp 0.8s ease 0.15s both;
         }
 
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to   { opacity: 1; transform: translateY(0); }
+        /* ========== WRAPPER ========== */
+        .wrapper { max-width: 1400px; margin: 0 auto; padding: 0 40px 100px; }
+
+        /* ========== CONTACT GRID (form + sidebar) ========== */
+        .contact-grid {
+            display: grid; grid-template-columns: 1fr 420px; gap: 40px;
+            animation: fadeInUp 0.8s ease 0.2s both;
         }
 
-        /* ============ MAIN LAYOUT ============ */
-        .contact-wrap {
-            position: relative; z-index: 2;
-            max-width: 1060px;
-            margin: 0 auto;
-            padding: 0 clamp(20px, 5vw, 60px) 100px;
-            display: grid;
-            grid-template-columns: 1fr 380px;
-            gap: 40px;
-            align-items: start;
+        /* ========== SECTION HEADER ========== */
+        .section-header { display: flex; align-items: center; gap: 15px; margin-bottom: 30px; }
+        .section-icon {
+            width: 50px; height: 50px; border-radius: 14px;
+            display: flex; align-items: center; justify-content: center; font-size: 1.4rem;
         }
-        @media (max-width: 780px) {
-            .contact-wrap { grid-template-columns: 1fr; }
-            .contact-sidebar { order: -1; }
-        }
+        .section-title { font-family: "Space Grotesk", sans-serif; font-size: 1.8rem; font-weight: 900; text-transform: uppercase; letter-spacing: -0.5px; }
+        .section-subtitle { color: var(--text-secondary); font-size: 0.9rem; margin-top: 4px; }
 
-        /* ============ FORM CARD ============ */
+        /* ========== FORM CARD ========== */
         .form-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: clamp(32px, 5vw, 48px);
-            position: relative;
-            overflow: hidden;
+            background: var(--bg-card); border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 44px; position: relative; overflow: hidden;
             transition: border-color 0.4s;
         }
-        .form-card:hover { border-color: var(--border-hover); }
+        .form-card:hover { border-color: rgba(0, 122, 255, 0.2); }
         .form-card::before {
-            content: '';
-            position: absolute; top: 0; left: 0; right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--accent), transparent);
-            opacity: 0.5;
+            content: ''; position: absolute; inset: 0;
+            background: var(--gradient-3); opacity: 0; transition: opacity 0.4s;
+            pointer-events: none;
         }
+        .form-card:hover::before { opacity: 0.03; }
+        .form-inner { position: relative; z-index: 1; }
 
-        .section-label {
-            font-size: 0.68rem;
-            font-weight: 600;
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 0.18em;
-            margin-bottom: 6px;
-            display: flex; align-items: center; gap: 10px;
-        }
-        .section-label::before {
-            content: '';
-            width: 22px; height: 1px;
-            background: var(--accent);
-        }
-
-        .form-card h2 {
-            font-family: 'Syne', sans-serif;
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: var(--text-primary);
-            margin: 12px 0 28px;
-        }
-
-        .input-group { margin-bottom: 20px; }
+        .input-group { margin-bottom: 22px; }
         .input-group label {
-            display: block;
-            font-size: 0.7rem;
-            font-weight: 500;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            margin-bottom: 8px;
+            display: block; color: var(--text-secondary);
+            font-size: 0.82rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.8px; margin-bottom: 10px;
         }
         .input-group input,
         .input-group textarea {
-            width: 100%;
-            background: var(--input-bg);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 13px 16px;
-            color: var(--text-primary);
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.88rem;
-            font-weight: 300;
-            transition: border-color 0.3s, box-shadow 0.3s;
-            outline: none;
+            width: 100%; background: #0a0b10;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px; padding: 14px 20px;
+            color: white; font-family: "Inter", sans-serif;
+            font-size: 0.95rem; outline: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .input-group input::placeholder,
-        .input-group textarea::placeholder { color: var(--text-muted); }
+        .input-group textarea::placeholder { color: #3a4560; }
         .input-group input:focus,
         .input-group textarea:focus {
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px var(--accent-dim);
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.15);
+            background: #0d0e14;
         }
-        .input-group textarea { resize: vertical; min-height: 120px; line-height: 1.6; }
+        .input-group textarea { resize: vertical; min-height: 140px; line-height: 1.7; }
 
         .submit-btn {
-            width: 100%;
-            background: var(--accent);
-            color: #060709;
-            border: none;
-            border-radius: 10px;
-            padding: 15px 24px;
-            font-family: 'Syne', sans-serif;
-            font-weight: 700;
-            font-size: 0.82rem;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: background 0.3s, transform 0.15s, box-shadow 0.3s;
-            margin-top: 8px;
-            position: relative;
-            overflow: hidden;
+            width: 100%; background: var(--gradient-1); color: white;
+            border: none; border-radius: 14px; padding: 18px 30px;
+            font-family: "Inter", sans-serif; font-size: 0.95rem;
+            font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px;
+            cursor: pointer; position: relative; overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            margin-top: 6px;
         }
         .submit-btn:hover {
-            background: #22dcff;
-            box-shadow: 0 4px 24px var(--accent-glow);
-            transform: translateY(-1px);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(102, 126, 234, 0.6);
         }
-        .submit-btn:active { transform: translateY(0); }
+        .submit-btn:active { transform: translateY(-1px); }
+        .submit-btn i { font-size: 1rem; transition: transform 0.3s; }
+        .submit-btn:hover i { transform: translateX(4px); }
 
-        /* ============ SIDEBAR ============ */
-        .contact-sidebar { display: flex; flex-direction: column; gap: 20px; }
+        /* ========== SIDEBAR ========== */
+        .sidebar { display: flex; flex-direction: column; gap: 24px; }
 
-        .sidebar-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 28px 24px;
-            transition: border-color 0.35s;
+        .side-card {
+            background: var(--bg-card); border-radius: 22px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 32px; position: relative; overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .sidebar-card:hover { border-color: var(--border-hover); }
+        .side-card:hover { transform: translateY(-4px); border-color: rgba(0, 122, 255, 0.25); box-shadow: 0 16px 45px rgba(0, 122, 255, 0.12); }
+        .side-card::before { content: ''; position: absolute; inset: 0; opacity: 0; transition: opacity 0.4s; pointer-events: none; }
+        .side-card.email-card::before { background: var(--gradient-3); }
+        .side-card.social-card::before { background: var(--gradient-1); }
+        .side-card:hover::before { opacity: 0.04; }
+        .side-inner { position: relative; z-index: 1; }
 
-        .sidebar-card .card-title {
-            font-family: 'Syne', sans-serif;
-            font-weight: 700;
-            font-size: 0.88rem;
-            color: var(--text-primary);
-            margin-bottom: 18px;
-            display: flex; align-items: center; gap: 10px;
+        .side-card-header { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
+        .side-card-icon {
+            width: 44px; height: 44px; border-radius: 13px;
+            display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
         }
-        .sidebar-card .card-title i { color: var(--accent); font-size: 0.78rem; }
+        .side-card-icon.cyan { background: rgba(6, 182, 212, 0.15); color: var(--accent-cyan); }
+        .side-card-icon.purple { background: rgba(102, 126, 234, 0.15); color: #667eea; }
+        .side-card-title { font-family: "Space Grotesk", sans-serif; font-size: 1.15rem; font-weight: 900; text-transform: uppercase; }
 
-        /* Email list */
-        .email-item {
-            display: flex; align-items: center; gap: 12px;
-            padding: 11px 0;
-            border-bottom: 1px solid var(--border);
-            text-decoration: none;
-            transition: transform 0.25s;
+        /* Email rows */
+        .email-row {
+            display: flex; align-items: center; gap: 16px;
+            padding: 16px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            text-decoration: none; transition: transform 0.3s;
         }
-        .email-item:last-child { border-bottom: none; }
-        .email-item:hover { transform: translateX(4px); }
-        .email-item .e-icon {
-            min-width: 34px; height: 34px;
-            background: var(--accent-dim);
-            border-radius: 8px;
-            display: flex; align-items: center; justify-content: center;
-            color: var(--accent); font-size: 0.7rem;
+        .email-row:last-child { border-bottom: none; }
+        .email-row:hover { transform: translateX(6px); }
+        .email-row .email-icon {
+            min-width: 42px; height: 42px; border-radius: 12px;
+            display: flex; align-items: center; justify-content: center; font-size: 0.9rem;
+            background: rgba(0, 122, 255, 0.12); color: var(--accent-blue);
+            transition: all 0.3s;
         }
-        .email-item .e-label { font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500; }
-        .email-item .e-address { font-size: 0.78rem; color: var(--text-secondary); font-weight: 300; margin-top: 1px; word-break: break-all; }
+        .email-row:hover .email-icon { background: rgba(0, 122, 255, 0.22); transform: scale(1.08); }
+        .email-row .email-label { font-size: 0.72rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.8px; font-weight: 600; margin-bottom: 3px; }
+        .email-row .email-address { font-size: 0.82rem; color: var(--text-primary); font-weight: 500; word-break: break-all; }
 
         /* Social grid */
         .social-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
         }
         .social-link {
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
-            gap: 8px;
-            background: var(--bg-surface);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 18px 10px 14px;
-            text-decoration: none;
-            transition: border-color 0.3s, background 0.3s, transform 0.25s;
+            background: #0a0b10; border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 16px; padding: 20px 10px 16px;
+            text-decoration: none; display: flex; flex-direction: column;
+            align-items: center; gap: 10px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .social-link:hover {
-            border-color: var(--border-hover);
-            background: var(--bg-card-hover);
-            transform: translateY(-2px);
+            transform: translateY(-5px);
+            border-color: rgba(0, 122, 255, 0.3);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+            background: #12141c;
         }
         .social-link .s-icon {
-            width: 38px; height: 38px;
-            border-radius: 10px;
+            width: 42px; height: 42px; border-radius: 12px;
             display: flex; align-items: center; justify-content: center;
-            font-size: 0.85rem;
-            transition: transform 0.3s;
+            font-size: 0.95rem; transition: transform 0.35s;
         }
-        .social-link:hover .s-icon { transform: scale(1.12); }
+        .social-link:hover .s-icon { transform: scale(1.15) rotate(5deg); }
         .social-link .s-name {
-            font-size: 0.62rem;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            font-weight: 500;
-            text-align: center;
+            font-size: 0.65rem; color: var(--text-secondary);
+            text-transform: uppercase; letter-spacing: 0.6px;
+            font-weight: 600; text-align: center;
         }
 
         /* Individual social colors */
-        .social-link[data-platform="twitter"]  .s-icon { background: rgba(29,155,240,0.12);  color: #1d9bf0; }
-        .social-link[data-platform="facebook"] .s-icon { background: rgba(24,119,242,0.12);  color: #1877f2; }
-        .social-link[data-platform="instagram"].s-icon { background: rgba(193,53,125,0.12); color: #c1357d; }
-        .social-link[data-platform="instagram"] .s-icon { background: rgba(193,53,125,0.12); color: #c1357d; }
-        .social-link[data-platform="linkedin"] .s-icon { background: rgba(10,102,194,0.12);  color: #0a66c2; }
-        .social-link[data-platform="youtube"] .s-icon  { background: rgba(255,0,0,0.12);     color: #ff0000; }
-        .social-link[data-platform="tiktok"]  .s-icon  { background: rgba(37,244,238,0.12);  color: #25f4ee; }
-        .social-link[data-platform="github"]  .s-icon  { background: rgba(240,240,240,0.1);  color: #e6edf3; }
-        .social-link[data-platform="reddit"] .s-icon   { background: rgba(255,87,0,0.12);    color: #ff5700; }
+        .social-link[data-p="twitter"]    .s-icon { background: rgba(29,155,240,0.13);  color: #1d9bf0; }
+        .social-link[data-p="facebook"]   .s-icon { background: rgba(24,119,242,0.13);  color: #1877f2; }
+        .social-link[data-p="instagram"]  .s-icon { background: rgba(193,53,125,0.13);  color: #c1357d; }
+        .social-link[data-p="linkedin"]   .s-icon { background: rgba(10,102,194,0.13);  color: #0a66c2; }
+        .social-link[data-p="youtube"]    .s-icon { background: rgba(255,0,0,0.13);     color: #ff0000; }
+        .social-link[data-p="tiktok"]     .s-icon { background: rgba(37,244,238,0.13);  color: #25f4ee; }
+        .social-link[data-p="github"]     .s-icon { background: rgba(200,200,200,0.1);  color: #e6edf3; }
+        .social-link[data-p="reddit"]     .s-icon { background: rgba(255,87,0,0.13);    color: #ff5700; }
+        .social-link[data-p="snapchat"]   .s-icon { background: rgba(255,238,0,0.13);   color: #ffee00; }
 
-        /* ============ FOOTER ============ */
-        footer {
-            position: relative; z-index: 2;
-            border-top: 1px solid var(--border);
-            padding: 40px clamp(20px, 5vw, 60px);
-            text-align: center;
-        }
-        footer p {
-            color: var(--text-muted);
-            font-size: 0.72rem;
-            letter-spacing: 0.06em;
-        }
-        footer a { color: var(--accent); text-decoration: none; }
-        footer a:hover { text-decoration: underline; }
+        /* hover glow per platform */
+        .social-link[data-p="twitter"]:hover    { border-color: rgba(29,155,240,0.4); box-shadow: 0 10px 28px rgba(29,155,240,0.2); }
+        .social-link[data-p="facebook"]:hover   { border-color: rgba(24,119,242,0.4); box-shadow: 0 10px 28px rgba(24,119,242,0.2); }
+        .social-link[data-p="instagram"]:hover  { border-color: rgba(193,53,125,0.4); box-shadow: 0 10px 28px rgba(193,53,125,0.2); }
+        .social-link[data-p="linkedin"]:hover   { border-color: rgba(10,102,194,0.4); box-shadow: 0 10px 28px rgba(10,102,194,0.2); }
+        .social-link[data-p="youtube"]:hover    { border-color: rgba(255,0,0,0.4);    box-shadow: 0 10px 28px rgba(255,0,0,0.2); }
+        .social-link[data-p="tiktok"]:hover     { border-color: rgba(37,244,238,0.4); box-shadow: 0 10px 28px rgba(37,244,238,0.2); }
+        .social-link[data-p="github"]:hover     { border-color: rgba(200,200,200,0.3); box-shadow: 0 10px 28px rgba(200,200,200,0.15); }
+        .social-link[data-p="reddit"]:hover     { border-color: rgba(255,87,0,0.4);   box-shadow: 0 10px 28px rgba(255,87,0,0.2); }
+        .social-link[data-p="snapchat"]:hover   { border-color: rgba(255,238,0,0.4);  box-shadow: 0 10px 28px rgba(255,238,0,0.2); }
 
-        /* ============ RESPONSIVE ============ */
-        @media (max-width: 520px) {
-            nav { padding: 0 20px; }
-            .nav-links { gap: 18px; }
-            .social-grid { grid-template-columns: repeat(3, 1fr); }
+        /* ========== FOOTER ========== */
+        .footer { background: var(--bg-header); padding: 60px 40px 35px; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+        .footer-inner { max-width: 1400px; margin: 0 auto; }
+        .footer-logo { font-family: 'Space Grotesk', sans-serif; font-size: 2.5rem; font-weight: 900; text-align: center; margin-bottom: 15px; }
+        .footer-logo span { background: linear-gradient(135deg, #007aff 0%, #00d4ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .footer-desc { color: var(--text-secondary); font-size: 1.1rem; max-width: 600px; margin: 0 auto 35px; text-align: center; }
+        .footer-links { display: flex; justify-content: center; gap: 35px; flex-wrap: wrap; margin-bottom: 35px; }
+        .footer-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--accent-blue); }
+        .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 25px; text-align: center; }
+        .footer-bottom p { color: var(--text-secondary); font-size: 0.9rem; opacity: 0.7; }
+
+        /* ========== ANIMATIONS ========== */
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* ========== SCROLLBAR ========== */
+        ::-webkit-scrollbar { width: 12px; }
+        ::-webkit-scrollbar-track { background: var(--bg-body); }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(135deg, #007aff, #00d4ff); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: linear-gradient(135deg, #0066dd, #00bbdd); }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1100px) {
+            .contact-grid { grid-template-columns: 1fr; }
+            .sidebar { flex-direction: row; flex-wrap: wrap; }
+            .side-card { flex: 1; min-width: 280px; }
+        }
+        @media (max-width: 768px) {
+            .nav-container { padding: 0 20px; min-height: 70px; }
+            .logo { font-size: 1.6rem; }
+            .menu-toggle { display: flex; }
+            .nav-list {
+                display: none; flex-direction: column;
+                position: absolute; top: 70px; left: 0; width: 100%;
+                background: rgba(13, 15, 22, 0.98); backdrop-filter: blur(20px);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                padding: 20px; gap: 0;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            }
+            .nav-list.active { display: flex; }
+            .nav-list li { width: 100%; }
+            .nav-list li a { width: 100%; padding: 18px 25px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); justify-content: flex-start; border-radius: 0; }
+            .page-hero { padding: 70px 20px 55px; }
+            .page-hero h1 { font-size: 2.4rem; }
+            .page-hero p { font-size: 1rem; }
+            .wrapper { padding: 0 20px 70px; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .sidebar { flex-direction: column; }
+            .side-card { min-width: unset; }
+            .form-card { padding: 30px 24px; }
+            .section-title { font-size: 1.4rem; }
+            .footer { padding: 50px 20px 30px; }
+        }
+        @media (max-width: 480px) {
+            .page-hero h1 { font-size: 2rem; }
+            .social-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+            .social-link { padding: 16px 6px 13px; }
+            .social-link .s-icon { width: 36px; height: 36px; font-size: 0.8rem; }
+            .social-link .s-name { font-size: 0.58rem; }
+            .form-card { padding: 24px 18px; }
+            .input-group input, .input-group textarea { padding: 12px 16px; font-size: 0.88rem; }
         }
     </style>
 </head>
 <body>
 
-<!-- Ambient + Grain -->
-<div class="ambient"></div>
-<div class="grain"></div>
+<div class="animated-bg"></div>
 
-<!-- ===== NAV ===== -->
+<!-- NAVIGATION -->
 <nav>
-    <a href="index.html" class="logo">PRO<span>TECH</span></a>
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-    </ul>
+    <div class="nav-container">
+        <a href="index.html" class="logo">PRO<span>TECH</span></a>
+        <div class="menu-toggle" id="mobile-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav-list" id="nav-list">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-users"></i> About</a></li>
+            <li><a href="contact.html" class="active-link"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </div>
 </nav>
 
-<!-- ===== HERO ===== -->
-<section class="hero">
-    <div class="hero-tag"><span class="dot"></span> Contact Us</div>
-    <h1>Let's Build<br>Something <span class="accent">Great</span></h1>
-    <p class="hero-sub">Have a question, idea, or collaboration in mind? We'd love to hear from you — drop us a line anytime.</p>
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <div class="hero-badge"><i class="fas fa-paper-plane"></i> Contact Us</div>
+    <h1>Let's Build Something <span class="gradient-text">Great</span></h1>
+    <p>Have a question, a collaboration idea, or just want to say hi? We'd love to hear from you — drop us a line anytime.</p>
 </section>
 
-<!-- ===== MAIN ===== -->
-<div class="contact-wrap">
+<!-- MAIN -->
+<div class="wrapper">
+    <div class="contact-grid">
 
-    <!-- FORM -->
-    <div class="form-card">
-        <div class="section-label">Send a Message</div>
-        <h2>Get In Touch</h2>
-        <form action="https://formspree.io/f/xrekrvzg" method="POST">
-            <div class="input-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Your full name" required>
-            </div>
-            <div class="input-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="you@example.com" required>
-            </div>
-            <div class="input-group">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" placeholder="What is this about?">
-            </div>
-            <div class="input-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Tell us what's on your mind..." required></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Send Message &nbsp;&#10148;</button>
-        </form>
-    </div>
-
-    <!-- SIDEBAR -->
-    <div class="contact-sidebar">
-
-        <!-- Emails -->
-        <div class="sidebar-card">
-            <div class="card-title"><i class="fas fa-envelope"></i> Email Us</div>
-            <a href="mailto:master.protechdaily@gmail.com" class="email-item">
-                <div class="e-icon"><i class="fas fa-envelope"></i></div>
-                <div>
-                    <div class="e-label">Master Inbox</div>
-                    <div class="e-address">master.protechdaily@gmail.com</div>
+        <!-- FORM -->
+        <div class="form-card">
+            <div class="form-inner">
+                <div class="section-header">
+                    <div class="section-icon" style="background: var(--gradient-3); box-shadow: 0 8px 25px rgba(6,182,212,0.4);"><i class="fas fa-pen-fancy" style="color:white;"></i></div>
+                    <div>
+                        <div class="section-title">Send a Message</div>
+                        <div class="section-subtitle">We usually reply within 24 hours</div>
+                    </div>
                 </div>
-            </a>
-            <a href="mailto:contact.protechdaily@gmail.com" class="email-item">
-                <div class="e-icon"><i class="fas fa-envelope"></i></div>
-                <div>
-                    <div class="e-label">General Contact</div>
-                    <div class="e-address">contact.protechdaily@gmail.com</div>
-                </div>
-            </a>
-        </div>
-
-        <!-- Social Media -->
-        <div class="sidebar-card">
-            <div class="card-title"><i class="fas fa-share-nodes"></i> Follow Us</div>
-            <div class="social-grid">
-
-                <!-- ✏️ TWITTER / X -->
-                <a href="#" class="social-link" data-platform="twitter" target="_blank">
-                    <div class="s-icon"><i class="fab fa-x-twitter"></i></div>
-                    <div class="s-name">Twitter / X</div>
-                </a>
-
-                <!-- ✏️ FACEBOOK -->
-                <a href="#" class="social-link" data-platform="facebook" target="_blank">
-                    <div class="s-icon"><i class="fab fa-facebook-f"></i></div>
-                    <div class="s-name">Facebook</div>
-                </a>
-
-                <!-- ✏️ INSTAGRAM -->
-                <a href="#" class="social-link" data-platform="instagram" target="_blank">
-                    <div class="s-icon"><i class="fab fa-instagram"></i></div>
-                    <div class="s-name">Instagram</div>
-                </a>
-
-                <!-- ✏️ LINKEDIN -->
-                <a href="#" class="social-link" data-platform="linkedin" target="_blank">
-                    <div class="s-icon"><i class="fab fa-linkedin-in"></i></div>
-                    <div class="s-name">LinkedIn</div>
-                </a>
-
-                <!-- ✏️ YOUTUBE -->
-                <a href="#" class="social-link" data-platform="youtube" target="_blank">
-                    <div class="s-icon"><i class="fab fa-youtube"></i></div>
-                    <div class="s-name">YouTube</div>
-                </a>
-
-                <!-- ✏️ TIKTOK -->
-                <a href="#" class="social-link" data-platform="tiktok" target="_blank">
-                    <div class="s-icon"><i class="fab fa-tiktok"></i></div>
-                    <div class="s-name">TikTok</div>
-                </a>
-
-                <!-- ✏️ GITHUB -->
-                <a href="#" class="social-link" data-platform="github" target="_blank">
-                    <div class="s-icon"><i class="fab fa-github"></i></div>
-                    <div class="s-name">GitHub</div>
-                </a>
-
-                <!-- ✏️ REDDIT -->
-                <a href="#" class="social-link" data-platform="reddit" target="_blank">
-                    <div class="s-icon"><i class="fab fa-reddit-alien"></i></div>
-                    <div class="s-name">Reddit</div>
-                </a>
-
+                <form action="https://formspree.io/f/xrekrvzg" method="POST">
+                    <div class="input-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your full name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="What is this about?">
+                    </div>
+                    <div class="input-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell us what's on your mind..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
+                </form>
             </div>
         </div>
 
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+
+            <!-- Emails -->
+            <div class="side-card email-card">
+                <div class="side-inner">
+                    <div class="side-card-header">
+                        <div class="side-card-icon cyan"><i class="fas fa-envelope"></i></div>
+                        <div class="side-card-title">Email Us</div>
+                    </div>
+                    <!-- ✏️ MASTER EMAIL -->
+                    <a href="mailto:master.protechdaily@gmail.com" class="email-row">
+                        <div class="email-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <div class="email-label">Master Inbox</div>
+                            <div class="email-address">master.protechdaily@gmail.com</div>
+                        </div>
+                    </a>
+                    <!-- ✏️ CONTACT EMAIL -->
+                    <a href="mailto:contact.protechdaily@gmail.com" class="email-row">
+                        <div class="email-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <div class="email-label">General Contact</div>
+                            <div class="email-address">contact.protechdaily@gmail.com</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="side-card social-card">
+                <div class="side-inner">
+                    <div class="side-card-header">
+                        <div class="side-card-icon purple"><i class="fas fa-share-nodes"></i></div>
+                        <div class="side-card-title">Follow Us</div>
+                    </div>
+                    <div class="social-grid">
+                        <!-- ✏️ TWITTER / X -->
+                        <a href="#" class="social-link" data-p="twitter" target="_blank">
+                            <div class="s-icon"><i class="fab fa-x-twitter"></i></div>
+                            <div class="s-name">Twitter / X</div>
+                        </a>
+                        <!-- ✏️ FACEBOOK -->
+                        <a href="#" class="social-link" data-p="facebook" target="_blank">
+                            <div class="s-icon"><i class="fab fa-facebook-f"></i></div>
+                            <div class="s-name">Facebook</div>
+                        </a>
+                        <!-- ✏️ INSTAGRAM -->
+                        <a href="#" class="social-link" data-p="instagram" target="_blank">
+                            <div class="s-icon"><i class="fab fa-instagram"></i></div>
+                            <div class="s-name">Instagram</div>
+                        </a>
+                        <!-- ✏️ LINKEDIN -->
+                        <a href="#" class="social-link" data-p="linkedin" target="_blank">
+                            <div class="s-icon"><i class="fab fa-linkedin-in"></i></div>
+                            <div class="s-name">LinkedIn</div>
+                        </a>
+                        <!-- ✏️ YOUTUBE -->
+                        <a href="#" class="social-link" data-p="youtube" target="_blank">
+                            <div class="s-icon"><i class="fab fa-youtube"></i></div>
+                            <div class="s-name">YouTube</div>
+                        </a>
+                        <!-- ✏️ TIKTOK -->
+                        <a href="#" class="social-link" data-p="tiktok" target="_blank">
+                            <div class="s-icon"><i class="fab fa-tiktok"></i></div>
+                            <div class="s-name">TikTok</div>
+                        </a>
+                        <!-- ✏️ GITHUB -->
+                        <a href="#" class="social-link" data-p="github" target="_blank">
+                            <div class="s-icon"><i class="fab fa-github"></i></div>
+                            <div class="s-name">GitHub</div>
+                        </a>
+                        <!-- ✏️ REDDIT -->
+                        <a href="#" class="social-link" data-p="reddit" target="_blank">
+                            <div class="s-icon"><i class="fab fa-reddit-alien"></i></div>
+                            <div class="s-name">Reddit</div>
+                        </a>
+                        <!-- ✏️ SNAPCHAT -->
+                        <a href="#" class="social-link" data-p="snapchat" target="_blank">
+                            <div class="s-icon"><i class="fab fa-snapchat"></i></div>
+                            <div class="s-name">Snapchat</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>
 
-<!-- ===== FOOTER ===== -->
-<footer>
-    <p>&copy; 2026 ProTech Daily. All rights reserved. &nbsp;|&nbsp; <a href="about.html">About Us</a></p>
-</footer>
+<!-- FOOTER -->
+<div class="footer">
+    <div class="footer-inner">
+        <div class="footer-logo">PRO<span>TECH</span></div>
+        <p class="footer-desc">Exploring the Digital Frontier. Your gateway to tomorrow's technology, today.</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ProTech Magazine. All rights reserved.</p>
+        </div>
+    </div>
+</div>
 
+<script>
+    document.getElementById('mobile-menu').addEventListener('click', function() {
+        this.classList.toggle('active');
+        document.getElementById('nav-list').classList.toggle('active');
+    });
+    document.addEventListener('click', function(e) {
+        const nav = document.querySelector('nav');
+        const menu = document.getElementById('nav-list');
+        const toggle = document.getElementById('mobile-menu');
+        if (!nav.contains(e.target) && menu.classList.contains('active')) {
+            menu.classList.remove('active');
+            toggle.classList.remove('active');
+        }
+    });
+</script>
 </body>
 </html>
