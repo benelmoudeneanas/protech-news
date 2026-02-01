@@ -1,5 +1,40 @@
 const articles = [
 {
+    id: 34,
+    title: "iPhone 18 Pro Max Leaks Suggest a Revolution in Mobile Photography",
+    slug: "iphone-18-pro-max-camera-leaks-variable-aperture-teleconverter",
+    cat: "tech-news",
+    img: "https://image2url.com/r2/default/images/iphone-18-pro-max-camera-leak.jpg",
+    desc: "Leaked reports indicate Apple is testing professional-grade hardware including variable aperture and teleconverter technology for its 2026 flagship.",
+    content: `
+        <p>Apple is reportedly pushing the boundaries of mobile imaging. New leaks suggest the <b>iPhone 18 Pro Max</b> will integrate advanced camera technologies designed to deliver professional-grade results in a smartphone form factor, potentially rendering traditional bulky cameras obsolete for many users.</p>
+        
+        <h3>Optical Precision: The Teleconverter Breakthrough</h3>
+        <p>The most significant rumor involves a built-in <b>teleconverter system</b>. Unlike digital zoom which degrades image quality, this optical advancement allows for extreme magnification while maintaining native resolution and sharpness, perfect for wildlife and architectural photography.</p>
+        
+        <div style="background: #111; border: 1px solid #0095f6; padding: 20px; border-radius: 12px; margin: 25px 0;">
+            <h4 style="margin-top: 0; color: #0095f6; font-family: 'Space Grotesk';">Leaked Technical Highlights:</h4>
+            <ul style="margin-bottom: 0; color: #94a3b8; font-size: 0.95rem; list-style: none; padding: 0;">
+                <li>📸 <b>Feature:</b> Mechanical Variable Aperture for light control.</li>
+                <li>🔭 <b>Zoom:</b> Internal Teleconverter to minimize digital cropping.</li>
+                <li>🛠️ <b>Challenge:</b> Engineering durability within a slim chassis.</li>
+            </ul>
+        </div>
+
+        <h3>Variable Aperture: Mastering Any Environment</h3>
+        <p>Another game-changer is the potential for a <b>variable aperture system</b>. This allows the lens to physically adjust its opening based on lighting conditions, much like a DSLR:</p>
+        <ul>
+            <li><b>Bright Settings:</b> A narrow aperture produces sharper landscapes and group shots.</li>
+            <li><b>Dim Settings:</b> A wider aperture allows maximum light intake for noise-free night photos.</li>
+        </ul>
+
+        <h3>Professional Integrity & Low-Light Dominance</h3>
+        <p>By prioritizing hardware-based optical zoom over software-driven "cropping," Apple aims to preserve <b>image integrity</b>. This focus ensures that photographers have a high-quality base image for post-processing. Combined with optimized low-light sensors, the iPhone 18 Pro Max is being positioned as the ultimate tool for both casual creators and semi-professional enthusiasts.</p>
+        
+        <p style="font-style: italic; color: #64748b;">Do these camera upgrades make the iPhone 18 Pro Max a must-buy for you, or is smartphone photography already "good enough"? Share your thoughts below.</p>
+    `
+},
+{
     id: 33,
     title: "Instagram to Empower Users with 'Leave Close Friends List' Feature",
     slug: "instagram-close-friends-exit-feature-meta-update",
