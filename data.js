@@ -1,6 +1,6 @@
 const articles = [
 {
-    id: 34,
+    id: 35,
     slug: "china-ai-doll-sales-explosion",
     title: "The Loneliness Cure? China’s AI Doll Sales Skyrocket by 1600%",
     desc: "A massive surge in AI-powered companion dolls signals a profound shift in a society where living alone is becoming the norm.",
@@ -25,6 +25,29 @@ const articles = [
         <h3>A Global Concern</h3>
         <p>This isn't just a Chinese phenomenon. The United States faced its own reckoning late last year during the 2025 holiday season when AI-enabled toys were found to potentially expose children to inappropriate content. As the line blurs, the world is watching to see if these digital companions are a bridge to better mental health or a trap leading to further isolation.</p>
     `
+},
+
+{
+    id: 23,
+    slug: "gta-vi-2026-reality-check-crisis",
+    title: "GTA VI: The Brutal 2026 Reality Check – Why Rockstar is Facing Its Biggest Crisis!",
+    cat: "leaks",
+    desc: "The dream of a 2025 release is dead. Internal leaks from Edinburgh reveal a studio in chaos, a delayed November 2026 launch, and a multiplayer mode that might change gaming forever.",
+    content: `
+                     <p>As we officially cross into 2026, the global gaming community is in a state of collective shock. What was once the most anticipated launch of 2025 has now officially shifted into the late 2026 calendar. But the delay is only the tip of the iceberg. <strong>Grand Theft Auto VI</strong> is currently navigating a minefield of technical debt, internal studio friction, and unprecedented expectations.</p>
+
+                     <h3>The November 19th Deadline</h3>
+                     <p>Reliable sources within Rockstar Games and parent company Take-Two Interactive have confirmed that the internal launch target is now <strong>November 19, 2026</strong>. Why the massive gap? It’s reported that the RAGE Engine (version 9) is struggling with the hyper-realistic water physics and the AI density required for 'Vice City'. Developers are reportedly working 60-hour weeks to ensure the 'level of polish' that has become Rockstar's trademark, but at what cost?</p>
+
+                     <h3>32-Player Chaos: The New GTA Online</h3>
+                     <p>Leak after leak has flooded the forums, but one detail remains consistent: the evolution of <strong>GTA VI Online</strong>. Court documents from an ongoing employment dispute revealed that testers are currently stress-testing 32-player sessions in a fully dynamic environment. Unlike the previous generation, every building in the Leonida state is rumored to have some level of interior access, requiring massive server-side processing power. This 'Density over Scale' approach is what's causing the most significant delays.</p>
+
+                     <h3>Internal Turmoil at Edinburgh HQ</h3>
+                     <p>The road hasn't just been technically difficult; it's been politically charged. In early 2026, Rockstar North faced a brief operational shutdown due to a heating system failure, but the real fire is coming from the staff. Ongoing 'return-to-office' mandates have sparked a unionization movement among QA testers and junior designers. Analysts fear that if a strike occurs mid-2026, even the November release date could be pushed into 2027.</p>
+
+                     <p>For the millions of PC gamers waiting, the silence is deafening. Historically, Rockstar releases on PC 12 to 18 months after consoles. This puts a potential PC release in <strong>early 2028</strong>, a timeline that many fans find unacceptable in the modern era of cross-platform gaming.</p>
+                     `,
+    img: "https://image2url.com/r2/default/images/1770040211425-a4e42383-5940-4804-9584-6f7bc5bb9abe.webp"
 },
 {
     id: 34,
@@ -363,28 +386,6 @@ const articles = [
                      <p>For the PC enthusiasts and gamers, the wait for the <strong>RTX 60-Series</strong> continues to drive the market, but these mobile and lifestyle gadgets are where the real innovation is happening right now.</p>
                      `,
     img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e"
-},
-{
-    id: 23,
-    slug: "gta-vi-2026-reality-check-crisis",
-    title: "GTA VI: The Brutal 2026 Reality Check – Why Rockstar is Facing Its Biggest Crisis!",
-    cat: "leaks",
-    desc: "The dream of a 2025 release is dead. Internal leaks from Edinburgh reveal a studio in chaos, a delayed November 2026 launch, and a multiplayer mode that might change gaming forever.",
-    content: `
-                     <p>As we officially cross into 2026, the global gaming community is in a state of collective shock. What was once the most anticipated launch of 2025 has now officially shifted into the late 2026 calendar. But the delay is only the tip of the iceberg. <strong>Grand Theft Auto VI</strong> is currently navigating a minefield of technical debt, internal studio friction, and unprecedented expectations.</p>
-
-                     <h3>The November 19th Deadline</h3>
-                     <p>Reliable sources within Rockstar Games and parent company Take-Two Interactive have confirmed that the internal launch target is now <strong>November 19, 2026</strong>. Why the massive gap? It’s reported that the RAGE Engine (version 9) is struggling with the hyper-realistic water physics and the AI density required for 'Vice City'. Developers are reportedly working 60-hour weeks to ensure the 'level of polish' that has become Rockstar's trademark, but at what cost?</p>
-
-                     <h3>32-Player Chaos: The New GTA Online</h3>
-                     <p>Leak after leak has flooded the forums, but one detail remains consistent: the evolution of <strong>GTA VI Online</strong>. Court documents from an ongoing employment dispute revealed that testers are currently stress-testing 32-player sessions in a fully dynamic environment. Unlike the previous generation, every building in the Leonida state is rumored to have some level of interior access, requiring massive server-side processing power. This 'Density over Scale' approach is what's causing the most significant delays.</p>
-
-                     <h3>Internal Turmoil at Edinburgh HQ</h3>
-                     <p>The road hasn't just been technically difficult; it's been politically charged. In early 2026, Rockstar North faced a brief operational shutdown due to a heating system failure, but the real fire is coming from the staff. Ongoing 'return-to-office' mandates have sparked a unionization movement among QA testers and junior designers. Analysts fear that if a strike occurs mid-2026, even the November release date could be pushed into 2027.</p>
-
-                     <p>For the millions of PC gamers waiting, the silence is deafening. Historically, Rockstar releases on PC 12 to 18 months after consoles. This puts a potential PC release in <strong>early 2028</strong>, a timeline that many fans find unacceptable in the modern era of cross-platform gaming.</p>
-                     `,
-    img: "https://images.unsplash.com/photo-1542751371-adc38448a05e"
 },
 {
     id: 22,
