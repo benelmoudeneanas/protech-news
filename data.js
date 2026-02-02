@@ -26,13 +26,13 @@ const articles = [
         <p>This isn't just a Chinese phenomenon. The United States faced its own reckoning late last year during the 2025 holiday season when AI-enabled toys were found to potentially expose children to inappropriate content. As the line blurs, the world is watching to see if these digital companions are a bridge to better mental health or a trap leading to further isolation.</p>
     `
 },
-
 {
     id: 23,
     slug: "gta-6-digital-only-launch-leak",
     title: "GTA VI To Thwart Leakers with Digital-Only Launch Strategy",
     desc: "Rockstar and Take-Two may skip a physical launch for GTA VI to prevent retail-level leaks before the November release.",
-    cat: "leaks",
+    img: "https://image2url.com/r2/default/images/1770040704232-a49c4531-213d-4071-8a58-bd01ce016a27.webp",
+    cat: "trends",
     content: `
         <p>As Rockstar and Take-Two take every precaution to avoid leaks for the upcoming Grand Theft Auto VI, new reports suggest a drastic shift in distribution strategy. According to leaks from industry vendors, GTA VI is expected to be a digital-only launch across both consoles and PC.</p>
         
@@ -44,7 +44,6 @@ const articles = [
         
         <p>Following numerous delays, GTA VI is currently scheduled for release on November 19, 2026. This digital-first approach marks a significant milestone in the industry's transition away from physical media for major AAA titles.</p>
     `
-    img: "https://image2url.com/r2/default/images/1770040211425-a4e42383-5940-4804-9584-6f7bc5bb9abe.webp"
 },
 {
     id: 34,
