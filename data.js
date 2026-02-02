@@ -7,6 +7,7 @@ const articles = [
     desc: "Samsung locks February 25, 2026 for Galaxy Unpacked. Revolutionary 60W charging, Privacy Display, and Snapdragon 8 Elite Gen 5 promise to shake up the flagship battle.",
     img: "https://image2url.com/r2/default/images/1770065875174-ff4eaf9d-2131-43e4-9012-065f56c23298.jpg",
     content: `
+    date: "2026-02-02"
         <p>The countdown to Samsung's next flagship has officially begun. According to the latest leaks confirmed by industry insiders, Samsung has locked in <strong>February 25th, 2026</strong>, for its next "Galaxy Unpacked" event. While this is slightly later than the January window we've seen in previous years, the delay is reportedly intended to perfect a suite of new AI features. For U.S. consumers, pre-orders are expected to go live immediately following the keynote, with devices hitting store shelves by early March.</p>
 
         <h2>A Long-Awaited Battery Breakthrough</h2>
@@ -57,6 +58,7 @@ const articles = [
     desc: "A massive surge in AI-powered companion dolls signals a profound shift in a society where living alone is becoming the norm.",
     img: "https://image2url.com/r2/default/images/1770039906378-6bb4e397-4ccc-4f29-8f65-e7349482299e.webp",
     cat: "trends",
+    date: "2026-02-01"
     content: `
         <p>While the world debates the industrial impact of Artificial Intelligence, a more intimate revolution is unfolding inside Chinese homes. A massive surge in AI-powered companion dolls among adults is signaling a profound shift in a society where living alone is becoming the standard.</p>
         
