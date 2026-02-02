@@ -5,7 +5,7 @@ const articles = [
     title: "The iPhone Killer? Samsung Galaxy S26 Ultra Leaks Reveal a Game-Changing Battery and a New Launch Date",
     cat: "leaks",
     desc: "Samsung locks February 25, 2026 for Galaxy Unpacked. Revolutionary 60W charging, Privacy Display, and Snapdragon 8 Elite Gen 5 promise to shake up the flagship battle.",
-    img: "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=800&q=80",
+    img: "https://image2url.com/r2/default/images/1770065875174-ff4eaf9d-2131-43e4-9012-065f56c23298.jpg",
     content: `
         <p>The countdown to Samsung's next flagship has officially begun. According to the latest leaks confirmed by industry insiders, Samsung has locked in <strong>February 25th, 2026</strong>, for its next "Galaxy Unpacked" event. While this is slightly later than the January window we've seen in previous years, the delay is reportedly intended to perfect a suite of new AI features. For U.S. consumers, pre-orders are expected to go live immediately following the keynote, with devices hitting store shelves by early March.</p>
 
