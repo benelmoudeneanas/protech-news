@@ -1,6 +1,33 @@
 const articles = [
 {
     id: 34,
+    slug: "china-ai-doll-sales-explosion",
+    title: "The Loneliness Cure? China’s AI Doll Sales Skyrocket by 1600%",
+    desc: "A massive surge in AI-powered companion dolls signals a profound shift in a society where living alone is becoming the norm.",
+    img: "https://image2url.com/r2/default/images/1770039906378-6bb4e397-4ccc-4f29-8f65-e7349482299e.webp",
+    cat: "trends",
+    content: `
+        <p>While the world debates the industrial impact of Artificial Intelligence, a more intimate revolution is unfolding inside Chinese homes. A massive surge in AI-powered companion dolls among adults is signaling a profound shift in a society where living alone is becoming the standard.</p>
+        
+        <h3>A 1,600% Explosion in Sales</h3>
+        <p>According to recent reports, 2025 marked a historic turning point for the industry, with sales of smart AI dolls leaping by a staggering 1,600%. This trend was on full display at CES 2026, where nearly 60 different AI-integrated dolls were showcased—roughly 80% of which were manufactured by Chinese tech firms.</p>
+        
+        <p>The market leader, a smart electronic parrot named "LaoLao," has become a cultural phenomenon. Priced at an accessible 159 Yuan ($23), the bird has already flown off the shelves of JD.com, with over 7 million units sold.</p>
+        
+        <h3>More Than Just Toys: Emotional Support</h3>
+        <p>For many, these devices are filling an emotional void. Users report deep attachments to their smart companions, citing physical interactions like guided deep-breathing sessions and gentle heating features. "There’s zero social pressure. It’s pure companionship without the stress of human interaction," says Nancy Liu, 27.</p>
+        
+        <h3>The Dark Side: Mental Health & Regulation</h3>
+        <p>However, the rapid rise of "AI bonding" has raised red flags regarding mental health. The Cyberspace Administration of China (CAC) recently introduced legislative reforms targeting AI developers. The goal is to curb "AI over-dependency" and protect users' psychological well-being.</p>
+        
+        <p>The upcoming regulations will hold tech giants accountable for any AI content that encourages self-harm, promotes gambling, or manipulates user emotions through deceptive algorithms.</p>
+        
+        <h3>A Global Concern</h3>
+        <p>This isn't just a Chinese phenomenon. The United States faced its own reckoning late last year during the 2025 holiday season when AI-enabled toys were found to potentially expose children to inappropriate content. As the line blurs, the world is watching to see if these digital companions are a bridge to better mental health or a trap leading to further isolation.</p>
+    `
+},
+{
+    id: 34,
     title: "iPhone 18 Pro Max Leaks Suggest a Revolution in Mobile Photography",
     slug: "iphone-18-pro-max-camera-leaks-variable-aperture-teleconverter",
     cat: "leaks",
