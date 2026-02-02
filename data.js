@@ -1,5 +1,56 @@
 const articles = [
 {
+    id: 36,
+    slug: "samsung-galaxy-s26-ultra-leaks-iphone-killer",
+    title: "The iPhone Killer? Samsung Galaxy S26 Ultra Leaks Reveal a Game-Changing Battery and a New Launch Date",
+    cat: "leaks",
+    desc: "Samsung locks February 25, 2026 for Galaxy Unpacked. Revolutionary 60W charging, Privacy Display, and Snapdragon 8 Elite Gen 5 promise to shake up the flagship battle.",
+    img: "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=800&q=80",
+    content: `
+        <p>The countdown to Samsung's next flagship has officially begun. According to the latest leaks confirmed by industry insiders, Samsung has locked in <strong>February 25th, 2026</strong>, for its next "Galaxy Unpacked" event. While this is slightly later than the January window we've seen in previous years, the delay is reportedly intended to perfect a suite of new AI features. For U.S. consumers, pre-orders are expected to go live immediately following the keynote, with devices hitting store shelves by early March.</p>
+
+        <h2>A Long-Awaited Battery Breakthrough</h2>
+        <p>Samsung is finally answering the prayers of power users in the United States. While the battery capacity remains at a solid 5,000mAh, the real revolution is in the charging speed. The S26 Ultra is tipped to support <strong>60W wired fast charging</strong>, a significant jump from the long-standing 45W limit. This means American users can spend less time tethered to a wall outlet and more time on the go, bringing Samsung closer to the speeds offered by its international rivals.</p>
+
+        <h2>Privacy at the Forefront</h2>
+        <p>In an era where data security is paramount, the S26 Ultra is set to introduce a new <strong>"Privacy Display."</strong> This technology utilizes advanced light-control layers to narrow the viewing angles, ensuring that the person sitting next to you on a flight or in a crowded Starbucks can't snoop on your screen. It's a feature designed specifically for the privacy-conscious professional.</p>
+
+        <div class="key-takeaways">
+            <div class="key-takeaways-title">
+                <i class="fas fa-lightbulb"></i> Key Highlights
+            </div>
+            <ul>
+                <li>Galaxy Unpacked scheduled for February 25, 2026</li>
+                <li>Revolutionary 60W fast charging (up from 45W)</li>
+                <li>New Privacy Display technology for enhanced security</li>
+                <li>Snapdragon 8 Elite Gen 5 with 30% better efficiency</li>
+                <li>Starting price: $1,299 with aggressive trade-in deals</li>
+            </ul>
+        </div>
+
+        <h2>The Power of Snapdragon 8 Elite Gen 5</h2>
+        <p>As is tradition, the North American variant of the S26 Ultra will be powered exclusively by Qualcomm's latest silicon: the <strong>Snapdragon 8 Elite Gen 5</strong>. Early benchmarks suggest a 30% boost in power efficiency and a massive leap in GPU performance. Coupled with 16GB of RAM, this device is built to handle the next generation of "Galaxy AI" without breaking a sweat.</p>
+
+        <h2>Design and Optics</h2>
+        
+        <h3>Refined Ergonomics</h3>
+        <p>The Ultra is moving away from its sharp, boxy corners. Expect a slightly more rounded titanium frame that makes the large device much more comfortable to hold for extended periods.</p>
+
+        <h3>Pro-Grade Camera</h3>
+        <p>While the 200MP main sensor remains, the real magic happens in the software. Enhanced computational photography and a refined periscope lens promise to deliver the best low-light shots ever seen on a smartphone.</p>
+
+        <blockquote>
+            "The Galaxy S26 Ultra isn't just an incremental update; it's a strategic move to reclaim the crown in the high-end smartphone market." - Tech Industry Analysts
+        </blockquote>
+
+        <h2>Pricing and Availability</h2>
+        <p>In the U.S. market, the Galaxy S26 Ultra is expected to start at <strong>$1,299</strong>. While it remains a premium investment, rumors suggest Samsung may offer aggressive trade-in deals and a free storage upgrade (256GB to 512GB) for early adopters to sweeten the deal.</p>
+
+        <h2>The Verdict</h2>
+        <p>The Galaxy S26 Ultra isn't just an incremental update; it's a strategic move to reclaim the crown in the high-end smartphone market. With faster charging, enhanced privacy, and unmatched processing power, Samsung is sending a clear message to Apple: <strong>the bar has just been raised.</strong></p>
+    `
+},
+{
     id: 35,
     slug: "china-ai-doll-sales-explosion",
     title: "The Loneliness Cure? China’s AI Doll Sales Skyrocket by 1600%",
