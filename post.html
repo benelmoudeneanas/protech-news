@@ -1459,7 +1459,7 @@
                                 </div>
                                 <div class="meta-item">
                                     <i class="far fa-calendar"></i>
-                                    <span>${new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                                    <span>${article.date || new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
                                 </div>
                                 <div class="meta-item">
                                     <i class="far fa-clock"></i>
