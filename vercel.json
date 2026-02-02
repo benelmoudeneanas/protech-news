@@ -2,8 +2,8 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/samsung-galaxy-s26-ultra-leaks-iphone-killer", "destination": "/post?id=35" },
-    { "source": "/gta-6-digital-only-launch-leak", "destination": "/post?id=32" },
+    { "source": "/samsung-galaxy-s26-ultra-leaks-iphone-killer", "destination": "/post?id=36" },
+    { "source": "/gta-6-digital-only-launch-leak", "destination": "/post?id=35" },
     { "source": "/iphone-18-pro-max-camera-leaks-variable-aperture-teleconverter", "destination": "/post?id=34" },
     { "source": "/instagram-close-friends-exit-feature-meta-update", "destination": "/post?id=33" },
     { "source": "/apple-iphone-17-record-sales-google-gemini-ai", "destination": "/post?id=32" },
