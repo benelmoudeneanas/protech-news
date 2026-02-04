@@ -2,6 +2,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
+    { "source": "/samsung-galaxy-s21-end-of-support-security-updates", "destination": "/post?id=38" },
     { "source": "/iphone-fold-major-leak-cameras-design-features", "destination": "/post?id=37" },
     { "source": "/samsung-galaxy-s26-ultra-leaks-iphone-killer", "destination": "/post?id=36" },
     { "source": "/gta-6-digital-only-launch-leak", "destination": "/post?id=35" },
