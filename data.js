@@ -6,7 +6,7 @@ const articles = [
     date: "2026-02-04",
     cat: "news",
     desc: "After four years of faithful service, the Galaxy S21, S21 Plus, and S21 Ultra have been removed from Samsung's update schedule. The era of these flagship devices has quietly come to an end.",
-    img: "https://image2url.com/r2/default/images/galaxy-s21-sunset-final-update.jpg",
+    img: "https://image2url.com/r2/default/images/1770237274368-7e5dfe0b-7b26-4814-9658-b2f78fd48dc9.jpg",
     content: `
         <p>The digital world often moves with frantic energy, but some of the most profound shifts happen in complete silence. For millions of users worldwide, a quiet change has just materialized—a disappearance from the official lists, a fading from the security schedules, and the end of a legendary vigil. If you examine the latest security bulletins from Samsung's headquarters in Seoul, you'll notice <strong>three names are conspicuously absent</strong>. The Galaxy S21, S21 Plus, and S21 Ultra have officially been retired from active support.</p>
 
