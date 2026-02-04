@@ -1,5 +1,64 @@
 const articles = [
 {
+    id: 37,
+    slug: "iphone-fold-major-leak-cameras-design-features",
+    title: "iPhone Fold Exposed in Major Leak – Cameras and Design Features Detailed",
+    cat: "leaks",
+    desc: "Apple's first foldable iPhone revealed in comprehensive leak. Touch ID returns, horizontal camera bar, and revolutionary button layout promise to reshape the iPhone experience.",
+    img: "https://image2url.com/r2/default/images/1770207595125-d60dce9a-379e-4b88-aa3e-5d34f091024e.jpg",
+    content: `
+    date: "2026-02-04",
+        <p>The moment tech enthusiasts have been anticipating for nearly a decade is finally approaching. According to a comprehensive leak surfacing from Weibo, Apple's first foldable device – the <strong>iPhone Fold</strong> – is set to arrive later this year. This isn't just another iPhone iteration; it's a complete reimagining of what an iPhone can be, and the details emerging now give us unprecedented insight into Apple's ambitious entry into the foldable market.</p>
+
+        <h2>A Revolutionary Year for iPhone</h2>
+        <p>2026 is shaping up to be a transformative year for Apple's smartphone lineup. The traditional fall launch strategy is getting a major overhaul, with the base iPhone model reportedly being pushed to an early-year release. This strategic shift makes room for the iPhone Fold to command center stage, marking Apple's boldest design departure since the original iPhone's debut. While competitors like Samsung, Honor, and Huawei have been refining their foldable technology through multiple generations, Apple's characteristically patient approach may finally pay dividends.</p>
+
+        <h2>Button Layout: Breaking Tradition</h2>
+        <p>In a move that will require serious adjustment from longtime iPhone users, Apple is consolidating all physical controls to the <strong>right-hand edge</strong> of the device. This design philosophy mirrors approaches taken by the Honor Magic V5 and Samsung Galaxy Z Fold 7, prioritizing functionality in the foldable form factor over familiar iPhone conventions.</p>
+
+        <div class="key-takeaways">
+            <div class="key-takeaways-title">
+                <i class="fas fa-lightbulb"></i> Key Highlights
+            </div>
+            <ul>
+                <li>Expected launch in late 2026</li>
+                <li>All buttons positioned on right edge for foldable ergonomics</li>
+                <li>Touch ID returns, integrated into power button</li>
+                <li>Single hole-punch front camera design</li>
+                <li>Horizontal camera bar with dual rear sensors</li>
+                <li>Two color options: White confirmed, likely Black as second</li>
+            </ul>
+        </div>
+
+        <h2>Touch ID Makes a Comeback</h2>
+        <p>The power button does more than just wake the device. Apple is bringing back <strong>Touch ID</strong>, but this time it's seamlessly integrated into the power button itself. This marks a significant shift from the Face ID-exclusive approach of recent years, acknowledging that foldable devices present unique unlocking scenarios where fingerprint authentication makes practical sense.</p>
+
+        <h3>Camera Button Integration</h3>
+        <p>Adding to the right-edge real estate is the dedicated camera button, a feature that's been gaining popularity across Apple's recent iPhone models. With power, Touch ID, volume controls, and camera button all sharing the same side, that right edge is going to be remarkably busy – a necessary compromise for the foldable form factor.</p>
+
+        <h2>Camera System: Simplicity Meets Innovation</h2>
+        
+        <h3>Front-Facing Design</h3>
+        <p>Apple is embracing minimalism with the front camera. A <strong>single, circular hole-punch cutout</strong> provides maximum screen real estate while maintaining clean aesthetics. No notches, no dynamic islands – just pure, uninterrupted display with minimal visual compromise.</p>
+
+        <h3>Rear Camera Configuration</h3>
+        <p>The rear camera system takes an unexpected horizontal orientation. A sleek <strong>black bar runs along the top of the right-hand panel</strong>, housing dual sensors in a configuration reminiscent of the iPhone Air's design language. What's particularly striking is Apple's commitment to consistency: regardless of the device color you choose, that camera bar remains uniformly black across all variants.</p>
+
+        <blockquote>
+            "After years of speculation, the iPhone Fold represents Apple's acknowledgment that the smartphone landscape is evolving, and even the most successful company must adapt or risk being left behind." - Industry Observers
+        </blockquote>
+
+        <h2>Color Options: Refined Minimalism</h2>
+        <p>Staying true to Apple's recent trend toward restrained color palettes, the iPhone Fold will launch with just <strong>two finish options</strong>. White has been confirmed through leaked materials, and conventional wisdom suggests black will serve as the complementary choice. This limited selection emphasizes the premium positioning and allows the revolutionary form factor to remain the focal point.</p>
+
+        <h2>Market Context and Timing</h2>
+        <p>The timing of these leaks – more than six months ahead of the anticipated launch – suggests that manufacturing is already well underway. This level of specific detail indicates Apple's foldable ambitions have moved far beyond conceptual stages into concrete production reality. The company has been watching, learning, and refining while competitors established the foldable category. Now, with years of competitor missteps and successes to learn from, Apple is positioned to enter the market with a polished, thoroughly considered product.</p>
+
+        <h2>The Verdict</h2>
+        <p>The iPhone Fold isn't just a new form factor – it's a statement. After nearly a decade of rumors and speculation, Apple is finally ready to compete in the foldable arena. With the return of Touch ID, a revolutionary button layout, and a minimalist camera system, the iPhone Fold promises to deliver the premium experience Apple users expect while embracing the flexibility that foldable technology enables. <strong>The wait is almost over, and the future of the iPhone is about to unfold.</strong></p>
+    `
+},
+{
     id: 36,
     slug: "samsung-galaxy-s26-ultra-leaks-iphone-killer",
     title: "The iPhone Killer? Samsung Galaxy S26 Ultra Leaks Reveal a Game-Changing Battery and a New Launch Date",
