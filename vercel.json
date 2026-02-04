@@ -2,7 +2,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/iphone-fold-major-leak-cameras-design-features", "destination": "/post?id=36" },
+    { "source": "/iphone-fold-major-leak-cameras-design-features", "destination": "/post?id=37" },
     { "source": "/samsung-galaxy-s26-ultra-leaks-iphone-killer", "destination": "/post?id=36" },
     { "source": "/gta-6-digital-only-launch-leak", "destination": "/post?id=35" },
     { "source": "/iphone-18-pro-max-camera-leaks-variable-aperture-teleconverter", "destination": "/post?id=34" },
