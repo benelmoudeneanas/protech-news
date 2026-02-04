@@ -2,7 +2,7 @@ const articles = [
 {
     id: 38,
     slug: "samsung-galaxy-s21-end-of-support-security-updates",
-    title: ""Samsung Just Discontinued Updates for These Popular Phones – Is Yours on the List?",
+    title: "Samsung Just Discontinued Updates for These Popular Phones – Is Yours on the List?",
     date: "2026-02-04",
     cat: "news",
     desc: "After four years of faithful service, the Galaxy S21, S21 Plus, and S21 Ultra have been removed from Samsung's update schedule. The era of these flagship devices has quietly come to an end.",
