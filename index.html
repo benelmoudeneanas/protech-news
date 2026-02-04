@@ -101,8 +101,15 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding: 0 40px;
+                padding: 0 20px;
                 min-height: 80px;
+                width: 100%;
+            }
+            
+            @media (min-width: 768px) {
+                .nav-container {
+                    padding: 0 40px;
+                }
             }
 
             .logo {
@@ -237,10 +244,17 @@
             .quick-search-container {
                 max-width: 1400px;
                 margin: 0 auto;
-                padding: 0 40px;
+                padding: 0 20px;
                 display: flex;
                 gap: 10px;
                 align-items: center;
+                width: 100%;
+            }
+            
+            @media (min-width: 768px) {
+                .quick-search-container {
+                    padding: 0 40px;
+                }
             }
 
             .quick-search-label {
@@ -291,7 +305,14 @@
             .wrapper {
                 max-width: 1400px;
                 margin: 0 auto;
-                padding: 40px 40px 80px;
+                padding: 40px 20px 80px;
+                width: 100%;
+            }
+            
+            @media (min-width: 768px) {
+                .wrapper {
+                    padding: 40px 40px 80px;
+                }
             }
 
             /* TODAY'S PICK Section (Hero) */
@@ -463,8 +484,20 @@
 
             .feed-grid {
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: 1fr;
                 gap: 25px;
+            }
+            
+            @media (min-width: 640px) {
+                .feed-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            
+            @media (min-width: 1024px) {
+                .feed-grid {
+                    grid-template-columns: repeat(3, 1fr);
+                }
             }
 
             .feed-card {
@@ -556,8 +589,20 @@
 
             .trending-grid {
                 display: grid;
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: 1fr;
                 gap: 20px;
+            }
+            
+            @media (min-width: 640px) {
+                .trending-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            
+            @media (min-width: 1024px) {
+                .trending-grid {
+                    grid-template-columns: repeat(4, 1fr);
+                }
             }
 
             .trending-card {
@@ -622,8 +667,14 @@
 
             .leaks-grid {
                 display: grid;
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: 1fr;
                 gap: 25px;
+            }
+            
+            @media (min-width: 768px) {
+                .leaks-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
             }
 
             .leak-card {
@@ -704,8 +755,14 @@
 
             .reviews-grid {
                 display: grid;
-                grid-template-columns: 1.5fr 1fr;
+                grid-template-columns: 1fr;
                 gap: 25px;
+            }
+            
+            @media (min-width: 1024px) {
+                .reviews-grid {
+                    grid-template-columns: 1.5fr 1fr;
+                }
             }
 
             .review-featured {
@@ -859,8 +916,20 @@
 
             .categories-grid {
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: 1fr;
                 gap: 25px;
+            }
+            
+            @media (min-width: 640px) {
+                .categories-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            
+            @media (min-width: 1024px) {
+                .categories-grid {
+                    grid-template-columns: repeat(3, 1fr);
+                }
             }
 
             .category-card {
@@ -1111,24 +1180,9 @@
             }
 
             /* Responsive Design */
-            @media (max-width: 1200px) {
-                .trending-grid {
-                    grid-template-columns: repeat(2, 1fr);
-                }
-
-                .categories-grid {
-                    grid-template-columns: repeat(2, 1fr);
-                }
-            }
-
             @media (max-width: 768px) {
-                .nav-container {
-                    padding: 0 15px;
-                    min-height: 65px;
-                }
-
                 .logo {
-                    font-size: 1.4rem;
+                    font-size: 1.6rem;
                 }
 
                 .menu-toggle {
@@ -1138,20 +1192,16 @@
                 .nav-list {
                     display: none;
                     flex-direction: column;
-                    position: fixed;
-                    top: 65px;
+                    position: absolute;
+                    top: 80px;
                     left: 0;
-                    right: 0;
                     width: 100%;
-                    max-height: calc(100vh - 65px);
-                    overflow-y: auto;
                     background: rgba(13, 15, 22, 0.98);
                     backdrop-filter: blur(20px);
                     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-                    padding: 15px;
+                    padding: 20px;
                     gap: 0;
                     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-                    z-index: 999;
                 }
 
                 .nav-list.active {
@@ -1164,55 +1214,17 @@
 
                 .nav-list li a {
                     width: 100%;
-                    padding: 15px 20px;
+                    padding: 18px 25px;
                     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
                     justify-content: flex-start;
-                    font-size: 0.95rem;
-                }
-
-                .nav-list li a i {
-                    min-width: 20px;
-                }
-
-                .quick-search-container {
-                    padding: 0 15px;
-                    gap: 8px;
-                    flex-wrap: nowrap;
-                }
-                
-                .quick-search-label {
-                    font-size: 0.75rem;
-                    margin-right: 5px;
-                    flex-shrink: 0;
-                }
-                
-                .quick-tag {
-                    padding: 6px 14px;
-                    font-size: 0.7rem;
-                    flex-shrink: 0;
-                }
-
-                .wrapper {
-                    padding: 25px 15px 50px;
                 }
 
                 .section-title {
                     font-size: 1.5rem;
                 }
-                
-                .section-header {
-                    flex-direction: row;
-                    gap: 12px;
-                }
-                
-                .section-icon {
-                    width: 40px;
-                    height: 40px;
-                    font-size: 1.2rem;
-                }
 
                 .hero-card {
-                    height: 400px;
+                    height: 450px;
                 }
 
                 .hero-title {
@@ -1221,18 +1233,6 @@
 
                 .hero-desc {
                     font-size: 1rem;
-                }
-
-                .feed-grid {
-                    grid-template-columns: 1fr;
-                }
-
-                .trending-grid {
-                    grid-template-columns: 1fr;
-                }
-
-                .leaks-grid {
-                    grid-template-columns: 1fr;
                 }
 
                 .leak-card {
@@ -1245,14 +1245,6 @@
                     height: 200px;
                 }
 
-                .reviews-grid {
-                    grid-template-columns: 1fr;
-                }
-
-                .categories-grid {
-                    grid-template-columns: 1fr;
-                }
-
                 .search-result-item {
                     flex-direction: column;
                 }
@@ -1260,6 +1252,13 @@
                 .search-result-img {
                     width: 100%;
                     height: 200px;
+                }
+                
+                .floating-offers-btn {
+                    bottom: 20px;
+                    right: 20px;
+                    width: 60px;
+                    height: 60px;
                 }
             }
 
