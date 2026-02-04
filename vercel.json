@@ -2,43 +2,157 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/samsung-galaxy-s21-end-of-support-security-updates", "destination": "/post?id=38" },
-    { "source": "/iphone-fold-major-leak-cameras-design-features", "destination": "/post?id=37" },
-    { "source": "/samsung-galaxy-s26-ultra-leaks-iphone-killer", "destination": "/post?id=36" },
-    { "source": "/gta-6-digital-only-launch-leak", "destination": "/post?id=35" },
-    { "source": "/iphone-18-pro-max-camera-leaks-variable-aperture-teleconverter", "destination": "/post?id=34" },
-    { "source": "/instagram-close-friends-exit-feature-meta-update", "destination": "/post?id=33" },
-    { "source": "/apple-iphone-17-record-sales-google-gemini-ai", "destination": "/post?id=32" },
-    { "source": "/samsung-galaxy-s26-price-leak-ultra-cheaper", "destination": "/post?id=31" },
-    { "source": "/ios-26-3-beta-3-features-siri-gemini-ai", "destination": "/post?id=30" },
-    { "source": "/galaxy-z-trifold-launch-leak-specs", "destination": "/post?id=29" },
-    { "source": "/ps6-leaks-release-date-specs", "destination": "/post?id=28" },
-    { "source": "/samsung-galaxy-s26-ultra-leak-production-pricing", "destination": "/post?id=27" },
-    { "source": "/apple-vision-pro-2026-review", "destination": "/post?id=26" },
-    { "source": "/galaxy-s26-leak-design-overhaul", "destination": "/post?id=25" },
-    { "source": "/10-tech-gadgets-2026-vouch", "destination": "/post?id=24" },
-    { "source": "/china-ai-doll-sales-explosion", "destination": "/post?id=23" },
-    { "source": "/iphone-18-pro-max-leaks-price-hike", "destination": "/post?id=22" },
-    { "source": "/starlink-mini-elon-musk-backpack-internet", "destination": "/post?id=21" },
-    { "source": "/federal-ai-act-2026-internet-freedom", "destination": "/post?id=20" },
-    { "source": "/tesla-model-2-spy-shots-release", "destination": "/post?id=19" },
-    { "source": "/apple-glasses-air-leaks-smartphone-death", "destination": "/post?id=18" },
-    { "source": "/nintendo-switch-2-pro-4k-benchmarks", "destination": "/post?id=17" },
-    { "source": "/sony-project-trinity-ps5-pro-leaks", "destination": "/post?id=16" },
-    { "source": "/samsung-galaxy-z-fold-8-triple-fold", "destination": "/post?id=15" },
-    { "source": "/google-pixel-11-pro-under-display-camera", "destination": "/post?id=14" },
-    { "source": "/us-micro-grid-revolution-energy-ai", "destination": "/post?id=13" },
-    { "source": "/remote-work-2-zoom-towns-tech-hubs", "destination": "/post?id=12" },
-    { "source": "/ai-education-us-public-schools-learning-gap", "destination": "/post?id=11" },
-    { "source": "/quantum-computing-usa-medical-miracles", "destination": "/post?id=10" },
-    { "source": "/biotech-gold-rush-personalized-longevity", "destination": "/post?id=9" },
-    { "source": "/defi-comeback-wall-street-blockchain", "destination": "/post?id=8" },
-    { "source": "/tesla-model-2-long-term-review", "destination": "/post?id=7" },
-    { "source": "/apple-glasses-air-one-week-review", "destination": "/post?id=6" },
-    { "source": "/nintendo-switch-2-pro-handheld-king-review", "destination": "/post?id=5" },
-    { "source": "/sony-ps5-pro-2026-path-tracing-review", "destination": "/post?id=4" },
-    { "source": "/samsung-galaxy-z-fold-8-tablet-review", "destination": "/post?id=3" },
-    { "source": "/starlink-mini-backpack-satellite-review", "destination": "/post?id=2" },
-    { "source": "/google-pixel-11-pro-smartest-phone-review", "destination": "/post?id=1" }
+    {
+      "source": "/samsung-galaxy-s21-end-of-support-security-updates",
+      "destination": "/samsung-galaxy-s21-end-of-support-security-updates.html"
+    },
+    {
+      "source": "/iphone-fold-major-leak-cameras-design-features",
+      "destination": "/iphone-fold-major-leak-cameras-design-features.html"
+    },
+    {
+      "source": "/samsung-galaxy-s26-ultra-leaks-iphone-killer",
+      "destination": "/samsung-galaxy-s26-ultra-leaks-iphone-killer.html"
+    },
+    {
+      "source": "/china-ai-doll-sales-explosion",
+      "destination": "/china-ai-doll-sales-explosion.html"
+    },
+    {
+      "source": "/gta-6-digital-only-launch-leak",
+      "destination": "/gta-6-digital-only-launch-leak.html"
+    },
+    {
+      "source": "/iphone-18-pro-max-camera-leaks-variable-aperture-teleconverter",
+      "destination": "/iphone-18-pro-max-camera-leaks-variable-aperture-teleconverter.html"
+    },
+    {
+      "source": "/instagram-close-friends-exit-feature-meta-update",
+      "destination": "/instagram-close-friends-exit-feature-meta-update.html"
+    },
+    {
+      "source": "/apple-iphone-17-record-sales-google-gemini-ai",
+      "destination": "/apple-iphone-17-record-sales-google-gemini-ai.html"
+    },
+    {
+      "source": "/samsung-galaxy-s26-price-leak-ultra-cheaper",
+      "destination": "/samsung-galaxy-s26-price-leak-ultra-cheaper.html"
+    },
+    {
+      "source": "/ios-26-3-beta-3-features-siri-gemini-ai",
+      "destination": "/ios-26-3-beta-3-features-siri-gemini-ai.html"
+    },
+    {
+      "source": "/galaxy-z-trifold-launch-leak-specs",
+      "destination": "/galaxy-z-trifold-launch-leak-specs.html"
+    },
+    {
+      "source": "/ps6-leaks-release-date-specs",
+      "destination": "/ps6-leaks-release-date-specs.html"
+    },
+    {
+      "source": "/samsung-galaxy-s26-ultra-leak-production-pricing",
+      "destination": "/samsung-galaxy-s26-ultra-leak-production-pricing.html"
+    },
+    {
+      "source": "/apple-vision-pro-2026-review",
+      "destination": "/apple-vision-pro-2026-review.html"
+    },
+    {
+      "source": "/galaxy-s26-leak-design-overhaul",
+      "destination": "/galaxy-s26-leak-design-overhaul.html"
+    },
+    {
+      "source": "/10-tech-gadgets-2026-vouch",
+      "destination": "/10-tech-gadgets-2026-vouch.html"
+    },
+    {
+      "source": "/iphone-18-pro-max-leaks-price-hike",
+      "destination": "/iphone-18-pro-max-leaks-price-hike.html"
+    },
+    {
+      "source": "/starlink-mini-elon-musk-backpack-internet",
+      "destination": "/starlink-mini-elon-musk-backpack-internet.html"
+    },
+    {
+      "source": "/federal-ai-act-2026-internet-freedom",
+      "destination": "/federal-ai-act-2026-internet-freedom.html"
+    },
+    {
+      "source": "/tesla-model-2-spy-shots-release",
+      "destination": "/tesla-model-2-spy-shots-release.html"
+    },
+    {
+      "source": "/apple-glasses-air-leaks-smartphone-death",
+      "destination": "/apple-glasses-air-leaks-smartphone-death.html"
+    },
+    {
+      "source": "/nintendo-switch-2-pro-4k-benchmarks",
+      "destination": "/nintendo-switch-2-pro-4k-benchmarks.html"
+    },
+    {
+      "source": "/sony-project-trinity-ps5-pro-leaks",
+      "destination": "/sony-project-trinity-ps5-pro-leaks.html"
+    },
+    {
+      "source": "/samsung-galaxy-z-fold-8-triple-fold",
+      "destination": "/samsung-galaxy-z-fold-8-triple-fold.html"
+    },
+    {
+      "source": "/google-pixel-11-pro-under-display-camera",
+      "destination": "/google-pixel-11-pro-under-display-camera.html"
+    },
+    {
+      "source": "/us-micro-grid-revolution-energy-ai",
+      "destination": "/us-micro-grid-revolution-energy-ai.html"
+    },
+    {
+      "source": "/remote-work-2-zoom-towns-tech-hubs",
+      "destination": "/remote-work-2-zoom-towns-tech-hubs.html"
+    },
+    {
+      "source": "/ai-education-us-public-schools-learning-gap",
+      "destination": "/ai-education-us-public-schools-learning-gap.html"
+    },
+    {
+      "source": "/quantum-computing-usa-medical-miracles",
+      "destination": "/quantum-computing-usa-medical-miracles.html"
+    },
+    {
+      "source": "/biotech-gold-rush-personalized-longevity",
+      "destination": "/biotech-gold-rush-personalized-longevity.html"
+    },
+    {
+      "source": "/defi-comeback-wall-street-blockchain",
+      "destination": "/defi-comeback-wall-street-blockchain.html"
+    },
+    {
+      "source": "/tesla-model-2-long-term-review",
+      "destination": "/tesla-model-2-long-term-review.html"
+    },
+    {
+      "source": "/apple-glasses-air-one-week-review",
+      "destination": "/apple-glasses-air-one-week-review.html"
+    },
+    {
+      "source": "/nintendo-switch-2-pro-handheld-king-review",
+      "destination": "/nintendo-switch-2-pro-handheld-king-review.html"
+    },
+    {
+      "source": "/sony-ps5-pro-2026-path-tracing-review",
+      "destination": "/sony-ps5-pro-2026-path-tracing-review.html"
+    },
+    {
+      "source": "/samsung-galaxy-z-fold-8-tablet-review",
+      "destination": "/samsung-galaxy-z-fold-8-tablet-review.html"
+    },
+    {
+      "source": "/starlink-mini-backpack-satellite-review",
+      "destination": "/starlink-mini-backpack-satellite-review.html"
+    },
+    {
+      "source": "/google-pixel-11-pro-smartest-phone-review",
+      "destination": "/google-pixel-11-pro-smartest-phone-review.html"
+    }
   ]
 }
