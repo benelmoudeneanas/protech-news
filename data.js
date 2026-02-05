@@ -6,7 +6,7 @@ const articles = [
     date: "2026-02-05",
     cat: "news",
     desc: "After multiple delays, Rockstar Games confirms November 19, 2026 as the final release date for GTA 6. The company promises this date is rock solid, with marketing set to begin this summer.",
-    img: "https://image2url.com/r2/default/images/gta6-vice-city-placeholder.jpg",
+    img: "https://image2url.com/r2/default/images/1770261222967-a4cfe734-736e-4e45-81dc-95507f86d510.jpg",
     content: `
         <p>The gaming world has been holding its breath for what feels like an eternity. Through rumors, leaks, and multiple delays, the promise of Grand Theft Auto VI has loomed like a digital mirage on the horizon. But now, as we enter 2026, the wait finally has a concrete endpoint. Rockstar Games and its parent company Take-Two Interactive have <strong>locked in November 19, 2026</strong> as the official release date—and this time, they're saying it's final.</p>
 
