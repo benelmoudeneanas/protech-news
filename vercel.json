@@ -3,6 +3,10 @@
   "trailingSlash": false,
   "rewrites": [
     {
+      "source": "/grand-theft-auto-6-encouraging-release-date-update",
+      "destination": "/grand-theft-auto-6-encouraging-release-date-update.html"
+    },
+    {
       "source": "/samsung-galaxy-s21-end-of-support-security-updates",
       "destination": "/samsung-galaxy-s21-end-of-support-security-updates.html"
     },
