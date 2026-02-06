@@ -1,7 +1,7 @@
 const articles = [
 {
         id: 40,
-        slug: "samsung-galaxy-s26-ultra-qi2-magnetic-charging-leak",
+        slug: "samsung-galaxy-s26-ultra-battery-wireless-charging-upgrades",
         title: "Samsung Galaxy S26 Ultra: New Leak Reveals No Built-in Qi2 Magnets - A Disappointing Trade-off",
         date: "2026-02-05",
         cat: "leaks",
