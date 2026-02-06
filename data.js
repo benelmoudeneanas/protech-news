@@ -6,7 +6,7 @@ const articles = [
         date: "2026-02-05",
         cat: "leaks",
         desc: "Samsung Galaxy S26 Ultra won't feature built-in Qi2 magnetic charging. The phone requires special cases for magnetic accessories, likely due to S Pen interference concerns.",
-        img: "https://image2url.com/r2/default/images/samsung-s26-ultra-qi2-leak.jpg",
+        img: "https://image2url.com/r2/default/images/1770380604774-416e783c-0b14-4d86-95c8-5db15ef310d7.jpg",
         url: "articles/samsung-galaxy-s26-ultra-qi2-magnetic-charging-leak.html"
     },
 {
