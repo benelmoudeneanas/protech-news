@@ -1,5 +1,15 @@
 const articles = [
 {
+        id: 40,
+        slug: "samsung-galaxy-s26-ultra-qi2-magnetic-charging-leak",
+        title: "Samsung Galaxy S26 Ultra: New Leak Reveals No Built-in Qi2 Magnets - A Disappointing Trade-off",
+        date: "2026-02-05",
+        cat: "leaks",
+        desc: "Samsung Galaxy S26 Ultra won't feature built-in Qi2 magnetic charging. The phone requires special cases for magnetic accessories, likely due to S Pen interference concerns.",
+        img: "https://image2url.com/r2/default/images/samsung-s26-ultra-qi2-leak.jpg",
+        url: "articles/samsung-galaxy-s26-ultra-qi2-magnetic-charging-leak.html"
+    },
+{
     id: 39,
     slug: "grand-theft-auto-6-encouraging-release-date-update",
     title: "Grand Theft Auto 6 Gets Encouraging Release Date Update – The Wait Is Almost Over",
