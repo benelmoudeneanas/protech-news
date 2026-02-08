@@ -1,5 +1,15 @@
 const articles = [
 {
+    id: 46,
+    slug: "roku-privacy-settings",
+    title: "4 Hidden Roku Settings You Must Disable Right Now to Save Your Privacy and Sanity!",
+    date: "2026-02-09",
+    cat: "tech-tips",
+    desc: "Discover 4 hidden Roku settings you must disable immediately to protect your privacy and enhance your streaming experience without interruptions or annoying ad tracking.",
+    img: "https://image2url.com/r2/default/images/1770593010139-8f7e9649-9144-4355-bb0e-cc9411c25243.jpg",
+    url: "roku-privacy-settings.html"
+}
+{
     id: 45,
     slug: "ai-banking-control-risks",
     title: "The $1,000 Mistake: Why AI Agents Controlling Your Bank Account Might Be Tech's Most Dangerous Gamble Yet",
@@ -7,7 +17,7 @@ const articles = [
     cat: "ai-analysis",
     desc: "As autonomous AI agents gain unprecedented access to our finances, critical questions emerge about privacy, security, and liability. What happens when an AI makes a $1,000 mistake with your money? A deep investigation into tech's most dangerous gamble.",
     img: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&h=630&fit=crop",
-    url: "articles/ai-banking-control-risks.html"
+    url: "ai-banking-control-risks.html"
 },
 {
     id: 44,
