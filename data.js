@@ -1,5 +1,15 @@
 const articles = [
 {
+    id: 42,
+    slug: "valve-steam-frame-pricing-timeline",
+    title: "Valve Reevaluating Steam Frame Release Timeline and Pricing",
+    date: "2026-02-08",
+    cat: "gaming",
+    desc: "Valve announces delays for Steam Frame and Steam Machine due to global memory and storage shortages. Company revisits early 2026 launch plans and pricing strategy amid industry-wide supply constraints.",
+    img: "https://image2url.com/r2/default/images/1770520213037-49d90c7c-6c6b-48fa-8bcd-eab808eeaf31.webp",
+    url: "articles/valve-steam-frame-pricing-timeline.html"
+},
+{
     id: 41,
     slug: "iphone-18-pro-max-battery-leak",
     title: "EXCLUSIVE: iPhone 18 Pro Max Battery Leak Reveals Game-Changing Performance",
