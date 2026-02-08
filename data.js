@@ -17,77 +17,6 @@ const articles = [
     cat: "news",
     desc: "After multiple delays, Rockstar Games confirms November 19, 2026 as the final release date for GTA 6. The company promises this date is rock solid, with marketing set to begin this summer.",
     img: "https://image2url.com/r2/default/images/1770261222967-a4cfe734-736e-4e45-81dc-95507f86d510.jpg",
-    content: `
-        <p>The gaming world has been holding its breath for what feels like an eternity. Through rumors, leaks, and multiple delays, the promise of Grand Theft Auto VI has loomed like a digital mirage on the horizon. But now, as we enter 2026, the wait finally has a concrete endpoint. Rockstar Games and its parent company Take-Two Interactive have <strong>locked in November 19, 2026</strong> as the official release date—and this time, they're saying it's final.</p>
-
-        <h2>The Journey to November</h2>
-        <p>The road to GTA 6's release has been anything but straightforward. Originally targeting a fall 2025 window, the game experienced its first major delay when Rockstar pushed the date to May 26, 2026. That spring release date lasted only months before another postponement shifted the launch to its current November 19 slot. For anxious fans, each delay felt like a small heartbreak—but the latest update brings something different: <strong>genuine confidence</strong>.</p>
-
-        <div class="key-takeaways">
-            <div class="key-takeaways-title">
-                <i class="fas fa-lightbulb"></i> Key Highlights
-            </div>
-            <ul>
-                <li>Official release date: November 19, 2026 for PS5 and Xbox Series X|S</li>
-                <li>Take-Two executives express "highest confidence level to date"</li>
-                <li>Major marketing campaign begins summer 2026</li>
-                <li>PC version expected 12-18 months after console release</li>
-                <li>Former Rockstar developer confirms: "This is the final date"</li>
-                <li>Game targets holiday 2026 sales window</li>
-            </ul>
-        </div>
-
-        <h2>Why This Update Is Actually Encouraging</h2>
-        <p>Unlike previous announcements that felt tentative, the current messaging from Take-Two carries a different weight. CEO Strauss Zelnick has repeatedly stated that the company's <strong>confidence in the November date is at an all-time high</strong>. This isn't just corporate speak—the timing aligns with Take-Two's fiscal year 2027, which the company describes as potentially "revolutionary" for the entertainment industry.</p>
-
-        <h3>The Marketing Machine Awakens</h3>
-        <p>Perhaps the strongest signal that November 19 is genuine comes from Take-Two's marketing timeline. The company has confirmed that <strong>GTA 6's promotional campaign will launch this summer</strong>, somewhere between June and August 2026. Companies don't invest in massive marketing campaigns unless they're absolutely certain the product will ship. This pre-marketing phase indicates Rockstar believes the game is advanced enough to commit publicly to the timeline.</p>
-
-        <blockquote>
-            "In this instance, of course, we're seeking to release the most extraordinary title anyone's ever seen in the history of entertainment. That's a tall order. And in this instance, Rockstar Games believes a limited amount of additional time is required for polish to support that view." - Strauss Zelnick, Take-Two CEO
-        </blockquote>
-
-        <h2>The "No More Delays" Promise</h2>
-        <p>According to Mike York, a former Rockstar animator who worked on GTA 5, the studio simply cannot afford another delay at this point. In his assessment, if Rockstar pushes GTA 6 again, <strong>the hype surrounding the game would collapse almost completely</strong>. The current silence in the news cycle—where "nobody is searching for GTA 6" because everyone knows there's nothing new to discuss—represents a dangerous precipice. Another delay could transform anticipation into apathy.</p>
-
-        <h3>The Polish Priority</h3>
-        <p>Rockstar's statement accompanying the November delay emphasized that the extra months would allow them to "finish the game with the level of polish you have come to expect and deserve." This echoes the approach taken with Red Dead Redemption 2, which similarly experienced multiple delays before landing on October 26, 2018—a date that ultimately held firm. The pattern suggests Rockstar would rather delay once properly than ship an unfinished product.</p>
-
-        <h2>What We Know About the Game</h2>
-        
-        <h3>The Return to Vice City</h3>
-        <p>GTA 6 will transport players back to Vice City, Rockstar's fictional version of Miami, set within the broader state of Leonida (based on Florida). The game world includes Vice City itself, Grassrivers (inspired by the Everglades), and the Leonida Keys (modeled after the Florida Keys). Additional locations include Ambrosia, Mount Kalaga National Park, and Port Gellhorn, creating what promises to be Rockstar's most expansive map yet.</p>
-
-        <h3>Dual Protagonists and Cultural Commentary</h3>
-        <p>Breaking franchise tradition, GTA 6 will feature dual protagonists, including <strong>Lucia—the series' first fully-fledged female lead character</strong>. The game world satirizes 2020s American culture, with particular focus on social media, influencer culture, modern policing tactics including body cameras, and contemporary social dynamics.</p>
-
-        <h2>Platform Availability and PC Timeline</h2>
-        <p>The November 19 date applies specifically to PlayStation 5 and Xbox Series X|S versions. PC players will need to exercise additional patience, with analysts predicting a desktop release <strong>12 to 18 months after the console launch</strong>. This timeline would place the PC version somewhere between mid-2027 and early 2028, following the historical pattern Rockstar established with GTA 5 and Red Dead Redemption 2.</p>
-
-        <h3>No Nintendo Switch 2 Plans (Yet)</h3>
-        <p>Despite speculation, Nintendo's platforms—including the rumored Switch 2—are not currently part of Rockstar's announced release plans. While technically possible in the future, any Nintendo version would be heavily contingent on specific agreements and technical considerations.</p>
-
-        <h2>The Trailer That Broke the Internet</h2>
-        <p>When Rockstar released the first official GTA 6 trailer in December 2023, it shattered records by accumulating <strong>over 475 million views within 24 hours</strong> across all platforms, surpassing even Deadpool & Wolverine's record as the biggest video launch ever. The trailer featured the Pointer Sisters' "Hot Together"—which saw a staggering 182,000% increase in Spotify streams—alongside tracks from Wang Chung, Zenglen, and Tammy Wynette.</p>
-
-        <h2>Development Realities and Controversies</h2>
-        <p>The path to November has not been without turbulence. In October 2025, Rockstar fired 34 employees from Rockstar North and Rockstar Toronto, citing "public discussion and distribution of confidential information." The Independent Workers' Union of Great Britain accused the company of union-busting, stating the employees were attempting to organize through Discord. Protests followed at both Rockstar's Edinburgh office and Take-Two's London headquarters.</p>
-
-        <h3>The Crunch Question</h3>
-        <p>Earlier controversies emerged when Rockstar walked back promises of flexible working conditions, mandating office returns that some employees feared could trigger harmful crunch culture and resignations. While some journalists initially suggested these decisions were partly to avoid delays, both Take-Two and other industry observers maintained the game remained on schedule for its 2025 window—before the subsequent delays materialized anyway.</p>
-
-        <h2>Industry Impact and Market Disruption</h2>
-        <p>The sheer gravitational pull of GTA 6's release is already reshaping the gaming landscape. When the game was delayed from late 2025 to 2026, EA reported selling approximately <strong>one million more units of Battlefield than forecasted</strong>—a boost CEO Andrew Wilson partly attributed to not competing with GTA. Multiple major live-service games are reportedly considering delaying significant updates to avoid launching anywhere near GTA 6's release window.</p>
-
-        <h3>The Budget Mystery</h3>
-        <p>Unverified rumors suggest the development budget has surpassed $1-2 billion, which would make GTA 6 the most expensive game ever developed. While these figures remain unconfirmed, they align with the scope of Rockstar's ambitions and the extended development timeline.</p>
-
-        <h2>The Revenue Juggernaut</h2>
-        <p>The financial stakes are astronomical. GTA 5, released in 2013, has sold over 200 million copies and generated more than $8 billion in revenue over its lifetime, making it the second best-selling game of all time. GTA Online continues generating substantial revenue 13 years after the base game's launch, consistently contributing to Take-Two's quarterly earnings alongside titles like Red Dead Redemption and even Words With Friends.</p>
-
-        <h2>The Verdict</h2>
-        <p>After years of waiting, multiple delays, and countless rumors, the November 19, 2026 release date for Grand Theft Auto 6 represents more than just another promised launch window—it represents a commitment backed by unprecedented confidence from both Rockstar and Take-Two. The summer 2026 marketing campaign, the strategic holiday timing, the internal acknowledgments that another delay would be catastrophic, and the consistent messaging from company leadership all point to one conclusion: <strong>this date is real, and the wait is almost over</strong>. For the millions of fans who've been patient through delays and controversies, the countdown to Vice City has finally, truly, begun. The question is no longer "if" or "when"—it's simply how many days until November 19, 2026. <strong>The answer: not many more.</strong></p>
-    `
 },
 {
     id: 38,
@@ -97,61 +26,6 @@ const articles = [
     cat: "news",
     desc: "After four years of faithful service, the Galaxy S21, S21 Plus, and S21 Ultra have been removed from Samsung's update schedule. The era of these flagship devices has quietly come to an end.",
     img: "https://image2url.com/r2/default/images/1770237274368-7e5dfe0b-7b26-4814-9658-b2f78fd48dc9.jpg",
-    content: `
-        <p>The digital world often moves with frantic energy, but some of the most profound shifts happen in complete silence. For millions of users worldwide, a quiet change has just materialized—a disappearance from the official lists, a fading from the security schedules, and the end of a legendary vigil. If you examine the latest security bulletins from Samsung's headquarters in Seoul, you'll notice <strong>three names are conspicuously absent</strong>. The Galaxy S21, S21 Plus, and S21 Ultra have officially been retired from active support.</p>
-
-        <h2>The Vanishing Act</h2>
-        <p>For years, these devices stood as sentinels of the mobile world. They captured midnight memories with revolutionary <strong>"Space Zoom"</strong> technology and powered through demanding tasks with an elegance that defined an entire era. But in February 2026's security bulletins, a mystery began to unfold: the monthly and quarterly update cycles—the very heartbeat of a smartphone's longevity—simply <strong>stopped beating</strong> for the S21 trio.</p>
-
-        <p>This wasn't an oversight. It was a calculated conclusion. While newer Samsung flagships are promised seven years of software support, the S21 series was born under different terms—a four-year covenant that has now reached its natural expiration. That promised time has officially run out.</p>
-
-        <div class="key-takeaways">
-            <div class="key-takeaways-title">
-                <i class="fas fa-lightbulb"></i> Key Highlights
-            </div>
-            <ul>
-                <li>Galaxy S21 series removed from Samsung's February 2026 security bulletin</li>
-                <li>Four-year support period has officially concluded</li>
-                <li>Android 15 and One UI 7 were the final major updates</li>
-                <li>Devices will no longer receive monthly security patches</li>
-                <li>Hardware remains functional but vulnerable to emerging threats</li>
-                <li>Newer flagships now receive 7 years of guaranteed support</li>
-            </ul>
-        </div>
-
-        <h2>The Ghost Phase: What Happens Now?</h2>
-        <p>What happens to a flagship device when the updates stop flowing? It doesn't die immediately, but it enters what we might call a <strong>"Ghost Phase."</strong> The hardware remains as capable as ever—the screens still illuminate with vibrant AMOLED brilliance, the processors still handle multitasking with ease, and the cameras continue capturing the world in stunning detail. Yet something fundamental has changed.</p>
-
-        <h3>The Invisible Wall Disappears</h3>
-        <p>The protective barrier of regular security patches has vanished. The <strong>Android 15 and One UI 7 update</strong> served as their final gift—a parting legacy before these devices were left to navigate an increasingly complex digital landscape on their own. From this moment forward, these phones will no longer receive the routine protections against newly discovered vulnerabilities and emerging digital threats.</p>
-
-        <h2>Understanding the Timeline</h2>
-        
-        <h3>The Four-Year Promise</h3>
-        <p>When the Galaxy S21 series launched in early 2021, Samsung committed to four years of security updates—a generous promise at the time. The company has honored that commitment to the letter, but the calendar has now run its course. The final update arrived with Android 15 and One UI 7, bringing these devices to their maximum supported software version.</p>
-
-        <h3>The Seven-Year Evolution</h3>
-        <p>The contrast with modern Samsung flagships is striking. Devices from the S24 series onward now receive <strong>seven years of guaranteed updates</strong>, nearly doubling the support lifecycle. This shift represents Samsung's acknowledgment that premium smartphones deserve premium longevity, but it also highlights how quickly industry standards can evolve.</p>
-
-        <blockquote>
-            "The S21 series isn't disappearing today, but the silence from Samsung's update servers is a stark reminder that in the world of technology, even the brightest stars eventually fade into the background." - Tech Industry Observers
-        </blockquote>
-
-        <h2>The Security Reality</h2>
-        <p>Without ongoing security patches, the S21 series now exists in an increasingly precarious position. Each passing month brings new vulnerabilities that will never be addressed. Banking apps may eventually refuse to run on unpatched systems. Corporate email servers might block access. App developers will gradually raise their minimum security requirements, leaving these devices behind.</p>
-
-        <h2>What This Means for Current Owners</h2>
-        <p>For the millions still using these devices, the question isn't whether they'll stop working—they won't. The question is whether the growing security risks and diminishing app compatibility make continued use practical. The S21 series remains remarkably capable hardware, but software support is the invisible foundation that determines how long that capability remains relevant.</p>
-
-        <h3>Your Options Moving Forward</h3>
-        <p>Current S21 owners face a meaningful decision. You can continue using your device with awareness of the growing security risks, or you can transition to newer hardware with extended support guarantees. Samsung's current flagship offerings promise seven years of protection—a commitment that would carry a device purchased today well into the 2030s.</p>
-
-        <h2>The Masterpiece Question</h2>
-        <p>As these three titans slip into the archives of tech history, a philosophical question emerges: <strong>Is a masterpiece still a masterpiece if the world stops maintaining it?</strong> The S21 series represented Samsung's finest work at the time of their release—premium materials, cutting-edge cameras, blazing performance. Those qualities haven't diminished, but their context has fundamentally changed.</p>
-
-        <h2>The Verdict</h2>
-        <p>The Galaxy S21 series isn't vanishing today, but the silence from Samsung's update servers marks a clear transition point. These devices served faithfully for four years, receiving every promised update and delivering premium experiences to millions. Now they enter a new phase—still functional, still capable, but increasingly vulnerable in a digital world that never stops evolving. The mystery isn't why they left the update schedule—it's what you choose to do next. Will you remain in the quiet safety of familiar hardware, or is it time to chase the protection that newer devices provide? <strong>The eclipse has arrived. How you respond is entirely up to you.</strong></p>
-    `
 },
 {
     id: 37,
