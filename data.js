@@ -8,7 +8,7 @@ const articles = [
     desc: "Discover 4 hidden Roku settings you must disable immediately to protect your privacy and enhance your streaming experience without interruptions or annoying ad tracking.",
     img: "https://image2url.com/r2/default/images/1770593010139-8f7e9649-9144-4355-bb0e-cc9411c25243.jpg",
     url: "roku-privacy-settings.html"
-}
+},
 {
     id: 45,
     slug: "ai-banking-control-risks",
