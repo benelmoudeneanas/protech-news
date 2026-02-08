@@ -1,5 +1,15 @@
 const articles = [
 {
+    id: 41,
+    slug: "iphone-18-pro-max-battery-leak",
+    title: "EXCLUSIVE: iPhone 18 Pro Max Battery Leak Reveals Game-Changing Performance",
+    date: "2026-02-07",
+    cat: "leaks",
+    desc: "Breaking insider intelligence unveils unprecedented 5000-5200 mAh battery capacity in iPhone 18 Pro Max, powered by revolutionary A20 Pro chip on 2nm process and C2 modem technology.",
+    img: "https://images.unsplash.com/photo-1678685888221-cda773a3dcdb?w=1200&h=675&fit=crop",
+    url: "articles/iphone-18-pro-max-battery-leak.html"
+},
+{
         id: 40,
         slug: "samsung-galaxy-s26-ultra-leak",
         title: "Samsung Galaxy S26 Ultra Leak Reveals Major Battery & Wireless Charging Upgrades",
