@@ -1,5 +1,15 @@
 const articles = [
 {
+    id: 44,
+    slug: "samsung-galaxy-s26-ultra-launch",
+    title: "Samsung Galaxy S26 Ultra: Expected Launch Date, Price, Design Leaks, and Full Specifications",
+    date: "2026-02-08",
+    cat: "smartphones",
+    desc: "Samsung Galaxy S26 Ultra set for February 25, 2026 launch with new camera island design, 200MP quad-camera, Snapdragon 8 Elite Gen 5, and pricing starting at €1,469 for 256GB model.",
+    img: "https://image2url.com/r2/default/images/1770552296952-3a1b63e3-c589-4259-9fa4-455047053850.jpg",
+    url: "samsung-galaxy-s26-ultra-launch.html"
+},
+{
     id: 43,
     slug: "xbox-game-pass-future-expansion",
     title: "Xbox Game Pass: Future Expansion with New Third-Party Services and Tier Mergers",
@@ -7,7 +17,7 @@ const articles = [
     cat: "gaming",
     desc: "Microsoft plans major Xbox Game Pass expansion with third-party service bundles, PC-Premium tier merger, and ad-supported cloud gaming. The future of gaming subscriptions is evolving.",
     img: "https://image2url.com/r2/default/images/1770522051436-a29d81ab-47eb-46dc-bab4-d376c3e2aad4.jpg",
-    url: "articles/xbox-game-pass-future-expansion.html"
+    url: "xbox-game-pass-future-expansion.html"
 },
 {
     id: 42,
@@ -17,7 +27,7 @@ const articles = [
     cat: "gaming",
     desc: "Valve announces delays for Steam Frame and Steam Machine due to global memory and storage shortages. Company revisits early 2026 launch plans and pricing strategy amid industry-wide supply constraints.",
     img: "https://image2url.com/r2/default/images/1770520213037-49d90c7c-6c6b-48fa-8bcd-eab808eeaf31.webp",
-    url: "articles/valve-steam-frame-pricing-timeline.html"
+    url: "valve-steam-frame-pricing-timeline.html"
 },
 {
     id: 41,
@@ -27,7 +37,7 @@ const articles = [
     cat: "leaks",
     desc: "Breaking insider intelligence unveils unprecedented 5000-5200 mAh battery capacity in iPhone 18 Pro Max, powered by revolutionary A20 Pro chip on 2nm process and C2 modem technology.",
     img: "https://images.unsplash.com/photo-1678685888221-cda773a3dcdb?w=1200&h=675&fit=crop",
-    url: "articles/iphone-18-pro-max-battery-leak.html"
+    url: "iphone-18-pro-max-battery-leak.html"
 },
 {
         id: 40,
@@ -37,7 +47,7 @@ const articles = [
         cat: "leaks",
         desc: "Samsung Galaxy S26 Ultra won't feature built-in Qi2 magnetic charging. The phone requires special cases for magnetic accessories, likely due to S Pen interference concerns.",
         img: "https://image2url.com/r2/default/images/1770380604774-416e783c-0b14-4d86-95c8-5db15ef310d7.jpg",
-        url: "articles/samsung-galaxy-s26-ultra-qi2-magnetic-charging-leak.html"
+        url: "samsung-galaxy-s26-ultra-qi2-magnetic-charging-leak.html"
     },
 {
     id: 39,
