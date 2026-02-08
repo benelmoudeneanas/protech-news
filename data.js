@@ -1,5 +1,15 @@
 const articles = [
 {
+    id: 45,
+    slug: "ai-banking-control-risks",
+    title: "The $1,000 Mistake: Why AI Agents Controlling Your Bank Account Might Be Tech's Most Dangerous Gamble Yet",
+    date: "2026-02-08",
+    cat: "ai-analysis",
+    desc: "As autonomous AI agents gain unprecedented access to our finances, critical questions emerge about privacy, security, and liability. What happens when an AI makes a $1,000 mistake with your money? A deep investigation into tech's most dangerous gamble.",
+    img: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&h=630&fit=crop",
+    url: "articles/ai-banking-control-risks.html"
+},
+{
     id: 44,
     slug: "samsung-galaxy-s26-ultra-launch",
     title: "Samsung Galaxy S26 Ultra: Expected Launch Date, Price, Design Leaks, and Full Specifications",
