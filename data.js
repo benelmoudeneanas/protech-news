@@ -1,5 +1,15 @@
 const articles = [
 {
+    id: 43,
+    slug: "xbox-game-pass-future-expansion",
+    title: "Xbox Game Pass: Future Expansion with New Third-Party Services and Tier Mergers",
+    date: "2026-02-08",
+    cat: "gaming",
+    desc: "Microsoft plans major Xbox Game Pass expansion with third-party service bundles, PC-Premium tier merger, and ad-supported cloud gaming. The future of gaming subscriptions is evolving.",
+    img: "https://image2url.com/r2/default/images/1770522051436-a29d81ab-47eb-46dc-bab4-d376c3e2aad4.jpg",
+    url: "articles/xbox-game-pass-future-expansion.html"
+},
+{
     id: 42,
     slug: "valve-steam-frame-pricing-timeline",
     title: "Valve Reevaluating Steam Frame Release Timeline and Pricing",
