@@ -1,5 +1,15 @@
 const articles = [
 {
+    id: 49,
+    slug: "samsung-galaxy-s26-charging-magnets",
+    title: "Samsung Galaxy S26: Turbo-Charged Speeds, But Where are the Magnets?",
+    date: "2026-02-08",
+    cat: "leaks",
+    desc: "Galaxy S26 gets turbo-charged 25W wireless charging with Qi 2.2.1, but Samsung skips magnetic support. Is blazing speed enough to forgive missing magnets?",
+    img: "https://image2url.com/r2/default/images/1770674515249-0bdf5bc7-20ee-4565-a87e-1ed3bdbec107.webp",
+    url: "articles/samsung-galaxy-s26-charging-magnets.html"
+},
+{
     id: 48,
     slug: "xfinity-vs-tmobile-home-internet",
     title: "Xfinity vs. T-Mobile Home Internet: Which One Actually Wins for Your Home?",
