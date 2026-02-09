@@ -29,6 +29,11 @@
   </url>
   
   <!-- Latest Articles (1-3 days old) - Very High Priority -->
+  <url> <loc>https://protechdaily.online/samsung-galaxy-s26-charging-magnets</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
   <url> <loc>https://protechdaily.online/xfinity-vs-tmobile-home-internet</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>weekly</changefreq>
