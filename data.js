@@ -1,5 +1,15 @@
 const articles = [
 {
+    id: 48,
+    slug: "xfinity-vs-tmobile-home-internet",
+    title: "Xfinity vs. T-Mobile Home Internet: Which One Actually Wins for Your Home?",
+    date: "2026-02-08",
+    cat: "comparison",
+    desc: "The ultimate battle: cable giant Xfinity vs 5G disruptor T-Mobile. Compare speeds, pricing, reliability, and find out which internet provider is actually right for your home.",
+    img: "https://image2url.com/r2/default/images/1770664211131-60256b86-75ce-4812-8b6b-e7a3e11a82bb.jpg",
+    url: "xfinity-vs-tmobile-home-internet.html"
+},
+{
     id: 47,
     slug: "iphone-18-pro-camera-revolution",
     title: "Apple's DSLR Killer? The iPhone 18 Pro Leak That Changes Everything",
@@ -7,7 +17,7 @@ const articles = [
     cat: "leaks",
     desc: "Forget software tricks—Apple is preparing a hardware revolution with variable aperture camera and professional telephoto lens. Could this be the DSLR killer photographers have been waiting for?",
     img: "https://image2url.com/r2/default/images/1770652676621-2aedf446-2671-4b4c-aa47-d2dd4224514d.jpg",
-    url: "articles/iphone-18-pro-camera-revolution.html"
+    url: "iphone-18-pro-camera-revolution.html"
 },
 {
     id: 46,
