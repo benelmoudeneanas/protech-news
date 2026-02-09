@@ -30,6 +30,12 @@
   
   <!-- Latest Articles (1-3 days old) - Very High Priority -->
   <url>
+    <loc>https://protechdaily.online/iphone-18-pro-camera-revolution</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://protechdaily.online/roku-privacy-settings</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>weekly</changefreq>
