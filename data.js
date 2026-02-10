@@ -1,5 +1,15 @@
 const articles = [
 {
+    id: 50,
+    slug: "apple-studio-display-2-rumors",
+    title: "Apple Studio Display 2: Is the Long-Awaited Professional Upgrade Finally Coming?",
+    date: "2026-02-08",
+    cat: "hardware",
+    desc: "Apple Studio Display 2 rumors reveal Mini-LED technology, 120Hz ProMotion, and professional upgrades. Everything we know about the long-awaited successor coming in 2026.",
+    img: "https://image2url.com/r2/default/images/1770728856607-3846407a-60d0-4b2a-aac2-9d438c021a38.jpg",
+    url: "articles/apple-studio-display-2-rumors.html"
+},
+{
     id: 49,
     slug: "samsung-galaxy-s26-charging-magnets",
     title: "Samsung Galaxy S26: Turbo-Charged Speeds, But Where are the Magnets?",
