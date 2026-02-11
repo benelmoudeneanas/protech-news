@@ -1,5 +1,15 @@
 const articles = [
 {
+    id: 52,
+    slug: "ios-26-3-siri-storm",
+    title: "iOS 26.3 Is Here — And It's the Calm Before the Siri Storm",
+    date: "2026-02-11",
+    cat: "ios",
+    desc: "iOS 26.3 drops with Android switching, new wallpapers, and privacy upgrades. But the real story? Apple confirms the next update brings a brand-new Siri powered by Google Gemini.",
+    img: "https://image2url.com/r2/default/images/1770846253128-c1c9b94e-ad69-4cd9-83c4-7f253865801f.jpg",
+    url: "articles/ios-26-3-siri-storm.html"
+},
+{
     id: 51,
     slug: "apple-siri-overhaul-delay",
     title: "Apple Reportedly Delays Siri Overhaul Again Amid Technical Challenges",
