@@ -1,6 +1,16 @@
 const articles = [
 {
     id: 51,
+    slug: "apple-siri-overhaul-delay",
+    title: "Apple Reportedly Delays Siri Overhaul Again Amid Technical Challenges",
+    date: "2026-02-10",
+    cat: "ai",
+    desc: "Apple delays Siri 2.0 again—privacy vs performance is proving harder than expected. Can Apple catch up with Google and OpenAI before it's too late?",
+    img: "https://image2url.com/r2/default/images/1770845471936-94acb501-a467-470b-b2d2-cb96902ebc86.jpg",
+    url: "articles/apple-siri-overhaul-delay.html"
+},
+{
+    id: 51,
     slug: "iphone-18-pro-prices",
     title: "iPhone 18 Pro and iPhone 18 Pro Max Prices: Here's What Rumors Say",
     date: "2026-02-10",
