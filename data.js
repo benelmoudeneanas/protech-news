@@ -1,5 +1,15 @@
 const articles = [
 {
+    id: 51,
+    slug: "iphone-18-pro-prices",
+    title: "iPhone 18 Pro and iPhone 18 Pro Max Prices: Here's What Rumors Say",
+    date: "2026-02-10",
+    cat: "hardware",
+    desc: "New leaks reveal expected iPhone 18 Pro and iPhone 18 Pro Max prices. Apple plans to keep prices unchanged despite component cost increases, with improvements in specs and cameras.",
+    img: "https://image2url.com/r2/default/images/1770818706445-34ca211b-5056-4dae-a65b-bd0f1b714ac2.jpg",
+    url: "articles/iphone-18-pro-prices.html"
+},
+{
     id: 50,
     slug: "apple-studio-display-2-rumors",
     title: "Apple Studio Display 2: Is the Long-Awaited Professional Upgrade Finally Coming?",
