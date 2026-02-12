@@ -11,7 +11,7 @@ from xml.etree.ElementTree import Element, SubElement, tostring
 from xml.dom import minidom
 
 # Configuration
-BASE_URL = "https://protech-news.vercel.app"
+BASE_URL = "https://protechdaily.online"
 ARTICLES_DIR = "articles"
 PAGES_DIR = "pages"
 OUTPUT_FILE = "sitemap.xml"
