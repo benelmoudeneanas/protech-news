@@ -111,7 +111,7 @@ function loadHomeFeed() {
     const container = document.getElementById('feed-container');
     if (!container) return;
     
-    const sortedArticles = articles.sort((a, b) => b.id - a.id);
+    const sortedArticles = articles.sort((a, b) => new Date(b.date) - new Date(a.date));
     renderArticles(sortedArticles, container);
 }
 
