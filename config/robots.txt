@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://protech-news.vercel.app/sitemap.xml
+Sitemap: https://protechdaily.online/sitemap.xml
 
 # Performance optimization
 User-agent: Googlebot
