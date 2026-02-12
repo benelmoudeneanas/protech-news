@@ -1,24 +1,22 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <!-- Critical Performance -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <!-- Preconnect for faster font loading -->
+    <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="ProTech - Your ultimate source for tech news, exclusive leaks, in-depth reviews, and future insights. Stay ahead with the latest in technology, smartphones, AI, and gaming.">
-    <meta name="keywords" content="tech news, technology, smartphone leaks, AI, gaming, reviews, iPhone, Samsung, Google Pixel, exclusive tech">
+    <meta name="keywords" content="tech news, technology, smartphone leaks, AI, gaming, reviews, iPhone, Samsung, Google Pixel">
     <meta name="author" content="ProTech Magazine">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://protech-news.vercel.app/">
     
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://protech-news.vercel.app/">
     <meta property="og:title" content="ProTech | Exploring the Digital Frontier">
@@ -34,9 +32,7 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
-    <link rel="apple-touch-icon" href="assets/images/favicon.png">
     
-    <!-- Title -->
     <title>ProTech | Exploring the Digital Frontier - Latest Tech News & Reviews</title>
     
     <!-- Google AdSense -->
@@ -54,7 +50,7 @@
     <!-- Google Site Verification -->
     <meta name="google-site-verification" content="rMjJnMz7ZZitF1NaLmYgiUyfNEbe06qhl11Lq_6iUBs">
     
-    <!-- Structured Data (JSON-LD) -->
+    <!-- Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -69,20 +65,13 @@
                 "@type": "ImageObject",
                 "url": "https://protech-news.vercel.app/assets/images/favicon.png"
             }
-        },
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://protech-news.vercel.app/?s={search_term_string}",
-            "query-input": "required name=search_term_string"
         }
     }
     </script>
     
-    <!-- Fonts (async load) -->
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;900&family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" media="print" onload="this.media='all'">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;900&family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -98,10 +87,12 @@
     <nav>
         <div class="nav-container">
             <div class="logo">PRO<span>TECH</span></div>
-            <ul class="nav-list">
-                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="pages/exclusive-leaks.html"><i class="fas fa-eye"></i> Leaks</a></li>
-                <li><a href="pages/offers.html"><i class="fas fa-tag"></i> Offers</a></li>
+            <ul class="nav-list" id="nav-list">
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="pages/trends.html"><i class="fas fa-fire"></i> Trends</a></li>
+                <li><a href="pages/ai-news.html"><i class="fas fa-robot"></i> AI News</a></li>
+                <li><a href="pages/tech-news.html"><i class="fas fa-microchip"></i> Tech News</a></li>
+                <li><a href="pages/gadgets.html"><i class="fas fa-mobile-alt"></i> Gadgets</a></li>
                 <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
                 <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
@@ -116,26 +107,139 @@
     </nav>
     
     <!-- Hero Section -->
-    <section class="hero">
-        <h1>Exploring the <span class="highlight">Digital Frontier</span></h1>
-        <p class="desc">Breaking Tech News • Exclusive Leaks • Future Insights</p>
-        
-        <div class="quick-search">
-            <span class="quick-tag" onclick="setQuickSearch('iPhone')">📱 iPhone</span>
-            <span class="quick-tag" onclick="setQuickSearch('Samsung')">🔥 Samsung</span>
-            <span class="quick-tag" onclick="setQuickSearch('AI')">🤖 AI</span>
-            <span class="quick-tag" onclick="setQuickSearch('Gaming')">🎮 Gaming</span>
-            <span class="quick-tag" onclick="setQuickSearch('Tesla')">⚡ Tesla</span>
+    <section class="hero-modern">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-bolt"></i>
+                <span>Breaking Tech News</span>
+            </div>
+            <h1>Welcome to the <span class="gradient-text">Digital Future</span></h1>
+            <p class="hero-desc">Discover tomorrow's technology today. From AI breakthroughs to exclusive leaks, we bring you the stories that shape the digital frontier.</p>
+            
+            <div class="hero-cta">
+                <button class="cta-primary" onclick="document.getElementById('featured').scrollIntoView({behavior: 'smooth'})">
+                    <span>Explore Stories</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <button class="cta-secondary" onclick="toggleSearchModal()">
+                    <i class="fas fa-search"></i>
+                    <span>Search</span>
+                </button>
+            </div>
+            
+            <div class="trending-topics">
+                <span class="topic-label">Trending Now:</span>
+                <div class="topics-list">
+                    <span class="topic-tag" onclick="filterByCategory('ai')">🤖 AI Revolution</span>
+                    <span class="topic-tag" onclick="filterByCategory('ios')">📱 iPhone 18</span>
+                    <span class="topic-tag" onclick="filterByCategory('gaming')">🎮 PS6 Leaks</span>
+                    <span class="topic-tag" onclick="filterByCategory('tech')">⚡ Tesla Model 2</span>
+                </div>
+            </div>
         </div>
     </section>
     
-    <!-- Feed Section -->
-    <section class="feed-section">
-        <div class="section-header">
-            <h2>Latest Articles</h2>
+    <!-- Featured Story -->
+    <section class="featured-story" id="featured">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-star"></i> Today's Highlight</h2>
+            </div>
+            <div class="featured-card" id="featured-article">
+                <!-- Will be populated by JavaScript -->
+            </div>
         </div>
-        <div class="feed-grid" id="feed-container">
-            <!-- Articles loaded dynamically -->
+    </section>
+    
+    <!-- Latest News Grid -->
+    <section class="latest-news">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-newspaper"></i> Latest Stories</h2>
+                <div class="filter-tabs">
+                    <button class="filter-tab active" onclick="filterArticles('all')">All</button>
+                    <button class="filter-tab" onclick="filterArticles('ios')">iOS</button>
+                    <button class="filter-tab" onclick="filterArticles('ai')">AI</button>
+                    <button class="filter-tab" onclick="filterArticles('gaming')">Gaming</button>
+                    <button class="filter-tab" onclick="filterArticles('leaks')">Leaks</button>
+                </div>
+            </div>
+            <div class="news-grid" id="news-grid">
+                <!-- Articles loaded dynamically -->
+            </div>
+            <div class="load-more-container">
+                <button class="load-more-btn" id="load-more-btn" onclick="loadMoreArticles()">
+                    <span>Load More Stories</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Categories Showcase -->
+    <section class="categories-showcase">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-th-large"></i> Explore by Category</h2>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card" onclick="window.location.href='pages/ai-news.html'">
+                    <div class="category-icon">🤖</div>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Latest breakthroughs in artificial intelligence</p>
+                    <span class="category-count" id="ai-count">0 articles</span>
+                </div>
+                <div class="category-card" onclick="window.location.href='pages/tech-news.html'">
+                    <div class="category-icon">💻</div>
+                    <h3>Tech News</h3>
+                    <p>Breaking technology updates</p>
+                    <span class="category-count" id="tech-count">0 articles</span>
+                </div>
+                <div class="category-card" onclick="window.location.href='pages/gadgets.html'">
+                    <div class="category-icon">📱</div>
+                    <h3>Smartphones & Gadgets</h3>
+                    <p>Latest devices and reviews</p>
+                    <span class="category-count" id="gadget-count">0 articles</span>
+                </div>
+                <div class="category-card" onclick="filterByCategory('gaming')">
+                    <div class="category-icon">🎮</div>
+                    <h3>Gaming</h3>
+                    <p>Console news and game releases</p>
+                    <span class="category-count" id="gaming-count">0 articles</span>
+                </div>
+                <div class="category-card" onclick="filterByCategory('leaks')">
+                    <div class="category-icon">🔥</div>
+                    <h3>Exclusive Leaks</h3>
+                    <p>Insider information and rumors</p>
+                    <span class="category-count" id="leaks-count">0 articles</span>
+                </div>
+                <div class="category-card" onclick="window.location.href='pages/trends.html'">
+                    <div class="category-icon">📈</div>
+                    <h3>Trends & Analysis</h3>
+                    <p>Industry insights and predictions</p>
+                    <span class="category-count" id="trends-count">0 articles</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-card">
+                <div class="newsletter-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h2>Stay Updated</h2>
+                <p>Get the latest tech news delivered straight to your inbox. Join thousands of tech enthusiasts!</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Newsletter feature coming soon!');">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">
+                        <span>Subscribe</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
         </div>
     </section>
     
@@ -143,7 +247,7 @@
     <div id="searchModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="toggleSearchModal()">&times;</span>
-            <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 2rem; margin-bottom: 10px;">Search ProTech</h2>
+            <h2 class="modal-title">Search ProTech</h2>
             <input type="text" id="searchInputModal" class="search-input" placeholder="Search articles, topics, categories..." autocomplete="off">
             <div id="searchResultsModal" class="search-results">
                 <div class="no-results">
@@ -155,26 +259,39 @@
     </div>
     
     <!-- Footer -->
-    <footer style="background: var(--bg-header); padding: 60px 40px 35px; margin-top: 100px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
-        <div style="max-width: 1400px; margin: 0 auto;">
-            <div style="text-align: center; margin-bottom: 40px;">
-                <div style="font-family: 'Space Grotesk'; font-size: 2.5rem; font-weight: 900; margin-bottom: 15px;">
-                    PRO<span style="background: linear-gradient(135deg, #007aff 0%, #00d4ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">TECH</span>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo">PRO<span>TECH</span></div>
+                    <p>Exploring the Digital Frontier. Your gateway to tomorrow's technology, today.</p>
                 </div>
-                <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
-                    Exploring the Digital Frontier. Your gateway to tomorrow's technology, today.
-                </p>
+                <div class="footer-links-grid">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <a href="index.html">Home</a>
+                        <a href="pages/trends.html">Trends</a>
+                        <a href="pages/ai-news.html">AI News</a>
+                        <a href="pages/tech-news.html">Tech News</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Categories</h4>
+                        <a href="pages/gadgets.html">Gadgets</a>
+                        <a href="javascript:void(0)" onclick="filterByCategory('gaming')">Gaming</a>
+                        <a href="javascript:void(0)" onclick="filterByCategory('leaks')">Leaks</a>
+                        <a href="javascript:void(0)" onclick="filterByCategory('ios')">iOS</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>About</h4>
+                        <a href="about.html">About Us</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="javascript:void(0)" onclick="showLegal('privacy')">Privacy Policy</a>
+                        <a href="javascript:void(0)" onclick="showLegal('terms')">Terms of Service</a>
+                    </div>
+                </div>
             </div>
-            <div style="display: flex; justify-content: center; gap: 35px; flex-wrap: wrap; margin-bottom: 35px;">
-                <a href="javascript:void(0)" onclick="showLegal('privacy')" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; transition: all 0.3s; font-weight: 500;">Privacy Policy</a>
-                <a href="javascript:void(0)" onclick="showLegal('terms')" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; transition: all 0.3s; font-weight: 500;">Terms of Service</a>
-                <a href="about.html" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; transition: all 0.3s; font-weight: 500;">About Us</a>
-                <a href="contact.html" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; transition: all 0.3s; font-weight: 500;">Contact</a>
-            </div>
-            <div style="border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 25px; text-align: center;">
-                <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 0; opacity: 0.7;">
-                    &copy; 2026 ProTech Magazine. All rights reserved.
-                </p>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ProTech Magazine. All rights reserved.</p>
             </div>
         </div>
     </footer>
