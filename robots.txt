@@ -1,9 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /admin/
-Disallow: /wp-admin/
-Disallow: /search/
-Disallow: /temp/
-Disallow: /cgi-bin/
-
-Sitemap: https://protechdaily.online/sitemap.xml
