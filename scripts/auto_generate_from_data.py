@@ -49,7 +49,7 @@ def parse_data_js():
                 article[field] = field_match.group(1).replace('\\', '')
         
         # استخراج content (بين ` `)
-        content_match = re.search(r'content\s*:\s*`(.*?)`(?=\s*[,}])', obj, re.DOTALL)
+        content_match = re.search(r'content\s*:\s*`([^`]+)`', obj, re.DOTALL)
         if content_match:
             article['content'] = content_match.group(1).strip()
         
