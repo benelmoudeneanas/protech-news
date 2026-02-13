@@ -1,6 +1,14 @@
 const articles = [
 
-  // ==================== LATEST ====================
+  {
+    slug: "sony-state-of-play-february-2026-announcements",
+    title: "Sony Delivers Massive 85-Minute Showcase at State of Play February 2026: Every Major Announcement",
+    date: "2026-02-13",
+    cat: "gaming",
+    desc: "The February 2026 State of Play has officially concluded, and Sony delivered on its promise of a massive showcase running for over 85 minutes with major reveals for PlayStation 5.",
+    img: "https://image2url.com/r2/default/images/1770944368249-eb8b5490-45d1-4abf-b715-5b518b73309a.jpg",
+    url: "articles/sony-state-of-play-february-2026-announcements.html"
+  },
   {
     slug: "ios-26-3-siri-storm",
     title: "iOS 26.3 Is Here — And It's the Calm Before the Siri Storm",
