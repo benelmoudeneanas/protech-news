@@ -6,7 +6,6 @@ Auto Generate Articles from data.js
 
 import os
 import re
-import json
 from datetime import datetime
 
 # المسارات
@@ -22,7 +21,6 @@ def parse_data_js():
         content = f.read()
     
     # استخراج الـ array من JavaScript
-    # نبحث عن const articles = [ ... ];
     match = re.search(r'const\s+articles\s*=\s*\[(.*?)\];', content, re.DOTALL)
     
     if not match:
@@ -30,29 +28,30 @@ def parse_data_js():
         return []
     
     array_content = match.group(1)
-    
-    # تحويل JavaScript objects إلى Python
-    # نستبدل ' بـ " ونصلح الـ format
-    array_content = array_content.strip()
-    
-    # تقسيم الـ objects
     articles = []
     
-    # نبحث عن كل object بين { }
-    objects = re.findall(r'\{([^}]+)\}', array_content)
+    # تقسيم المقالات (كل object بين {})
+    # نستعمل regex أكثر ذكاء
+    pattern = r'\{([^{}]*(?:\{[^{}]*\}[^{}]*)*)\}'
+    objects = re.findall(pattern, array_content)
     
     for obj in objects:
         article = {}
         
-        # استخراج كل field
+        # استخراج الحقول العادية
         fields = ['slug', 'title', 'date', 'cat', 'desc', 'img', 'url']
         
         for field in fields:
             # البحث عن: field: "value" أو field: 'value'
-            pattern = rf'{field}\s*:\s*["\']([^"\']*)["\']'
-            match = re.search(pattern, obj)
-            if match:
-                article[field] = match.group(1)
+            field_pattern = rf'{field}\s*:\s*["\']([^"\']*)["\']'
+            field_match = re.search(field_pattern, obj)
+            if field_match:
+                article[field] = field_match.group(1).replace('\\', '')
+        
+        # استخراج content (بين ` `)
+        content_match = re.search(r'content\s*:\s*`(.*?)`(?=\s*[,}])', obj, re.DOTALL)
+        if content_match:
+            article['content'] = content_match.group(1).strip()
         
         if article.get('slug'):
             articles.append(article)
@@ -75,9 +74,30 @@ def get_category_class(category):
         'leaks': 'cat-leaks',
         'hardware': 'cat-hardware',
         'gaming': 'cat-gaming',
-        'tech': 'cat-tech'
+        'tech': 'cat-tech',
+        'news': 'cat-tech',
+        'reviews': 'cat-tech',
+        'comparison': 'cat-tech',
+        'tech-tips': 'cat-tech'
     }
     return category_map.get(category.lower(), 'cat-tech')
+
+def get_article_content(article_data):
+    """الحصول على المحتوى - من data.js أو توليد بسيط"""
+    
+    # إذا كان المحتوى موجود في data.js، استعمله
+    if article_data.get('content'):
+        return article_data['content']
+    
+    # إذا مافيهش، ولد محتوى بسيط
+    desc = article_data.get('desc', '')
+    
+    return f'''
+        <h2>Overview</h2>
+        <p>{desc}</p>
+        
+        <p>This article will be updated with full content soon. Stay tuned for more details!</p>
+    '''
 
 def generate_article_html(article_data):
     """توليد HTML من القالب"""
@@ -85,6 +105,9 @@ def generate_article_html(article_data):
     # قراءة القالب
     with open(TEMPLATE_PATH, 'r', encoding='utf-8') as f:
         template = f.read()
+    
+    # الحصول على المحتوى
+    article_content = get_article_content(article_data)
     
     # تحضير البيانات
     replacements = {
@@ -98,12 +121,7 @@ def generate_article_html(article_data):
         '{{CATEGORY}}': article_data.get('cat', 'tech').upper(),
         '{{CATEGORY_CLASS}}': get_category_class(article_data.get('cat', 'tech')),
         '{{TITLE_SHORT}}': article_data.get('title', '')[:50] + '...' if len(article_data.get('title', '')) > 50 else article_data.get('title', ''),
-        '{{CONTENT}}': f'''
-            <h2>Introduction</h2>
-            <p>{article_data.get('desc', 'Content coming soon...')}</p>
-            
-            <p>This article will be updated with full content soon. Stay tuned for more details!</p>
-        '''
+        '{{CONTENT}}': article_content
     }
     
     # تطبيق الاستبدالات
@@ -142,7 +160,7 @@ def main():
     
     # توليد المقالات
     new_count = 0
-    updated_count = 0
+    skipped_count = 0
     
     for article in articles:
         slug = article.get('slug', '')
@@ -160,13 +178,17 @@ def main():
             with open(article_path, 'r', encoding='utf-8') as f:
                 existing = f.read()
             
-            # التحقق إذا كان المحتوى placeholder فقط
-            if 'Content coming soon' in existing or len(existing) < 5000:
+            # التحقق إذا كان المحتوى قديم أو placeholder
+            if 'Content coming soon' in existing or 'will be updated with full content soon' in existing or len(existing) < 3000:
                 # تحديث الملف
                 with open(article_path, 'w', encoding='utf-8') as f:
                     f.write(html)
                 print(f"   🔄 محدث: {slug}.html")
-                updated_count += 1
+                new_count += 1
+            else:
+                # تخطي الملفات التي تحتوي على محتوى كامل
+                print(f"   ⏭️  تخطي: {slug}.html (يحتوي على محتوى)")
+                skipped_count += 1
         else:
             # إنشاء ملف جديد
             with open(article_path, 'w', encoding='utf-8') as f:
@@ -176,8 +198,8 @@ def main():
     
     print("\n" + "=" * 60)
     print(f"✅ تم التوليد بنجاح!")
-    print(f"   - مقالات جديدة: {new_count}")
-    print(f"   - مقالات محدثة: {updated_count}")
+    print(f"   - مقالات جديدة/محدثة: {new_count}")
+    print(f"   - مقالات متخطاة: {skipped_count}")
     print(f"   - إجمالي: {len(articles)}")
 
 if __name__ == "__main__":
