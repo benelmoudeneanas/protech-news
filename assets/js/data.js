@@ -1,14 +1,33 @@
-const articles = [
-
-  {
-    slug: "sony-state-of-play-february-2026-announcements",
-    title: "Sony Delivers Massive 85-Minute Showcase at State of Play February 2026: Every Major Announcement",
-    date: "2026-02-13",
-    cat: "gaming",
-    desc: "The February 2026 State of Play has officially concluded, and Sony delivered on its promise of a massive showcase running for over 85 minutes with major reveals for PlayStation 5.",
-    img: "https://image2url.com/r2/default/images/1770944368249-eb8b5490-45d1-4abf-b715-5b518b73309a.jpg",
-    url: "articles/sony-state-of-play-february-2026-announcements.html"
-  },
+{
+  slug: "sony-state-of-play-february-2026-announcements",
+  title: "Sony Delivers Massive 85-Minute Showcase at State of Play February 2026: Every Major Announcement",
+  date: "2026-02-13",
+  cat: "gaming",
+  desc: "The February 2026 State of Play has officially concluded...",
+  img: "https://image2url.com/r2/default/images/1770944368249-eb8b5490-45d1-4abf-b715-5b518b73309a.jpg",
+  url: "articles/sony-state-of-play-february-2026-announcements.html",
+  
+  // المحتوى الكامل هنا ⬇️
+  content: `
+    <h2>The Heavy Hitters: God of War and MGS Return</h2>
+    <p>Sony kicked things off with major announcements that fans have been waiting for. The event confirmed the existence of the God of War Trilogy Remake, bringing Kratos' original Greek saga to modern hardware with stunning visual upgrades.</p>
+    
+    <p>Additionally, Konami and PlayStation revealed the Metal Gear Solid Master Collection Vol. 2, finally bringing another set of tactical espionage classics to the PS5.</p>
+    
+    <h2>PlayStation Studios: Marathon and Saros Dates Confirmed</h2>
+    <p>PlayStation Studios had a strong presence during the show. Bungie's highly anticipated extraction shooter, Marathon, received a new trailer and a confirmed release date of March 5, 2026. Sony is positioning this as a major title for the spring window.</p>
+    
+    <p>Housemarque also took the stage to showcase Saros, the spiritual successor to their award-winning Returnal. The game promises intense bullet-hell action with a more direct narrative and is scheduled for release on April 30, 2026.</p>
+    
+    <h2>Viral Moments and New IPs</h2>
+    <p>One of the most talked-about reveals was Project Windless, which introduced a quirky character instantly dubbed the "Chicken Man," already generating massive buzz across social media.</p>
+    
+    <p>Naughty Dog fans were also treated to more details on their new sci-fi IP, Intergalactic. While rumors suggest a 2027 release, the continued glimpses into this new universe confirm that the studio is aiming for a groundbreaking experience.</p>
+    
+    <h2>Rumors and Speculation</h2>
+    <p>The event also addressed the swirling rumors regarding the future of legacy titles. Leading up to the show, leaks pointed heavily towards a 2D God of War spin-off and a remake of Assassin's Creed IV: Black Flag. With the showcase now wrapped up, the landscape for PlayStation in 2026 looks incredibly robust, offering something for every type of gamer.</p>
+  `
+},
   {
     slug: "ios-26-3-siri-storm",
     title: "iOS 26.3 Is Here — And It's the Calm Before the Siri Storm",
