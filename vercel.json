@@ -1,4 +1,10 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/:path((?!articles|pages|assets|about|contact|index).*)",
+      "destination": "/articles/:path"
+    }
+  ]
 }
