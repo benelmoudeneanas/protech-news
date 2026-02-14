@@ -38,21 +38,21 @@ function loadFeaturedArticle() {
     
     container.innerHTML = `
         <div class="featured-image">
-            <img src="${article.img}" alt="${article.title}" loading="lazy">
+            <img src="${article.img}" alt="${article.title}" width="800" height="500" decoding="async" fetchpriority="high">
         </div>
         <div class="featured-content">
             <div class="featured-meta">
                 <span class="featured-badge">${article.cat.toUpperCase()}</span>
                 <span class="featured-date">
-                    <i class="fas fa-calendar"></i>
+                    <i class="fas fa-calendar" aria-hidden="true"></i>
                     ${formatDate(article.date)}
                 </span>
             </div>
             <h3>${article.title}</h3>
             <p>${article.desc}</p>
-            <a href="${article.url}" class="read-more">
+            <a href="${article.url}" class="read-more" aria-label="Read full story: ${article.title}">
                 <span>Read Full Story</span>
-                <i class="fas fa-arrow-right"></i>
+                <i class="fas fa-arrow-right" aria-hidden="true"></i>
             </a>
         </div>
     `;
@@ -80,7 +80,7 @@ function loadArticles(filter = 'all') {
     container.innerHTML = articlesToShow.map(article => `
         <div class="news-card" onclick="window.location.href='${article.url}'">
             <div class="news-card-image">
-                <img src="${article.img}" alt="${article.title}" loading="lazy">
+                <img src="${article.img}" alt="${article.title}" loading="lazy" decoding="async" width="400" height="250">
             </div>
             <div class="news-card-content">
                 <div class="news-card-meta">

@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <!-- Preconnect -->
+    <!-- Preconnect & Preload Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;900&family=Inter:wght@400;500;600;700;900&display=swap">
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="ProTech - Your ultimate source for tech news, exclusive leaks, in-depth reviews, and future insights. Stay ahead with the latest in technology, smartphones, AI, and gaming.">
@@ -69,12 +70,33 @@
     }
     </script>
     
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;900&family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Fonts - Async loading for better performance -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;900&family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;900&family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet"></noscript>
     
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Font Awesome - Deferred -->
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"></noscript>
+    
+    <!-- Critical CSS Inline for Faster First Paint -->
+    <style>:root{--bg-body:#0a0b10;--bg-card:#12141c;--bg-header:#0d0f16;--accent-blue:#007aff;--accent-purple:#8b5cf6;--accent-cyan:#06b6d4;--text-primary:#ffffff;--text-secondary:#b0bfd0;--border-color:#1e293b}*{margin:0;padding:0;box-sizing:border-box}body{font-family:"Inter",-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg-body);color:var(--text-primary);line-height:1.6;overflow-x:hidden}.container{max-width:1400px;margin:0 auto;padding:0 40px}.animated-bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;opacity:.05;background:radial-gradient(circle at 20% 30%,rgba(0,122,255,.2) 0%,transparent 50%),radial-gradient(circle at 80% 70%,rgba(139,92,246,.2) 0%,transparent 50%);animation:bgShift 30s ease-in-out infinite}@keyframes bgShift{0%,100%{transform:translate(0) rotate(0) scale(1)}50%{transform:translate(5%,5%) rotate(3deg) scale(1.1)}}nav{background:rgba(13,15,22,.98);backdrop-filter:blur(25px);border-bottom:1px solid rgba(255,255,255,.08);position:sticky;top:0;z-index:1000;box-shadow:0 8px 32px rgba(0,0,0,.5)}.nav-container{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 40px;min-height:80px}.logo{font-family:"Space Grotesk",sans-serif;font-size:2rem;font-weight:900;cursor:pointer;letter-spacing:-1.5px;transition:transform .3s}.logo span{background:linear-gradient(135deg,#007aff 0%,#00d4ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.nav-list{display:flex;list-style:none;gap:35px}.nav-list a{color:var(--text-secondary);text-decoration:none;font-weight:600;font-size:.95rem;transition:all .3s;display:flex;align-items:center;gap:8px}.nav-list a:hover,.nav-list a.active{color:var(--accent-blue)}.search-btn{background:linear-gradient(135deg,var(--accent-blue),var(--accent-cyan));border:none;color:#fff;padding:12px 24px;border-radius:12px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:8px;transition:all .3s}.mobile-menu{display:none;font-size:1.8rem;cursor:pointer;color:var(--text-primary)}.hero-modern{padding:120px 40px 80px;text-align:center}.hero-content{max-width:900px;margin:0 auto}.hero-badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,rgba(0,122,255,.2),rgba(139,92,246,.2));border:1px solid rgba(0,122,255,.3);padding:10px 20px;border-radius:50px;font-size:.9rem;font-weight:600;margin-bottom:30px;animation:pulse 2s ease-in-out infinite}@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}.hero-modern h1{font-family:"Space Grotesk",sans-serif;font-size:4rem;font-weight:900;line-height:1.1;margin-bottom:25px}.gradient-text{background:linear-gradient(135deg,#007aff 0%,#00d4ff 50%,#8b5cf6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.hero-desc{font-size:1.3rem;color:var(--text-secondary);line-height:1.7;margin-bottom:40px;max-width:700px;margin-left:auto;margin-right:auto}.hero-cta{display:flex;gap:20px;justify-content:center;margin-bottom:50px}.cta-primary,.cta-secondary{padding:16px 32px;border-radius:14px;font-weight:700;font-size:1rem;cursor:pointer;display:flex;align-items:center;gap:10px;transition:all .3s;border:none}.cta-primary{background:linear-gradient(135deg,var(--accent-blue),var(--accent-purple));color:#fff}.cta-secondary{background:transparent;border:2px solid rgba(255,255,255,.2);color:var(--text-primary)}.trending-topics{display:flex;align-items:center;justify-content:center;gap:15px;flex-wrap:wrap}.topic-label{color:var(--text-secondary);font-weight:600;font-size:.9rem}.topics-list{display:flex;gap:12px;flex-wrap:wrap}.topic-tag{background:var(--bg-card);border:1px solid rgba(255,255,255,.1);padding:8px 16px;border-radius:20px;font-size:.9rem;cursor:pointer;transition:all .3s}</style>
+    
+    <!-- Stylesheet - Deferred for better performance -->
+    <link rel="preload" as="style" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="assets/css/styles.css"></noscript>
+    
+    <!-- OneSignal SDK -->
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "7fa7473c-5cd2-4b19-81d8-2851980ef462",
+    });
+  });
+</script>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -88,20 +110,20 @@
         <div class="nav-container">
             <div class="logo">PRO<span>TECH</span></div>
             <ul class="nav-list" id="nav-list">
-                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="pages/trends.html"><i class="fas fa-fire"></i> Trends</a></li>
-                <li><a href="pages/ai-news.html"><i class="fas fa-robot"></i> AI News</a></li>
-                <li><a href="pages/tech-news.html"><i class="fas fa-microchip"></i> Tech News</a></li>
-                <li><a href="pages/gadgets.html"><i class="fas fa-mobile-alt"></i> Gadgets</a></li>
-                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
-                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="index.html" class="active"><i class="fas fa-home" aria-hidden="true"></i> Home</a></li>
+                <li><a href="pages/trends.html"><i class="fas fa-fire" aria-hidden="true"></i> Trends</a></li>
+                <li><a href="pages/ai-news.html"><i class="fas fa-robot" aria-hidden="true"></i> AI News</a></li>
+                <li><a href="pages/tech-news.html"><i class="fas fa-microchip" aria-hidden="true"></i> Tech News</a></li>
+                <li><a href="pages/gadgets.html"><i class="fas fa-mobile-alt" aria-hidden="true"></i> Gadgets</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle" aria-hidden="true"></i> About</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope" aria-hidden="true"></i> Contact</a></li>
             </ul>
-            <button class="search-btn" onclick="toggleSearchModal()">
-                <i class="fas fa-search"></i>
+            <button class="search-btn" onclick="toggleSearchModal()" aria-label="Search articles">
+                <i class="fas fa-search" aria-hidden="true"></i>
                 <span>Search</span>
             </button>
-            <div class="mobile-menu" id="mobile-menu">
-                <i class="fas fa-bars"></i>
+            <div class="mobile-menu" id="mobile-menu" role="button" aria-label="Toggle mobile menu" tabindex="0">
+                <i class="fas fa-bars" aria-hidden="true"></i>
             </div>
         </div>
     </nav>
@@ -110,19 +132,19 @@
     <section class="hero-modern">
         <div class="hero-content">
             <div class="hero-badge">
-                <i class="fas fa-bolt"></i>
+                <i class="fas fa-bolt" aria-hidden="true"></i>
                 <span>Breaking Tech News</span>
             </div>
             <h1>Welcome to the <span class="gradient-text">Digital Future</span></h1>
             <p class="hero-desc">Discover tomorrow's technology today. From AI breakthroughs to exclusive leaks, we bring you the stories that shape the digital frontier.</p>
             
             <div class="hero-cta">
-                <button class="cta-primary" onclick="document.getElementById('featured').scrollIntoView({behavior: 'smooth'})">
+                <button class="cta-primary" onclick="document.getElementById('featured').scrollIntoView({behavior: 'smooth'})" aria-label="Explore latest stories">
                     <span>Explore Stories</span>
-                    <i class="fas fa-arrow-right"></i>
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
                 </button>
-                <button class="cta-secondary" onclick="toggleSearchModal()">
-                    <i class="fas fa-search"></i>
+                <button class="cta-secondary" onclick="toggleSearchModal()" aria-label="Search articles">
+                    <i class="fas fa-search" aria-hidden="true"></i>
                     <span>Search</span>
                 </button>
             </div>
@@ -143,7 +165,7 @@
     <section class="featured-story" id="featured">
         <div class="container">
             <div class="section-header">
-                <h2><i class="fas fa-star"></i> Today's Highlight</h2>
+                <h2><i class="fas fa-star" aria-hidden="true"></i> Today's Highlight</h2>
             </div>
             <div class="featured-card" id="featured-article">
                 <!-- Will be populated by JavaScript -->
@@ -155,22 +177,22 @@
     <section class="latest-news">
         <div class="container">
             <div class="section-header">
-                <h2><i class="fas fa-newspaper"></i> Latest Stories</h2>
+                <h2><i class="fas fa-newspaper" aria-hidden="true"></i> Latest Stories</h2>
                 <div class="filter-tabs">
-                    <button class="filter-tab active" onclick="filterArticles('all')">All</button>
-                    <button class="filter-tab" onclick="filterArticles('ios')">iOS</button>
-                    <button class="filter-tab" onclick="filterArticles('ai')">AI</button>
-                    <button class="filter-tab" onclick="filterArticles('gaming')">Gaming</button>
-                    <button class="filter-tab" onclick="filterArticles('leaks')">Leaks</button>
+                    <button class="filter-tab active" onclick="filterArticles('all')" aria-label="Show all articles">All</button>
+                    <button class="filter-tab" onclick="filterArticles('ios')" aria-label="Filter iOS articles">iOS</button>
+                    <button class="filter-tab" onclick="filterArticles('ai')" aria-label="Filter AI articles">AI</button>
+                    <button class="filter-tab" onclick="filterArticles('gaming')" aria-label="Filter gaming articles">Gaming</button>
+                    <button class="filter-tab" onclick="filterArticles('leaks')" aria-label="Filter leaks articles">Leaks</button>
                 </div>
             </div>
             <div class="news-grid" id="news-grid">
                 <!-- Articles loaded dynamically -->
             </div>
             <div class="load-more-container">
-                <button class="load-more-btn" id="load-more-btn" onclick="loadMoreArticles()">
+                <button class="load-more-btn" id="load-more-btn" onclick="loadMoreArticles()" aria-label="Load more articles">
                     <span>Load More Stories</span>
-                    <i class="fas fa-chevron-down"></i>
+                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
                 </button>
             </div>
         </div>
@@ -180,40 +202,40 @@
     <section class="categories-showcase">
         <div class="container">
             <div class="section-header">
-                <h2><i class="fas fa-th-large"></i> Explore by Category</h2>
+                <h2><i class="fas fa-th-large" aria-hidden="true"></i> Explore by Category</h2>
             </div>
             <div class="categories-grid">
-                <div class="category-card" onclick="window.location.href='pages/ai-news.html'">
+                <div class="category-card" onclick="window.location.href='pages/ai-news.html'" role="button" tabindex="0" aria-label="View AI and Machine Learning articles">
                     <div class="category-icon">🤖</div>
                     <h3>AI & Machine Learning</h3>
                     <p>Latest breakthroughs in artificial intelligence</p>
                     <span class="category-count" id="ai-count">0 articles</span>
                 </div>
-                <div class="category-card" onclick="window.location.href='pages/tech-news.html'">
+                <div class="category-card" onclick="window.location.href='pages/tech-news.html'" role="button" tabindex="0" aria-label="View Tech News articles">
                     <div class="category-icon">💻</div>
                     <h3>Tech News</h3>
                     <p>Breaking technology updates</p>
                     <span class="category-count" id="tech-count">0 articles</span>
                 </div>
-                <div class="category-card" onclick="window.location.href='pages/gadgets.html'">
+                <div class="category-card" onclick="window.location.href='pages/gadgets.html'" role="button" tabindex="0" aria-label="View Smartphones and Gadgets articles">
                     <div class="category-icon">📱</div>
                     <h3>Smartphones & Gadgets</h3>
                     <p>Latest devices and reviews</p>
                     <span class="category-count" id="gadget-count">0 articles</span>
                 </div>
-                <div class="category-card" onclick="filterByCategory('gaming')">
+                <div class="category-card" onclick="filterByCategory('gaming')" role="button" tabindex="0" aria-label="View Gaming articles">
                     <div class="category-icon">🎮</div>
                     <h3>Gaming</h3>
                     <p>Console news and game releases</p>
                     <span class="category-count" id="gaming-count">0 articles</span>
                 </div>
-                <div class="category-card" onclick="filterByCategory('leaks')">
+                <div class="category-card" onclick="filterByCategory('leaks')" role="button" tabindex="0" aria-label="View Exclusive Leaks">
                     <div class="category-icon">🔥</div>
                     <h3>Exclusive Leaks</h3>
                     <p>Insider information and rumors</p>
                     <span class="category-count" id="leaks-count">0 articles</span>
                 </div>
-                <div class="category-card" onclick="window.location.href='pages/trends.html'">
+                <div class="category-card" onclick="window.location.href='pages/trends.html'" role="button" tabindex="0" aria-label="View Trends and Analysis articles">
                     <div class="category-icon">📈</div>
                     <h3>Trends & Analysis</h3>
                     <p>Industry insights and predictions</p>
@@ -228,15 +250,15 @@
         <div class="container">
             <div class="newsletter-card">
                 <div class="newsletter-icon">
-                    <i class="fas fa-envelope"></i>
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
                 </div>
                 <h2>Stay Updated</h2>
                 <p>Get the latest tech news delivered straight to your inbox. Join thousands of tech enthusiasts!</p>
                 <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Newsletter feature coming soon!');">
-                    <input type="email" placeholder="Enter your email" required>
-                    <button type="submit">
+                    <input type="email" placeholder="Enter your email" required aria-label="Email address">
+                    <button type="submit" aria-label="Subscribe to newsletter">
                         <span>Subscribe</span>
-                        <i class="fas fa-paper-plane"></i>
+                        <i class="fas fa-paper-plane" aria-hidden="true"></i>
                     </button>
                 </form>
             </div>
@@ -244,14 +266,14 @@
     </section>
     
     <!-- Search Modal -->
-    <div id="searchModal" class="modal">
+    <div id="searchModal" class="modal" role="dialog" aria-labelledby="searchModalTitle" aria-hidden="true">
         <div class="modal-content">
-            <span class="close-modal" onclick="toggleSearchModal()">&times;</span>
-            <h2 class="modal-title">Search ProTech</h2>
-            <input type="text" id="searchInputModal" class="search-input" placeholder="Search articles, topics, categories..." autocomplete="off">
-            <div id="searchResultsModal" class="search-results">
+            <span class="close-modal" onclick="toggleSearchModal()" role="button" aria-label="Close search modal">&times;</span>
+            <h2 class="modal-title" id="searchModalTitle">Search ProTech</h2>
+            <input type="text" id="searchInputModal" class="search-input" placeholder="Search articles, topics, categories..." autocomplete="off" aria-label="Search input">
+            <div id="searchResultsModal" class="search-results" role="region" aria-live="polite">
                 <div class="no-results">
-                    <i class="fas fa-search"></i>
+                    <i class="fas fa-search" aria-hidden="true"></i>
                     <p>Start typing to search...</p>
                 </div>
             </div>
@@ -277,16 +299,16 @@
                     <div class="footer-column">
                         <h4>Categories</h4>
                         <a href="pages/gadgets.html">Gadgets</a>
-                        <a href="javascript:void(0)" onclick="filterByCategory('gaming')">Gaming</a>
-                        <a href="javascript:void(0)" onclick="filterByCategory('leaks')">Leaks</a>
-                        <a href="javascript:void(0)" onclick="filterByCategory('ios')">iOS</a>
+                        <a href="#gaming" onclick="filterByCategory('gaming'); return false;">Gaming</a>
+                        <a href="#leaks" onclick="filterByCategory('leaks'); return false;">Leaks</a>
+                        <a href="#ios" onclick="filterByCategory('ios'); return false;">iOS</a>
                     </div>
                     <div class="footer-column">
                         <h4>About</h4>
                         <a href="about.html">About Us</a>
                         <a href="contact.html">Contact</a>
-                        <a href="javascript:void(0)" onclick="showLegal('privacy')">Privacy Policy</a>
-                        <a href="javascript:void(0)" onclick="showLegal('terms')">Terms of Service</a>
+                        <a href="#privacy" onclick="showLegal('privacy'); return false;">Privacy Policy</a>
+                        <a href="#terms" onclick="showLegal('terms'); return false;">Terms of Service</a>
                     </div>
                 </div>
             </div>
