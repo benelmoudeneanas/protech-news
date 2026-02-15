@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Image Downloader for ProTech News
-يقرأ الصور من data.js، يحملها، ويخزنها محلياً
+Image Downloader for ProTech News with WebP Conversion
+يقرأ الصور من data.js، يحملها، يحولها لـ WebP، ويخزنها محلياً
 """
 
 import os
@@ -10,11 +10,18 @@ import hashlib
 import requests
 from urllib.parse import urlparse
 from pathlib import Path
+from PIL import Image
+from io import BytesIO
 
 # المسارات
 DATA_JS_PATH = "assets/js/data.js"
 IMAGES_DIR = "assets/images/articles"
 TEMP_DATA_JS = "assets/js/data.js.backup"
+
+# إعدادات WebP
+CONVERT_TO_WEBP = True  # ← غيرها لـ False إذا ما بغيتيش WebP
+WEBP_QUALITY = 85  # جودة WebP (1-100، 85 ممتاز)
+MAX_WIDTH = 1200  # أقصى عرض للصور (باش يصغروا إلا كانو كبار بزاف)
 
 def ensure_directories():
     """التأكد من وجود المجلدات"""
@@ -33,29 +40,61 @@ def parse_data_js():
     
     return content, images
 
-def get_image_extension(url):
-    """استخراج امتداد الصورة من الرابط"""
-    parsed = urlparse(url)
-    path = parsed.path
-    
-    # محاولة استخراج الامتداد من الرابط
-    ext = os.path.splitext(path)[1]
-    
-    # إذا مافيهش امتداد، استعمل .jpg كافتراضي
-    if not ext or ext not in ['.jpg', '.jpeg', '.png', '.webp', '.gif']:
-        ext = '.jpg'
-    
-    return ext
-
-def generate_local_filename(url):
+def generate_local_filename(url, force_webp=False):
     """توليد اسم ملف محلي من الرابط"""
     # استعمال hash باش نتجنب تكرار الأسماء
     url_hash = hashlib.md5(url.encode()).hexdigest()[:12]
-    ext = get_image_extension(url)
+    
+    # إذا بغينا نحولوا لـ WebP
+    if CONVERT_TO_WEBP or force_webp:
+        ext = '.webp'
+    else:
+        # استخراج الامتداد الأصلي
+        parsed = urlparse(url)
+        path = parsed.path
+        ext = os.path.splitext(path)[1]
+        
+        # إذا مافيهش امتداد، استعمل .jpg كافتراضي
+        if not ext or ext not in ['.jpg', '.jpeg', '.png', '.webp', '.gif']:
+            ext = '.jpg'
+    
     return f"article-{url_hash}{ext}"
 
-def download_image(url, save_path):
-    """تحميل صورة من رابط"""
+def convert_to_webp(image_data, save_path):
+    """تحويل الصورة لـ WebP مع تحسين الحجم"""
+    try:
+        # فتح الصورة من البيانات
+        img = Image.open(BytesIO(image_data))
+        
+        # تحويل RGBA إلى RGB إذا لزم الأمر
+        if img.mode in ('RGBA', 'LA', 'P'):
+            # إنشاء خلفية بيضاء
+            background = Image.new('RGB', img.size, (255, 255, 255))
+            if img.mode == 'P':
+                img = img.convert('RGBA')
+            background.paste(img, mask=img.split()[-1] if img.mode == 'RGBA' else None)
+            img = background
+        elif img.mode != 'RGB':
+            img = img.convert('RGB')
+        
+        # تصغير الصورة إذا كانت كبيرة بزاف
+        if img.width > MAX_WIDTH:
+            ratio = MAX_WIDTH / img.width
+            new_height = int(img.height * ratio)
+            img = img.resize((MAX_WIDTH, new_height), Image.Resampling.LANCZOS)
+            print(f"      📐 تصغير: {img.width}x{img.height}")
+        
+        # حفظ كـ WebP
+        img.save(save_path, 'WEBP', quality=WEBP_QUALITY, method=6)
+        
+        return True
+        
+    except Exception as e:
+        print(f"      ❌ فشل التحويل لـ WebP: {str(e)[:50]}")
+        return False
+
+def download_and_convert_image(url, save_path):
+    """تحميل صورة وتحويلها لـ WebP"""
     try:
         print(f"      ⬇️  تحميل: {url[:60]}...")
         
@@ -66,14 +105,31 @@ def download_image(url, save_path):
         response = requests.get(url, headers=headers, timeout=30, stream=True)
         response.raise_for_status()
         
-        # حفظ الصورة
-        with open(save_path, 'wb') as f:
-            for chunk in response.iter_content(chunk_size=8192):
-                f.write(chunk)
+        # قراءة البيانات
+        image_data = response.content
+        original_size = len(image_data) / 1024  # KB
         
-        file_size = os.path.getsize(save_path) / 1024  # KB
-        print(f"      ✅ تم التحميل: {os.path.basename(save_path)} ({file_size:.1f} KB)")
-        return True
+        print(f"      📥 حجم أصلي: {original_size:.1f} KB")
+        
+        # التحويل لـ WebP
+        if CONVERT_TO_WEBP:
+            if convert_to_webp(image_data, save_path):
+                webp_size = os.path.getsize(save_path) / 1024  # KB
+                savings = ((original_size - webp_size) / original_size) * 100
+                print(f"      ✅ WebP: {webp_size:.1f} KB (توفير {savings:.0f}%)")
+                return True
+            else:
+                # إذا فشل التحويل، احفظها كما هي
+                print(f"      ⚠️  الحفظ بالصيغة الأصلية...")
+                with open(save_path, 'wb') as f:
+                    f.write(image_data)
+                return True
+        else:
+            # حفظ بدون تحويل
+            with open(save_path, 'wb') as f:
+                f.write(image_data)
+            print(f"      ✅ تم الحفظ: {original_size:.1f} KB")
+            return True
         
     except requests.exceptions.RequestException as e:
         print(f"      ❌ فشل التحميل: {str(e)[:50]}")
@@ -95,6 +151,8 @@ def process_images():
         return
     
     print(f"\n📊 تم العثور على {len(images)} صورة")
+    if CONVERT_TO_WEBP:
+        print(f"🔄 التحويل لـ WebP مفعل (جودة: {WEBP_QUALITY}%)")
     print("=" * 70)
     
     # خريطة للاستبدال (رابط قديم -> رابط جديد)
@@ -102,6 +160,8 @@ def process_images():
     downloaded = 0
     skipped = 0
     failed = 0
+    total_original_size = 0
+    total_webp_size = 0
     
     for i, img_url in enumerate(images, 1):
         print(f"\n[{i}/{len(images)}] معالجة الصورة...")
@@ -121,15 +181,15 @@ def process_images():
             print(f"      ✅ موجود مسبقاً: {local_filename}")
             skipped += 1
         else:
-            # تحميل الصورة
-            if download_image(img_url, local_path):
+            # تحميل وتحويل الصورة
+            if download_and_convert_image(img_url, local_path):
                 downloaded += 1
             else:
                 failed += 1
                 continue
         
         # إضافة للاستبدالات
-        # المسار النسبي من root: assets/images/articles/xxx.jpg
+        # المسار النسبي من root: assets/images/articles/xxx.webp
         new_url = f"assets/images/articles/{local_filename}"
         replacements[img_url] = new_url
     
@@ -139,6 +199,9 @@ def process_images():
     print(f"   ⏭️  متخطاة: {skipped}")
     print(f"   ❌ فشلت: {failed}")
     print(f"   📊 إجمالي: {len(images)}")
+    
+    if CONVERT_TO_WEBP and downloaded > 0:
+        print(f"\n💾 تم التحويل إلى WebP بجودة {WEBP_QUALITY}%")
     
     return content, replacements
 
@@ -176,69 +239,11 @@ def update_data_js(content, replacements):
     
     print(f"\n   ✅ تم تحديث {replaced_count} رابط في data.js")
 
-def update_existing_html_files():
-    """تحديث ملفات HTML الموجودة بالمسارات الجديدة"""
-    
-    articles_dir = "articles"
-    
-    if not os.path.exists(articles_dir):
-        return
-    
-    print("\n" + "=" * 70)
-    print("🔄 تحديث ملفات HTML الموجودة...")
-    
-    html_files = [f for f in os.listdir(articles_dir) if f.endswith('.html')]
-    
-    if not html_files:
-        print("   ⚠️  لا توجد ملفات HTML")
-        return
-    
-    # قراءة الاستبدالات من data.js
-    with open(DATA_JS_PATH, 'r', encoding='utf-8') as f:
-        data_content = f.read()
-    
-    # استخراج المسارات المحلية
-    local_images = re.findall(r'img\s*:\s*["\']assets/images/articles/([^"\']+)["\']', data_content)
-    
-    updated_count = 0
-    
-    for html_file in html_files:
-        file_path = os.path.join(articles_dir, html_file)
-        
-        with open(file_path, 'r', encoding='utf-8') as f:
-            html_content = f.read()
-        
-        # استبدال روابط الصور الخارجية بالمحلية
-        original_content = html_content
-        
-        # البحث عن src="https://..." أو src='https://...'
-        external_images = re.findall(r'src=["\']https://[^"\']+["\']', html_content)
-        
-        for ext_img in external_images:
-            # محاولة إيجاد المسار المحلي المناسب
-            for local_img in local_images:
-                # إذا وجدنا مطابقة، نستبدل
-                local_path = f'../assets/images/articles/{local_img}'
-                html_content = re.sub(
-                    r'src=["\']https://[^"\']+' + re.escape(local_img[-20:]) + r'[^"\']*["\']',
-                    f'src="{local_path}"',
-                    html_content
-                )
-        
-        # حفظ إذا تغير المحتوى
-        if html_content != original_content:
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(html_content)
-            updated_count += 1
-            print(f"   ✅ محدث: {html_file}")
-    
-    print(f"\n   ✅ تم تحديث {updated_count} ملف HTML")
-
 def main():
     """البرنامج الرئيسي"""
     
     print("=" * 70)
-    print("🖼️  ProTech Image Downloader & Localizer")
+    print("🖼️  ProTech Image Downloader & WebP Converter")
     print("=" * 70)
     
     # التحقق من وجود data.js
@@ -253,9 +258,6 @@ def main():
         # تحديث data.js
         if replacements:
             update_data_js(content, replacements)
-            
-            # تحديث ملفات HTML الموجودة (اختياري)
-            # update_existing_html_files()
         
         print("\n" + "=" * 70)
         print("✅ تم الانتهاء بنجاح!")
@@ -265,6 +267,9 @@ def main():
         print("   2. راجع data.js (نسخة احتياطية: data.js.backup)")
         print("   3. شغل السكريبت المولد: python3 scripts/auto_generate_from_data.py")
         print("   4. Commit & Push للتغييرات")
+        
+        if CONVERT_TO_WEBP:
+            print(f"\n🎯 جميع الصور تم تحويلها لـ WebP بجودة {WEBP_QUALITY}%")
         
     except Exception as e:
         print(f"\n❌ خطأ: {str(e)}")
