@@ -1,4 +1,4 @@
-// ProTech Main JavaScript
+// ProTech Main JavaScript - Optimized for Performance
 
 // Global variables
 let currentFilter = 'all';
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeNavigation() {
     const mobileMenu = document.getElementById('mobile-menu');
     const navList = document.getElementById('nav-list');
-    
+
     if (mobileMenu) {
         mobileMenu.addEventListener('click', function() {
             navList.classList.toggle('active');
@@ -29,16 +29,22 @@ function initializeNavigation() {
     }
 }
 
-// Load Featured Article (first article)
+// Load Featured Article (first article) - محسن للأداء
 function loadFeaturedArticle() {
     const container = document.getElementById('featured-article');
     if (!container || !articles || articles.length === 0) return;
-    
+
     const article = articles[0];
-    
+
     container.innerHTML = `
         <div class="featured-image">
-            <img src="${article.img}" alt="${article.title}" width="800" height="500" decoding="async" fetchpriority="high">
+            <img src="${article.img}" 
+                 alt="${article.title}" 
+                 width="1200" 
+                 height="675" 
+                 loading="eager" 
+                 fetchpriority="high" 
+                 decoding="async">
         </div>
         <div class="featured-content">
             <div class="featured-meta">
@@ -56,31 +62,36 @@ function loadFeaturedArticle() {
             </a>
         </div>
     `;
-    
+
     container.onclick = () => window.location.href = article.url;
 }
 
-// Load Articles
+// Load Articles - محسن مع lazy loading
 function loadArticles(filter = 'all') {
     const container = document.getElementById('news-grid');
     if (!container || !articles) return;
-    
+
     currentFilter = filter;
-    
+
     let filteredArticles = articles;
     if (filter !== 'all') {
         filteredArticles = articles.filter(article => article.cat === filter);
     }
-    
+
     // Skip first article as it's featured
     filteredArticles = filteredArticles.slice(1);
-    
+
     const articlesToShow = filteredArticles.slice(0, displayedArticles);
-    
+
     container.innerHTML = articlesToShow.map(article => `
         <div class="news-card" onclick="window.location.href='${article.url}'">
             <div class="news-card-image">
-                <img src="${article.img}" alt="${article.title}" loading="lazy" decoding="async" width="400" height="250">
+                <img src="${article.img}" 
+                     alt="${article.title}" 
+                     width="400" 
+                     height="250" 
+                     loading="lazy" 
+                     decoding="async">
             </div>
             <div class="news-card-content">
                 <div class="news-card-meta">
@@ -92,7 +103,7 @@ function loadArticles(filter = 'all') {
             </div>
         </div>
     `).join('');
-    
+
     // Update load more button
     updateLoadMoreButton(filteredArticles.length);
 }
@@ -101,13 +112,13 @@ function loadArticles(filter = 'all') {
 function filterArticles(category) {
     displayedArticles = articlesPerPage;
     loadArticles(category);
-    
+
     // Update active tab
     document.querySelectorAll('.filter-tab').forEach(tab => {
         tab.classList.remove('active');
     });
     event.target.classList.add('active');
-    
+
     // Scroll to articles
     document.getElementById('news-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
@@ -116,7 +127,7 @@ function filterArticles(category) {
 function filterByCategory(category) {
     displayedArticles = articlesPerPage;
     loadArticles(category);
-    
+
     // Scroll to articles
     document.getElementById('news-grid').scrollIntoView({ behavior: 'smooth' });
 }
@@ -131,7 +142,7 @@ function loadMoreArticles() {
 function updateLoadMoreButton(totalArticles) {
     const button = document.getElementById('load-more-btn');
     if (!button) return;
-    
+
     if (displayedArticles >= totalArticles - 1) { // -1 because first is featured
         button.style.display = 'none';
     } else {
@@ -142,7 +153,7 @@ function updateLoadMoreButton(totalArticles) {
 // Update Category Counts
 function updateCategoryCounts() {
     if (!articles) return;
-    
+
     const counts = {
         ai: 0,
         tech: 0,
@@ -151,7 +162,7 @@ function updateCategoryCounts() {
         leaks: 0,
         hardware: 0
     };
-    
+
     articles.forEach(article => {
         if (counts.hasOwnProperty(article.cat)) {
             counts[article.cat]++;
@@ -159,43 +170,44 @@ function updateCategoryCounts() {
             counts.tech++;
         }
     });
-    
+
     // Update UI
     const updateCount = (id, count) => {
         const el = document.getElementById(id);
         if (el) el.textContent = `${count} article${count !== 1 ? 's' : ''}`;
     };
-    
+
     updateCount('ai-count', counts.ai);
     updateCount('tech-count', counts.tech);
     updateCount('gadget-count', counts.ios);
     updateCount('gaming-count', counts.gaming);
     updateCount('leaks-count', counts.leaks);
     updateCount('trends-count', counts.hardware);
+    updateCount('ios-count', counts.ios);
 }
 
 // Search Modal
 function toggleSearchModal() {
     const modal = document.getElementById('searchModal');
     if (!modal) return;
-    
+
     modal.classList.toggle('active');
-    
+
     if (modal.classList.contains('active')) {
         document.getElementById('searchInputModal').focus();
     }
 }
 
-// Initialize Search
+// Initialize Search - محسن مع lazy loading للصور
 function initializeSearch() {
     const searchInput = document.getElementById('searchInputModal');
     const searchResults = document.getElementById('searchResultsModal');
-    
+
     if (!searchInput || !searchResults) return;
-    
+
     searchInput.addEventListener('input', function() {
         const query = this.value.toLowerCase().trim();
-        
+
         if (query.length === 0) {
             searchResults.innerHTML = `
                 <div class="no-results">
@@ -205,15 +217,15 @@ function initializeSearch() {
             `;
             return;
         }
-        
+
         if (query.length < 2) return;
-        
+
         const results = articles.filter(article => 
             article.title.toLowerCase().includes(query) ||
             article.desc.toLowerCase().includes(query) ||
             article.cat.toLowerCase().includes(query)
         );
-        
+
         if (results.length === 0) {
             searchResults.innerHTML = `
                 <div class="no-results">
@@ -223,10 +235,15 @@ function initializeSearch() {
             `;
             return;
         }
-        
+
         searchResults.innerHTML = results.slice(0, 10).map(article => `
             <div class="search-result-item" onclick="window.location.href='${article.url}'">
-                <img src="${article.img}" alt="${article.title}">
+                <img src="${article.img}" 
+                     alt="${article.title}" 
+                     width="80" 
+                     height="80" 
+                     loading="lazy" 
+                     decoding="async">
                 <div class="search-result-content">
                     <span class="search-result-category cat-${article.cat}">${article.cat.toUpperCase()}</span>
                     <h4>${highlightText(article.title, query)}</h4>
@@ -236,7 +253,7 @@ function initializeSearch() {
             </div>
         `).join('');
     });
-    
+
     // Close modal on Escape key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
@@ -264,11 +281,8 @@ function formatDate(dateStr) {
 
 // Legal modals
 function showLegal(type) {
-    const content = type === 'privacy' 
-        ? 'Privacy Policy content will be added here.'
-        : 'Terms of Service content will be added here.';
-    
-    alert(content);
+    const url = type === 'privacy' ? 'privacy-policy.html' : 'terms-of-service.html';
+    window.location.href = url;
 }
 
 // Add styles for search results
@@ -297,10 +311,12 @@ searchStyles.textContent = `
         height: 80px;
         object-fit: cover;
         border-radius: 8px;
+        flex-shrink: 0;
     }
     
     .search-result-content {
         flex: 1;
+        min-width: 0;
     }
     
     .search-result-category {
@@ -318,6 +334,11 @@ searchStyles.textContent = `
         font-weight: 700;
         margin-bottom: 6px;
         line-height: 1.4;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
     }
     
     .search-result-content p {
@@ -325,6 +346,11 @@ searchStyles.textContent = `
         color: var(--text-secondary);
         margin-bottom: 6px;
         line-height: 1.5;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
     }
     
     .search-result-date {
@@ -337,6 +363,23 @@ searchStyles.textContent = `
         color: var(--accent-blue);
         padding: 2px 4px;
         border-radius: 3px;
+        font-weight: 600;
+    }
+    
+    .no-results {
+        text-align: center;
+        padding: 60px 20px;
+        color: var(--text-secondary);
+    }
+    
+    .no-results i {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        opacity: 0.5;
+    }
+    
+    .no-results p {
+        font-size: 1.1rem;
     }
 `;
 document.head.appendChild(searchStyles);
