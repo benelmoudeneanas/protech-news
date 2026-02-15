@@ -24,7 +24,21 @@ jobs:
       
       - name: Install dependencies
         run: |
-          pip install beautifulsoup4 Pillow
+          pip install beautifulsoup4 Pillow requests
+      
+      - name: Create images directory
+        run: |
+          mkdir -p assets/images/articles
+      
+      - name: Download images from data.js
+        run: |
+          if [ -f "scripts/download_images.py" ]; then
+            echo "🖼️ Downloading images..."
+            python3 scripts/download_images.py || echo "⚠️ Image download had issues, continuing..."
+          else
+            echo "⚠️ download_images.py not found, skipping"
+          fi
+        continue-on-error: true
       
       - name: Generate articles from data.js
         run: |
@@ -39,5 +53,8 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add articles/*.html
+          git add assets/images/articles/* 2>/dev/null || echo "No new images"
+          git add assets/js/data.js 2>/dev/null || echo "No data.js update"
+          git add assets/js/data.js.backup 2>/dev/null || echo "No backup"
           git add sitemap.xml
-          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-generated articles and sitemap" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-generated articles, images and sitemap" && git push)
