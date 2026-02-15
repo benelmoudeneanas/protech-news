@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Auto Generate Articles from data.js
-يقرأ data.js ويولد ملفات HTML للمقالات الجديدة فقط
+Auto Generate Articles from data.js (UPDATED)
+يقرأ data.js ويولد ملفات HTML مع دعم الصور المحلية
 """
 
 import os
@@ -31,7 +31,6 @@ def parse_data_js():
     articles = []
     
     # تقسيم المقالات (كل object بين {})
-    # نستعمل regex أكثر ذكاء
     pattern = r'\{([^{}]*(?:\{[^{}]*\}[^{}]*)*)\}'
     objects = re.findall(pattern, array_content)
     
@@ -78,16 +77,39 @@ def get_category_class(category):
         'news': 'cat-tech',
         'reviews': 'cat-tech',
         'comparison': 'cat-tech',
-        'tech-tips': 'cat-tech'
+        'tech-tips': 'cat-tech',
+        'entertainment': 'cat-entertainment'
     }
     return category_map.get(category.lower(), 'cat-tech')
+
+def convert_image_path(img_url):
+    """تحويل مسار الصورة من مطلق إلى نسبي"""
+    
+    # إذا كانت الصورة محلية بالفعل
+    if img_url.startswith('assets/'):
+        # من articles/ نرجع لـ root ونروح لـ assets
+        return f"../{img_url}"
+    
+    # إذا كانت رابط خارجي، نخليها كما هي
+    # (السكريبت الآخر download_images.py يحولها لمحلية)
+    return img_url
 
 def get_article_content(article_data):
     """الحصول على المحتوى - من data.js أو توليد بسيط"""
     
     # إذا كان المحتوى موجود في data.js، استعمله
     if article_data.get('content'):
-        return article_data['content']
+        content = article_data['content']
+        
+        # تحويل مسارات الصور في المحتوى
+        # البحث عن src="assets/images/..." وتحويلها لـ src="../assets/images/..."
+        content = re.sub(
+            r'src="(assets/images/[^"]+)"',
+            r'src="../\1"',
+            content
+        )
+        
+        return content
     
     # إذا مافيهش، ولد محتوى بسيط
     desc = article_data.get('desc', '')
@@ -109,13 +131,16 @@ def generate_article_html(article_data):
     # الحصول على المحتوى
     article_content = get_article_content(article_data)
     
+    # تحويل مسار الصورة
+    article_image = convert_image_path(article_data.get('img', ''))
+    
     # تحضير البيانات
     replacements = {
         '{{TITLE}}': article_data.get('title', 'Untitled'),
         '{{DESCRIPTION}}': article_data.get('desc', ''),
         '{{KEYWORDS}}': article_data.get('title', ''),
         '{{CANONICAL_URL}}': f"{BASE_URL}/articles/{article_data.get('slug', '')}.html",
-        '{{IMAGE}}': article_data.get('img', ''),
+        '{{IMAGE}}': article_image,  # استخدام المسار المحول
         '{{DATE}}': article_data.get('date', datetime.now().strftime('%Y-%m-%d')),
         '{{DATE_FORMATTED}}': format_date(article_data.get('date', '')),
         '{{CATEGORY}}': article_data.get('cat', 'tech').upper(),
@@ -134,7 +159,7 @@ def generate_article_html(article_data):
 def main():
     """البرنامج الرئيسي"""
     
-    print("🤖 Auto Generate Articles from data.js")
+    print("🤖 Auto Generate Articles from data.js (UPDATED)")
     print("=" * 60)
     
     # التأكد من وجود الملفات
@@ -201,6 +226,7 @@ def main():
     print(f"   - مقالات جديدة/محدثة: {new_count}")
     print(f"   - مقالات متخطاة: {skipped_count}")
     print(f"   - إجمالي: {len(articles)}")
+    print("\n💡 ملاحظة: الصور المحلية في assets/images/articles/")
 
 if __name__ == "__main__":
     main()
