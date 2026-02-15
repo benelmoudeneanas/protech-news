@@ -1,5 +1,4 @@
 const articles = [
-
 {
   slug: "netflix-romance-valentine-2026",
   title: "The Netflix Romance Algorithm: Top Streaming Picks for Valentine's Day 2026",
