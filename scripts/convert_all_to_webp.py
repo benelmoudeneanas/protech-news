@@ -1,189 +1,141 @@
 #!/usr/bin/env python3
 """
-Convert All Existing Images to WebP
-تحويل جميع الصور الموجودة إلى WebP
+Resize Existing WebP Images
+تصغير الصور WebP الموجودة من 1200px إلى 800px
 """
 
 import os
-import re
 from PIL import Image
 from pathlib import Path
 
 # المسارات
-DATA_JS_PATH = "assets/js/data.js"
 IMAGES_DIR = "assets/images/articles"
 
-# إعدادات WebP
+# إعدادات
 WEBP_QUALITY = 85
-MAX_WIDTH = 800
+MAX_WIDTH = 800  # ← الحجم الجديد
 
-def convert_image_to_webp(image_path):
-    """تحويل صورة واحدة لـ WebP"""
+def resize_webp_image(image_path):
+    """تصغير صورة WebP واحدة"""
     try:
         # قراءة الصورة
         img = Image.open(image_path)
-
-        # تحويل RGBA إلى RGB
-        if img.mode in ('RGBA', 'LA', 'P'):
-            background = Image.new('RGB', img.size, (255, 255, 255))
-            if img.mode == 'P':
-                img = img.convert('RGBA')
-            background.paste(img, mask=img.split()[-1] if img.mode == 'RGBA' else None)
-            img = background
-        elif img.mode != 'RGB':
-            img = img.convert('RGB')
-
-        # تصغير إذا كانت كبيرة
-        if img.width > MAX_WIDTH:
-            ratio = MAX_WIDTH / img.width
-            new_height = int(img.height * ratio)
-            img = img.resize((MAX_WIDTH, new_height), Image.Resampling.LANCZOS)
-
-        # اسم الملف الجديد
-        base_name = os.path.splitext(image_path)[0]
-        new_path = f"{base_name}.webp"
-
+        
         # الحجم الأصلي
-        original_size = os.path.getsize(image_path) / 1024
-
-        # حفظ كـ WebP
-        img.save(new_path, 'WEBP', quality=WEBP_QUALITY, method=6)
-
+        original_width = img.width
+        original_height = img.height
+        original_size = os.path.getsize(image_path) / 1024  # KB
+        
+        # تحقق إذا كانت محتاجة تصغير
+        if img.width <= MAX_WIDTH:
+            print(f"⏭️  {os.path.basename(image_path)}")
+            print(f"   📏 الحجم: {img.width}x{img.height} (ما يحتاجش تصغير)\n")
+            return False
+        
+        # تصغير مع الحفاظ على النسبة
+        ratio = MAX_WIDTH / img.width
+        new_height = int(img.height * ratio)
+        img = img.resize((MAX_WIDTH, new_height), Image.Resampling.LANCZOS)
+        
+        # حفظ بنفس الاسم (استبدال)
+        img.save(image_path, 'WEBP', quality=WEBP_QUALITY, method=6)
+        
         # الحجم الجديد
-        webp_size = os.path.getsize(new_path) / 1024
-        savings = ((original_size - webp_size) / original_size) * 100
-
+        new_size = os.path.getsize(image_path) / 1024  # KB
+        savings = ((original_size - new_size) / original_size) * 100
+        
         print(f"✅ {os.path.basename(image_path)}")
-        print(f"   📥 قبل: {original_size:.1f} KB")
-        print(f"   📤 بعد: {webp_size:.1f} KB (توفير {savings:.0f}%)")
-
-        # حذف الملف القديم
-        os.remove(image_path)
-        print(f"   🗑️  حذف القديم\n")
-
-        return new_path, os.path.basename(image_path), os.path.basename(new_path)
-
+        print(f"   📏 قبل: {original_width}x{original_height} ({original_size:.1f} KB)")
+        print(f"   📐 بعد: {MAX_WIDTH}x{new_height} ({new_size:.1f} KB)")
+        print(f"   💾 توفير: {savings:.0f}%\n")
+        
+        return True
+        
     except Exception as e:
         print(f"❌ خطأ في {os.path.basename(image_path)}: {str(e)}\n")
-        return None, None, None
+        return False
 
-def convert_all_images():
-    """تحويل جميع الصور في المجلد"""
-
+def resize_all_webp_images():
+    """تصغير جميع صور WebP في المجلد"""
+    
     if not os.path.exists(IMAGES_DIR):
         print(f"❌ المجلد غير موجود: {IMAGES_DIR}")
-        return []
-
-    # البحث عن جميع الصور
-    image_files = []
-    for ext in ['.jpg', '.jpeg', '.png']:
-        image_files.extend(Path(IMAGES_DIR).glob(f'*{ext}'))
-
-    if not image_files:
-        print("⚠️  لا توجد صور للتحويل (jpg/png)")
-        return []
-
-    print(f"📊 تم العثور على {len(image_files)} صورة للتحويل")
+        return
+    
+    # البحث عن جميع صور WebP
+    webp_files = list(Path(IMAGES_DIR).glob('*.webp'))
+    
+    if not webp_files:
+        print("⚠️  لا توجد صور WebP للتصغير")
+        return
+    
+    print(f"📊 تم العثور على {len(webp_files)} صورة WebP")
+    print(f"🎯 الحد الأقصى للعرض: {MAX_WIDTH}px")
+    print(f"🎨 الجودة: {WEBP_QUALITY}%")
     print("=" * 70)
     print()
-
-    conversions = []
+    
+    resized_count = 0
+    skipped_count = 0
     total_original = 0
-    total_webp = 0
-
-    for i, img_file in enumerate(image_files, 1):
-        print(f"[{i}/{len(image_files)}] تحويل...")
+    total_new = 0
+    
+    for i, img_file in enumerate(webp_files, 1):
+        print(f"[{i}/{len(webp_files)}] معالجة...")
         img_path = str(img_file)
-
-        # الحجم الأصلي
-        original_size = os.path.getsize(img_path) / 1024
-        total_original += original_size
-
-        # التحويل
-        new_path, old_name, new_name = convert_image_to_webp(img_path)
-
-        if new_path:
-            webp_size = os.path.getsize(new_path) / 1024
-            total_webp += webp_size
-            conversions.append((old_name, new_name))
-
-    # الإحصائيات
-    if conversions:
-        total_savings = ((total_original - total_webp) / total_original) * 100
-        print("=" * 70)
-        print(f"📊 الإحصائيات:")
-        print(f"   ✅ تم التحويل: {len(conversions)} صورة")
-        print(f"   📥 الحجم الأصلي: {total_original:.1f} KB")
-        print(f"   📤 الحجم الجديد: {total_webp:.1f} KB")
-        print(f"   💾 التوفير: {total_savings:.0f}%")
-        print("=" * 70)
-
-    return conversions
-
-def update_data_js(conversions):
-    """تحديث data.js بأسماء الملفات الجديدة"""
-
-    if not conversions:
-        print("\n⚠️  لا توجد تحويلات للتطبيق")
-        return
-
-    if not os.path.exists(DATA_JS_PATH):
-        print(f"\n⚠️  {DATA_JS_PATH} غير موجود")
-        return
-
-    print("\n🔄 تحديث data.js...")
-
-    # قراءة data.js
-    with open(DATA_JS_PATH, 'r', encoding='utf-8') as f:
-        content = f.read()
-
-    # حفظ نسخة احتياطية
-    backup_path = DATA_JS_PATH + ".backup"
-    with open(backup_path, 'w', encoding='utf-8') as f:
-        f.write(content)
-    print(f"   💾 نسخة احتياطية: {backup_path}")
-
-    # تحديث الأسماء
-    updated_content = content
-    replaced_count = 0
-
-    for old_name, new_name in conversions:
-        if old_name in updated_content:
-            updated_content = updated_content.replace(old_name, new_name)
-            replaced_count += 1
-            print(f"   ✅ {old_name} → {new_name}")
-
-    # حفظ التحديث
-    with open(DATA_JS_PATH, 'w', encoding='utf-8') as f:
-        f.write(updated_content)
-
-    print(f"\n   ✅ تم تحديث {replaced_count} رابط في data.js")
+        
+        # الحجم قبل
+        size_before = os.path.getsize(img_path) / 1024
+        total_original += size_before
+        
+        # التصغير
+        if resize_webp_image(img_path):
+            resized_count += 1
+            size_after = os.path.getsize(img_path) / 1024
+            total_new += size_after
+        else:
+            skipped_count += 1
+            total_new += size_before
+    
+    # الإحصائيات النهائية
+    print("=" * 70)
+    print(f"📊 الإحصائيات النهائية:")
+    print(f"   ✅ تم التصغير: {resized_count} صورة")
+    print(f"   ⏭️  متخطاة: {skipped_count} صورة (صغيرة بالفعل)")
+    print(f"   📊 إجمالي: {len(webp_files)} صورة")
+    print()
+    
+    if resized_count > 0:
+        total_savings = ((total_original - total_new) / total_original) * 100
+        print(f"💾 التوفير الكلي:")
+        print(f"   📥 الحجم قبل: {total_original:.1f} KB ({total_original/1024:.2f} MB)")
+        print(f"   📤 الحجم بعد: {total_new:.1f} KB ({total_new/1024:.2f} MB)")
+        print(f"   💰 التوفير: {total_savings:.0f}% ({(total_original-total_new)/1024:.2f} MB)")
+    
+    print("=" * 70)
 
 def main():
     """البرنامج الرئيسي"""
-
+    
     print("=" * 70)
-    print("🖼️  تحويل جميع الصور القديمة إلى WebP")
+    print("📐 تصغير صور WebP الموجودة")
+    print(f"🎯 من أي حجم → {MAX_WIDTH}px عرض")
     print("=" * 70)
     print()
-
-    # تحويل الصور
-    conversions = convert_all_images()
-
-    # تحديث data.js
-    if conversions:
-        update_data_js(conversions)
-
-        print("\n" + "=" * 70)
-        print("✅ تم الانتهاء بنجاح!")
-        print("=" * 70)
-        print("\n💡 الخطوات التالية:")
-        print("   1. تحقق من المجلد: assets/images/articles/")
-        print("   2. راجع data.js (نسخة احتياطية: data.js.backup)")
-        print("   3. Commit & Push للتغييرات")
-        print("\n🎯 جميع الصور الآن بصيغة WebP!")
-    else:
-        print("\n⚠️  لم يتم تحويل أي صور")
+    
+    resize_all_webp_images()
+    
+    print("\n" + "=" * 70)
+    print("✅ تم الانتهاء!")
+    print("=" * 70)
+    print("\n💡 الخطوات التالية:")
+    print("   1. تحقق من الصور: assets/images/articles/")
+    print("   2. Commit & Push:")
+    print("      git add assets/images/articles/")
+    print("      git commit -m '📐 Resize images to 800px'")
+    print("      git push")
+    print()
+    print("🚀 الآن الصور محسنة 100%!")
 
 if __name__ == "__main__":
     main()
