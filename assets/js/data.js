@@ -5,7 +5,7 @@ const articles = [
   date: "2026-02-16",
   cat: "tech",
   desc: "From aggressive trade-in credits to limited-time pre-order bonuses, here’s everything you need to know about the Samsung Galaxy S26 Ultra launch pricing strategy.",
-  img: "https://image2url.com/r2/default/images/1771284246637-db7037bb-712d-4d03-a5fd-5affd6312577.webp",
+  img: "assets/images/articles/article-7bf55a3c805b.webp",
   url: "articles/samsung-galaxy-s26-ultra-price-preorder-2026.html",
   content: `
     <p><strong>Samsung</strong> has officially lifted the curtain on the <strong>Samsung Galaxy S26 Ultra</strong>, and while the hardware upgrades are headline-worthy, it’s the pricing and pre-order strategy that could define this launch cycle.</p>

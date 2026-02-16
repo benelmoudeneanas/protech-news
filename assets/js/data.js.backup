@@ -1,11 +1,69 @@
 const articles = [
+  {
+  slug: "samsung-galaxy-s26-ultra-price-preorder-2026",
+  title: "Samsung Galaxy S26 Ultra: Price, Pre-Order Deals And Trade-In Offers Explained",
+  date: "2026-02-16",
+  cat: "tech",
+  desc: "From aggressive trade-in credits to limited-time pre-order bonuses, here’s everything you need to know about the Samsung Galaxy S26 Ultra launch pricing strategy.",
+  img: "https://image2url.com/r2/default/images/1771284246637-db7037bb-712d-4d03-a5fd-5affd6312577.webp",
+  url: "articles/samsung-galaxy-s26-ultra-price-preorder-2026.html",
+  content: `
+    <p><strong>Samsung</strong> has officially lifted the curtain on the <strong>Samsung Galaxy S26 Ultra</strong>, and while the hardware upgrades are headline-worthy, it’s the pricing and pre-order strategy that could define this launch cycle.</p>
+
+    <p>In a flagship market where premium smartphones are pushing well beyond the $1,000 barrier, Samsung’s latest Ultra model enters with a familiar question: is this the most powerful Android phone of 2026—and is it worth the upgrade?</p>
+
+    <h2>Starting Price: Premium Territory</h2>
+    <p>The Galaxy S26 Ultra launches at a starting price consistent with last year’s Ultra positioning, firmly placing it in the ultra-premium tier. Higher storage configurations increase the cost significantly, especially for users opting for top-capacity models.</p>
+
+    <p>Rather than introducing a sharp price hike, Samsung appears focused on maintaining stability while adding value through bundled offers.</p>
+
+    <h2>Pre-Order Incentives: Where The Real Savings Begin</h2>
+    <p>As with previous Ultra releases, Samsung is emphasizing early-buyer incentives. Customers pre-ordering during the launch window can expect:</p>
+    <ul>
+      <li>Free storage upgrades (pay for a lower tier, receive the next tier up)</li>
+      <li>Enhanced trade-in credits</li>
+      <li>Samsung store credit for accessories</li>
+      <li>Carrier-based bill credits and financing perks</li>
+    </ul>
+
+    <p>For many buyers, these incentives significantly reduce the effective purchase price—especially when combined with a recent flagship trade-in.</p>
+
+    <h2>Trade-In Strategy: Maximizing Upgrade Value</h2>
+    <p>Samsung’s trade-in program remains one of the most aggressive among Android manufacturers. Owners of recent Galaxy Ultra, Fold, and Flip devices are eligible for substantial credits that can shave hundreds off the final price.</p>
+
+    <p>Even select competitor devices qualify for competitive trade-in values, making switching ecosystems more attractive in 2026.</p>
+
+    <h2>Carrier Deals Vs. Unlocked Offers</h2>
+    <p>Carrier promotions may include multi-year bill credits tied to installment plans, which can dramatically lower upfront costs. However, unlocked buyers benefit from greater flexibility, faster updates, and direct Samsung bonuses.</p>
+
+    <p>Stacking opportunities—combining trade-ins, storage upgrades, and promotional credits—appear to be the real advantage this year, narrowing the real-world gap between base and premium configurations.</p>
+
+    <div class="highlight-box">
+      <h3>📱 Should You Pre-Order?</h3>
+      <ul>
+        <li><strong>Upgrading from S25 Ultra?</strong> Consider waiting unless trade-in credits are exceptionally strong.</li>
+        <li><strong>Coming from S23 or older?</strong> The performance and camera improvements make the value proposition much stronger.</li>
+        <li><strong>Switching from another brand?</strong> Watch for boosted cross-platform trade-in bonuses.</li>
+      </ul>
+    </div>
+
+    <h2>The Bigger Picture</h2>
+    <p>The Galaxy S26 Ultra represents more than incremental hardware upgrades. It reinforces Samsung’s dominance in the premium Android tier, leveraging AI-powered features, next-gen processing, and ecosystem integration.</p>
+
+    <p>With strong pre-order bonuses and aggressive trade-in incentives, the real cost of ownership may be far lower than the headline price suggests—especially for early adopters.</p>
+
+    <p style="font-size: 1.1rem; font-weight: 600; margin-top: 30px;">
+      Bottom line: If you’re planning a flagship upgrade in 2026, the launch window could deliver the best overall value. 📦✨
+    </p>
+  `
+},
 {
   slug: "netflix-romance-valentine-2026",
   title: "The Netflix Romance Algorithm: Top Streaming Picks for Valentine's Day 2026",
   date: "2026-02-14",
   cat: "entertainment",
   desc: "From 4K Ultra HD storytelling to AI-driven recommendations, discover the top romantic picks trending on Netflix this Valentine's Day 2026.",
-  img: "assets/images/articles/article-dcd7ac72e91b.png",
+  img: "assets/images/articles/article-dcd7ac72e91b.webp",
   url: "articles/netflix-romance-valentine-2026.html",
   content: `
     <p>In the age of high-bitrate streaming and AI-driven recommendations, finding the perfect "data match" for your Valentine's Day movie night can be a challenge. While the Netflix algorithm is constantly crunching numbers to predict your next favorite watch, some titles transcend the code.</p>
@@ -46,7 +104,7 @@ const articles = [
   date: "2026-02-14",
   cat: "ios",
   desc: "Apple just issued a critical security warning for all iPhone users. iOS 26.3 patches active vulnerabilities, adds carrier location privacy controls, and brings RCS encryption. Here's why you must update right now.",
-  img: "assets/images/articles/article-50a0aa818c84.jpg",
+  img: "assets/images/articles/article-50a0aa818c84.webp",
   url: "articles/ios-26-3-critical-security-update.html",
   content: `
     <p>Apple has officially released iOS 26.3 — and this time, it's not a routine update you can snooze for a few days. A <strong>critical security warning</strong> has been issued to all iPhone users, urging immediate installation to protect against active threats already being exploited in the wild.</p>
@@ -109,7 +167,7 @@ const articles = [
   date: "2026-02-13",
   cat: "reviews",
   desc: "Apple Watch Series 11 delivers what fans have begged for for years: 24-hour battery that survives a full day AND sleep tracking. Plus hypertension alerts, 2x scratch-resistant glass, and 5G. But should you upgrade?",
-  img: "assets/images/articles/article-52aa7295a6b0.jpg",
+  img: "assets/images/articles/article-52aa7295a6b0.webp",
   url: "articles/apple-watch-series-11-review.html",
   content: `
     <p>Apple didn't reinvent the wheel with the Series 11 — but it fixed the one thing that frustrated every Apple Watch owner for a decade. After years of begging, Apple finally delivered a watch that lasts <strong>24 hours</strong>, survives sleep tracking overnight, and still has battery left when you wake up. That changes everything.</p>
@@ -173,7 +231,7 @@ const articles = [
   date: "2026-02-13",
   cat: "gaming",
   desc: "The February 2026 State of Play has officially concluded...",
-  img: "assets/images/articles/article-f2a4eac75f7e.jpg",
+  img: "assets/images/articles/article-f2a4eac75f7e.webp",
   url: "articles/sony-state-of-play-february-2026-announcements.html",
   
   // المحتوى الكامل هنا ⬇️
@@ -203,7 +261,7 @@ const articles = [
     date: "2026-02-11",
     cat: "ios",
     desc: "iOS 26.3 drops with Android switching, new wallpapers, and a major privacy feature. But the real story? Apple just confirmed the next update brings a totally new Siri powered by Google Gemini.",
-    img: "assets/images/articles/article-2d753c2db30b.jpg",
+    img: "assets/images/articles/article-2d753c2db30b.webp",
     url: "articles/ios-26-3-siri-storm.html"
   },
   {
@@ -212,7 +270,7 @@ const articles = [
     date: "2026-02-10",
     cat: "ai",
     desc: "Apple delays Siri overhaul again due to technical challenges merging on-device AI with cloud LLMs. Siri 2.0 misses spring update—can Apple catch up with Google and OpenAI?",
-    img: "assets/images/articles/article-8dee4112298a.jpg",
+    img: "assets/images/articles/article-8dee4112298a.webp",
     url: "articles/apple-siri-overhaul-delay.html"
   },
   {
@@ -221,7 +279,7 @@ const articles = [
     date: "2026-02-10",
     cat: "leaks",
     desc: "New leaks reveal expected iPhone 18 Pro and iPhone 18 Pro Max prices. Apple plans to keep prices unchanged despite component cost increases, with improvements in specs and cameras.",
-    img: "assets/images/articles/article-df9b1fd30380.jpg",
+    img: "assets/images/articles/article-df9b1fd30380.webp",
     url: "articles/iphone-18-pro-prices.html"
   },
   {
@@ -230,7 +288,7 @@ const articles = [
     date: "2026-02-08",
     cat: "hardware",
     desc: "Apple Studio Display 2 rumors reveal Mini-LED technology, 120Hz ProMotion, and professional upgrades. Is the long-awaited successor finally coming in 2026?",
-    img: "assets/images/articles/article-28d307d793a2.jpg",
+    img: "assets/images/articles/article-28d307d793a2.webp",
     url: "articles/apple-studio-display-2-rumors.html"
   },
   {
@@ -248,7 +306,7 @@ const articles = [
     date: "2026-02-08",
     cat: "comparison",
     desc: "Xfinity vs T-Mobile Home Internet comparison. Which wins for your home? Compare speeds, pricing, contracts, and reliability to make the right choice for your household.",
-    img: "assets/images/articles/article-2f6bb5808676.jpg",
+    img: "assets/images/articles/article-2f6bb5808676.webp",
     url: "articles/xfinity-vs-tmobile-home-internet.html"
   },
   {
@@ -257,7 +315,7 @@ const articles = [
     date: "2026-02-08",
     cat: "leaks",
     desc: "Apple's iPhone 18 Pro leaks reveal revolutionary variable aperture camera and professional telephoto lens. Could this be the DSLR killer we've been waiting for?",
-    img: "assets/images/articles/article-c1a46a11148a.jpg",
+    img: "assets/images/articles/article-c1a46a11148a.webp",
     url: "articles/iphone-18-pro-camera-revolution.html"
   },
   {
@@ -266,7 +324,7 @@ const articles = [
     date: "2026-02-09",
     cat: "tech-tips",
     desc: "Discover 4 hidden Roku settings you must disable immediately to protect your privacy and enhance your streaming experience without interruptions or annoying ad tracking.",
-    img: "assets/images/articles/article-7e9c9cbdc970.jpg",
+    img: "assets/images/articles/article-7e9c9cbdc970.webp",
     url: "articles/roku-privacy-settings.html"
   },
 
@@ -277,7 +335,7 @@ const articles = [
     date: "2026-02-07",
     cat: "leaks",
     desc: "Samsung Galaxy S26 Ultra launch date, price leaks, design changes with new camera island, and full specifications. Expected February 25, 2026 unveiling with 200MP camera and Snapdragon 8 Elite Gen 5.",
-    img: "assets/images/articles/article-6c24b1184a06.jpg",
+    img: "assets/images/articles/article-6c24b1184a06.webp",
     url: "articles/samsung-galaxy-s26-ultra-launch.html"
   },
   {
@@ -286,7 +344,7 @@ const articles = [
     date: "2026-02-06",
     cat: "leaks",
     desc: "Samsung locks February 25, 2026 for Galaxy Unpacked. Revolutionary 60W charging, Privacy Display, and Snapdragon 8 Elite Gen 5 promise to shake up the flagship battle.",
-    img: "assets/images/articles/article-90722fe56004.jpg",
+    img: "assets/images/articles/article-90722fe56004.webp",
     url: "articles/samsung-galaxy-s26-ultra-leaks-iphone-killer.html"
   },
   {
@@ -295,7 +353,7 @@ const articles = [
     date: "2026-02-05",
     cat: "leaks",
     desc: "Samsung Galaxy S26 Ultra leaks reveal major upgrades including Qi2 magnetic wireless charging and larger battery capacity up to 5,500mAh, competing with Chinese rivals.",
-    img: "assets/images/articles/article-9ee8a49ae565.jpg",
+    img: "assets/images/articles/article-9ee8a49ae565.webp",
     url: "articles/samsung-galaxy-s26-ultra-leak.html"
   },
   {
@@ -304,7 +362,7 @@ const articles = [
     date: "2026-02-04",
     cat: "leaks",
     desc: "The 'Ultra' remains the king as Samsung gears up for its 2026 flagship launch. Recent data reveals a massive focus on the premium model and a surprisingly stable pricing strategy.",
-    img: "assets/images/articles/article-dce0f5e8b43a.jpg",
+    img: "assets/images/articles/article-dce0f5e8b43a.webp",
     url: "articles/samsung-galaxy-s26-ultra-leak-production-pricing.html"
   },
   {
@@ -313,7 +371,7 @@ const articles = [
     date: "2026-02-04",
     cat: "leaks",
     desc: "New reports reveal a confusing pricing strategy for the Galaxy S26. While the base models see a price hike due to RAM scarcity, the Ultra is set to become more affordable.",
-    img: "assets/images/articles/article-25976653de49.jpg",
+    img: "assets/images/articles/article-25976653de49.webp",
     url: "articles/samsung-galaxy-s26-price-leak-ultra-cheaper.html"
   },
   {
@@ -331,7 +389,7 @@ const articles = [
     date: "2026-02-04",
     cat: "news",
     desc: "After four years of faithful service, the Galaxy S21, S21 Plus, and S21 Ultra have been removed from Samsung's update schedule.",
-    img: "assets/images/articles/article-006d12a32c43.jpg",
+    img: "assets/images/articles/article-006d12a32c43.webp",
     url: "articles/samsung-galaxy-s21-end-of-support-security-updates.html"
   },
   {
@@ -340,7 +398,7 @@ const articles = [
     date: "2026-02-03",
     cat: "hardware",
     desc: "Why settle for a dual-screen when you can have three? Samsung's 2026 flagship unfolds into a massive 10.2-inch tablet. Is this the end of the iPad?",
-    img: "assets/images/articles/article-fa8ac9f7b3d9.jpg",
+    img: "assets/images/articles/article-fa8ac9f7b3d9.webp",
     url: "articles/samsung-galaxy-z-fold-8-triple-fold.html"
   },
   {
@@ -349,7 +407,7 @@ const articles = [
     date: "2026-02-03",
     cat: "reviews",
     desc: "Samsung just turned a phone into a full-sized tablet. Is the 'Z' design a gimmick or the new standard for mobile productivity?",
-    img: "assets/images/articles/article-26f872461e3c.jpeg",
+    img: "assets/images/articles/article-26f872461e3c.webp",
     url: "articles/samsung-galaxy-z-fold-8-tablet-review.html"
   },
   {
@@ -358,7 +416,7 @@ const articles = [
     date: "2026-02-02",
     cat: "leaks",
     desc: "Breaking: New supply chain leaks suggest Samsung will unveil the world's first Tri-Fold smartphone within the next 48 hours. Is the iPad finally in trouble?",
-    img: "assets/images/articles/article-93aca54f09d0.jpg",
+    img: "assets/images/articles/article-93aca54f09d0.webp",
     url: "articles/galaxy-z-trifold-launch-leak-specs.html"
   },
 
@@ -369,7 +427,7 @@ const articles = [
     date: "2026-02-07",
     cat: "leaks",
     desc: "Breaking insider intelligence unveils unprecedented power capabilities in Apple's iPhone 18 Pro Max. Revolutionary 5200 mAh battery with A20 Pro chip technology.",
-    img: "assets/images/articles/article-853dc19fe380.jpg",
+    img: "assets/images/articles/article-853dc19fe380.webp",
     url: "articles/iphone-18-pro-max-battery-leak.html"
   },
   {
@@ -378,7 +436,7 @@ const articles = [
     date: "2026-02-04",
     cat: "leaks",
     desc: "Leaked reports indicate Apple is testing professional-grade hardware including variable aperture and teleconverter technology for its 2026 flagship.",
-    img: "assets/images/articles/article-04f7262cc460.jpg",
+    img: "assets/images/articles/article-04f7262cc460.webp",
     url: "articles/iphone-18-pro-max-camera-leaks-variable-aperture-teleconverter.html"
   },
   {
@@ -387,7 +445,7 @@ const articles = [
     date: "2026-02-04",
     cat: "leaks",
     desc: "Is it a phone or a luxury computer? Exclusive supply chain reports confirm a massive price hike for the 2026 lineup. Here is what you get for $2,000.",
-    img: "assets/images/articles/article-a0e553d64bce.jpg",
+    img: "assets/images/articles/article-a0e553d64bce.webp",
     url: "articles/iphone-18-pro-max-leaks-price-hike.html"
   },
   {
@@ -396,7 +454,7 @@ const articles = [
     date: "2026-02-04",
     cat: "leaks",
     desc: "Apple's first foldable iPhone revealed in comprehensive leak. Touch ID returns, horizontal camera bar, and revolutionary button layout promise to reshape the iPhone experience.",
-    img: "assets/images/articles/article-da514618ad6d.jpg",
+    img: "assets/images/articles/article-da514618ad6d.webp",
     url: "articles/iphone-fold-major-leak-cameras-design-features.html"
   },
   {
@@ -405,7 +463,7 @@ const articles = [
     date: "2026-02-04",
     cat: "news",
     desc: "Apple just posted a massive $144B revenue beat fueled by an iPhone 17 supercycle, while confirming a game-changing AI pivot with Google Gemini.",
-    img: "assets/images/articles/article-9ee8a49ae565.jpg",
+    img: "assets/images/articles/article-9ee8a49ae565.webp",
     url: "articles/apple-iphone-17-record-sales-google-gemini-ai.html"
   },
   {
@@ -414,7 +472,7 @@ const articles = [
     date: "2026-02-03",
     cat: "leaks",
     desc: "The wait is over. Exclusive leaks from Apple's supply chain reveal a lightweight pair of glasses that do everything your iPhone can—and more.",
-    img: "assets/images/articles/article-9f387603b2f9.jpg",
+    img: "assets/images/articles/article-9f387603b2f9.webp",
     url: "articles/apple-glasses-air-leaks-smartphone-death.html"
   },
   {
@@ -423,7 +481,7 @@ const articles = [
     date: "2026-02-03",
     cat: "reviews",
     desc: "Apple's first pair of AR spectacles is here. Does the 'Air' finally replace the iPhone, or is it just an expensive accessory? Here is our deep dive.",
-    img: "assets/images/articles/article-b5bb1d0f5449.jpg",
+    img: "assets/images/articles/article-b5bb1d0f5449.webp",
     url: "articles/apple-glasses-air-one-week-review.html"
   },
   {
@@ -432,7 +490,7 @@ const articles = [
     date: "2026-02-03",
     cat: "reviews",
     desc: "Apple has finally addressed the weight and price barriers. With the 2026 refresh, the Vision Pro moves from a 'luxury toy' to a legitimate productivity powerhouse.",
-    img: "assets/images/articles/article-a014616c5c44.jpg",
+    img: "assets/images/articles/article-a014616c5c44.webp",
     url: "articles/apple-vision-pro-2026-review.html"
   },
   {
@@ -461,7 +519,7 @@ const articles = [
     date: "2026-02-07",
     cat: "gaming",
     desc: "Microsoft plans major Xbox Game Pass expansion with third-party service bundles, PC-Premium tier merger, and ad-supported cloud gaming.",
-    img: "assets/images/articles/article-4e51f321fec5.jpg",
+    img: "assets/images/articles/article-4e51f321fec5.webp",
     url: "articles/xbox-game-pass-future-expansion.html"
   },
   {
@@ -470,7 +528,7 @@ const articles = [
     date: "2026-02-04",
     cat: "gaming",
     desc: "After multiple delays, Rockstar Games confirms November 19, 2026 as the final release date for GTA 6. The company promises this date is rock solid.",
-    img: "assets/images/articles/article-2253304f92fa.jpg",
+    img: "assets/images/articles/article-2253304f92fa.webp",
     url: "articles/grand-theft-auto-6-encouraging-release-date-update.html"
   },
   {
@@ -488,7 +546,7 @@ const articles = [
     date: "2026-02-04",
     cat: "gaming",
     desc: "The gaming world is buzzing with PlayStation 6 rumors. From 8K native gaming to revolutionary AI integration, here is the future of gaming.",
-    img: "assets/images/articles/article-a96d51f588f8.jpg",
+    img: "assets/images/articles/article-a96d51f588f8.webp",
     url: "articles/ps6-leaks-release-date-specs.html"
   },
   {
@@ -497,7 +555,7 @@ const articles = [
     date: "2026-02-03",
     cat: "gaming",
     desc: "A massive data breach at Sony has revealed 'Project Trinity'—a 2026 monster focused on Path-Tracing and 120fps gaming. Here is what's coming next.",
-    img: "assets/images/articles/article-f698af96c9da.jpg",
+    img: "assets/images/articles/article-f698af96c9da.webp",
     url: "articles/sony-project-trinity-ps5-pro-leaks.html"
   },
   {
@@ -506,7 +564,7 @@ const articles = [
     date: "2026-02-03",
     cat: "reviews",
     desc: "Sony's mid-generation beast promises native 4K with full Ray-Tracing. We pushed the hardware to its limit with GTA VI and Cyberpunk 2077.",
-    img: "assets/images/articles/article-f698af96c9da.jpg",
+    img: "assets/images/articles/article-f698af96c9da.webp",
     url: "articles/sony-ps5-pro-2026-path-tracing-review.html"
   },
   {
@@ -524,7 +582,7 @@ const articles = [
     date: "2026-02-03",
     cat: "reviews",
     desc: "4K docked gaming, DLSS 3.5, and full backward compatibility. We tested the Switch 2 Pro with 'Metroid Prime 4' and the results are breathtaking.",
-    img: "assets/images/articles/article-ef9948cc08c7.jpg",
+    img: "assets/images/articles/article-ef9948cc08c7.webp",
     url: "articles/nintendo-switch-2-pro-handheld-king-review.html"
   },
 
@@ -535,7 +593,7 @@ const articles = [
     date: "2026-02-08",
     cat: "ai",
     desc: "AI agents controlling bank accounts raise critical questions about privacy, security, and liability. What happens when an AI makes a $1,000 mistake with your money?",
-    img: "assets/images/articles/article-c459b44c4335.jpg",
+    img: "assets/images/articles/article-c459b44c4335.webp",
     url: "articles/ai-banking-control-risks.html"
   },
   {
@@ -553,7 +611,7 @@ const articles = [
     date: "2026-02-04",
     cat: "ai",
     desc: "Washington has finally pulled the trigger. The most comprehensive AI regulation in history is now law. Find out how the new 'Watermark Mandate' affects your business and your privacy.",
-    img: "assets/images/articles/article-5656ba49be24.jpg",
+    img: "assets/images/articles/article-5656ba49be24.webp",
     url: "articles/federal-ai-act-2026-internet-freedom.html"
   },
   {
@@ -562,7 +620,7 @@ const articles = [
     date: "2026-02-04",
     cat: "ai",
     desc: "Classrooms in 2026 look nothing like they did five years ago. From personalized AI tutors to VR history lessons—see how American students are making a record-breaking comeback.",
-    img: "assets/images/articles/article-f06b0a894778.jpg",
+    img: "assets/images/articles/article-f06b0a894778.webp",
     url: "articles/ai-education-us-public-schools-learning-gap.html"
   },
   {
@@ -571,7 +629,7 @@ const articles = [
     date: "2026-02-04",
     cat: "tech",
     desc: "The 'Quantum Supremacy' era is officially here. Discover how US pharmaceutical companies are using quantum processors to develop vaccines in weeks, not years.",
-    img: "assets/images/articles/article-699ddcd8b8b8.jpg",
+    img: "assets/images/articles/article-699ddcd8b8b8.webp",
     url: "articles/quantum-computing-usa-medical-miracles.html"
   },
 
@@ -582,7 +640,7 @@ const articles = [
     date: "2026-02-04",
     cat: "reviews",
     desc: "The 2026 gadget lineup has officially moved past the 'AI hype' into pure utility. From holographic communication to bio-integrated health trackers, here are the 10 devices redefining our reality.",
-    img: "assets/images/articles/article-33f0ded9ac70.jpg",
+    img: "assets/images/articles/article-33f0ded9ac70.webp",
     url: "articles/10-tech-gadgets-2026-vouch.html"
   },
   {
@@ -591,7 +649,7 @@ const articles = [
     date: "2026-02-04",
     cat: "tech",
     desc: "The 'Dead Zone' is officially dead. SpaceX is launching a laptop-sized satellite dish that runs on a power bank. But why are regulators trying to stop it?",
-    img: "assets/images/articles/article-cb55bb0aaadd.jpg",
+    img: "assets/images/articles/article-cb55bb0aaadd.webp",
     url: "articles/starlink-mini-elon-musk-backpack-internet.html"
   },
   {
@@ -600,7 +658,7 @@ const articles = [
     date: "2026-02-04",
     cat: "reviews",
     desc: "We took the Starlink Mini into the depths of the Grand Canyon. It's small, it's fast, and it changes everything for rural America.",
-    img: "assets/images/articles/article-cb55bb0aaadd.jpg",
+    img: "assets/images/articles/article-cb55bb0aaadd.webp",
     url: "articles/starlink-mini-backpack-satellite-review.html"
   },
   {
@@ -609,7 +667,7 @@ const articles = [
     date: "2026-02-04",
     cat: "leaks",
     desc: "No holes, no notches, just pure screen. Google's 2026 flagship has finally solved the under-display camera puzzle. See the leaked photo quality!",
-    img: "assets/images/articles/article-3bc522932196.jpg",
+    img: "assets/images/articles/article-3bc522932196.webp",
     url: "articles/google-pixel-11-pro-under-display-camera.html"
   },
   {
@@ -618,7 +676,7 @@ const articles = [
     date: "2026-02-04",
     cat: "reviews",
     desc: "Google's 2026 flagship isn't about specs—it's about the AI that lives inside it. Is the 'Invisible Camera' enough to beat the iPhone 18?",
-    img: "assets/images/articles/article-3bc522932196.jpg",
+    img: "assets/images/articles/article-3bc522932196.webp",
     url: "articles/google-pixel-11-pro-smartest-phone-review.html"
   },
   {
@@ -627,7 +685,7 @@ const articles = [
     date: "2026-02-04",
     cat: "news",
     desc: "Meta confirms it is developing a privacy-centric tool allowing users to voluntarily opt-out of someone else's Close Friends circle.",
-    img: "assets/images/articles/article-4a6c27423a9e.jpg",
+    img: "assets/images/articles/article-4a6c27423a9e.webp",
     url: "articles/instagram-close-friends-exit-feature-meta-update.html"
   },
 
@@ -638,7 +696,7 @@ const articles = [
     date: "2026-02-04",
     cat: "tech",
     desc: "Forget the Cybertruck—this is the Tesla that will actually change the world. Exclusive photos from the Austin Gigafactory reveal a compact powerhouse that could kill the gas engine for good.",
-    img: "assets/images/articles/article-4c9b55c8f84d.jpg",
+    img: "assets/images/articles/article-4c9b55c8f84d.webp",
     url: "articles/tesla-model-2-spy-shots-release.html"
   },
   {
@@ -647,7 +705,7 @@ const articles = [
     date: "2026-02-04",
     cat: "reviews",
     desc: "We spent 30 days with Elon Musk's most affordable car yet. From range anxiety to build quality—here is the truth about the car that's killing gas engines.",
-    img: "assets/images/articles/article-4c9b55c8f84d.jpg",
+    img: "assets/images/articles/article-4c9b55c8f84d.webp",
     url: "articles/tesla-model-2-long-term-review.html"
   },
 
@@ -658,7 +716,7 @@ const articles = [
     date: "2026-02-04",
     cat: "tech",
     desc: "After the disastrous storms of 2025, America is rebuilding its power grid from the ground up. Inside the $100 billion shift to decentralized AI-managed energy.",
-    img: "assets/images/articles/article-fb0363c396d0.jpg",
+    img: "assets/images/articles/article-fb0363c396d0.webp",
     url: "articles/us-micro-grid-revolution-energy-ai.html"
   },
   {
@@ -667,7 +725,7 @@ const articles = [
     date: "2026-02-04",
     cat: "tech",
     desc: "The office mandate failed. Now, a new migration is reshaping the American landscape. Discover why states like West Virginia and Wyoming are the new tech hubs.",
-    img: "assets/images/articles/article-ec9e7ec5ed34.jpg",
+    img: "assets/images/articles/article-ec9e7ec5ed34.webp",
     url: "articles/remote-work-2-zoom-towns-tech-hubs.html"
   },
   {
@@ -676,7 +734,7 @@ const articles = [
     date: "2026-02-04",
     cat: "tech",
     desc: "Is 100 the new 80? In 2026, Americans are spending record amounts on AI-driven health monitoring and bio-hacking. Inside the movement to end aging.",
-    img: "assets/images/articles/article-b9064b6804c6.jpg",
+    img: "assets/images/articles/article-b9064b6804c6.webp",
     url: "articles/biotech-gold-rush-personalized-longevity.html"
   },
   {
@@ -685,7 +743,7 @@ const articles = [
     date: "2026-02-04",
     cat: "tech",
     desc: "After years of volatility, 2026 marks the 'Great Stabilization'. Discover how regulated blockchain protocols are saving US consumers billions in banking fees.",
-    img: "assets/images/articles/article-9338b6d93225.jpg",
+    img: "assets/images/articles/article-9338b6d93225.webp",
     url: "articles/defi-comeback-wall-street-blockchain.html"
   }
 
