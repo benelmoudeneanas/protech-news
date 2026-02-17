@@ -859,5 +859,4 @@ const articles = [
     img: "assets/images/articles/article-9338b6d93225.webp",
     url: "articles/defi-comeback-wall-street-blockchain.html"
   }
-
 ];
