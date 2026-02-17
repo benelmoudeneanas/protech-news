@@ -5,7 +5,7 @@ const articles = [
   date: "2026-02-17",
   cat: "tech",
   desc: "From 4K restoration to AI deepfakes, exploring how technology preserves Robert Duvall's cinematic legacy for future generations through digital archiving and entertainment tech.",
-  img: "https://image2url.com/r2/default/images/1771286975063-b7d8b06e-e6fb-4249-8ff0-69710952bbde.jpg",
+  img: "assets/images/articles/article-c334416903fb.webp",
   url: "articles/robert-duvall-digital-legacy.html",
   content: `
     <p>With the passing of the legendary <strong>Robert Duvall</strong> (1931-2026), the tech world focuses on a fascinating question: how do we preserve such a massive cinematic legacy in the digital age? The intersection of classic cinema and cutting-edge technology reveals innovative solutions that ensure future generations can experience his iconic performances.</p>
