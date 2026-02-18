@@ -1,406 +1,275 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Preconnect & DNS Prefetch للسرعة القصوى -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    <link rel="dns-prefetch" href="https://cdn.onesignal.com">
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<!-- Preconnect ONLY critical origins -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.onesignal.com">
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="ProTech - Your ultimate source for tech news, exclusive leaks, in-depth reviews, and future insights. Stay ahead with the latest in technology, smartphones, AI, and gaming.">
-    <meta name="keywords" content="tech news, technology, smartphone leaks, AI, gaming, reviews, iPhone, Samsung, Google Pixel, ProTech">
-    <meta name="author" content="ProTech Magazine">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://protechdaily.online/">
+<!-- SEO -->
+<meta name="description" content="Latest tech news, AI updates, smartphone leaks and gaming news. Stay ahead with ProTech.">
+<meta name="keywords" content="tech news, AI, iPhone, Samsung, gaming, reviews">
+<meta name="author" content="ProTech">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://protechdaily.online/">
+<meta name="theme-color" content="#007aff">
 
-    <!-- Improved Meta Tags -->
-    <meta name="theme-color" content="#007aff">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://protechdaily.online/">
+<meta property="og:title" content="ProTech | Latest Tech News & Reviews">
+<meta property="og:description" content="Latest tech news, AI updates, smartphone leaks and gaming news.">
+<meta property="og:image" content="https://protechdaily.online/assets/images/favicon.png">
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://protechdaily.online/">
-    <meta property="og:title" content="ProTech | Exploring the Digital Frontier">
-    <meta property="og:description" content="Your ultimate source for tech news, exclusive leaks, in-depth reviews, and future insights.">
-    <meta property="og:image" content="https://protechdaily.online/assets/images/favicon.png">
-    <meta property="og:site_name" content="ProTech">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ProTech | Latest Tech News">
+<meta name="twitter:description" content="Latest tech news, AI updates, smartphone leaks.">
+<meta name="twitter:image" content="https://protechdaily.online/assets/images/favicon.png">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@ProTech">
-    <meta name="twitter:url" content="https://protechdaily.online/">
-    <meta name="twitter:title" content="ProTech | Exploring the Digital Frontier">
-    <meta name="twitter:description" content="Your ultimate source for tech news, exclusive leaks, in-depth reviews, and future insights.">
-    <meta name="twitter:image" content="https://protechdaily.online/assets/images/favicon.png">
+<!-- Favicon -->
+<link rel="icon" href="assets/images/favicon.png">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
-    <link rel="apple-touch-icon" href="assets/images/favicon.png">
+<title>ProTech | Latest Tech News, AI & Reviews</title>
 
-    <title>ProTech | Exploring the Digital Frontier - Latest Tech News & Reviews</title>
+<!-- AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3339602944499634" crossorigin="anonymous"></script>
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3339602944499634" crossorigin="anonymous"></script>
+<!-- GTM -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-W5BV7BH4');</script>
 
-    <!-- Google Tag Manager -->
-    <script>
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-W5BV7BH4');
-    </script>
+<!-- Verification -->
+<meta name="google-site-verification" content="rMjJnMz7ZZitF1NaLmYgiUyfNEbe06qhl11Lq_6iUBs">
 
-    <!-- Google Site Verification -->
-    <meta name="google-site-verification" content="rMjJnMz7ZZitF1NaLmYgiUyfNEbe06qhl11Lq_6iUBs">
+<!-- Structured Data -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"ProTech","url":"https://protechdaily.online/","description":"Latest tech news, AI updates, reviews","publisher":{"@type":"Organization","name":"ProTech","logo":{"@type":"ImageObject","url":"https://protechdaily.online/assets/images/favicon.png"}},"potentialAction":{"@type":"SearchAction","target":"https://protechdaily.online/?s={search_term_string}","query-input":"required name=search_term_string"}}
+</script>
 
-    <!-- Enhanced Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "ProTech Magazine",
-        "alternateName": "ProTech",
-        "url": "https://protechdaily.online/",
-        "description": "Your ultimate source for tech news, exclusive leaks, in-depth reviews, and future insights",
-        "publisher": {
-            "@type": "Organization",
-            "name": "ProTech",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://protechdaily.online/assets/images/favicon.png",
-                "width": 512,
-                "height": 512
-            }
-        },
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://protechdaily.online/?s={search_term_string}",
-            "query-input": "required name=search_term_string"
-        }
-    }
-    </script>
+<!-- Critical CSS - MINIFIED -->
+<style>:root{--bg-body:#0a0b10;--bg-card:#12141c;--accent-blue:#007aff;--text-primary:#fff;--text-secondary:#b0bfd0}*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg-body);color:var(--text-primary);line-height:1.6}nav{background:rgba(13,15,22,.98);backdrop-filter:blur(25px);border-bottom:1px solid rgba(255,255,255,.08);position:sticky;top:0;z-index:1000}.nav-container{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 20px;min-height:70px}.logo{font-size:1.8rem;font-weight:900;cursor:pointer}.logo span{color:var(--accent-blue)}.nav-list{display:flex;list-style:none;gap:25px}.nav-list a{color:var(--text-secondary);text-decoration:none;font-weight:600;font-size:.9rem}.nav-list a:hover{color:var(--accent-blue)}.search-btn{background:var(--accent-blue);border:none;color:#fff;padding:10px 20px;border-radius:10px;cursor:pointer}.mobile-menu{display:none;font-size:1.5rem;cursor:pointer;color:#fff}.container{max-width:1400px;margin:0 auto;padding:0 20px}@media(max-width:768px){.nav-list{display:none}.mobile-menu{display:block}}</style>
 
-    <!-- Critical CSS Inline للأداء الأقصى -->
-    <style>:root{--bg-body:#0a0b10;--bg-card:#12141c;--bg-header:#0d0f16;--accent-blue:#007aff;--accent-purple:#8b5cf6;--accent-cyan:#06b6d4;--text-primary:#ffffff;--text-secondary:#b0bfd0;--border-color:#1e293b}*{margin:0;padding:0;box-sizing:border-box}body{font-family:"Inter",-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg-body);color:var(--text-primary);line-height:1.6;overflow-x:hidden}.container{max-width:1400px;margin:0 auto;padding:0 40px}.animated-bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;opacity:.05;background:radial-gradient(circle at 20% 30%,rgba(0,122,255,.2) 0%,transparent 50%),radial-gradient(circle at 80% 70%,rgba(139,92,246,.2) 0%,transparent 50%);animation:bgShift 30s ease-in-out infinite;will-change:transform}@keyframes bgShift{0%,100%{transform:translate(0) rotate(0) scale(1)}50%{transform:translate(5%,5%) rotate(3deg) scale(1.1)}}nav{background:rgba(13,15,22,.98);backdrop-filter:blur(25px);-webkit-backdrop-filter:blur(25px);border-bottom:1px solid rgba(255,255,255,.08);position:sticky;top:0;z-index:1000;box-shadow:0 8px 32px rgba(0,0,0,.5)}.nav-container{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 40px;min-height:80px}.logo{font-family:"Space Grotesk",sans-serif;font-size:2rem;font-weight:900;cursor:pointer;letter-spacing:-1.5px;transition:transform .3s ease;will-change:transform}.logo:hover{transform:scale(1.05)}.logo span{background:linear-gradient(135deg,#007aff 0%,#00d4ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.nav-list{display:flex;list-style:none;gap:35px}.nav-list a{color:var(--text-secondary);text-decoration:none;font-weight:600;font-size:.95rem;transition:all .3s ease;display:flex;align-items:center;gap:8px}.nav-list a:hover,.nav-list a.active{color:var(--accent-blue)}.search-btn{background:linear-gradient(135deg,var(--accent-blue),var(--accent-cyan));border:none;color:#fff;padding:12px 24px;border-radius:12px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:8px;transition:all .3s ease;box-shadow:0 4px 15px rgba(0,122,255,.3)}.search-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,122,255,.4)}.mobile-menu{display:none;font-size:1.8rem;cursor:pointer;color:var(--text-primary)}.featured-card img,.news-card img{width:100%;height:auto;display:block;border-radius:12px;object-fit:cover}.section-header{margin-bottom:40px}.section-header h2{font-family:"Space Grotesk",sans-serif;font-size:2.2rem;font-weight:900;display:flex;align-items:center;gap:15px}@media(max-width:768px){.container{padding:0 20px}.nav-container{padding:0 20px}.logo{font-size:1.5rem}.nav-list{position:absolute;top:80px;left:0;right:0;background:var(--bg-header);flex-direction:column;padding:20px;gap:15px;display:none}.mobile-menu{display:block}}</style>
+<!-- Fonts - SUBSET ONLY -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"></noscript>
 
-    <!-- Fonts - Async Loading محسن -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;900&family=Inter:wght@400;500;600;700;900&display=swap">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;900&family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;900&family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet"></noscript>
+<!-- Custom Icons (NO Font Awesome) -->
+<style>
+.icon{width:1em;height:1em;display:inline-block;vertical-align:middle;fill:currentColor}
+.icon-home{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23b0bfd0' d='M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z'/%3E%3C/svg%3E") no-repeat center;background-size:contain}
+.icon-fire{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23b0bfd0' d='M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z'/%3E%3C/svg%3E") no-repeat center;background-size:contain}
+.icon-robot{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23b0bfd0' d='M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm6 8h-1V8c0-2.21-1.79-4-4-4h-2C8.79 4 7 5.79 7 8v2H6c-1.1 0-2 .9-2 2v10h2v-2h12v2h2V12c0-1.1-.9-2-2-2zM9 14c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm6 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z'/%3E%3C/svg%3E") no-repeat center;background-size:contain}
+.icon-chip{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23b0bfd0' d='M17 8h2V6c0-1.1-.9-2-2-2h-2v2h2v2zm0 8h2v2c0 1.1-.9 2-2 2h-2v-2h2v-2zM7 18H5v-2H3v2c0 1.1.9 2 2 2h2v-2zM5 8h2V6h2V4H7C5.9 4 5 4.9 5 6v2h2v-2H5v2zm7-4H10v2h2V4zm0 16h-2v2h2v-2zM20 12h2v-2h-2v2zM2 12h2v-2H2v2zm16-6v2h2V6h-2zM6 16v2h2v-2H6zm0-8V6H4v2h2zm10 10v-2h-2v2h2zM8 9h8v6H8V9z'/%3E%3C/svg%3E") no-repeat center;background-size:contain}
+.icon-mobile{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23b0bfd0' d='M17 1H7c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm0 18H7V5h10v14z'/%3E%3C/svg%3E") no-repeat center;background-size:contain}
+.icon-search{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3C/svg%3E") no-repeat center;background-size:contain}
+.icon-info{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23b0bfd0' d='M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z'/%3E%3C/svg%3E") no-repeat center;background-size:contain}
+.icon-envelope{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23b0bfd0' d='M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z'/%3E%3C/svg%3E") no-repeat center;background-size:contain}
+.icon-star{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23ffc107' d='M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z'/%3E%3C/svg%3E") no-repeat center;background-size:contain}
+.icon-news{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23b0bfd0' d='M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM7 18H5v-2h2v2zm0-4H5v-2h2v2zm0-4H5V8h2v2zm4 8H9v-2h2v2zm0-4H9v-2h2v2zm0-4H9V8h2v2zm4 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V8h2v2zm4 8h-2V8h2v10z'/%3E%3C/svg%3E") no-repeat center;background-size:contain}
+</style>
 
-    <!-- Font Awesome 6.5.1 (أحدث نسخة) -->
-    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+<!-- Main CSS - Deferred -->
+<link rel="stylesheet" href="assets/css/styles.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="assets/css/styles.css"></noscript>
 
-    <!-- Main Stylesheet - Deferred -->
-    <link rel="preload" as="style" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/styles.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="assets/css/styles.css"></noscript>
-
-    <!-- OneSignal SDK - Deferred -->
-    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-    <script>
-        window.OneSignalDeferred = window.OneSignalDeferred || [];
-        OneSignalDeferred.push(async function(OneSignal) {
-            await OneSignal.init({
-                appId: "7fa7473c-5cd2-4b19-81d8-2851980ef462",
-            });
-        });
-    </script>
+<!-- OneSignal - LAZY -->
+<script>
+window.addEventListener('load',function(){
+var s=document.createElement('script');
+s.src='https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js';
+s.defer=true;
+document.head.appendChild(s);
+s.onload=function(){
+window.OneSignalDeferred=window.OneSignalDeferred||[];
+OneSignalDeferred.push(async function(OneSignal){
+await OneSignal.init({appId:"7fa7473c-5cd2-4b19-81d8-2851980ef462"});
+});
+};
+});
+</script>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W5BV7BH4" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W5BV7BH4" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <!-- Animated Background -->
-    <div class="animated-bg"></div>
+<!-- Navigation -->
+<nav>
+<div class="nav-container">
+<div class="logo" onclick="window.location.href='index.html'">PRO<span>TECH</span></div>
+<ul class="nav-list" id="nav-list">
+<li><a href="index.html" class="active"><i class="icon icon-home"></i> Home</a></li>
+<li><a href="pages/trends.html"><i class="icon icon-fire"></i> Trends</a></li>
+<li><a href="pages/ai-news.html"><i class="icon icon-robot"></i> AI News</a></li>
+<li><a href="pages/tech-news.html"><i class="icon icon-chip"></i> Tech News</a></li>
+<li><a href="pages/gadgets.html"><i class="icon icon-mobile"></i> Gadgets</a></li>
+<li><a href="about.html"><i class="icon icon-info"></i> About</a></li>
+<li><a href="contact.html"><i class="icon icon-envelope"></i> Contact</a></li>
+</ul>
+<button class="search-btn" onclick="toggleSearchModal()">
+<i class="icon icon-search"></i>
+<span>Search</span>
+</button>
+<div class="mobile-menu" id="mobile-menu">☰</div>
+</div>
+</nav>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <div class="logo" role="button" tabindex="0" onclick="window.location.href='index.html'">PRO<span>TECH</span></div>
-            <ul class="nav-list" id="nav-list">
-                <li><a href="index.html" class="active"><i class="fas fa-home" aria-hidden="true"></i> Home</a></li>
-                <li><a href="pages/trends.html"><i class="fas fa-fire" aria-hidden="true"></i> Trends</a></li>
-                <li><a href="pages/ai-news.html"><i class="fas fa-robot" aria-hidden="true"></i> AI News</a></li>
-                <li><a href="pages/tech-news.html"><i class="fas fa-microchip" aria-hidden="true"></i> Tech News</a></li>
-                <li><a href="pages/gadgets.html"><i class="fas fa-mobile-alt" aria-hidden="true"></i> Gadgets</a></li>
-                <li><a href="about.html"><i class="fas fa-info-circle" aria-hidden="true"></i> About</a></li>
-                <li><a href="contact.html"><i class="fas fa-envelope" aria-hidden="true"></i> Contact</a></li>
-            </ul>
-            <button class="search-btn" onclick="toggleSearchModal()" aria-label="Search articles">
-                <i class="fas fa-search" aria-hidden="true"></i>
-                <span>Search</span>
-            </button>
-            <div class="mobile-menu" id="mobile-menu" role="button" aria-label="Toggle mobile menu" tabindex="0">
-                <i class="fas fa-bars" aria-hidden="true"></i>
-            </div>
-        </div>
-    </nav>
+<!-- Featured Story -->
+<section class="featured-story" id="featured">
+<div class="container">
+<div class="section-header">
+<h1><i class="icon icon-star"></i> Today's Highlight</h1>
+</div>
+<div class="featured-card" id="featured-article">
+<!-- JS -->
+</div>
+</div>
+</section>
 
-    <!-- Featured Story -->
-    <section class="featured-story" id="featured">
-        <div class="container">
-            <div class="section-header">
-                <h2><i class="fas fa-star" aria-hidden="true"></i> Today's Highlight</h2>
-            </div>
-            <div class="featured-card" id="featured-article">
-                <!-- Will be populated by JavaScript -->
-            </div>
-        </div>
-    </section>
+<!-- Latest News -->
+<section class="latest-news">
+<div class="container">
+<div class="section-header">
+<h2><i class="icon icon-news"></i> Latest Stories</h2>
+<div class="filter-tabs">
+<button class="filter-tab active" onclick="filterArticles('all')">All</button>
+<button class="filter-tab" onclick="filterArticles('ios')">iOS</button>
+<button class="filter-tab" onclick="filterArticles('ai')">AI</button>
+<button class="filter-tab" onclick="filterArticles('gaming')">Gaming</button>
+<button class="filter-tab" onclick="filterArticles('leaks')">Leaks</button>
+</div>
+</div>
+<div class="news-grid" id="news-grid">
+<!-- JS -->
+</div>
+<div class="load-more-container">
+<button class="load-more-btn" id="load-more-btn" onclick="loadMoreArticles()">
+<span>Load More</span>
+</button>
+</div>
+</div>
+</section>
 
-    <!-- Latest News Grid -->
-    <section class="latest-news">
-        <div class="container">
-            <div class="section-header">
-                <h2><i class="fas fa-newspaper" aria-hidden="true"></i> Latest Stories</h2>
-                <div class="filter-tabs">
-                    <button class="filter-tab active" onclick="filterArticles('all')" aria-label="Show all articles">All</button>
-                    <button class="filter-tab" onclick="filterArticles('ios')" aria-label="Filter iOS articles">iOS</button>
-                    <button class="filter-tab" onclick="filterArticles('ai')" aria-label="Filter AI articles">AI</button>
-                    <button class="filter-tab" onclick="filterArticles('gaming')" aria-label="Filter gaming articles">Gaming</button>
-                    <button class="filter-tab" onclick="filterArticles('leaks')" aria-label="Filter leaks articles">Leaks</button>
-                </div>
-            </div>
-            <div class="news-grid" id="news-grid">
-                <!-- Articles loaded dynamically -->
-            </div>
-            <div class="load-more-container">
-                <button class="load-more-btn" id="load-more-btn" onclick="loadMoreArticles()" aria-label="Load more articles">
-                    <span>Load More Stories</span>
-                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
-                </button>
-            </div>
-        </div>
-    </section>
+<!-- Categories -->
+<section class="categories-showcase">
+<div class="container">
+<div class="section-header">
+<h2>Explore by Category</h2>
+</div>
+<div class="categories-grid">
+<a href="pages/ai-news.html" class="category-card">
+<div class="category-icon">🤖</div>
+<h3>AI & ML</h3>
+<p>Latest breakthroughs in AI</p>
+<span class="category-count" id="ai-count">0 articles</span>
+</a>
+<a href="pages/tech-news.html" class="category-card">
+<div class="category-icon">💻</div>
+<h3>Tech News</h3>
+<p>Breaking technology updates</p>
+<span class="category-count" id="tech-count">0 articles</span>
+</a>
+<a href="pages/gadgets.html" class="category-card">
+<div class="category-icon">📱</div>
+<h3>Gadgets</h3>
+<p>Latest devices and reviews</p>
+<span class="category-count" id="gadget-count">0 articles</span>
+</a>
+<a href="javascript:void(0)" onclick="filterArticles('gaming')" class="category-card">
+<div class="category-icon">🎮</div>
+<h3>Gaming</h3>
+<p>Console news and releases</p>
+<span class="category-count" id="gaming-count">0 articles</span>
+</a>
+<a href="javascript:void(0)" onclick="filterArticles('leaks')" class="category-card">
+<div class="category-icon">🔥</div>
+<h3>Leaks</h3>
+<p>Insider information</p>
+<span class="category-count" id="leaks-count">0 articles</span>
+</a>
+<a href="pages/trends.html" class="category-card">
+<div class="category-icon">📈</div>
+<h3>Trends</h3>
+<p>Industry insights</p>
+<span class="category-count" id="trends-count">0 articles</span>
+</a>
+</div>
+</div>
+</section>
 
-    <!-- Categories Showcase -->
-    <section class="categories-showcase">
-        <div class="container">
-            <div class="section-header">
-                <h2><i class="fas fa-th-large" aria-hidden="true"></i> Explore by Category</h2>
-            </div>
-            <div class="categories-grid">
-                <div class="category-card" onclick="window.location.href='pages/ai-news.html'" role="button" tabindex="0" aria-label="View AI and Machine Learning articles">
-                    <div class="category-icon">🤖</div>
-                    <h3>AI & Machine Learning</h3>
-                    <p>Latest breakthroughs in artificial intelligence</p>
-                    <span class="category-count" id="ai-count">0 articles</span>
-                </div>
-                <div class="category-card" onclick="window.location.href='pages/tech-news.html'" role="button" tabindex="0" aria-label="View Tech News articles">
-                    <div class="category-icon">💻</div>
-                    <h3>Tech News</h3>
-                    <p>Breaking technology updates</p>
-                    <span class="category-count" id="tech-count">0 articles</span>
-                </div>
-                <div class="category-card" onclick="window.location.href='pages/gadgets.html'" role="button" tabindex="0" aria-label="View Smartphones and Gadgets articles">
-                    <div class="category-icon">📱</div>
-                    <h3>Smartphones & Gadgets</h3>
-                    <p>Latest devices and reviews</p>
-                    <span class="category-count" id="gadget-count">0 articles</span>
-                </div>
-                <div class="category-card" onclick="filterByCategory('gaming')" role="button" tabindex="0" aria-label="View Gaming articles">
-                    <div class="category-icon">🎮</div>
-                    <h3>Gaming</h3>
-                    <p>Console news and game releases</p>
-                    <span class="category-count" id="gaming-count">0 articles</span>
-                </div>
-                <div class="category-card" onclick="filterByCategory('leaks')" role="button" tabindex="0" aria-label="View Exclusive Leaks">
-                    <div class="category-icon">🔥</div>
-                    <h3>Exclusive Leaks</h3>
-                    <p>Insider tips and early reveals</p>
-                    <span class="category-count" id="leaks-count">0 articles</span>
-                </div>
-                <div class="category-card" onclick="filterByCategory('ios')" role="button" tabindex="0" aria-label="View iOS articles">
-                    <div class="category-icon">🍎</div>
-                    <h3>iOS & Apple</h3>
-                    <p>Latest from the Apple ecosystem</p>
-                    <span class="category-count" id="ios-count">0 articles</span>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Newsletter -->
+<section class="newsletter-section">
+<div class="container">
+<div class="newsletter-card">
+<div class="newsletter-icon">✉️</div>
+<h2>Stay Updated</h2>
+<p>Get the latest tech news delivered to your inbox.</p>
+<form class="newsletter-form" onsubmit="event.preventDefault(); alert('Coming soon!');">
+<input type="email" placeholder="Enter your email" required>
+<button type="submit">
+<span>Subscribe</span>
+</button>
+</form>
+</div>
+</div>
+</section>
 
-    <!-- Search Modal -->
-    <div id="searchModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="searchModalTitle">
-        <div class="modal-content">
-            <button class="close-modal" onclick="toggleSearchModal()" aria-label="Close search modal">
-                <i class="fas fa-times"></i>
-            </button>
-            <h2 id="searchModalTitle"><i class="fas fa-search"></i> Search ProTech</h2>
-            <input type="search" 
-                   id="searchInputModal" 
-                   class="search-input" 
-                   placeholder="Search articles..." 
-                   autocomplete="off"
-                   aria-label="Search articles">
-            <div id="searchResultsModal" class="search-results" role="region" aria-live="polite"></div>
-        </div>
-    </div>
+<!-- Search Modal -->
+<div id="searchModal" class="modal">
+<div class="modal-content">
+<span class="close-modal" onclick="toggleSearchModal()">&times;</span>
+<h2>Search ProTech</h2>
+<input type="text" id="searchInputModal" class="search-input" placeholder="Search articles..." autocomplete="off">
+<div id="searchResultsModal" class="search-results">
+<div class="no-results">
+<i class="icon icon-search"></i>
+<p>Start typing to search...</p>
+</div>
+</div>
+</div>
+</div>
 
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top" style="display:none">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+<!-- Footer -->
+<footer>
+<div class="footer-container">
+<div class="footer-top">
+<div class="footer-brand">
+<div class="logo">PRO<span>TECH</span></div>
+<p>Exploring the Digital Frontier</p>
+</div>
+<div class="footer-links-grid">
+<div class="footer-column">
+<h3>Navigation</h3>
+<a href="index.html">Home</a>
+<a href="pages/trends.html">Trends</a>
+<a href="pages/ai-news.html">AI News</a>
+<a href="pages/tech-news.html">Tech News</a>
+</div>
+<div class="footer-column">
+<h3>Categories</h3>
+<a href="pages/gadgets.html">Gadgets</a>
+<a href="javascript:void(0)" onclick="filterArticles('gaming')">Gaming</a>
+<a href="javascript:void(0)" onclick="filterArticles('leaks')">Leaks</a>
+<a href="javascript:void(0)" onclick="filterArticles('ios')">iOS</a>
+</div>
+<div class="footer-column">
+<h3>About</h3>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact</a>
+<a href="privacy-policy.html">Privacy</a>
+<a href="terms-of-service.html">Terms</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2026 ProTech. All rights reserved.</p>
+</div>
+</div>
+</footer>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <div class="logo">PRO<span>TECH</span></div>
-                    <p>Exploring the Digital Frontier. Your gateway to tomorrow's technology, today.</p>
-                    <div class="social-links" style="margin-top:20px">
-                        <a href="#" aria-label="Follow us on X (Twitter)" title="X (Twitter)" style="display:inline-block;margin-right:15px;color:var(--text-secondary);font-size:1.3rem;transition:color .3s">
-                            <i class="fa-brands fa-x-twitter"></i>
-                        </a>
-                        <a href="#" aria-label="Follow us on Facebook" title="Facebook" style="display:inline-block;margin-right:15px;color:var(--text-secondary);font-size:1.3rem;transition:color .3s">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="#" aria-label="Follow us on LinkedIn" title="LinkedIn" style="display:inline-block;margin-right:15px;color:var(--text-secondary);font-size:1.3rem;transition:color .3s">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="#" aria-label="Follow us on GitHub" title="GitHub" style="display:inline-block;color:var(--text-secondary);font-size:1.3rem;transition:color .3s">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-links-grid">
-                    <div class="footer-column">
-                        <h4>Navigation</h4>
-                        <a href="index.html">Home</a>
-                        <a href="pages/trends.html">Trends</a>
-                        <a href="pages/ai-news.html">AI News</a>
-                        <a href="pages/tech-news.html">Tech News</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Categories</h4>
-                        <a href="pages/gadgets.html">Gadgets</a>
-                        <a href="#gaming" onclick="filterByCategory('gaming'); return false;">Gaming</a>
-                        <a href="#leaks" onclick="filterByCategory('leaks'); return false;">Leaks</a>
-                        <a href="#ios" onclick="filterByCategory('ios'); return false;">iOS</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>About</h4>
-                        <a href="about.html">About Us</a>
-                        <a href="contact.html">Contact</a>
-                        <a href="privacy-policy.html">Privacy Policy</a>
-                        <a href="terms-of-service.html">Terms of Service</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 ProTech Magazine. All rights reserved.</p>
-                <p style="margin-top:10px;font-size:0.9rem;opacity:0.7">Made with <i class="fas fa-heart" style="color:#e74c3c"></i> for Tech Enthusiasts</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Floating CPA Offers Button -->
-    <a href="pages/offers.html" class="floating-cpa-btn" aria-label="View exclusive offers" title="Exclusive Offers">
-        <i class="fas fa-gift"></i>
-        <span>Offers</span>
-    </a>
-
-    <!-- Scripts - Deferred -->
-    <script src="assets/js/data.js" defer></script>
-    <script src="assets/js/main.js" defer></script>
-
-    <!-- Back to Top Script -->
-    <script>
-        window.addEventListener('scroll', function() {
-            var backToTop = document.getElementById('backToTop');
-            if (window.pageYOffset > 300) {
-                backToTop.style.display = 'flex';
-                backToTop.classList.add('visible');
-            } else {
-                backToTop.style.display = 'none';
-                backToTop.classList.remove('visible');
-            }
-        });
-
-        document.getElementById('backToTop')?.addEventListener('click', function() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    </script>
-
-    <!-- Floating CPA Button Styles -->
-    <style>
-        .floating-cpa-btn {
-            position: fixed;
-            bottom: 90px;
-            right: 20px;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-            border-radius: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
-            box-shadow: 0 4px 20px rgba(255, 107, 107, 0.4);
-            z-index: 999;
-            transition: all 0.3s ease;
-            animation: pulse-cpa 2s ease-in-out infinite;
-        }
-        
-        .floating-cpa-btn:hover {
-            transform: translateY(-5px) scale(1.1);
-            box-shadow: 0 6px 30px rgba(255, 107, 107, 0.6);
-        }
-        
-        .floating-cpa-btn i {
-            font-size: 1.5rem;
-            margin-bottom: 2px;
-        }
-        
-        .floating-cpa-btn span {
-            font-size: 0.65rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        @keyframes pulse-cpa {
-            0%, 100% {
-                transform: scale(1);
-                box-shadow: 0 4px 20px rgba(255, 107, 107, 0.4);
-            }
-            50% {
-                transform: scale(1.05);
-                box-shadow: 0 6px 30px rgba(255, 107, 107, 0.6);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .floating-cpa-btn {
-                bottom: 80px;
-                right: 15px;
-                width: 55px;
-                height: 55px;
-            }
-            
-            .floating-cpa-btn i {
-                font-size: 1.3rem;
-            }
-            
-            .floating-cpa-btn span {
-                font-size: 0.6rem;
-            }
-        }
-    </style>
+<!-- Scripts - Deferred -->
+<script src="assets/js/data.js" defer></script>
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>
