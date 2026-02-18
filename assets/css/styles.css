@@ -1010,3 +1010,17 @@ footer {
         gap: 30px;
     }
 }
+
+/* Performance Fixes */
+.news-card img, .featured-card img {
+  aspect-ratio: 16/9;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.news-card {
+  min-height: 450px;
+}
+.featured-card {
+  min-height: 400px;
+}
