@@ -1,11 +1,51 @@
 const articles = [
   {
+  slug: "google-pixel-10a-vs-9a-8a-7a-comparison",
+  title: "Google Pixel 10a vs. 9a, 8a, and 7a: Is the New $499 King Worth the Upgrade?",
+  date: "2026-02-18",
+  cat: "tech",
+  desc: "A deep dive into Google's latest budget flagship, the Pixel 10a, comparing its 3,000-nit display and Tensor G4 performance against its predecessors.",
+  img: "https://image2url.com/r2/default/images/1771435723947-0c4ed4b6-828e-4c23-9a70-961a3e761c41.webp",
+  url: "articles/google-pixel-10a-vs-9a-8a-7a-comparison.html",
+  content: `
+    <p>Google has officially pulled back the curtain on the <strong>Pixel 10a</strong>. Following the tradition of the "A-series," this device aims to deliver the core Pixel experience—excellent cameras and smart AI—at a much more digestible price point of <strong>$499</strong>.</p>
+
+    <h2>Display & Design: Brighter, Tougher, Better</h2>
+    <p>While the Pixel 10a shares the same footprint and 6.3-inch OLED screen size as the 9a, Google has packed some serious hardware upgrades into the panel itself.</p>
+    
+    <ul>
+      <li><strong>Peak Brightness:</strong> The 10a reaches a massive 3,000 nits, outshining the 9a (2,700 nits) and dwarfing the 7a’s 1,000 nits. This makes outdoor visibility significantly better.</li>
+      <li><strong>Durability:</strong> For the first time in the A-series, Google moved away from the aging Gorilla Glass 3. The Pixel 10a features <strong>Gorilla Glass 7i</strong>, offering much better scratch and drop resistance.</li>
+      <li><strong>Contrast:</strong> The contrast ratio has doubled to 2,000,000:1 compared to the 9a, ensuring deeper blacks and more vibrant colors.</li>
+    </ul>
+
+    <div class="highlight-box">
+      <h3>🚀 Performance & Connectivity Edge</h3>
+      <p>Interestingly, both the Pixel 10a and 9a are powered by the <strong>Tensor G4</strong> chip. Key improvements in the 10a include:</p>
+      <ul>
+        <li><strong>Satellite SOS:</strong> Bringing emergency satellite communication to the budget-friendly tier.</li>
+        <li><strong>Faster Charging:</strong> The 10a now supports 30W wired charging (up from 23W on the 9a) and 10W wireless charging.</li>
+        <li><strong>Battery:</strong> A robust 5,100 mAh capacity shared with the 9a, providing superior longevity over the 8a and 7a.</li>
+      </ul>
+    </div>
+
+    <h2>The Verdict: Should You Upgrade?</h2>
+    <p>If you already own a <strong>Pixel 9a</strong>, the Pixel 10a is a refined tweak rather than a transformation. The experience will feel 98% the same, though you might appreciate the tougher glass and significantly faster charging speeds.</p>
+
+    <p>However, if you are coming from a <strong>Pixel 7a or 8a</strong>, the Pixel 10a is a massive leap. You’re getting a significantly larger and brighter screen, a much more modern processor, and a battery that finally lasts as long as you need it to.</p>
+
+    <p style="font-size: 1.1rem; font-weight: 600; margin-top: 30px;">
+      The Pixel 10a solidifies Google's dominance in the mid-range market, proving that you don't need to spend $800+ to get a flagship-tier display and AI capabilities. 📱✨
+    </p>
+  `
+  },
+  {
   slug: "gemini-vs-chatgpt-2026-shift",
   title: "The AI Evolution: Why Gemini is Overtaking ChatGPT in Professional Workflows",
   date: "2026-02-17",
   cat: "tech",
   desc: "An analytical look at how Google Gemini’s integration, real-time data accuracy, and specialized 'Gems' are shifting the balance of power in the AI industry.",
-  img: "https://image2url.com/r2/default/images/1771358749086-0aa1c33b-a3cf-4033-9f51-d9bdc4215773.jpg",
+  img: "assets/images/articles/article-f266752bb5b4.webp",
   url: "articles/gemini-vs-chatgpt-2026-shift.html",
   content: `
     <p>For years, OpenAI’s <strong>ChatGPT</strong> was the undisputed synonym for artificial intelligence. Since its 2022 debut, it set the gold standard for conversational AI, helping millions summarize documents, plan schedules, and brainstorm creative ideas. However, as we move through 2026, a significant shift is occurring in the tech landscape. A growing number of power users and professionals are migrating to <strong>Google Gemini</strong>, finding it to be a more mature and integrated alternative.</p>

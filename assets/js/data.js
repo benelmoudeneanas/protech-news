@@ -5,7 +5,7 @@ const articles = [
   date: "2026-02-18",
   cat: "tech",
   desc: "A deep dive into Google's latest budget flagship, the Pixel 10a, comparing its 3,000-nit display and Tensor G4 performance against its predecessors.",
-  img: "https://image2url.com/r2/default/images/1771435723947-0c4ed4b6-828e-4c23-9a70-961a3e761c41.webp",
+  img: "assets/images/articles/article-f681e533b0a8.webp",
   url: "articles/google-pixel-10a-vs-9a-8a-7a-comparison.html",
   content: `
     <p>Google has officially pulled back the curtain on the <strong>Pixel 10a</strong>. Following the tradition of the "A-series," this device aims to deliver the core Pixel experience—excellent cameras and smart AI—at a much more digestible price point of <strong>$499</strong>.</p>
