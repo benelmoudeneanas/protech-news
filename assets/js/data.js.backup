@@ -1,11 +1,51 @@
 const articles = [
+{
+  slug: "samsung-galaxy-s26-ultra-privacy-display-leak",
+  title: "Galaxy S26 Ultra’s New Privacy Display: A Game Changer or Just Hype?",
+  date: "2026-02-19",
+  cat: "tech",
+  desc: "Leaked details reveal Samsung's 'Flex Magic Pixel' technology for the S26 Ultra, offering a hardware-level privacy shield integrated directly into the OLED panel.",
+  img: "https://image2url.com/r2/default/images/1771559027719-7f0a9fa9-2f7b-4106-a84d-3a38abcfaaed.jpg",
+  url: "articles/samsung-galaxy-s26-ultra-privacy-display-leak.html",
+  content: `
+    <p>We’ve all been there—sitting on a crowded bus or in a tight elevator, feeling the person next to us staring right at our phone screen. Samsung seems to have finally found a high-tech solution for this, and the latest leaks about the <strong>Galaxy S26 Ultra</strong> give us a clear look at how it works.</p>
+
+    <p>Forget those cheap plastic privacy protectors you buy online; we’re talking about a built-in, hardware-level feature that could change how we use our phones in public.</p>
+
+    <h2>The Tech Behind the Magic</h2>
+    <p>The S26 Ultra is expected to debut the <strong>"Flex Magic Pixel"</strong> technology. This isn't just a software trick; it’s integrated directly into the OLED panel. With a single tap, the screen can narrow its viewing angle. This means while you see everything perfectly clear from the front, anyone looking from the side sees nothing but a dark or obscured screen.</p>
+
+    <div class="highlight-box">
+      <h3>🛡️ Smart Privacy That Thinks for You</h3>
+      <p>Based on recent leaks from the upcoming <strong>One UI 8.5</strong>, here is how the "Privacy Shield" actually functions:</p>
+      <ul>
+        <li><strong>AI Auto-Shield:</strong> The phone uses AI and sensors to detect if you’re in a crowded environment or if you’ve opened a "sensitive" app (like banking) and triggers the privacy mode automatically.</li>
+        <li><strong>Selective Hiding:</strong> Instead of dimming the whole screen, you can choose to hide only specific parts, like your notification bar or password fields.</li>
+        <li><strong>Manual Control:</strong> There’s a quick toggle in the settings to flip the shield on or off whenever you need that extra layer of "digital walls."</li>
+      </ul>
+    </div>
+
+    <h2>Deep Privacy & Potential Challenges</h2>
+    <p>If you’re really worried about someone looking over your shoulder, the <strong>Deep Privacy Mode</strong> maxes out the settings and drops the brightness to ensure your data stays for your eyes only.</p>
+
+    <p>As exciting as this sounds, there are two main things to keep an eye on:</p>
+    <ul>
+      <li><strong>Battery Life:</strong> Since the phone needs to stay "aware" of its surroundings to trigger the auto-privacy, we’ll have to see the impact on battery endurance.</li>
+      <li><strong>Display Quality:</strong> We’re all hoping this extra hardware layer doesn’t mess with the Ultra’s legendary brightness and color accuracy when the mode is off.</li>
+    </ul>
+
+    <p style="font-size: 1.1rem; font-weight: 600; margin-top: 30px;">
+      If Samsung pulls this off, the Galaxy S26 Ultra won't just be a powerhouse in performance, but a leader in mobile security, solving a real-world problem we deal with every day. 📱🔒
+    </p>
+  `
+  },
   {
   slug: "google-pixel-10a-vs-9a-8a-7a-comparison",
   title: "Google Pixel 10a vs. 9a, 8a, and 7a: Is the New $499 King Worth the Upgrade?",
   date: "2026-02-18",
   cat: "tech",
   desc: "A deep dive into Google's latest budget flagship, the Pixel 10a, comparing its 3,000-nit display and Tensor G4 performance against its predecessors.",
-  img: "https://image2url.com/r2/default/images/1771435723947-0c4ed4b6-828e-4c23-9a70-961a3e761c41.webp",
+  img: "assets/images/articles/article-f681e533b0a8.webp",
   url: "articles/google-pixel-10a-vs-9a-8a-7a-comparison.html",
   content: `
     <p>Google has officially pulled back the curtain on the <strong>Pixel 10a</strong>. Following the tradition of the "A-series," this device aims to deliver the core Pixel experience—excellent cameras and smart AI—at a much more digestible price point of <strong>$499</strong>.</p>

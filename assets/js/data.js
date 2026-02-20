@@ -5,7 +5,7 @@ const articles = [
   date: "2026-02-19",
   cat: "tech",
   desc: "Leaked details reveal Samsung's 'Flex Magic Pixel' technology for the S26 Ultra, offering a hardware-level privacy shield integrated directly into the OLED panel.",
-  img: "https://image2url.com/r2/default/images/1771559027719-7f0a9fa9-2f7b-4106-a84d-3a38abcfaaed.jpg",
+  img: "assets/images/articles/article-cac54b320e50.webp",
   url: "articles/samsung-galaxy-s26-ultra-privacy-display-leak.html",
   content: `
     <p>We’ve all been there—sitting on a crowded bus or in a tight elevator, feeling the person next to us staring right at our phone screen. Samsung seems to have finally found a high-tech solution for this, and the latest leaks about the <strong>Galaxy S26 Ultra</strong> give us a clear look at how it works.</p>
