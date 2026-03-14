@@ -5,7 +5,7 @@ const articles = [
   date: "2026-03-14",
   cat: "tech",
   desc: "The transition from 5G to 6G is already being planned, promising terahertz speeds and a seamless integration between the physical and digital worlds.",
-  img: "https://image2url.com/r2/default/images/1773448874587-a84e16de-0fd5-4833-9ac0-a95ac5a56ded.webp",
+  img: "assets/images/articles/article-638c755429a8.webp",
   url: "articles/6g-technology-future-wireless-connectivity.html",
   content: `
     <p>While 5G networks continue to expand globally, the tech industry is already laying the groundwork for its successor: <strong>6G</strong>. This next generation of wireless connectivity isn't just about faster downloads; it’s about a fundamental shift in how the physical and digital worlds interact.</p>

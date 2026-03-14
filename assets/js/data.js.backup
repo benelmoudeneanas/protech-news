@@ -1,11 +1,50 @@
 const articles = [
 {
+  slug: "6g-technology-future-wireless-connectivity",
+  title: "Beyond 5G: How 6G Will Redefine the Digital Frontier",
+  date: "2026-03-14",
+  cat: "tech",
+  desc: "The transition from 5G to 6G is already being planned, promising terahertz speeds and a seamless integration between the physical and digital worlds.",
+  img: "https://image2url.com/r2/default/images/1773448874587-a84e16de-0fd5-4833-9ac0-a95ac5a56ded.webp",
+  url: "articles/6g-technology-future-wireless-connectivity.html",
+  content: `
+    <p>While 5G networks continue to expand globally, the tech industry is already laying the groundwork for its successor: <strong>6G</strong>. This next generation of wireless connectivity isn't just about faster downloads; it’s about a fundamental shift in how the physical and digital worlds interact.</p>
+
+    <p>By utilizing terahertz frequencies, 6G aims to create a seamless integration that will transform our daily technology usage into a more immersive and instantaneous experience.</p>
+
+    <h2>The Leap to Terahertz Speeds</h2>
+    <p>6G is set to utilize high-frequency <strong>Terahertz (THz)</strong> bands, pushing data speeds toward an incredible <strong>1 Terabyte per second</strong>. This leap in bandwidth and near-zero latency will enable real-time applications that were previously thought impossible, transforming mobile connectivity into a global backbone for instantaneous data exchange.</p>
+
+    <div class="highlight-box">
+      <h3>🌐 The Network as a Universal Sensor</h3>
+      <p>One of the most revolutionary features of 6G is <strong>"Joint Sensing and Communication."</strong> Here is how this technology will change our environment:</p>
+      <ul>
+        <li><strong>Spatial Awareness:</strong> The network functions like a high-resolution radar, identifying the shape, position, and movement of objects.</li>
+        <li><strong>Autonomous Synergy:</strong> Provides a critical layer of environmental data for self-driving vehicles and sophisticated robotics.</li>
+        <li><strong>Immersive AR/VR:</strong> Enables lag-free digital overlays on the physical world for a truly "mixed reality" experience.</li>
+      </ul>
+    </div>
+
+    <h2>Technical Hurdles & Global Standards</h2>
+    <p>As exciting as the 2030 vision sounds, the road to 6G faces significant infrastructure and geopolitical challenges that researchers are currently tackling.</p>
+
+    <ul>
+      <li><strong>Signal Range:</strong> Higher frequencies have very short ranges and are easily blocked by physical obstacles, requiring a much denser network of small cells.</li>
+      <li><strong>Global Compatibility:</strong> International standards must be unified to ensure the 6G ecosystem remains compatible across different borders and manufacturers.</li>
+    </ul>
+
+    <p style="font-size: 1.1rem; font-weight: 600; margin-top: 30px;">
+      As major tech powers invest billions into R&D, we are moving toward a future where the internet isn't just something we use, but an invisible fabric that senses and reacts to the world around us. 📡🚀
+    </p>
+  `
+},
+{
   slug: "samsung-galaxy-s26-ultra-privacy-display-leak",
   title: "Galaxy S26 Ultra’s New Privacy Display: A Game Changer or Just Hype?",
   date: "2026-02-19",
   cat: "tech",
   desc: "Leaked details reveal Samsung's 'Flex Magic Pixel' technology for the S26 Ultra, offering a hardware-level privacy shield integrated directly into the OLED panel.",
-  img: "https://image2url.com/r2/default/images/1771559027719-7f0a9fa9-2f7b-4106-a84d-3a38abcfaaed.jpg",
+  img: "assets/images/articles/article-cac54b320e50.webp",
   url: "articles/samsung-galaxy-s26-ultra-privacy-display-leak.html",
   content: `
     <p>We’ve all been there—sitting on a crowded bus or in a tight elevator, feeling the person next to us staring right at our phone screen. Samsung seems to have finally found a high-tech solution for this, and the latest leaks about the <strong>Galaxy S26 Ultra</strong> give us a clear look at how it works.</p>
