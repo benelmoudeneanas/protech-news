@@ -1,11 +1,61 @@
 const articles = [
 {
+  slug: "samsung-galaxy-s26-ultra-review",
+  title: "Samsung Galaxy S26 Ultra Review: It's frustrating, but it's the best Android phone I've tested",
+  date: "2026-03-21",
+  cat: "tech",
+  desc: "The Samsung Galaxy S26 Ultra is an iterative update. However, it offers unique tools that allow it to stand out in a saturated market.",
+  img: "https://image2url.com/r2/default/images/1774401613680-59d76466-348a-4d14-86b9-c1ee68e3b060.webp",
+  url: "articles/samsung-galaxy-s26-ultra-review.html",
+  content: `
+    <p>Samsung has been using a proven formula for its S-series flagships since 2024: combining a screen improvement with a more powerful processor, a thinner design, new (sometimes questionable) AI features, and better cameras. The latest <strong>Galaxy S26 Ultra</strong> follows this exact script.</p>
+
+    <p>While it's not a revolutionary update compared to the Galaxy S25 Ultra, the formula seems to work once again. Features like the <strong>Privacy Display</strong>, faster charging, and <strong>Horizontal Lock</strong> significantly improve the user experience.</p>
+
+    <div class="highlight-box">
+      <h3>✅ Pros & ❌ Cons</h3>
+      <ul>
+        <li><strong>✅ Privacy Display:</strong> Truly unique and practical — built-in and customizable per app.</li>
+        <li><strong>✅ Performance & Battery:</strong> Balanced efficiency with 60W wired charging (75% in 30 minutes).</li>
+        <li><strong>✅ Software Support:</strong> Seven years of updates with One UI 8.5 (Android 16).</li>
+        <li><strong>❌ AI Tools:</strong> Plenty of features, but inconsistent in execution.</li>
+        <li><strong>❌ Camera:</strong> Excellent, but the gap with competitors is narrowing.</li>
+        <li><strong>❌ No Qi2 Magnets:</strong> A notable omission for wireless charging enthusiasts.</li>
+      </ul>
+    </div>
+
+    <h2>A Large Phone That Feels Light</h2>
+    <p>Samsung continues to reduce the weight and thickness of its premium lineup. The S26 Ultra weighs just <strong>214 grams</strong> — 4 grams lighter than its predecessor — with a slim <strong>7.9mm profile</strong>, thinner than both the S25 Ultra (8.2mm) and the iPhone 17 Pro Max (8.75mm). If you want a 6.9-inch screen without the bulk, this is the thinnest and lightest in its class.</p>
+
+    <h2>The Best Display on a Phone</h2>
+    <p>The <strong>6.9-inch AMOLED display</strong> (120Hz, 3120×1440) is protected by Corning's anti-reflective Gorilla Armor 2. What sets it apart is Samsung's built-in <strong>Privacy Display</strong> — unlike third-party screen protectors, it's integrated and can be activated selectively for specific apps like banking or messaging, showing only a black rectangle to anyone viewing from the side.</p>
+
+    <h2>Performance & Battery</h2>
+    <p>Powered by the <strong>Qualcomm Snapdragon 8 Elite Gen 5 for Galaxy</strong>, the phone is incredibly fast and responsive. Despite keeping the same <strong>5,000 mAh battery</strong>, efficiency improvements allow it to last a full day with around 25% remaining by bedtime. Wired charging has been bumped to <strong>60W</strong>, reaching 75% in just 30 minutes.</p>
+
+    <h2>AI: Plenty of Features, Some Inconsistency</h2>
+    <ul>
+      <li><strong>Now Nudge:</strong> Real-time suggestions based on your screen content.</li>
+      <li><strong>Audio Eraser:</strong> Reduce crowd noise in third-party app videos.</li>
+      <li><strong>Bixby:</strong> Updated to help find settings, though still inconsistent.</li>
+      <li><strong>Document Scan:</strong> Automatically removes shadows and wrinkles from scanned documents.</li>
+    </ul>
+
+    <h2>Cameras: Good, But Facing Tough Competition</h2>
+    <p>The camera system features a <strong>200MP main sensor (f/1.4)</strong> and a <strong>50MP 5x optical telephoto lens (f/2.9)</strong>. A standout addition is the <strong>Horizontal Lock</strong> (GoPro-style), keeping video perfectly level regardless of how you hold the phone. Image quality is excellent with great dynamic range and faithful skin tones — but the competitive gap is clearly shrinking.</p>
+
+    <p style="font-size: 1.1rem; font-weight: 600; margin-top: 30px;">
+      Is it worth upgrading from the S25 Ultra? No. But does the Samsung Galaxy S26 Ultra offer one of the best mobile experiences available today? Absolutely — it remains the most versatile and polished Android flagship on the market. 📱🏆
+    </p>
+  `
+},
+{
   slug: "6g-technology-future-wireless-connectivity",
   title: "Beyond 5G: How 6G Will Redefine the Digital Frontier",
   date: "2026-03-14",
   cat: "tech",
   desc: "The transition from 5G to 6G is already being planned, promising terahertz speeds and a seamless integration between the physical and digital worlds.",
-  img: "https://image2url.com/r2/default/images/1773448874587-a84e16de-0fd5-4833-9ac0-a95ac5a56ded.webp",
+  img: "assets/images/articles/article-638c755429a8.webp",
   url: "articles/6g-technology-future-wireless-connectivity.html",
   content: `
     <p>While 5G networks continue to expand globally, the tech industry is already laying the groundwork for its successor: <strong>6G</strong>. This next generation of wireless connectivity isn't just about faster downloads; it’s about a fundamental shift in how the physical and digital worlds interact.</p>

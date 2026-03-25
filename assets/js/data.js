@@ -5,7 +5,7 @@ const articles = [
   date: "2026-03-21",
   cat: "tech",
   desc: "The Samsung Galaxy S26 Ultra is an iterative update. However, it offers unique tools that allow it to stand out in a saturated market.",
-  img: "https://image2url.com/r2/default/images/1774401613680-59d76466-348a-4d14-86b9-c1ee68e3b060.webp",
+  img: "assets/images/articles/article-0ce2a806d5ae.webp",
   url: "articles/samsung-galaxy-s26-ultra-review.html",
   content: `
     <p>Samsung has been using a proven formula for its S-series flagships since 2024: combining a screen improvement with a more powerful processor, a thinner design, new (sometimes questionable) AI features, and better cameras. The latest <strong>Galaxy S26 Ultra</strong> follows this exact script.</p>
