@@ -5,7 +5,7 @@ const articles = [
   date: "2026-03-30",
   cat: "tech",
   desc: "Leaked image suggests Apple's iPhone 18 Pro will debut a much more compact pill-shaped cutout, confirming rumors of new under-screen Face ID technology.",
-  img: "https://image2url.com/r2/default/images/1774910357058-7e73a3a7-a77f-43ff-a915-658dd22e03ea.jpg",
+  img: "assets/images/articles/article-856f2c8cf72a.webp",
   url: "articles/iphone-18-pro-leaks-dynamic-island-size-reduction.html",
   content: `
     <p>We are still far from the official release, but a significant leak has just given us our first potential look at Apple's <strong>iPhone 18 Pro</strong>. An unconfirmed image has surfaced, purporting to show a prototype that confirms long-standing rumors about a major redesign for the front of the device.</p>
