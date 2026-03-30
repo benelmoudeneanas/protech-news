@@ -1,5 +1,55 @@
 const articles = [
 {
+  slug: "iphone-18-pro-leaks-dynamic-island-size-reduction",
+  title: "First Leaked Photo of iPhone 18 Pro Shows Significantly Smaller Dynamic Island",
+  date: "2026-03-30",
+  cat: "tech",
+  desc: "Leaked image suggests Apple's iPhone 18 Pro will debut a much more compact pill-shaped cutout, confirming rumors of new under-screen Face ID technology.",
+  img: "https://image2url.com/r2/default/images/1774910357058-7e73a3a7-a77f-43ff-a915-658dd22e03ea.jpg",
+  url: "articles/iphone-18-pro-leaks-dynamic-island-size-reduction.html",
+  content: `
+    <p>We are still far from the official release, but a significant leak has just given us our first potential look at Apple's <strong>iPhone 18 Pro</strong>. An unconfirmed image has surfaced, purporting to show a prototype that confirms long-standing rumors about a major redesign for the front of the device.</p>
+
+    <p>While the overall form factor remains similar, the standout feature is clearly the refined <strong>Dynamic Island</strong>. This is not just a minor tweak; if the rumors hold true, this represents the most significant alteration to the cutout since its introduction on the iPhone 14 Pro.</p>
+
+    <div class="highlight-box">
+      <h3>✅ Major Leaked Changes & 🔍 Expected Features</h3>
+      <ul>
+        <li><strong>✅ Dynamic Island Reduction:</strong> Width significantly reduced from ~20.76mm to ~13.49mm (approx. 35% smaller).</li>
+        <li><strong>✅ Under-Display Face ID:</strong> Achieved by moving the Flood Illuminator component beneath the active screen area.</li>
+        <li><strong>✅ New Selfie Camera:</strong> Expected boost to a 24-megapixel sensor for superior front-facing photos.</li>
+        <li><strong>🔍 Display Design:</strong> The main screen borders (bezels) are likely to remain identical to the iPhone 17 series.</li>
+        <li><strong>🔍 Expected Lineup:</strong> Possible split release strategy for autumn 2026 and spring 2027.</li>
+      </ul>
+    </div>
+
+    <h2>A More Immersive Display Experience</h2>
+    <p>According to leaked technical specifications, the iPhone 18 Pro's new pill-shaped cutout will be approximately <strong>13.49mm wide</strong>, compared to the 20.76mm on current models. This reduction—made possible by integrating key Face ID components like the <strong>Flood Illuminator</strong> under the display—will unlock more valuable screen real estate, making the Dynamic Island less intrusive during daily use.</p>
+
+    <h2>What Stays the Same?</h2>
+    <p>While the cutout shrinks, not every part of the interface is changing. The <strong>dot projector, infrared camera</strong>, and the <strong>24MP selfie camera</strong> itself will remain within the smaller cutout area. Furthermore, reports indicate that the display borders (the <strong>bezels</strong>) will not receive any further slimming in this generation.</p>
+
+    <h2>The iPhone 18 Lineup Strategy</h2>
+    <p>Apple appears to be planning a phased launch for the iPhone 18 series. Current rumors suggest a release structure as follows:</p>
+    <ul>
+      <li><strong>Autumn 2026:</strong> Initial launch featuring the <strong>iPhone 18 Pro</strong>, <strong>iPhone 18 Pro Max</strong>, and a new <strong>iPhone Fold</strong> model.</li>
+      <li><strong>Spring 2027:</strong> Follow-up release including the standard <strong>iPhone 18</strong> and a lower-cost <strong>iPhone 18e</strong>.</li>
+    </ul>
+
+    <h2>Expected Pricing (Subject to Change)</h2>
+    <p>Preliminary estimates based on leaked data give us an idea of the pricing structure, which appears to hold firm on current pro models:</p>
+    <ul>
+      <li><strong>iPhone 18 Pro:</strong> Estimated to start around <strong>€1,229</strong>.</li>
+      <li><strong>iPhone 18 Pro Max:</strong> Estimated to start around <strong>€1,479</strong>.</li>
+      <li><strong>Standard iPhone 18:</strong> Anticipated to launch at <strong>€969</strong>.</li>
+    </ul>
+
+    <p style="font-size: 1.1rem; font-weight: 600; margin-top: 30px;">
+      This leak provides an exciting look into Apple's future. If these specifications are accurate, the iPhone 18 Pro is set to deliver the modern, minimalist front design that users have been waiting for, balancing cutting-edge technology with increased usable display space. 📱✨
+    </p>
+  `
+},
+{
   slug: "samsung-galaxy-s26-ultra-review",
   title: "Samsung Galaxy S26 Ultra Review: It's frustrating, but it's the best Android phone I've tested",
   date: "2026-03-21",
