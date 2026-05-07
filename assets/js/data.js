@@ -5,7 +5,7 @@ const articles = [
   date: "2026-05-07",
   cat: "tech",
   desc: "The 2026 India AI Impact Summit highlights a global shift toward open-source AI models as a democratic alternative to proprietary tech giants.",
-  img: "https://www.image2url.com/r2/default/images/1778129318329-336b4e2c-c880-45fb-9d31-467b2da1128f.webp",
+  img: "assets/images/articles/article-f97d1f183482.webp",
   url: "articles/india-ai-impact-summit-2026-open-source-innovation.html",
   content: `
     <p>The <strong>India AI Impact Summit 2026</strong> has emerged as a pivotal moment for the global technology landscape. Central to the discussions was the transformative power of <strong>Open-Source Innovation</strong>, positioned not just as a technical choice, but as a strategic necessity for democratic and inclusive AI development.</p>

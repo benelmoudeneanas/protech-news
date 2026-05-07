@@ -1,11 +1,62 @@
 const articles = [
 {
+  slug: "india-ai-impact-summit-2026-open-source-innovation",
+  title: "Outlooks on Open-Source Innovation at the India AI Impact Summit 2026",
+  date: "2026-05-07",
+  cat: "tech",
+  desc: "The 2026 India AI Impact Summit highlights a global shift toward open-source AI models as a democratic alternative to proprietary tech giants.",
+  img: "https://www.image2url.com/r2/default/images/1778129318329-336b4e2c-c880-45fb-9d31-467b2da1128f.webp",
+  url: "articles/india-ai-impact-summit-2026-open-source-innovation.html",
+  content: `
+    <p>The <strong>India AI Impact Summit 2026</strong> has emerged as a pivotal moment for the global technology landscape. Central to the discussions was the transformative power of <strong>Open-Source Innovation</strong>, positioned not just as a technical choice, but as a strategic necessity for democratic and inclusive AI development.</p>
+
+    <p>Experts and policymakers at the summit argued that moving away from "closed-box" proprietary models is essential for the Global South to achieve technological sovereignty and foster a competitive ecosystem that isn't dominated by a handful of Silicon Valley giants.</p>
+
+    <div class="highlight-box">
+      <h3>🚀 Key Strategic Pillars & 🌐 Future Outlooks</h3>
+      <ul>
+        <li><strong>✅ Democratizing Access:</strong> Shifting the focus from proprietary APIs to open-source foundational models to empower local developers.</li>
+        <li><strong>✅ Digital Public Infrastructure (DPI):</strong> Leveraging the success of India's UPI model to create open, interoperable AI "stacks" for public services.</li>
+        <li><strong>✅ Responsible Innovation:</strong> Implementing transparency and safety protocols directly into open-source frameworks.</li>
+        <li><strong>🔍 Strategic Sovereignty:</strong> Using open-source tools to build domestic compute capacity and reduce reliance on external supply chains.</li>
+        <li><strong>🔍 The Three Sutras:</strong> Focusing AI impact on 'People' (diversity), 'Planet' (sustainability), and 'Progress' (equity).</li>
+      </ul>
+    </div>
+
+    <h2>The "Third Way" of AI Governance</h2>
+    <p>Unlike the heavily regulated approach of the EU or the state-centralized model in China, India is championing what the summit calls the <strong>"Third Way."</strong> This model prioritizes open-source collaboration to build public goods. By integrating AI into the national Digital Public Infrastructure, India aims to solve large-scale problems in healthcare, agriculture, and education through transparent and accessible technology.</p>
+
+    <h2>Balancing Innovation with Accountability</h2>
+    <p>A significant portion of the summit focused on the <strong>"Responsibility Gap."</strong> While open-source allows for faster innovation, it also requires new frameworks for accountability. The 2026 outlook suggests that safety should not be a "bolt-on" feature but a core part of the open-source development lifecycle, ensuring that decentralized innovation remains ethical and secure.</p>
+
+    <h2>Global Impact and Collaborative Ecosystems</h2>
+    <p>The summit outlined a vision where India serves as a global laboratory for AI solutions. The strategy involves:</p>
+    <ul>
+      <li><strong>Cross-Border Partnerships:</strong> Sharing open-source AI frameworks with other developing nations to foster global equity.</li>
+      <li><strong>Linguistic Inclusion:</strong> Using open-source models to break language barriers in a country with over 22 official languages.</li>
+      <li><strong>Compute Democratization:</strong> Making high-performance computing resources more accessible to researchers through open-source orchestration.</li>
+    </ul>
+
+    <h2>Economic Implications of Open AI</h2>
+    <p>Preliminary economic projections discussed during the sessions highlight the potential for open-source AI to significantly lower the barrier to entry for startups:</p>
+    <ul>
+      <li><strong>Startup Costs:</strong> Estimated reduction of <strong>40%</strong> in initial R&D for AI-driven ventures.</li>
+      <li><strong>Public Sector Efficiency:</strong> Potential for a <strong>25% improvement</strong> in service delivery through open-stack AI integrations.</li>
+      <li><strong>Market Competitiveness:</strong> Increased diversity in the AI market, preventing monopolies.</li>
+    </ul>
+
+    <p style="font-size: 1.1rem; font-weight: 600; margin-top: 30px;">
+      The 2026 Summit concludes that the future of AI must be open. By championing transparency and collective intelligence, India is setting a global precedent for how technology can be used as a force for public good, ensuring that the AI revolution benefits everyone, everywhere. 🌐💡
+    </p>
+  `
+},
+{
   slug: "iphone-18-pro-leaks-dynamic-island-size-reduction",
   title: "First Leaked Photo of iPhone 18 Pro Shows Significantly Smaller Dynamic Island",
   date: "2026-03-30",
   cat: "tech",
   desc: "Leaked image suggests Apple's iPhone 18 Pro will debut a much more compact pill-shaped cutout, confirming rumors of new under-screen Face ID technology.",
-  img: "https://image2url.com/r2/default/images/1774910357058-7e73a3a7-a77f-43ff-a915-658dd22e03ea.jpg",
+  img: "assets/images/articles/article-856f2c8cf72a.webp",
   url: "articles/iphone-18-pro-leaks-dynamic-island-size-reduction.html",
   content: `
     <p>We are still far from the official release, but a significant leak has just given us our first potential look at Apple's <strong>iPhone 18 Pro</strong>. An unconfirmed image has surfaced, purporting to show a prototype that confirms long-standing rumors about a major redesign for the front of the device.</p>
